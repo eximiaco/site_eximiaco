@@ -28,9 +28,39 @@ $display_hero = $container->get( 'display_hero' );
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'elemarjr' ); ?></a>
 
 	<div class="top-header-wrapper <?php echo esc_attr( $display_hero ? '' : 'top-header-wrapper__no-hero' ); ?>">
+		<div class="top-languages">
+			<div class="container">
+				<ul class="langs-navigation">
+				<?php
+				$languages = pll_the_languages( array( 'raw' => 1 ) );
+				foreach ( $languages as $lang ) : ?>
+					<li class="menu-item<?php echo $lang['current_lang'] ? esc_attr( ' current-menu-item' ) : ''; ?>">
+						<a href="<?php echo esc_url( $lang['url'] ); ?>" class="menu-link">
+						<?php echo esc_html( $lang['name'] ); ?>
+						</a>
+					</li>
+				<?php endforeach; ?>
+					<li class="menu-item">
+						<a href="#" class="menu-link">
+							<button class="search-toggle" aria-controls="search" aria-expanded="false">
+								<i class="i-search"></i>
+							</button>
+						</a>
+					</li>
+				</ul><!-- .langs-navigation -->
+				<ul class="websites-navegation">
+					<?php if ( !empty(get_theme_mod('head_primary_url')) ) :?>
+						<li class="menu-item<?php echo ( get_theme_mod('head_primary_url') == get_site_url() ? 'current-menu-item' : '' ) ?>"><a href="<?php echo get_theme_mod('head_primary_url'); ?>" class="menu-link"><?php echo get_theme_mod('head_primary_title'); ?></a></li>
+					<?php endif; ?>
+					<?php if ( !empty(get_theme_mod('head_secondary_url')) ) :?>
+						<li class="menu-item<?php echo ( get_theme_mod('head_secondary_url') == get_site_url() ? 'current-menu-item' : '' ) ?>"><a href="<?php echo get_theme_mod('head_secondary_url'); ?>" class="menu-link"><?php echo get_theme_mod('head_secondary_title'); ?></a></li>
+					<?php endif; ?>
+				</ul>
+			</div>
+		</div>
 		<div class="top-header container">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-branding">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+				<img src="<?php echo ( get_theme_mod('head_logo' ) ? get_theme_mod('head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			</a><!-- .site-branding -->
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -61,27 +91,6 @@ $display_hero = $container->get( 'display_hero' );
 						<span class="search-close"></span>
 					</form>
 				</div><!-- #site-search -->
-
-				<ul class="langs-navigation">
-					<?php
-						$languages = pll_the_languages( array( 'raw' => 1 ) );
-
-					foreach ( $languages as $lang ) :
-						?>
-							<li class="menu-item<?php echo $lang['current_lang'] ? esc_attr( ' current-menu-item' ) : ''; ?>">
-								<a href="<?php echo esc_url( $lang['url'] ); ?>" class="menu-link">
-								<?php echo esc_html( $lang['name'] ); ?>
-								</a>
-							</li>
-					<?php endforeach; ?>
-					<li class="menu-item">
-						<a href="#" class="menu-link">
-							<button class="search-toggle" aria-controls="search" aria-expanded="false">
-								<i class="i-search"></i>
-							</button>
-						</a>
-					</li>
-				</ul><!-- .langs-navigation -->
 			</div><!-- .header-right -->
 		</div>
 	</div>
