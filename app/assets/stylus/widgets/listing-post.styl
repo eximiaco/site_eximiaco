@@ -68,19 +68,19 @@
             z-index 20
 
         p
-            background $dusky-blue
+            background var-use( color-secondary )
 
 
         a
-            background $tiffany
+            background var-use( color-primary )
             text-decoration none
 
             &:hover
-                background darken( $tiffany, 10% )
+                background 'darken( %s, 10% )' % var-use( color-primary )
                 text-decoration none
 
     &__serie
-        color $tiffany
+        color var-use( color-primary )
         display block
         font-size 12px
         font-weight bold
@@ -133,7 +133,7 @@
     &__footer
         clearfix()
         bottom -40px
-        color $tiffany
+        color var-use( color-primary )
         left 0
         overflow hidden
         padding 20px
@@ -168,7 +168,7 @@
         margin-left 11px
 
     a&--comments
-        color $tiffany
+        color var-use( color-primary )
         position relative
         text-decoration none
         z-index 20

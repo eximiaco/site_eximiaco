@@ -67,14 +67,14 @@
         background $white-two
 
     &__dark
-        background $dark-grey
+        background var-use( color-secondary )
         color $white
 
         & ^[0..-2]--button
             @extend $placeholder
 
     &__dusky
-        background $dusky-blue
+        background var-use( color-primary )
         color $white
 
         & ^[0..-2]--button

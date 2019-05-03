@@ -20,6 +20,7 @@
     max-width 400px
     padding $card-box-padding-above $card-box-padding-aside
     text-decoration none
+    text-align center
     width 100%
 
     @media screen and ( min-width $screen-md )
@@ -44,16 +45,16 @@
 
     &__header
         align-items flex-start
-        display flex
+        display block
         justify-content space-between
         margin-bottom 20px
         min-height 64px
 
     &__thumbnail
-        max-height 64px
+        max-height 90px
 
         img
-            max-height 64px
+            max-height 90px
             max-width 100%
             width auto
 
@@ -68,7 +69,7 @@
             margin-top 0
 
         a
-            color $blue-gray
+            color var-use( color-primary )
 
     &__wrapper
         display flex
@@ -80,7 +81,7 @@
 
     &__button
         align-items center
-        background $blue-gray
+        background var-use( color-primary )
         color $white
         display flex
         line-height normal
@@ -89,7 +90,7 @@
         text-decoration none
 
         &:hover
-            background darken( $blue-gray, 10% )
+            background var-use( color-secondary )
 
         [class^='i-'],
         [class*=' i-']
