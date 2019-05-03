@@ -9,19 +9,12 @@ require 'recipe/npm.php';
 require 'app/recipe/bower.php';
 require 'app/recipe/grunt.php';
 
-host('elemarjr.aztecweb.net')
+host('eximia.co')
 	->port(2201)
 	->stage('staging')
-    ->user('elemarjr')
+    ->user('eximia')
     ->set('branch', 'develop')
-    ->set('deploy_path', '/home/elemarjr/staging');
-
-host('www.elemarjr.com')
-	->port(2201)
-	->stage('production')
-    ->user('elemarjr')
-    ->set('branch', 'master')
-	->set('deploy_path', '/home/elemarjr/production');
+    ->set('deploy_path', '/home/eximia/production');
 
 set('http_user', 'www-data');
 
