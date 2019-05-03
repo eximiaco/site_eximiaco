@@ -75,8 +75,13 @@ define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) );
  */
 $table_prefix = 'wp_';
 
-
-
+/** MULTISITE */
+define( 'MULTISITE', true );
+define( 'SUBDOMAIN_INSTALL', true );
+define( 'DOMAIN_CURRENT_SITE', 'www.eximia.co' );
+define( 'PATH_CURRENT_SITE', '/' );
+define( 'SITE_ID_CURRENT_SITE', 1 );
+define( 'BLOG_ID_CURRENT_SITE', 1 );
 
 /* That's all, stop editing! Happy blogging. */
 
