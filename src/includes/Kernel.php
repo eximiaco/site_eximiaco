@@ -39,6 +39,7 @@ class Kernel {
 
 			\Aztec\Setup\Textdomain::class,
 
+			\Aztec\Customize\Colors::class,
 			\Aztec\Customize\Newsletter::class,
 			\Aztec\Customize\Banner\Footer\Promotion::class,
 			\Aztec\Customize\Banner\SinglePost\Contact::class,

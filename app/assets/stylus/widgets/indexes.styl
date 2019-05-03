@@ -9,7 +9,7 @@
     $nav-arrow-width-md = 90px
     $nav-arrow-width-lg = $nav-arrow-width
 
-    background $dusky-blue
+    background var-use( color-secondary )
     position fixed
     top $sm-nav-height
     transition top $transition-default
@@ -48,7 +48,7 @@
 
     &__nav
         align-items center
-        background $dusky-blue
+        background var-use( color-secondary )
         color $white
         cursor pointer
         display flex
@@ -99,10 +99,10 @@
     &__toggler
         align-items center
         background $white
-        border 2px solid $dusky-blue
+        border 2px solid var-use( color-secondary )
         border-top none
         bottom - $toggler-height
-        color $dusky-blue
+        color var-use( color-secondary )
         cursor pointer
         display flex
         font-size .625rem
@@ -188,7 +188,7 @@
 
         &-item
             background $denim-blue
-            border-bottom 1px solid $dusky-blue
+            border-bottom 1px solid var-use( color-secondary )
             font-size 16px
 
             a

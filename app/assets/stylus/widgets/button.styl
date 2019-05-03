@@ -8,8 +8,8 @@ a.button,
 input[type='submit'].button
     $height = 45px
     background $white
-    border 1px solid $black
-    color $black
+    border 1px solid var-use( color-primary )
+    color var-use( color-primary )
     display inline-block
     font-weight bold
     line-height $height
@@ -22,21 +22,21 @@ input[type='submit'].button
         padding 0 30px
 
     &:hover
-        background $black
+        background var-use( color-primary )
         color $white
         text-decoration none
 
     &__bordered
         background transparent
-        border 1px solid $black
+        border 1px solid var-use( color-primary )
 
         &:hover
-            background $black
+            background var-use( color-primary )
             color $white
 
     &__transparent
         background transparent
-        color $black
+        color var-use( color-primary )
 
     &__tiffany
         background $tiffany

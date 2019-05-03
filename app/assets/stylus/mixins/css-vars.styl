@@ -1,0 +1,25 @@
+/*
+ * Declaração de uma variável CSS
+ *
+ * Esse mixin foi criado para resolver o problema do Stylint que acusava
+ * `property is not valid`.
+ *
+ * Toda declaração de variável no CSS deve ser feita através desse mixin.
+ *
+ * Exemplo:
+ *
+ * var-declare( site-header_height, 52px )
+ */
+var-declare( $name, $value )
+  $declare-name = ( '--%s' % $name )
+  {$declare-name} $value
+
+/**
+ * Uso de uma variável CSS como valor de uma propriedade
+ *
+ * Exemplo:
+ *
+ * var-use( site-header_height )
+ */
+var-use( $name )
+  var( '--%s' % $name )

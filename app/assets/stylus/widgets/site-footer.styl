@@ -1,5 +1,5 @@
 .site-footer
-    background-color $dark-grey
+    background-color var-use( color-primary )
     color $white
     height $footer-height
     padding 65px 0 30px
@@ -8,7 +8,8 @@
     visibility visible
     z-index 100
 
-    a
+    a, p
+        color white
         text-decoration none
 
 .scroll-up
