@@ -11,14 +11,14 @@ require 'app/recipe/grunt.php';
 
 host('eximia.co')
 	->port(2201)
-	->stage('staging')
+	->stage('production')
     ->user('eximia')
     ->set('branch', 'develop')
     ->set('deploy_path', '/home/eximia/production');
 
 set('http_user', 'www-data');
 
-set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/elemarjr.git');
+set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/eximia.git');
 
 set('ssh_multiplexing', false);
 
