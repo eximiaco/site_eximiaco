@@ -35,13 +35,13 @@ define([],function () {
 	} );
 
 	jQuery( window ).on( 'scroll', function() {
-		if( jQuery( this ).scrollTop() > 0 ) {
-			$body.addClass( bodyStickyClass );
-			$topHeader.addClass( headerStickyClass );
-		} else {
-			$body.removeClass( bodyStickyClass );
-			$topHeader.removeClass( headerStickyClass );
-		}
+		// if( jQuery( this ).scrollTop() > 0 ) {
+		// 	$body.addClass( bodyStickyClass );
+		// 	$topHeader.addClass( headerStickyClass );
+		// } else {
+		// 	$body.removeClass( bodyStickyClass );
+		// 	$topHeader.removeClass( headerStickyClass );
+		// }
 
 		var ymin = 0,
             ymax = $siteHeader.height(),

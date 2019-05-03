@@ -62,7 +62,7 @@ button
 // Header wrapper
 .top-header-wrapper
     fixed top left
-    height $sm-nav-height
+    height auto
     transition .2s ease-out
     width 100%
     z-index 99
@@ -70,8 +70,12 @@ button
     &__no-hero
         background $header-bg
 
-    @media screen and ( min-width $nav-breakpoint )
-        height $sm-nav-height-breakpoint
+.top-languages
+    align-content right
+    align-items center
+    background-color #333
+    display flex
+    height 40px
 
 .top-header
     align-items center
@@ -79,6 +83,7 @@ button
     justify-content space-between
     height 100%
     position relative
+    padding 15px 0
     z-index 9999
 
     &--collapse
@@ -106,8 +111,7 @@ button
                 display flex
 
     &__searchable
-        .main-navigation,
-        .langs-navigation
+        .main-navigation
             display none
 
         .site-search
@@ -207,8 +211,9 @@ button
 
 // Langs
 .langs-navigation
-    display flex
+    float right
     list-style none
+    height 40px
     margin 0
     padding 0
 
@@ -224,15 +229,14 @@ button
     .menu-link
         color $white
         display block
-        padding 8px
+        height 40px
+        padding 0
+        line-height 40px
         text-decoration none
         text-transform uppercase
 
     @media screen and ( min-width $nav-breakpoint )
         font-weight bold
-
-        .menu-link
-            padding 3px 0 0
 
         .menu-item
             margin 0 0 0 20px
@@ -243,6 +247,44 @@ button
             &.current-menu-item a
                 border-bottom 1px solid var-use( color-primary )
                 color $white
+
+.websites-navegation
+    float right
+    height 40px
+    list-style none
+    margin 0
+    padding 0
+
+    .menu-item
+        display inline-block
+        font-size 12px
+        margin-right 50px
+
+        &.current-menu-item a,
+        &.current-menu-item:hover a
+            background-color var( --color-primary )
+
+    .menu-link
+        color $white
+        display block
+        height 40px
+        padding 0 5px
+        line-height 40px
+        text-decoration none
+        text-transform uppercase
+
+    @media screen and ( min-width $nav-breakpoint )
+        font-weight bold
+
+        .menu-item
+            margin 0 0 0 20px
+
+            &.current-menu-item
+                margin-left 15px
+
+            &.current-menu-item a
+                background-color var( --color-primary )
+
 
 // Search
 .search-form
@@ -319,7 +361,7 @@ button
     @media screen and ( min-width $nav-breakpoint )
         position absolute
         right 0
-        top -100%
+        top -150px
 
 
 // Header
