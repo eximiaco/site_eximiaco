@@ -4,17 +4,24 @@
             color $black
             font-weight bold
             position relative
+            text-align left
             text-transform uppercase
 
         & ^[0]__date
-            font-size 20px
+            color var-use( color-primary )
+            float left
+            font-size 24px
+            width 50%
 
         & ^[0]__image
+            float right
             height 80px
-            max-width calc( 50% - 25px )
+            text-align right
+            width calc( 50% - 25px )
 
             img
                 height auto
+                margin-left auto
                 max-height 100%
                 max-width 100%
                 width auto
@@ -32,21 +39,9 @@
             color var-use( color-primary )
             font-size 12px
 
-    &--event&--active
-        background var-use( color-primary )
-
-        & ^[0]__date,
-        & ^[0]__title
-            color $white
-
-        & ^[0]__role,
-        & ^[0]__footer
-            color $black
-
     &--old
         & ^[0]__date
-        & ^[0]__title,
-        & ^[0]__footer
+        & ^[0]__title
             color $gray-light-300
 
         & ^[0]__role
