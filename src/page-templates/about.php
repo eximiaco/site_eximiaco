@@ -35,7 +35,11 @@ $page_section = $container->get( PageSection::class ); ?>
 		while ( have_rows( 'about_repeater' ) ) :
 			the_row();
 			?>
+			<?php if ( $page_section->get_title() == 'Experiência' ) : ?>
+			<div class="<?php echo esc_attr( $page_section->get_row_classes() ); ?> page-section__custom">
+			<?php else : ?>
 			<div class="<?php echo esc_attr( $page_section->get_row_classes() ); ?>">
+			<?php endif; ?>
 				<?php get_template_part( 'template-parts/page-sections' ); ?>
 			</div>
 			<?php endwhile; ?>
