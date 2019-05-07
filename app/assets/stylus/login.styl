@@ -17,7 +17,7 @@ body
         color $tundora
 
     .message
-        border 2px solid $tiffany
+        border 2px solid $brownish-grey
         border-bottom none
         box-shadow none
         color $brownish-grey
@@ -37,12 +37,12 @@ body
 
     input[type='checkbox']
         &:focus
-            border-color $tiffany
+            border-color $brownish-grey
             box-shadow none
 
         &:checked
             &:before
-                color $tiffany
+                color $brownish-grey
 
     .submit
         .button
@@ -53,12 +53,17 @@ body
             text-align center
 
     h1
-        a
-            background-image url( '/wp-content/themes/elemarjr/assets/images/logo-b.svg' )
-            background-size inherit
-            height 47px
-            margin 50px auto 0
-            width 125px
+        display none
+
+    .logo-header
+        display block
+        height 110px
+        text-align center
+        width 100%
+
+        img
+            max-height 100%
+            max-width 100%
 
     #login_error // @stylint ignore namingConvention warning preferred naming convention is BEM
         border 2px solid $punch
@@ -73,7 +78,7 @@ body
     color $tundora
 
     &:hover
-        color $tiffany
+        color $brownish-grey
 
 .input
     background $white
@@ -82,18 +87,18 @@ body
 
 .wp-core-ui
     .button-primary
-        background $tiffany
-        border-color $tiffany
+        background $brownish-grey
+        border-color $brownish-grey
         border-radius 0
         box-shadow none
         text-shadow none
 
         &:hover
         &:focus
-            background darken( $tiffany, 10% )
-            border-color darken( $tiffany, 10% )
+            background darken( $brownish-grey, 10% )
+            border-color darken( $brownish-grey, 10% )
             box-shadow none
 
         &:active
-            background darken( $tiffany, 20% )
-            border-color darken( $tiffany, 10% )
+            background darken( $brownish-grey, 20% )
+            border-color darken( $brownish-grey, 10% )
