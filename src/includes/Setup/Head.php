@@ -132,6 +132,5 @@ class Head extends Base {
 		}
 		$rgb = "{$r}, {$g}, {$b}";
 		return $rgb;
-	 }
-
+	}
 }
