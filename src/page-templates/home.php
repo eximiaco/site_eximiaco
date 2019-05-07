@@ -103,7 +103,7 @@ get_header(); ?>
 					<div class="front-page--quote-content">
 						<span class="front-page--quote-icon"><i class="i-quote"></i></span>
 						<div><?php echo wp_kses_post( get_field( 'quote' ) ); ?></div>
-						<p class="front-page--quote-author">Elemar JR</p>
+						<p class="front-page--quote-author">Elemar JR<br>CEO - Exímia</p>
 					</div>
 				</div>
 			</div>
