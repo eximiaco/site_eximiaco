@@ -27,7 +27,7 @@ global $container;
 	<?php endif; ?>
 
 	<?php
-	if ( ! is_page_template( 'page-templates/contact.php' ) && ! is_page_template( 'page-templates/about.php' ) ) :
+	if ( ! is_page_template( 'page-templates/contact.php' ) ) :
 		get_template_part( 'template-parts/newsletter/form' );
 		endif;
 	?>
