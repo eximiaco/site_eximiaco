@@ -30,7 +30,7 @@ $display_hero = $container->get( 'display_hero' );
 	<div class="top-header-wrapper <?php echo esc_attr( $display_hero ? '' : 'top-header-wrapper__no-hero' ); ?>">
 		<div class="top-languages">
 			<div class="container">
-				<ul class="langs-navigation">
+				<ul class="langs-navigation"><!-- #site-navigation -->
 				<?php
 				$languages = pll_the_languages( array( 'raw' => 1 ) );
 				foreach ( $languages as $lang ) : ?>
@@ -40,13 +40,6 @@ $display_hero = $container->get( 'display_hero' );
 						</a>
 					</li>
 				<?php endforeach; ?>
-					<li class="menu-item">
-						<a href="#" class="menu-link">
-							<button class="search-toggle" aria-controls="search" aria-expanded="false">
-								<i class="i-search"></i>
-							</button>
-						</a>
-					</li>
 				</ul><!-- .langs-navigation -->
 				<ul class="websites-navegation">
 					<?php if ( !empty(get_theme_mod('head_primary_url')) ) :?>
@@ -80,8 +73,16 @@ $display_hero = $container->get( 'display_hero' );
 							)
 						)
 						?>
-				</nav><!-- #site-navigation -->
-
+				</nav>
+				<ul class="langs-navigation">
+					<li class="menu-item">
+						<a href="#" class="menu-link">
+							<button class="search-toggle" aria-controls="search" aria-expanded="false">
+								<i class="i-search"></i>
+							</button>
+						</a>
+					</li>
+				</ul>
 				<div id="site-search" class="site-search">
 					<form method="GET" class="search-form">
 						<button type="submit" class="search-submit">
