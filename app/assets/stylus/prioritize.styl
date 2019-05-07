@@ -62,7 +62,7 @@ button
 // Header wrapper
 .top-header-wrapper
     fixed top left
-    height 125px
+    height $sm-nav-height
     transition .2s ease-out
     width 100%
     z-index 99
@@ -78,9 +78,8 @@ button
     align-items center
     display flex
     justify-content space-between
-    height auto
+    height calc( 100% - 40px )
     position relative
-    padding 15px 0
     z-index 9999
 
     &--collapse
