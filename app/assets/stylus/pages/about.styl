@@ -4,3 +4,38 @@
 
         @media screen and ( min-width $screen-md )
             padding-bottom 150px
+
+.page-section__custom
+    background-color #1d4770
+
+    .page-section--container
+        padding-bottom 0
+
+        h2
+            margin-bottom 0
+            padding-bottom 20px
+            position relative
+
+            &::after
+                border-bottom 1px solid white
+                bottom 0
+                content ''
+                left 0
+                position absolute
+                width 40px
+
+    @media screen and ( min-width $screen-md )
+        .page-section--container
+            text-align right
+            padding-bottom 0
+            padding-top 0
+
+            h2
+                margin-bottom 0
+                padding-bottom 20px
+                position relative
+
+                &::after
+                    bottom 0
+                    left auto
+                    right 0
