@@ -107,7 +107,7 @@ class Head extends Base {
 	 * Add multiples custom_css
 	 */
 	public function custom_css() {
-		echo sprintf( '<style>:root{ --color-primary: %s; --color-secondary: %s; } .top-header-wrapper__sticky{ background-color: rgba(%s, %s) }</style>',
+		echo sprintf( '<style>:root{ --color-primary: %s; --color-secondary: %s; } .top-header-wrapper{ background-color: rgba(%s, %s) }</style>',
 			get_theme_mod('colors_primary'),
 			get_theme_mod('colors_secondary'),
 			$this->hex2rgb(get_theme_mod('colors_secondary')),
