@@ -30,17 +30,11 @@ get_header(); ?>
 	while ( have_posts() ) :
 		the_post();
 		?>
-	<?php
-	$text_event = explode('<p>&nbsp;</p>', get_field( 'cta_text' ) );
-	$text_header = $text_event[0];
-	$text_footer = $text_event[1];
-	?>
 	<div class="container events__container">
-		<div class="page-header">
-			<h3 class="page-header--title"><?php the_title(); ?></h3>
-		</div>
-		<h4 class="events-header--subtitle"><?php echo $text_header; ?></h5>
 		<?php foreach ( $events_by_year as $year => $events ) : ?>
+		<div class="page-header">
+			<h3 class="page-header--title"><?php echo esc_html( __( 'Calendar', 'elemarjr' ) ); ?> <b><?php echo esc_html( $year ); ?></b></h3>
+		</div>
 		<div class="cards-list cards-list--events">
 			<div class="cards-list__wrapper">
 				<?php
@@ -57,7 +51,7 @@ get_header(); ?>
 	<div class="events__about">
 		<div class="container events__container">
 			<div class="events--about-text">
-				<?php echo $text_footer; ?>
+				<?php the_field( 'cta_text' ); ?>
 			</div>
 		</div>
 	</div>

@@ -20,6 +20,7 @@ class Login extends Base {
 	public function init() {
 		add_action( 'login_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_filter( 'login_message', array( $this, 'get_logo' ) );
+		add_action( 'login_head', array( $this, 'custom_css' ), 5 );
 	}
 
 	/**
@@ -33,5 +34,15 @@ class Login extends Base {
 	{
 		$logo_url = get_theme_mod('head_logo') ? get_theme_mod('head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' );
 		echo "<a href=\"#\" class=\"logo-header\"><img src=\"{$logo_url}\" alt=\"\" /></a>";
+	}
+
+	/**
+	 * Add multiples custom_css
+	 */
+	public function custom_css() {
+		echo sprintf( '<style>:root{ --color-primary: %s; --color-secondary: %s; }</style>',
+			get_theme_mod('colors_primary'),
+			get_theme_mod('colors_secondary')
+		);
 	}
 }

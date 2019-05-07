@@ -45,6 +45,7 @@
         line-height 28px
 
     &--title
+        color var-use( color-primary )
         font-size 26px
         font-weight normal
         margin-top 0
@@ -73,9 +74,13 @@
         & ^[0..-2]--button
             @extend $placeholder
 
-    &__dusky
+    &__dusky,
+    &__dark
         background var-use( color-primary )
         color $white
+
+        .page-section--title
+            color white
 
         & ^[0..-2]--button
             @extend $placeholder
