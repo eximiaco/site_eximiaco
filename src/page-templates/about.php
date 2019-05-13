@@ -35,7 +35,7 @@ $page_section = $container->get( PageSection::class ); ?>
 		while ( have_rows( 'about_repeater' ) ) :
 			the_row();
 			?>
-			<?php if ( $page_section->get_title() == 'Experiência' ) : ?>
+			<?php if ( strtolower($page_section->get_title()) == 'experiência' || strtolower($page_section->get_title()) == 'experience' ) : ?>
 			<div class="<?php echo esc_attr( $page_section->get_row_classes() ); ?> page-section__custom_<?php echo ( get_theme_mod('head_primary_url') == 'https://eximia.tech' ? 'co' : 'tech' ); ?>">
 			<?php else : ?>
 			<div class="<?php echo esc_attr( $page_section->get_row_classes() ); ?>">
