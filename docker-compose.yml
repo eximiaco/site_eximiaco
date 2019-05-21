@@ -41,8 +41,8 @@ services:
     image: schickling/mailcatcher
     restart: always
     ports:
-      - "1026:1026"
-      - "1081:1081"
+      - "1025:1025"
+      - "1080:1080"
     environment:
       MAILCATCHER_PORT: 1025
 
