@@ -76,6 +76,9 @@ if ( '' === $url ) {
 		<div class="card__content">
 			<p class="card__role"><?php the_field( 'event_role' ); ?></p>
 			<h3 class="card__title"><?php the_field( 'event_name' ); ?></h3>
+			<?php if ( ! empty( get_field( 'event_responsible' ) ) ) : ?>
+			<p class="card__responsible"><?php the_field( 'event_responsible' ); ?></p>
+			<?php endif; ?>
 		</div>
 		<div class="card__footer"><?php the_title(); ?></div>
 	</div>
