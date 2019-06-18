@@ -90,12 +90,18 @@ class Event extends Base {
 					'label' => __( 'Role', 'elemarjr' ),
 				),
 				array(
+					'type' => 'text',
+					'key' => 'event_responsible',
+					'name' => 'event_responsible',
+					'label' => __( 'Responsible', 'elemarjr' ),
+				),
+				array(
 					'type' => 'url',
 					'key' => 'event_url',
 					'name' => 'event_url',
 					'label' => __( 'URL', 'elemarjr' ),
 				),
-			 ),
+			),
 			 'location' => $this->location,
 			)
 		);
