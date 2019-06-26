@@ -8,7 +8,7 @@ function kill() {
 
 compose="docker-compose -f docker-compose.yml"
 os=$(uname -s)
-if [ 'Darwin' == $os ]; then
+if [ 'Darwin' = $os ]; then
 	compose="${compose} -f docker-compose.mac.yml"
 fi
 
