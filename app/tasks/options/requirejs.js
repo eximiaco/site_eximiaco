@@ -6,6 +6,7 @@ module.exports = {
 		options: {
 			baseUrl: 'bower_components',
 			include: [ 'almond/almond' ],
+			preserveLicenseComments : false,
 			paths: {
 				app: '../app/assets/js/app'
 			},
