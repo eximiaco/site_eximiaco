@@ -29,6 +29,8 @@ class Head extends Base {
 		add_action( 'wp_head', $this->callback( 'viewport' ), 1 );
 		add_action( 'wp_head', $this->callback( 'charset' ), 1 );
 		add_action( 'wp_head', $this->callback( 'favicons' ), 1 );
+		add_action( 'wp_head', $this->callback( 'keywords' ), 1 );
+		add_action( 'wp_head', $this->callback( 'author' ), 1 );
 		add_action( 'wp_head', $this->callback( 'custom_css' ), 5 );
 	}
 
@@ -75,10 +77,40 @@ class Head extends Base {
 	}
 
 	/**
-	 * Add vieport meata tag
+	 * Add vieport meta tag
 	 */
 	public function viewport() {
 		echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">' . esc_html( PHP_EOL );
+	}
+
+	/**
+	 * Add author meta tag
+	 */
+	public function author() {
+		if ( is_single() ) {
+			global $post;
+			$author = get_the_author_meta('user_nicename', $post->post_author);
+			if ( '' != $author ) {
+				echo sprintf( '<meta name="author" content="%s" />', $author ) . esc_html( PHP_EOL );
+			}
+		}
+	}
+
+	/**
+	 * Add author meta tag
+	 */
+	public function keywords() {
+		if ( is_single() ) {
+			global $post;
+			$keywords = get_the_tags( $post->ID );
+			if ( ! empty( $keywords ) ) {
+				$meta_keywords = array();
+				foreach ( $keywords as $keyword ) {
+					$meta_keywords[] = $keyword->name;
+				}
+				echo sprintf( '<meta name="keywords" content="%s" />', implode( ', ', $meta_keywords ) ) . esc_html( PHP_EOL );
+			}
+		}
 	}
 
 	/**
