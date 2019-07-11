@@ -29,7 +29,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/blog/content-parts/serie' ); ?>
 
-			<?php the_title( '<h1 class="post--title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
+			<?php the_title( '<h1 class="post--title">', '</h1>' ); ?>
 
 			<?php get_template_part( 'template-parts/blog/single/meta' ); ?>
 			</header>
