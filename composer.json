@@ -37,7 +37,8 @@
 		"wpackagist-plugin/wp-session-manager" : "^4.1",
 		"wpackagist-plugin/slideshare": "^1.9",
 		"wpackagist-plugin/wp-smushit": "^3.1",
-		"wpackagist-plugin/classic-editor": "^1.4"
+		"wpackagist-plugin/classic-editor": "^1.4",
+		"wpackagist-plugin/restricted-site-access": "^7.1"
 	},
 	"require-dev" : {
 		"deployer/deployer" : "^6.0",
