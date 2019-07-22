@@ -23,7 +23,7 @@
 		"php-di/php-di" : "^5.4",
 		"aaemnnosttv/wp-cli-dotenv-command" : "^1.0",
 		"johnpbloch/wordpress" : "^5.1",
-		"wp-cli/wp-cli" : "^1.5.1",
+		"wp-cli/wp-cli-bundle" : "^2.2",
 		"worddrop/bookworm" : "dev-master",
 		"wpackagist-plugin/all-in-one-favicon" : "~4.6",
 		"wpackagist-plugin/akismet" : "~4.0",
