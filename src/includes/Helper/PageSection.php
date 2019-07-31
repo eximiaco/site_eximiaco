@@ -151,6 +151,7 @@ class PageSection extends Base {
 				'light' => __( 'Background Gray and Title Black', 'elemarjr' ),
 				'dark'  => __( 'Background Black and Title White', 'elemarjr' ),
 				'dusky' => __( 'Background Dusky and Title White', 'elemarjr' ),
+				'darken' => __( 'Background Dark and Title White', 'elemarjr' ),
 			)
 		);
 	}
@@ -192,6 +193,9 @@ class PageSection extends Base {
 					break;
 				case 'dusky':
 					$classes[] = 'page-section__dusky';
+					break;
+				case 'darken':
+					$classes[] = 'page-section__darken';
 					break;
 			}
 		}

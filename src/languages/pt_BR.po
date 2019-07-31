@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2019-07-31 17:27:46+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: 404.php:17
 msgid "Page not found"
@@ -44,7 +44,7 @@ msgstr "Comentários estão fechados."
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: header.php:60
+#: header.php:91
 msgid "Search"
 msgstr "Buscar"
 
@@ -76,6 +76,38 @@ msgstr "Banner na página do post"
 msgid "Single post promotion banner"
 msgstr "Banner na página do post"
 
+#: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
+msgid "Color Scheme"
+msgstr "Esquema de cores"
+
+#: includes/Customize/Colors.php:52
+msgid "Primary Color"
+msgstr "Cor Primária"
+
+#: includes/Customize/Colors.php:62
+msgid "Secondary Color"
+msgstr "Cor Secundária"
+
+#: includes/Customize/Colors.php:73
+msgid "Main menu opacity"
+msgstr "Opacidade do menu principal"
+
+#: includes/Customize/Head.php:42
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: includes/Customize/Head.php:61
+msgid "Logo"
+msgstr "Logo"
+
+#: includes/Customize/Head.php:74
+msgid "Primary Website"
+msgstr "Site Primário"
+
+#: includes/Customize/Head.php:97
+msgid "Secondary Website"
+msgstr "Site Secundário"
+
 #: includes/Customize/Newsletter.php:47
 msgid "Newletter Form"
 msgstr "Formulário de Newsletter"
@@ -84,17 +116,81 @@ msgstr "Formulário de Newsletter"
 msgid "Title - (%s)"
 msgstr "Título - (%s)"
 
-#: includes/Customize/Newsletter.php:88
+#: includes/Customize/Newsletter.php:87
 #: includes/Integration/ACF/Pages/HomePage.php:166
 msgid "Background"
 msgstr "Fundo"
 
+#: includes/Customize/Newsletter.php:101
+msgid "Form action"
+msgstr "Ação do formulário"
+
+#: includes/Customize/Newsletter.php:102
+msgid "Form action url"
+msgstr "Url da ação do formulário"
+
+#: includes/Customize/Newsletter.php:113
+msgid "User ID"
+msgstr "Id do usuário"
+
+#: includes/Customize/Newsletter.php:114
+msgid "Mailchimp user identification"
+msgstr "Usuário de identificação do Mailchimp"
+
+#: includes/Customize/Newsletter.php:125
+msgid "Form ID"
+msgstr "Id do formulário"
+
+#: includes/Customize/Newsletter.php:126
+msgid "Mailchimp form identification"
+msgstr "Formulário de identificação do Mailchimp"
+
+#: includes/Customize/Newsletter.php:137
+msgid "Enter the form input name tag for these fields"
+msgstr "Informe o nome da tag de formulário para estes campos"
+
+#: includes/Customize/Newsletter.php:138
+msgid "Field \"Name\""
+msgstr "Campo \"Nome\""
+
+#: includes/Customize/Newsletter.php:149
+msgid "Field \"Surname\""
+msgstr "Campo \"Sobrenome\""
+
+#: includes/Customize/Newsletter.php:160
+msgid "Field \"E-mail\""
+msgstr "Campo \"Email\""
+
+#: includes/Customize/Newsletter.php:175
+msgid "Custom content field (%s)"
+msgstr "Campo de conteúdo personalizado"
+
+#: includes/Customize/Newsletter.php:176
+msgid "Field Label (%s)"
+msgstr "Rótulo do campo - (%s)"
+
+#: includes/Customize/Newsletter.php:189
+msgid "Field ID"
+msgstr "Id do campo"
+
+#: includes/Customize/Newsletter.php:200
+msgid "Field Name"
+msgstr "Campo Nome"
+
+#: includes/Customize/Social.php:41
+msgid "Social Media"
+msgstr "Mídia Social"
+
+#: includes/Customize/Social.php:52
+msgid "Twitter Account"
+msgstr "Conta do Twitter"
+
 #: includes/Form/Contact.php:42 includes/Integration/ACF/PostType/Event.php:62
-#: template-parts/newsletter/form.php:46
+#: template-parts/newsletter/form.php:49
 msgid "Name"
 msgstr "Nome"
 
-#: includes/Form/Contact.php:43 template-parts/newsletter/form.php:48
+#: includes/Form/Contact.php:43 template-parts/newsletter/form.php:51
 msgid "Email"
 msgstr "E-mail"
 
@@ -195,10 +291,6 @@ msgstr "Rótulo do botão"
 msgid "Button URL"
 msgstr "URL do botão"
 
-#: includes/Helper/PageSection.php:148
-msgid "Color Scheme"
-msgstr "Esquema de cores"
-
 #: includes/Helper/PageSection.php:150
 msgid "Background White and Title Black"
 msgstr "Fundo Branco e Título Preto"
@@ -214,6 +306,10 @@ msgstr "Fundo Preto e Título Branco"
 #: includes/Helper/PageSection.php:153
 msgid "Background Dusky and Title White"
 msgstr "Fundo Escuro e Título Branco"
+
+#: includes/Helper/PageSection.php:154
+msgid "Background Dark and Title White"
+msgstr "Fundo Mais Escura e Título Branco"
 
 #: includes/Integration/ACF/Pages/About.php:84
 #: includes/Integration/ACF/PostType/Service.php:65
@@ -294,7 +390,7 @@ msgid "Label"
 msgstr "Rótulo"
 
 #: includes/Integration/ACF/Pages/Event.php:73
-#: includes/Integration/ACF/PostType/Event.php:96
+#: includes/Integration/ACF/PostType/Event.php:102
 msgid "URL"
 msgstr "URL"
 
@@ -373,6 +469,10 @@ msgstr "Data final"
 #: includes/Integration/ACF/PostType/Event.php:90
 msgid "Role"
 msgstr "Posição"
+
+#: includes/Integration/ACF/PostType/Event.php:96
+msgid "Responsible"
+msgstr ""
 
 #: includes/Integration/ACF/PostType/Lab.php:55 includes/PostType/Lab.php:37
 msgid "Lab"
@@ -581,11 +681,11 @@ msgstr "Nenhuma recomendação encontrada."
 msgid "No testimonials found in Trash."
 msgstr "Nenhuma recomendação encontrada na lixeira."
 
-#: includes/Setup/Navigation.php:33
+#: includes/Setup/Navigation.php:34
 msgid "Primary"
 msgstr "Primário"
 
-#: includes/Setup/Navigation.php:34
+#: includes/Setup/Navigation.php:35
 msgid "Social Menu"
 msgstr "Menu Social"
 
@@ -693,11 +793,11 @@ msgstr "Séries Populares"
 msgid "No series found."
 msgstr "Nenhuma série encontrada."
 
-#: index.php:37
+#: index.php:33
 msgid "Previous Page"
 msgstr "Página Anterior"
 
-#: index.php:37
+#: index.php:33
 msgid "Next Page"
 msgstr "Próxima Página"
 
@@ -713,7 +813,7 @@ msgstr "Agenda"
 msgid "Last posts in English"
 msgstr "Últimos posts em Inglês"
 
-#: page-templates/restricted-area.php:53
+#: page-templates/restricted-area.php:59
 msgid "Logout"
 msgstr "Logout"
 
@@ -732,7 +832,7 @@ msgstr "Resultados de Busca por &#8220;%s&#8221;"
 msgid "Page %s"
 msgstr "Página %s"
 
-#: template-parts/blog/category-nav.php:29
+#: template-parts/blog/category-nav.php:34
 msgid "Show All"
 msgstr "Ver Todos"
 
@@ -753,13 +853,13 @@ msgstr "%1$s às %2$s"
 msgid "reading time:"
 msgstr "tempo de leitura:"
 
-#: template-parts/blog/single/post-nav.php:27
-#: template-parts/blog/single/post-nav.php:36
+#: template-parts/blog/single/post-nav.php:35
+#: template-parts/blog/single/post-nav.php:44
 msgid "Previous"
 msgstr "Anterior"
 
-#: template-parts/blog/single/post-nav.php:62
-#: template-parts/blog/single/post-nav.php:76
+#: template-parts/blog/single/post-nav.php:69
+#: template-parts/blog/single/post-nav.php:83
 msgid "Next"
 msgstr "Próximo"
 
@@ -780,39 +880,23 @@ msgstr "e"
 msgid "what we wrote about it"
 msgstr "o que escrevemos sobre"
 
-#: template-parts/newsletter/form.php:47
+#: template-parts/newsletter/form.php:50
 msgid "Surname"
 msgstr "Sobrenome"
 
-#: template-parts/newsletter/form.php:51
+#: template-parts/newsletter/form.php:54
 msgid "Check the content of your interest"
 msgstr "Marque o conteúdo de seu interesse"
 
-#: template-parts/newsletter/form.php:56
-msgid "Events in which we will speak"
-msgstr "Eventos em que iremos palestrar"
-
-#: template-parts/newsletter/form.php:64
-msgid "English content"
-msgstr "Conteúdo em inglês"
-
-#: template-parts/newsletter/form.php:72
-msgid "Portuguese content"
-msgstr "Conteúdo em Português"
-
-#: template-parts/newsletter/form.php:80
-msgid "Offers and Promotions"
-msgstr "Ofertas e Promoções"
-
-#: template-parts/newsletter/form.php:88
+#: template-parts/newsletter/form.php:69
 msgid "Select at least one interest"
 msgstr "Selecione pelo menos um interesse"
 
-#: template-parts/newsletter/form.php:92
+#: template-parts/newsletter/form.php:73
 msgid "Subscribe"
 msgstr "Inscrever-se"
 
-#: template-parts/page/home/blog.php:52
+#: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Veja mais"
 
@@ -840,6 +924,18 @@ msgstr "Página Inicial"
 msgid "Restricted area"
 msgstr "Área restrita"
 
+#~ msgid "Events in which we will speak"
+#~ msgstr "Eventos em que iremos palestrar"
+
+#~ msgid "English content"
+#~ msgstr "Conteúdo em inglês"
+
+#~ msgid "Portuguese content"
+#~ msgstr "Conteúdo em Português"
+
+#~ msgid "Offers and Promotions"
+#~ msgstr "Ofertas e Promoções"
+
 #~ msgid "Gallery"
 #~ msgstr "Galeria"
 
@@ -851,9 +947,6 @@ msgstr "Área restrita"
 
 #~ msgid "Type your email"
 #~ msgstr "Digite seu e-mail"
-
-#~ msgid "First Name"
-#~ msgstr "Nome"
 
 #~ msgid "Last Name"
 #~ msgstr "Sobrenome"
