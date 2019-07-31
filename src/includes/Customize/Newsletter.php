@@ -161,10 +161,11 @@ class Newsletter extends Base {
 			'section' => $section_id,
 		) );
 
-		for ( $x=1; $x <= 4; $x++ ) {
+		$languages_list = PLL()->model->get_languages_list();
+		for ( $x=1; $x <= ( count($languages_list) * 2 ); $x++ ) {
 
 			$y = true;
-			foreach ( PLL()->model->get_languages_list() as $lang ) {
+			foreach ( $languages_list as $lang ) {
 				$wp_customize->add_setting(
 					"{$section_id}_content_{$lang->slug}_{$x}_label", array(
 					'default' => '',
