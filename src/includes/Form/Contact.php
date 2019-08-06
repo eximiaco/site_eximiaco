@@ -76,6 +76,7 @@ class Contact extends Form {
 			);
 			$wp_customize->add_control(
 				$email_id, array(
+				/* translators: %s: website locale */
 				'label' => sprintf( __( 'Email that receive the contact - (%s)', 'elemarjr' ), $lang->locale ),
 				'section' => $section_id,
 				'type' => 'text',
@@ -90,6 +91,7 @@ class Contact extends Form {
 			);
 			$wp_customize->add_control(
 				$subject_id, array(
+				/* translators: %s: locale */
 				'label' => sprintf( __( 'Email subject - (%s)', 'elemarjr' ), $lang->locale ),
 				'section' => $section_id,
 				'type' => 'text',

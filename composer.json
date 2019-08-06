@@ -4,18 +4,6 @@
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "https://wpackagist.org"
-		},
-		{
-			"type": "package",
-			"package": {
-				"name": "wp/i18n-tools",
-				"version": "dev-master",
-				"source": {
-					"url": "https://develop.svn.wordpress.org",
-					"type": "svn",
-					"reference": "trunk/tools/i18n/"
-				}
-			}
 		}
 	],
 	"require" : {
@@ -44,7 +32,6 @@
 		"deployer/deployer" : "^6.0",
 		"deployer/recipes" : "^6.0",
 		"wpackagist-plugin/query-monitor" : "^3.0",
-		"wp/i18n-tools" : "dev-master",
 		"wp-coding-standards/wpcs" : "^0.14.0"
 	},
 	"autoload" : {
