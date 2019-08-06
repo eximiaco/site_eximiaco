@@ -171,6 +171,18 @@ class HomePage extends Base {
 					'name' => 'quote',
 					'label' => __( 'Quote', 'elemarjr' ),
 				),
+				array(
+					'type' => 'text',
+					'key' => 'quote-author',
+					'name' => 'quote-author',
+					'label' => __( 'Quote author', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'quote-job-role',
+					'name' => 'quote-job-role',
+					'label' => __( 'Quote job role', 'elemarjr' ),
+				),
 			 ),
 			 'location' => $this->location,
 			)
