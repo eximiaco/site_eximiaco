@@ -42,20 +42,17 @@ get_header(); ?>
 					setup_postdata( $post );
 					get_template_part( 'template-parts/event/event' );
 				endforeach;
-
 				wp_reset_postdata();
 				?>
 			</div>
 		</div>
 		<?php endforeach; ?>
-
-		<div class="events__about">
+	</div>
+	<div class="events__about">
+		<div class="container events__container">
 			<div class="events--about-text">
 				<?php the_field( 'cta_text' ); ?>
 			</div>
-			<a href="<?php the_field( 'cta_url' ); ?>" class="button button__bordered">
-				<?php the_field( 'cta_label' ); ?>
-			</a>
 		</div>
 	</div>
 	<?php endwhile; ?>

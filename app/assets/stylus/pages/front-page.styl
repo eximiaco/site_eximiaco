@@ -18,11 +18,10 @@
 
         &-content
             font-size 16px
-            line-height 1.75
             width 100%
 
         &-title
-            color $dark-grey
+            color var-use( color-primary )
             font-size 32px
             font-weight 100
             letter-spacing 2px
@@ -30,6 +29,14 @@
             margin-bottom 75px
             position relative
             z-index 5
+
+            &:before
+                border-bottom 1px solid var-use( color-primary )
+                bottom -20px
+                content ''
+                left 0
+                position absolute
+                width 40px
 
             @media screen and ( min-width $screen-lg )
                 letter-spacing 3.5px
@@ -41,11 +48,9 @@
             flex-direction row
 
             &-content
-                width 50%
+                width 100%
 
             &-image
-                right 20px
-                top 50%
                 transform translateY( -50% )
                 width 50%
 
@@ -58,11 +63,10 @@
         @media screen and ( min-width $screen-lg )
             &-image
                 padding-right 40px
-                position static
                 transform none
 
     &--quote
-        background-color $quote-bg
+        background-color var-use( color-primary )
         background-position center
         background-repeat repeat
         background-size cover
@@ -77,6 +81,7 @@
             display inline-block
             font-size 14px
             font-weight bold
+            line-height 20px
             margin-top 15px
             padding-top 15px
 
@@ -125,7 +130,7 @@
         padding 50px 0
 
         &-title
-            color $black
+            color var-use( color-primary )
             display inline-block
             font-size 32px
             font-weight 300
@@ -137,7 +142,7 @@
             width 100%
 
             &:after
-                border-bottom 1px solid $dusky-blue
+                border-bottom 1px solid var-use( color-primary )
                 bottom -20px
                 content ''
                 left 0
@@ -166,7 +171,7 @@
                 &:after
                     display none
 
-            .listing-post:last-child
+            .listing-post:nth-child(4)
                 display none
 
                 @media screen and ( min-width $screen-md )
@@ -193,7 +198,7 @@
             padding-bottom 30px
 
         .swiper-pagination
-            color $brownish-grey
+            color var-use( color-primary )
             text-align center
 
         .swiper-pagination-fraction
@@ -212,3 +217,14 @@
 
         .swiper-button-prev
             transform rotate( -180deg )
+
+.home
+    .hero--wrapper
+            align-items center
+            padding-bottom 0
+
+            @media screen and ( min-width $screen-md )
+                padding-bottom 0
+
+    .hero--container
+            padding-top 60px

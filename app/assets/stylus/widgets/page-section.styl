@@ -7,9 +7,10 @@
         justify-content space-between
         padding 50px $page-section-padding-horizontal-sm
         position relative
+        display flex
+        flex-wrap wrap
 
         @media screen and ( min-width $screen-md )
-            display flex
             padding 70px $page-section-padding-horizontal-md
 
     &--content
@@ -45,6 +46,7 @@
         line-height 28px
 
     &--title
+        color var-use( color-primary )
         font-size 26px
         font-weight normal
         margin-top 0
@@ -67,18 +69,28 @@
         background $white-two
 
     &__dark
-        background $dark-grey
+        background var-use( color-secondary )
         color $white
 
         & ^[0..-2]--button
             @extend $placeholder
 
-    &__dusky
-        background $dusky-blue
+    &__dusky,
+    &__dark
+        background var-use( color-primary )
         color $white
+
+        .page-section--title
+            color white
 
         & ^[0..-2]--button
             @extend $placeholder
+
+    &__darken
+        background-color var( --color-secondary )
+        color $white
+        .page-section--title
+            color white
 
     // Right modifier
     &__invert
@@ -90,6 +102,31 @@
             @media screen and ( min-width $screen-lg )
                 margin-left 0
                 margin-right 40px
+
+    // Padding
+    &__without-padding
+        .page-section
+            &--container
+                padding-top 0
+                padding-bottom 0
+                text-align right
+
+            &--content
+                padding-top 30px
+                padding-bottom 30px
+
+                h2
+                    margin-bottom 0
+                    padding-bottom 20px
+                    position relative
+
+                    &::after
+                        border-bottom 1px solid white
+                        bottom 0
+                        content ''
+                        position absolute
+                        width 40px
+                        right 0
 
     // Customer template
     &__customers

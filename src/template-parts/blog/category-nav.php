@@ -14,6 +14,11 @@
  * @var DI\Container
  */
 global $container;
+
+$current_category = single_cat_title( '', false );
+if ( '' != $current_category ) {
+	echo '<h1 style="display:none;">' . $current_category . '</h1>';
+}
 ?>
 <nav class="category-nav">
 	<ul>

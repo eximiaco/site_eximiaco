@@ -41,47 +41,30 @@ foreach ( $bg_images as $size => $url ) :
 		<h2 class="newsletter--title">
 			<?php echo wp_kses_post( get_theme_mod( $newsletter->get_theme_mod_control_id( $lang, 'title' ) ) ); ?>
 		</h2>
-		<form class="form newsletter--form" method="post" action="https://elemarjr.us17.list-manage.com/subscribe/post?u=0ea74f86198646647c46d29cf&amp;id=cd82e1ff48" target="_blank">
+		<form class="form newsletter--form" method="post" action="<?php echo get_theme_mod('newsletter_action'); ?>" target="_blank">
+			<input type="hidden" name="u" value="<?php echo get_theme_mod('newsletter_u'); ?>">
+			<input type="hidden" name="id" value="<?php echo get_theme_mod('newsletter_id'); ?>">
+
 			<div class="newsletter--inputs">
-				<input class="col-6" type="text" name="FNAME" placeholder="<?php esc_attr_e( 'Name', 'elemarjr' ); ?>" required>
-				<input type="text" name="LNAME" placeholder="<?php esc_attr_e( 'Surname', 'elemarjr' ); ?>" required>
-				<input type="email" name="EMAIL" placeholder="<?php esc_attr_e( 'Email', 'elemarjr' ); ?>" required>
+				<input type="text"	name="<?php echo get_theme_mod('newsletter_name'); ?>" placeholder="<?php esc_attr_e( 'Name', 'elemarjr' ); ?>" class="col-6" required>
+				<input type="text"	name="<?php echo get_theme_mod('newsletter_surname'); ?>" placeholder="<?php esc_attr_e( 'Surname', 'elemarjr' ); ?>" required>
+				<input type="email"	name="<?php echo get_theme_mod('newsletter_email'); ?>" placeholder="<?php esc_attr_e( 'Email', 'elemarjr' ); ?>" required>
 			</div>
 
 			<h4 class="newsletter--divisortitle"><?php esc_html_e( 'Check the content of your interest', 'elemarjr' ); ?></h4>
 
 			<div class="newsletter--options">
-				<label for="evt-pale">
-					<div class="newsletter--interest">
-						<span><?php esc_html_e( 'Events in which we will speak', 'elemarjr' ); ?></span>
-						<input id="evt-pale" class="newsletter--check" type="checkbox" name="group[4625][1]" value="1">
-						<span class="checkmark"></span>
-					</div>
-				</label>
-
-				<label for="cont-en">
-					<div class="newsletter--interest">
-						<span><?php esc_html_e( 'English content', 'elemarjr' ); ?></span>
-						<input id="cont-en" class="newsletter--check" type="checkbox" name="group[4625][2]" value="2">
-						<span class="checkmark"></span>
-					</div>
-				</label>
-
-				<label for="cont-pt">
-					<div class="newsletter--interest">
-						<span><?php esc_html_e( 'Portuguese content', 'elemarjr' ); ?></span>
-						<input id="cont-pt" class="newsletter--check" type="checkbox" name="group[4625][4]" value="4">
-						<span class="checkmark"></span>
-					</div>
-				</label>
-
-				<label for="ofrt-prom">
-					<div class="newsletter--interest">
-						<span><?php esc_html_e( 'Offers and Promotions', 'elemarjr' ); ?></span>
-						<input id="ofrt-prom" class="newsletter--check" type="checkbox" name="group[4625][8]" value="8">
-						<span class="checkmark"></span>
-					</div>
-				</label>
+				<?php for ( $x=1; $x <= 6; $x++ ) : ?>
+					<?php if(!empty(get_theme_mod("newsletter_content_{$x}_id"))): ?>
+						<label for="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>">
+							<div class="newsletter--interest">
+								<span><?php echo get_theme_mod("newsletter_content_{$lang->slug}_{$x}_label"); ?></span>
+								<input id="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>" name="<?php echo get_theme_mod("newsletter_content_{$x}_name"); ?>" class="newsletter--check" type="checkbox" value="Y">
+								<span class="checkmark"></span>
+							</div>
+						</label>
+					<?php endif;?>
+				<?php endfor; ?>
 			</div>
 
 			<p class="newsletter--check-validation-message">

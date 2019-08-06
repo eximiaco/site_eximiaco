@@ -151,6 +151,25 @@ class PageSection extends Base {
 				'light' => __( 'Background Gray and Title Black', 'elemarjr' ),
 				'dark'  => __( 'Background Black and Title White', 'elemarjr' ),
 				'dusky' => __( 'Background Dusky and Title White', 'elemarjr' ),
+				'darken' => __( 'Background Dark and Title White', 'elemarjr' ),
+			)
+		);
+	}
+
+	/**
+	 * Add padding section field.
+	 *
+	 * @return array
+	 */
+	public function add_padding_field() {
+		return array(
+			'type'    => 'radio',
+			'key'     => 'padding',
+			'name'    => 'padding',
+			'label'   => __( 'Padding Section', 'elemarjr' ),
+			'choices' => array(
+				'with'  => __( 'With padding', 'elemarjr' ),
+				'without' => __( 'Without padding', 'elemarjr' ),
 			)
 		);
 	}
@@ -166,6 +185,7 @@ class PageSection extends Base {
 		$this->get_color_scheme_class( $classes );
 		$this->get_image_align_class( $classes );
 		$this->get_image_position_class( $classes );
+		$this->get_padding_class( $classes );
 
 		return implode( ' ', $classes );
 	}
@@ -192,6 +212,9 @@ class PageSection extends Base {
 					break;
 				case 'dusky':
 					$classes[] = 'page-section__dusky';
+					break;
+				case 'darken':
+					$classes[] = 'page-section__darken';
 					break;
 			}
 		}
@@ -224,6 +247,20 @@ class PageSection extends Base {
 
 		if ( $align !== 'none' ) {
 			$classes[] = 'page-section__image-' . $align;
+		}
+	}
+
+	/**
+	 * Add padding classes.
+	 *
+	 * @param  array $classes Classes array.
+	 * @return void
+	 */
+	private function get_padding_class( &$classes ) {
+		$padding = $this->get_field( 'padding' );
+
+		if ( $padding === 'without' ) {
+			$classes[] = 'page-section__without-padding';
 		}
 	}
 

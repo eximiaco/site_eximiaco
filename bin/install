@@ -132,6 +132,7 @@ fi
 
 # Install portuguese language
 $wp language core install pt_BR --activate
+$wp language core install es_ES
 
 # Update language of core, theme and plugins
 $wp language core update

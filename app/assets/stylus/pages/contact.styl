@@ -1,8 +1,4 @@
 .contact
-    color $black
-    padding-bottom 70px
-    text-align center
-
     &--subtitle
         color $black
         font-weight bold
@@ -17,7 +13,7 @@
     .form
         input,
         textarea
-            border-color $black
+            border-color var-use( color-primary )
 
             &::placeholder
                 color $black
@@ -54,3 +50,8 @@
     &,
     .site-content
         background $white-two
+
+article.contact
+    color $black
+    padding-bottom 70px
+    text-align center

@@ -1,5 +1,8 @@
 FROM wordpress:cli-php7.2
 
+# this package is not registered on packagist
+RUN php -d memory_limit=512M "$(which wp)" package install 10up/mu-migration
+
 USER root
 
 RUN set -ex; \

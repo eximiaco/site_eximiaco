@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Docker
 ## Kill and remove all existing Docker containers
 function kill() {
@@ -8,7 +10,7 @@ function kill() {
 
 compose="docker-compose -f docker-compose.yml"
 os=$(uname -s)
-if [ 'Darwin' == $os ]; then
+if [ 'Darwin' = $os ]; then
 	compose="${compose} -f docker-compose.mac.yml"
 fi
 
@@ -43,3 +45,6 @@ alias ngrok="${compose} run --rm ngrok"
 ## phpcs
 alias phpcs="php phpcs -s"
 alias phpcbf="php phpcbf"
+
+## Make Pot
+alias i18n="${compose} run --rm -u $(id -u ${USER}):$(id -g ${USER}) wp i18n make-pot ../src ../src/languages/elemarjr.pot"

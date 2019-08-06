@@ -4,18 +4,6 @@
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "https://wpackagist.org"
-		},
-		{
-			"type": "package",
-			"package": {
-				"name": "wp/i18n-tools",
-				"version": "dev-master",
-				"source": {
-					"url": "https://develop.svn.wordpress.org",
-					"type": "svn",
-					"reference": "trunk/tools/i18n/"
-				}
-			}
 		}
 	],
 	"require" : {
@@ -23,7 +11,7 @@
 		"php-di/php-di" : "^5.4",
 		"aaemnnosttv/wp-cli-dotenv-command" : "^1.0",
 		"johnpbloch/wordpress" : "^5.1",
-		"wp-cli/wp-cli" : "^1.5.1",
+		"wp-cli/wp-cli-bundle" : "^2.2",
 		"worddrop/bookworm" : "dev-master",
 		"wpackagist-plugin/all-in-one-favicon" : "~4.6",
 		"wpackagist-plugin/akismet" : "~4.0",
@@ -37,13 +25,13 @@
 		"wpackagist-plugin/wp-session-manager" : "^4.1",
 		"wpackagist-plugin/slideshare": "^1.9",
 		"wpackagist-plugin/wp-smushit": "^3.1",
-		"wpackagist-plugin/classic-editor": "^1.4"
+		"wpackagist-plugin/classic-editor": "^1.4",
+		"wpackagist-plugin/restricted-site-access": "^7.1"
 	},
 	"require-dev" : {
 		"deployer/deployer" : "^6.0",
 		"deployer/recipes" : "^6.0",
 		"wpackagist-plugin/query-monitor" : "^3.0",
-		"wp/i18n-tools" : "dev-master",
 		"wp-coding-standards/wpcs" : "^0.14.0"
 	},
 	"autoload" : {

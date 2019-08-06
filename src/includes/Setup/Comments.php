@@ -89,7 +89,7 @@ class Comments extends Base {
 				(<p.*class="(.*)".*?>)
 					(<label\s)((?>.*?>))
 						(
-							((?>.*?\s))<span\sclass="required">(\*)<\/span>
+							((?>.*?\s)+)<span\sclass="required">(\*)<\/span>
 							|
 							(.*)
 						)

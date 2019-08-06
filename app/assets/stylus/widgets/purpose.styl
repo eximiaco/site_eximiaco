@@ -6,7 +6,7 @@
         width 80%
 
     &--title
-        color $black
+        color var-use( color-primary )
         font-size 16px
         font-weight bold
         margin-bottom 10px
@@ -16,10 +16,48 @@
 
     &--icon
         font-size 40px
-        margin-right 20px
+        padding 0 10px 0 0
+        position relative
+
+        @media screen and ( min-width $screen-md )
+            font-size 70px
+            padding 0 55px
+
+            &::after,
+            &::before
+                background-color var-use( color-primary )
+                content ''
+                height 1px
+                margin-top -3px
+                position absolute
+                top 50%
+                width 45px
+
+        &::after
+            right 0
+        &::before
+            left 0
 
         i::before
-            color $black
+            color var-use( color-primary )
 
         @media screen and ( min-width $screen-md )
             margin-right 35px
+
+    &-image
+        float left
+        width 100%
+
+        @media screen and ( min-width $screen-md )
+            width 45%
+            padding-right 30px
+
+    &-info
+        float right
+        width 100%
+
+        @media screen and ( min-width $screen-md )
+            width 55%
+
+        > .purpose
+            align-items: center;

@@ -48,6 +48,14 @@ Build the theme
 
     $ docker-compose run --rm node grunt
 
+## Internationalization
+
+### Make Pot
+
+After source app/profile, the theme language POT file is generated with the command
+
+	$ i18n
+
 ### WordPress
 
 Install the WordPress

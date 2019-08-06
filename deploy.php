@@ -9,23 +9,24 @@ require 'recipe/npm.php';
 require 'app/recipe/bower.php';
 require 'app/recipe/grunt.php';
 
-host('elemarjr.aztecweb.net')
-	->port(2201)
-	->stage('staging')
-    ->user('elemarjr')
-    ->set('branch', 'develop')
-    ->set('deploy_path', '/home/elemarjr/staging');
-
-host('www.elemarjr.com')
+host('eximia.co')
 	->port(2201)
 	->stage('production')
-    ->user('elemarjr')
-    ->set('branch', 'master')
-	->set('deploy_path', '/home/elemarjr/production');
+	->user('eximia')
+	->set('branch', 'master')
+	->set('deploy_path', '/home/eximia/production');
+
+host('staging.eximia.co')
+	->port(2201)
+	->stage('staging')
+	->user('eximia_staging')
+	->set('branch', 'develop')
+	->set('deploy_path', '/home/eximia_staging');
+
 
 set('http_user', 'www-data');
 
-set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/elemarjr.git');
+set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/eximia.git');
 
 set('ssh_multiplexing', false);
 
@@ -42,7 +43,7 @@ set('writable_dirs', [
 ]);
 
 task('deploy:install', function () {
-    run('cd {{release_path}} && bin/install');
+    run('cd {{release_path}} && bin/install', [ 'timeout' => null ]);
 });
 
 task('deploy:notes', function () {

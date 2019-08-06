@@ -37,8 +37,8 @@ class PostNav extends Base {
 	 * @param  \WP_Post $post The current post.
 	 * @return boolean
 	 */
-	private function is_not_private_post( $post ) {
-		return 'private' !== get_post_status( $post );
+	private function is_private_post( $post ) {
+		return 'private' == get_post_status( $post );
 	}
 
 	/**
@@ -52,7 +52,7 @@ class PostNav extends Base {
 	 * @return string
 	 */
 	public function post_join( $join, $in_same_term, $excluded_terms, $taxonomy, $post ) {
-		if ( $this->is_not_private_post( $post ) ) {
+		if ( ! $this->is_private_post( $post ) ) {
 			return $join;
 		}
 
@@ -102,8 +102,8 @@ class PostNav extends Base {
 	private function post_where( $op, $where, $in_same_term, $excluded_terms, $taxonomy, $post ) {
 		global $wpdb;
 
-		if ( $this->is_not_private_post( $post ) ) {
-			return $where;
+		if ( ! $this->is_private_post( $post ) ) {
+			return preg_replace( "/p.post_status = 'publish' OR p.post_status = 'private'/", "p.post_status = 'publish'", $where, 1 );
 		}
 
 		$term       = get_the_terms( $post, $taxonomy )[0];
@@ -127,7 +127,7 @@ class PostNav extends Base {
 	 * @return string
 	 */
 	public function post_sort( $sort, $post, $order ) {
-		if ( $this->is_not_private_post( $post ) ) {
+		if ( ! $this->is_private_post( $post ) ) {
 			return $sort;
 		}
 

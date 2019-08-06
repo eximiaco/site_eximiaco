@@ -111,6 +111,7 @@ class About extends Base {
 						$this->page_section->add_image_position_field(),
 						$this->page_section->add_image_align_field( $this->default ),
 						$this->page_section->add_color_scheme_field(),
+						$this->page_section->add_padding_field(),
 						array (
 							'type'              => 'repeater',
 							'key'               => 'items',

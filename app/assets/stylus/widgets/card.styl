@@ -44,16 +44,17 @@
 
     &__header
         align-items flex-start
-        display flex
+        display block
         justify-content space-between
         margin-bottom 20px
         min-height 64px
 
     &__thumbnail
-        max-height 64px
+        max-height 90px
+        margin 10px 0 20px 0
 
         img
-            max-height 64px
+            max-height 90px
             max-width 100%
             width auto
 
@@ -68,7 +69,7 @@
             margin-top 0
 
         a
-            color $blue-gray
+            color var-use( color-primary )
 
     &__wrapper
         display flex
@@ -80,16 +81,17 @@
 
     &__button
         align-items center
-        background $blue-gray
+        background var-use( color-primary )
         color $white
         display flex
         line-height normal
         padding 2px 4px
         position relative
         text-decoration none
+        text-transform uppercase
 
         &:hover
-            background darken( $blue-gray, 10% )
+            background var-use( color-secondary )
 
         [class^='i-'],
         [class*=' i-']
