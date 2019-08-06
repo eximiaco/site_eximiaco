@@ -94,6 +94,7 @@ button
         &.toggled
             display block
 
+
         @media screen and ( min-width $nav-breakpoint )
             align-items center
             background transparent
@@ -105,6 +106,10 @@ button
 
             &.toggled
                 display flex
+
+        @media screen and ( max-width $nav-breakpoint )
+            .langs-navigation
+                display none
 
     &__searchable
         .main-navigation
