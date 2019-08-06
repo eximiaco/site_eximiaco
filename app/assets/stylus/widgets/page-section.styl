@@ -7,9 +7,10 @@
         justify-content space-between
         padding 50px $page-section-padding-horizontal-sm
         position relative
+        display flex
+        flex-wrap wrap
 
         @media screen and ( min-width $screen-md )
-            display flex
             padding 70px $page-section-padding-horizontal-md
 
     &--content
@@ -104,25 +105,27 @@
 
     // Padding
     &__without-padding
-        .page-section--container
-            padding 0
-            text-align right
+        .page-section
+            &--container
+                padding-top 0
+                padding-bottom 0
+                text-align right
 
-            h2
-                margin-bottom 0
-                padding-bottom 20px
-                position relative
+            &--content
+                padding-top 30px
+                padding-bottom 30px
 
-                &::after
-                    border-bottom 1px solid white
-                    bottom 0
-                    content ''
-                    left 0
-                    position absolute
-                    width 40px
+                h2
+                    margin-bottom 0
+                    padding-bottom 20px
+                    position relative
 
-                    @media screen and ( min-width $screen-md )
-                        left auto
+                    &::after
+                        border-bottom 1px solid white
+                        bottom 0
+                        content ''
+                        position absolute
+                        width 40px
                         right 0
 
     // Customer template
