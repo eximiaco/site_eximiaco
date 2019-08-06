@@ -49,7 +49,7 @@ class Colors extends Base {
 			)
 		);
 		$wp_customize->add_control( "{$section_id}_primary", array(
-			'label' => __( 'Primary Color' ),
+			'label' => __( 'Primary Color', 'elemarjr' ),
 			'type' => 'color',
 			'section' => $section_id,
 		) );
@@ -59,7 +59,7 @@ class Colors extends Base {
 			)
 		);
 		$wp_customize->add_control( "{$section_id}_secondary", array(
-			'label' => __( 'Secondary Color' ),
+			'label' => __( 'Secondary Color', 'elemarjr' ),
 			'type' => 'color',
 			'section' => $section_id,
 		) );
@@ -70,7 +70,7 @@ class Colors extends Base {
 			)
 		);
 		$wp_customize->add_control( "{$section_id}_opacity", array(
-			'label' => __( 'Main menu opacity' ),
+			'label' => __( 'Main menu opacity', 'elemarjr' ),
 			'type' => 'range',
 			'section' => $section_id,
 			'input_attrs' => array(

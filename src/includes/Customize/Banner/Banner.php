@@ -52,7 +52,7 @@ abstract class Banner extends Base {
 			$wp_customize->add_control(
 				new Editor(
 					$wp_customize, $text_id, array(
-						'label' => sprintf( __( 'Text - (%s)', 'elemarjr' ), $lang->locale ),
+						'label' => __( 'Text', 'elemarjr' ) . " - ($lang->locale)",
 						'section' => $section_id,
 						'editor_settings' => array(
 							'quicktags' => true,
@@ -70,7 +70,7 @@ abstract class Banner extends Base {
 			);
 			$wp_customize->add_control(
 				$label_id, array(
-					'label' => sprintf( __( 'Label - (%s)', 'elemarjr' ), $lang->locale ),
+					'label' => __( 'Label', 'elemarjr' ) . " - ($lang->locale)",
 					'section' => $section_id,
 					'type' => 'text',
 				)
@@ -84,7 +84,7 @@ abstract class Banner extends Base {
 			);
 			$wp_customize->add_control(
 				$url_id, array(
-					'label' => sprintf( __( 'URL - (%s)', 'elemarjr' ), $lang->locale ),
+					'label' => __( 'URL', 'elemarjr' ), " - ($lang->locale)",
 					'section' => $section_id,
 					'type' => 'url',
 				)
@@ -101,7 +101,7 @@ abstract class Banner extends Base {
 					$wp_customize,
 					$background_id,
 					array(
-						'label' => sprintf( __( 'Background Image - (%s)', 'elemarjr' ), $lang->locale ),
+						'label' => __( 'Background Image', 'elemarjr' ) . " - ($lang->locale)",
 						'section' => $section_id,
 						'settings' => $background_id,
 					)

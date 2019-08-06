@@ -227,7 +227,9 @@ class Form extends Base {
 		}
 
 		$message .= '<br><br>---<br>';
+		/* translators: %s: website term */
 		$message .= sprintf( __( 'Message sent by %s website', 'elemarjr' ), get_bloginfo( 'name' ) ) . '<br>';
+		/* translators: %s: Sent from term */
 		$message .= sprintf( __( 'Sent from: <a href="%1$s">%1$s</a>', 'elemarjr' ), $referer );
 
 		return $message;
