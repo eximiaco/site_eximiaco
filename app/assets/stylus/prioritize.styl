@@ -217,14 +217,14 @@ button
     float right
     list-style none
     height 40px
-    margin 0
+    margin 0 0 0 20px
     padding 0
 
     .menu-item
         border-bottom 1px solid transparent
         display inline-block
         font-size 12px
-        margin-right 50px
+        margin 0 0 0 20px
 
         &.current-menu-item a
             color var-use( color-primary )
@@ -261,7 +261,7 @@ button
     .menu-item
         display inline-block
         font-size 12px
-        margin-right 50px
+        margin 0 0 0 20px
 
         &.current-menu-item a,
         &.current-menu-item:hover a
@@ -278,16 +278,6 @@ button
 
     @media screen and ( min-width $nav-breakpoint )
         font-weight bold
-
-        .menu-item
-            margin 0 0 0 20px
-
-            &.current-menu-item
-                margin-left 15px
-
-            &.current-menu-item a
-                background-color var( --color-primary )
-
 
 // Search
 .search-form
