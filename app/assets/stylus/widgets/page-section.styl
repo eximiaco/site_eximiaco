@@ -85,6 +85,12 @@
         & ^[0..-2]--button
             @extend $placeholder
 
+    &__darken
+        background-color var( --color-secondary )
+        color $white
+        .page-section--title
+            color white
+
     // Right modifier
     &__invert
         & ^[0..-2]--content
@@ -95,6 +101,29 @@
             @media screen and ( min-width $screen-lg )
                 margin-left 0
                 margin-right 40px
+
+    // Padding
+    &__without-padding
+        .page-section--container
+            padding 0
+            text-align right
+
+            h2
+                margin-bottom 0
+                padding-bottom 20px
+                position relative
+
+                &::after
+                    border-bottom 1px solid white
+                    bottom 0
+                    content ''
+                    left 0
+                    position absolute
+                    width 40px
+
+                    @media screen and ( min-width $screen-md )
+                        left auto
+                        right 0
 
     // Customer template
     &__customers
