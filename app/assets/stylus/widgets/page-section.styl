@@ -103,31 +103,6 @@
                 margin-left 0
                 margin-right 40px
 
-    // Padding
-    &__without-padding
-        .page-section
-            &--container
-                padding-top 0
-                padding-bottom 0
-                text-align right
-
-            &--content
-                padding-top 30px
-                padding-bottom 30px
-
-                h2
-                    margin-bottom 0
-                    padding-bottom 20px
-                    position relative
-
-                    &::after
-                        border-bottom 1px solid white
-                        bottom 0
-                        content ''
-                        position absolute
-                        width 40px
-                        right 0
-
     // Customer template
     &__customers
         position relative
@@ -213,6 +188,30 @@
 
             @media screen and ( min-width $screen-lg )
                 width 55%
+
+    // Experience template
+    &__experience
+        & ^[0..-2]--container
+            padding-top 0
+            padding-bottom 0
+            text-align right
+
+        & ^[0..-2]--content
+            padding-top 30px
+            padding-bottom 30px
+
+            h2
+                margin-bottom 0
+                padding-bottom 20px
+                position relative
+
+                &::after
+                    border-bottom 1px solid white
+                    bottom 0
+                    content ''
+                    position absolute
+                    width 40px
+                    right 0
 
     // Image align top
     &__image-top

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-08-06T18:07:53+00:00\n"
+"POT-Creation-Date: 2019-08-07T16:14:52+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -318,6 +318,10 @@ msgstr "Clientes"
 #: includes/Integration/ACF/Pages/About.php:102
 msgid "MVP"
 msgstr "MVP"
+
+#: includes/Integration/ACF/Pages/About.php:103
+msgid "Experience"
+msgstr "Experiência"
 
 #: includes/Integration/ACF/Pages/About.php:118
 msgid "Items"
@@ -844,7 +848,7 @@ msgstr "Fundo Escuro e Título Branco"
 
 #: includes/Helper/PageSection.php:154
 msgid "Background Dark and Title White"
-msgstr "Fundo Mais Escura e Título Branco"
+msgstr "Fundo Mais Escuro e Título Branco"
 
 #: includes/Helper/PageSection.php:169
 msgid "Padding Section"
@@ -990,9 +994,6 @@ msgstr "Logout"
 
 #~ msgid "My Clients"
 #~ msgstr "Meus Clientes"
-
-#~ msgid "My Experience"
-#~ msgstr "Minha Experiência"
 
 #~ msgid "RavenDB"
 #~ msgstr "RavenDB"
