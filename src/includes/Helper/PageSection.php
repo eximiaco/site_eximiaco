@@ -185,7 +185,6 @@ class PageSection extends Base {
 		$this->get_color_scheme_class( $classes );
 		$this->get_image_align_class( $classes );
 		$this->get_image_position_class( $classes );
-		$this->get_padding_class( $classes );
 
 		return implode( ' ', $classes );
 	}
@@ -227,7 +226,7 @@ class PageSection extends Base {
 	 * @return void
 	 */
 	private function get_template_class( &$classes ) {
-		$classes[] = 'page-section__' . $this->get_field( 'template' )[0];
+		$classes[] = 'page-section__' . $this->get_field( 'template' );
 	}
 
 	/**
@@ -247,20 +246,6 @@ class PageSection extends Base {
 
 		if ( $align !== 'none' ) {
 			$classes[] = 'page-section__image-' . $align;
-		}
-	}
-
-	/**
-	 * Add padding classes.
-	 *
-	 * @param  array $classes Classes array.
-	 * @return void
-	 */
-	private function get_padding_class( &$classes ) {
-		$padding = $this->get_field( 'padding' );
-
-		if ( $padding === 'without' ) {
-			$classes[] = 'page-section__without-padding';
 		}
 	}
 
