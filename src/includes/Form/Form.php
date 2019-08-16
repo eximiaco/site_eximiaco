@@ -151,6 +151,13 @@ class Form extends Base {
 						$form_object->set_flash();
 					}
 
+					if( ! empty( $values['language'] ) ){
+						$message = array(
+							'message' => $message,
+							'language' => $values['language']
+						);
+					}
+
 					wp_safe_redirect( add_query_arg( 'message', $message, $_SERVER['HTTP_REFERER'] ) );
 					exit;
 				}

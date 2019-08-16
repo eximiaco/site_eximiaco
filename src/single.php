@@ -25,6 +25,8 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="post--header container">
+			<?php get_template_part( 'template-parts/blog/single/translate-request' ); ?>
+
 			<?php get_template_part( 'template-parts/blog/content-parts/category' ); ?>
 
 			<?php get_template_part( 'template-parts/blog/content-parts/serie' ); ?>
@@ -53,9 +55,11 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/blog/single/promotion' ); ?>
 
+
 			<?php comments_template(); ?>
 			</section>
 		</article>
+
 		<?php endwhile; ?>
 	</main>
 

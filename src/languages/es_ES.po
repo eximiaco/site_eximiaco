@@ -4,592 +4,173 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2019-08-15T13:33:46+00:00\n"
 "PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
-"Last-Translator: \n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es\n"
 
-#: 404.php:17
-msgid "Page not found"
-msgstr "Página no encontrada"
-
-#: 404.php:19
-msgid "Sorry! That page doesn't seem to exist."
-msgstr "¡Lo siento! Esa página no parece existir."
-
-#: 404.php:22
-msgid "Back to home"
-msgstr "Volver al inicio"
-
-#: comments.php:28
-msgid "No Comments"
-msgstr "No hay comentarios"
-
-#: comments.php:30
-msgid "1 Comment"
-msgstr "1 Comentario"
-
-#: comments.php:32
-msgid "Comments"
-msgstr "Comentarios"
-
-#: comments.php:58
-msgid "Comments are closed."
-msgstr "Los comentarios están cerrados."
-
-#: header.php:28
-msgid "Skip to content"
-msgstr "Saltar al contenido"
-
-#: header.php:60
-msgid "Search"
-msgstr "Buscar"
-
-#: includes/Customize/Banner/Banner.php:55
-msgid "Text - (%s)"
-msgstr "Texto - (%s)"
-
-#: includes/Customize/Banner/Banner.php:73
-msgid "Label - (%s)"
-msgstr "Etiqueta - (%s)"
-
-#: includes/Customize/Banner/Banner.php:87
-msgid "URL - (%s)"
-msgstr "URL - (%s)"
-
-#: includes/Customize/Banner/Banner.php:104
-msgid "Background Image - (%s)"
-msgstr "Imagen de fondo - (%s)"
-
-#: includes/Customize/Banner/Footer/Promotion.php:30
-msgid "Footer promotion banner"
-msgstr "Banner de promoción de pie de página"
-
-#: includes/Customize/Banner/SinglePost/Contact.php:30
-msgid "Single post contact banner"
+#. Theme Name of the theme
+msgid "Elemar Jr Blog Theme"
 msgstr ""
 
-#: includes/Customize/Banner/SinglePost/Promotion.php:30
-msgid "Single post promotion banner"
+#. Author of the theme
+msgid "Aztec Online Solutions"
 msgstr ""
 
-#: includes/Customize/Newsletter.php:47
-msgid "Newletter Form"
-msgstr "Formulario Newletter"
+#. Author URI of the theme
+msgid "http://aztecweb.net/"
+msgstr ""
 
-#: includes/Customize/Newsletter.php:62
-msgid "Title - (%s)"
-msgstr "Título - (%s)"
+#: template-parts/event/event.php:22
+msgid "and"
+msgstr "y"
 
-#: includes/Customize/Newsletter.php:88
-#: includes/Integration/ACF/Pages/HomePage.php:166
-msgid "Background"
-msgstr "Background"
-
-#: includes/Form/Contact.php:42 includes/Integration/ACF/PostType/Event.php:62
-#: template-parts/newsletter/form.php:46
+#: template-parts/newsletter/form.php:49
+#: includes/Integration/ACF/PostType/Event.php:62
 msgid "Name"
 msgstr "Nombre"
 
-#: includes/Form/Contact.php:43 template-parts/newsletter/form.php:48
+#: template-parts/newsletter/form.php:50
+msgid "Surname"
+msgstr "Apellido"
+
+#: template-parts/newsletter/form.php:51
 msgid "Email"
 msgstr "Email"
 
-#: includes/Form/Contact.php:45
-msgid "Your Message"
-msgstr "Su Mensaje"
+#: template-parts/newsletter/form.php:54
+msgid "Check the content of your interest"
+msgstr "Seleccione el contenido de su interés"
 
-#. Template Name of the plugin/theme
-#: includes/Form/Contact.php:65
-msgid "Contact"
-msgstr "Contacto"
+#: template-parts/newsletter/form.php:71
+msgid "Select at least one interest"
+msgstr "Seleccione al menos un interés"
 
-#: includes/Form/Contact.php:79
-msgid "Email that receive the contact - (%s)"
-msgstr "Correo electrónico que recibe el contacto - (%s)"
+#: template-parts/newsletter/form.php:75
+msgid "Subscribe"
+msgstr "Suscribete"
 
-#: includes/Form/Contact.php:93
-msgid "Email subject - (%s)"
-msgstr "Asunto del correo electrónico - (%s)"
+#. translators: search results
+#: template-parts/blog/breadcrumb.php:27
+msgid "Search Results for &#8220;%s&#8221;"
+msgstr "Resultados de búsqueda para &#8220;%s&#8221;"
 
-#: includes/Form/Form.php:230
-msgid "Message sent by %s website"
-msgstr "Mensaje enviado por el sitio web de %s"
+#: template-parts/blog/single/post-nav.php:35
+#: template-parts/blog/single/post-nav.php:44
+msgid "Previous"
+msgstr "Anterior"
 
-#: includes/Form/Form.php:231
-msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
-msgstr "Enviado desde: <a href=\"%1$s\">%1$s</a>"
+#: template-parts/blog/single/post-nav.php:69
+#: template-parts/blog/single/post-nav.php:83
+msgid "Next"
+msgstr "Siguiente"
 
-#: includes/Helper/PageSection.php:27
-#: includes/Integration/ACF/Pages/Contact.php:59
-#: includes/Integration/ACF/Pages/HomePage.php:61
-#: includes/Integration/ACF/Pages/HomePage.php:217
-#: includes/Integration/ACF/Pages/Page.php:57
-msgid "Title"
-msgstr "Título"
+#: template-parts/blog/single/meta.php:25
+msgid "reading time:"
+msgstr "tiempo de lectura:"
 
-#: includes/Helper/PageSection.php:28
-#: includes/Integration/ACF/Pages/Contact.php:60
-msgid "Use * to bold"
-msgstr "Use * para negrita"
+#: template-parts/blog/single/meta.php:42
+msgid "translates:"
+msgstr "traduce:"
 
-#: includes/Helper/PageSection.php:42
-#: includes/Integration/ACF/Pages/About.php:158
-#: includes/Integration/ACF/Pages/Event.php:58
-#: includes/Integration/ACF/Pages/HomePage.php:67
-#: includes/Integration/ACF/Pages/HomePage.php:194
-#: includes/Integration/ACF/Pages/Page.php:69
-msgid "Text"
-msgstr "Texto"
+#. translators: more posts in series
+#: template-parts/blog/single/serie.php:35
+msgid "More posts in %s series"
+msgstr "Más publicaciones en la serie %s"
 
-#: includes/Helper/PageSection.php:56
-#: includes/Integration/ACF/Pages/HomePage.php:144
-msgid "Image"
-msgstr "Imagen"
+#: template-parts/blog/single/translate-request.php:20
+msgid ""
+"There are no translations for this language (%s) at this time. Leave your "
+"name and email and we'll get back to you when this post is translated."
+msgstr ""
+"No hay traducciones para este idioma (%s) en este momento. Deje su nombre "
+"y correo electrónico y le responderemos cuando se traduzca esta "
+"publicación."
 
-#: includes/Helper/PageSection.php:71
-msgid "Image Position"
-msgstr "Posición de la imagen"
+#: template-parts/blog/single/translate-request.php:34
+msgid "request translate"
+msgstr "solicitar traducción"
 
-#: includes/Helper/PageSection.php:73
-msgid "Left"
-msgstr "Izquierda"
+#: template-parts/blog/single/tags.php:14
+msgid "Tags"
+msgstr "Etiquetas"
 
-#: includes/Helper/PageSection.php:74
-msgid "Right"
-msgstr "Derecha"
+#: template-parts/blog/post-list.php:18
+msgid "Loading posts..."
+msgstr "Cargando publicaciones…"
 
-#: includes/Helper/PageSection.php:90
-msgid "Image Align"
-msgstr "Alineación de la Imagen"
+#: template-parts/blog/category-nav.php:34
+msgid "Show All"
+msgstr "Mostrar todo"
 
-#: includes/Helper/PageSection.php:92
-msgid "None"
-msgstr "Ninguno"
+#: template-parts/blog/post-list-empty.php:13
+msgid "Nothing found here."
+msgstr "No se ha encontrado nada aquí."
 
-#: includes/Helper/PageSection.php:93
-msgid "Overlap top"
+#: template-parts/page/home/blog.php:56
+msgid "See more"
+msgstr "Ver más"
+
+#: template-parts/lab/lab.php:35
+msgid "what we wrote about it"
+msgstr "lo que escribimos al respecto"
+
+#: includes/Taxonomy/Serie.php:38 includes/Taxonomy/Serie.php:40
+msgid "Series"
+msgstr "Series"
+
+#: includes/Taxonomy/Serie.php:41
+msgid "Serie"
+msgstr "Serie"
+
+#: includes/Taxonomy/Serie.php:42
+msgid "All Series"
+msgstr "Todas las series"
+
+#: includes/Taxonomy/Serie.php:43
+msgid "Edit Serie"
 msgstr ""
 
-#: includes/Helper/PageSection.php:94
-msgid "Stick on top"
+#: includes/Taxonomy/Serie.php:44
+msgid "View Serie"
 msgstr ""
 
-#: includes/Helper/PageSection.php:95
-msgid "Stick on bottom"
+#: includes/Taxonomy/Serie.php:45
+msgid "Update Serie"
 msgstr ""
 
-#: includes/Helper/PageSection.php:96
-msgid "Overlap bottom"
+#: includes/Taxonomy/Serie.php:46
+msgid "Add New Serie"
 msgstr ""
 
-#: includes/Helper/PageSection.php:113
-msgid "Button label"
+#: includes/Taxonomy/Serie.php:47
+msgid "New Serie Name"
 msgstr ""
 
-#: includes/Helper/PageSection.php:129
-#: includes/Integration/ACF/Pages/HomePage.php:79
-msgid "Button URL"
+#: includes/Taxonomy/Serie.php:48
+msgid "Parent Serie"
 msgstr ""
 
-#: includes/Helper/PageSection.php:148
-msgid "Color Scheme"
+#: includes/Taxonomy/Serie.php:49
+msgid "Parent Serie:"
 msgstr ""
 
-#: includes/Helper/PageSection.php:150
-msgid "Background White and Title Black"
+#: includes/Taxonomy/Serie.php:50
+msgid "Search Series"
 msgstr ""
 
-#: includes/Helper/PageSection.php:151
-msgid "Background Gray and Title Black"
-msgstr ""
-
-#: includes/Helper/PageSection.php:152
-msgid "Background Black and Title White"
-msgstr ""
-
-#: includes/Helper/PageSection.php:153
-msgid "Background Dusky and Title White"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:84
-#: includes/Integration/ACF/PostType/Service.php:65
-#: includes/Integration/ACF/Taxonomy/Index.php:47
-msgid "Page sections"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:96
-msgid "Template"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:100
-msgid "Default"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:101
-msgid "Customers"
-msgstr "Clientes"
-
-#: includes/Integration/ACF/Pages/About.php:102
-msgid "MVP"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:117
-msgid "Items"
-msgstr "Elementos"
-
-#: includes/Integration/ACF/Pages/About.php:129
-msgid "Item"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:151
-#: includes/Integration/ACF/Pages/HomePage.php:54
-#: includes/Integration/ACF/Pages/Page.php:51
-msgid "Hero"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/Contact.php:52
-msgid "Body"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/Contact.php:66
-#: includes/Integration/ACF/Pages/Page.php:63
-msgid "Subtitle"
-msgstr "Subtítulo"
-
-#: includes/Integration/ACF/Pages/Contact.php:72
-msgid "Description"
-msgstr "Descripción"
-
-#: includes/Integration/ACF/Pages/Contact.php:87
-msgid "Form"
-msgstr "Formulario"
-
-#: includes/Integration/ACF/Pages/Contact.php:94
-msgid "Success"
-msgstr "Éxito"
-
-#: includes/Integration/ACF/Pages/Contact.php:100
-msgid "Error Message: Empty fields"
-msgstr "Mensaje de error: Campos vacíos"
-
-#: includes/Integration/ACF/Pages/Contact.php:106
-msgid "Error Message: Spam"
-msgstr "Mensaje de error: Spam"
-
-#: includes/Integration/ACF/Pages/Contact.php:112
-msgid "Error Message: Not sent"
-msgstr "Mensaje de error: No enviado"
-
-#. Template Name of the plugin/theme
-#: includes/Integration/ACF/Pages/Event.php:51
-msgid "About"
-msgstr "Sobre"
-
-#: includes/Integration/ACF/Pages/Event.php:64
-msgid "Label"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/Event.php:73
-#: includes/Integration/ACF/PostType/Event.php:96
-msgid "URL"
-msgstr "URL"
-
-#: includes/Integration/ACF/Pages/HomePage.php:73
-msgid "Button Label"
-msgstr "Etiqueta del Botón"
-
-#: includes/Integration/ACF/Pages/HomePage.php:94
-msgid "Purpose"
-msgstr "Propósito"
-
-#: includes/Integration/ACF/Pages/HomePage.php:102
-msgid "Section title"
-msgstr "Título de la sección"
-
-#: includes/Integration/ACF/Pages/HomePage.php:108
-msgid "Icon Class 1"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:114
-msgid "Title 1"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:120
-msgid "Text 1"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:126
-msgid "Icon Class 2"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:132
-msgid "Title 2"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:138
-msgid "Text 2"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:159
-#: includes/Integration/ACF/Pages/HomePage.php:172
-msgid "Quote"
-msgstr "Frase"
-
-#: includes/Integration/ACF/Pages/HomePage.php:187 page-templates/home.php:37
-msgid "Blog"
-msgstr "Publicaciones"
-
-#: includes/Integration/ACF/Pages/HomePage.php:195
-msgid "Text after the section title"
-msgstr "Texto después del título de la sección"
-
-#: includes/Integration/ACF/Pages/HomePage.php:210
-#: includes/PostType/Testimonial.php:36
-msgid "Testimonials"
-msgstr "Recomendaciones"
-
-#. Template Name of the plugin/theme
-#: includes/Integration/ACF/Pages/NewsletterForm.php:51
-msgid "Newsletter Form"
-msgstr "Boletín de noticias"
-
-#: includes/Integration/ACF/PostType/Event.php:55
-#: includes/PostType/Event.php:37
-msgid "Event"
-msgstr "Evento"
-
-#: includes/Integration/ACF/PostType/Event.php:69
-msgid "Start date"
-msgstr "Fecha de inicio"
-
-#: includes/Integration/ACF/PostType/Event.php:80
-msgid "End date"
-msgstr "Fecha de finalización"
-
-#: includes/Integration/ACF/PostType/Event.php:90
-msgid "Role"
-msgstr "Función"
-
-#: includes/Integration/ACF/PostType/Lab.php:55 includes/PostType/Lab.php:37
-msgid "Lab"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Lab.php:62
-msgid "Tag"
-msgstr "Etiqueta"
-
-#: includes/Integration/ACF/PostType/Lab.php:74
-msgid "Repository"
-msgstr "Repositorio"
-
-#: includes/Integration/ACF/PostType/Testimonial.php:51
-#: includes/PostType/Testimonial.php:37
-msgid "Testimonial"
-msgstr "Recomendación"
-
-#: includes/Integration/ACF/PostType/Testimonial.php:57
-msgid "Position"
-msgstr "Posición"
-
-#: includes/Integration/ACF/PostType/Testimonial.php:63
-msgid "Photo"
-msgstr "Foto"
-
-#: includes/Integration/ACF/PostType/Testimonial.php:69
-msgid "Company Logo"
-msgstr "Logo de la empresa"
-
-#: includes/Integration/ACF/Taxonomy/Index.php:51
-msgid "Order"
-msgstr ""
-
-#: includes/Integration/Polylang/Polylang.php:51
-msgid "Contact Phone"
-msgstr "Teléfono de contacto"
-
-#: includes/Integration/Polylang/Polylang.php:52
-msgid "Contact Email"
-msgstr "Email de contacto"
-
-#: includes/PostType/Event.php:36
-msgid "Events"
-msgstr "Eventos"
-
-#: includes/PostType/Event.php:38
-msgctxt "event"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Event.php:39
-msgid "Add New Event"
-msgstr ""
-
-#: includes/PostType/Event.php:40
-msgid "New Event"
-msgstr ""
-
-#: includes/PostType/Event.php:41
-msgid "Edit Event"
-msgstr ""
-
-#: includes/PostType/Event.php:42
-msgid "View Event"
-msgstr ""
-
-#: includes/PostType/Event.php:43
-msgid "All Events"
-msgstr ""
-
-#: includes/PostType/Event.php:44
-msgid "Search Events"
-msgstr ""
-
-#: includes/PostType/Event.php:45
-msgid "No events found."
-msgstr ""
-
-#: includes/PostType/Event.php:46
-msgid "No events found in Trash."
-msgstr ""
-
-#. Template Name of the plugin/theme
-#: includes/PostType/Lab.php:36
-msgid "Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:38
-msgctxt "lab"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Lab.php:39
-msgid "Add New Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:40
-msgid "New Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:41
-msgid "Edit Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:42
-msgid "View Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:43
-msgid "All Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:44
-msgid "Search Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:45
-msgid "No labs found."
-msgstr ""
-
-#: includes/PostType/Lab.php:46
-msgid "No labs found in Trash."
-msgstr ""
-
-#. Template Name of the plugin/theme
-#: includes/PostType/Service.php:36
-msgid "Services"
-msgstr "Servicios"
-
-#: includes/PostType/Service.php:37
-msgid "Service"
-msgstr "Servicio"
-
-#: includes/PostType/Service.php:38
-msgctxt "service"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Service.php:39
-msgid "Add New Service"
-msgstr ""
-
-#: includes/PostType/Service.php:40
-msgid "New Service"
-msgstr ""
-
-#: includes/PostType/Service.php:41
-msgid "Edit Service"
-msgstr ""
-
-#: includes/PostType/Service.php:42
-msgid "View Service"
-msgstr ""
-
-#: includes/PostType/Service.php:43
-msgid "All Services"
-msgstr ""
-
-#: includes/PostType/Service.php:44
-msgid "Search Services"
-msgstr ""
-
-#: includes/PostType/Service.php:45
-msgid "No services found."
-msgstr ""
-
-#: includes/PostType/Service.php:46
-msgid "No services found in Trash."
-msgstr ""
-
-#: includes/PostType/Testimonial.php:38
-msgctxt "testimonial"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:39
-msgid "Add New Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:40
-msgid "New Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:41
-msgid "Edit Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:42
-msgid "View Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:43
-msgid "All Testimonials"
-msgstr "Todas las recomendaciones"
-
-#: includes/PostType/Testimonial.php:44
-msgid "Search Testimonials"
-msgstr "Buscar Recomendaciones"
-
-#: includes/PostType/Testimonial.php:45
-msgid "No testimonials found."
-msgstr ""
-
-#: includes/PostType/Testimonial.php:46
-msgid "No testimonials found in Trash."
-msgstr ""
-
-#: includes/Setup/Navigation.php:33
-msgid "Primary"
-msgstr "Primario"
-
-#: includes/Setup/Navigation.php:34
-msgid "Social Menu"
+#: includes/Taxonomy/Serie.php:51
+msgid "Popular Series"
+msgstr "Series populares"
+
+#: includes/Taxonomy/Serie.php:52
+msgid "No series found."
 msgstr ""
 
 #: includes/Taxonomy/Index.php:39 includes/Taxonomy/Index.php:41
@@ -644,201 +225,768 @@ msgstr ""
 msgid "No indexes found."
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:38 includes/Taxonomy/Serie.php:40
-msgid "Series"
-msgstr "Series"
+#: includes/Form/Contact.php:45
+msgid "Your Message"
+msgstr "Su Mensaje"
 
-#: includes/Taxonomy/Serie.php:41
-msgid "Serie"
-msgstr "Serie"
+#. Template Name of the theme
+#: includes/Form/Contact.php:65
+msgid "Contact"
+msgstr "Contacto"
 
-#: includes/Taxonomy/Serie.php:42
-msgid "All Series"
-msgstr "Todas las series"
+#. translators: %s: website locale
+#: includes/Form/Contact.php:80 includes/Form/TranslateRequest.php:77
+msgid "Email that receive the contact - (%s)"
+msgstr "Correo electrónico que recibe el contacto - (%s)"
 
-#: includes/Taxonomy/Serie.php:43
-msgid "Edit Serie"
+#. translators: %s: locale
+#: includes/Form/Contact.php:95 includes/Form/TranslateRequest.php:92
+msgid "Email subject - (%s)"
+msgstr "Asunto del correo electrónico - (%s)"
+
+#: includes/Form/TranslateRequest.php:62
+msgid "Translate Request"
+msgstr "Solicitud de traducción"
+
+#. translators: %s: website term
+#: includes/Form/Form.php:231
+msgid "Message sent by %s website"
+msgstr "Mensaje enviado por el sitio web de %s"
+
+#. translators: %s: Sent from term
+#: includes/Form/Form.php:233
+msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
+msgstr "Enviado desde: <a href=\"%1$s\">%1$s</a>"
+
+#: includes/PostType/Testimonial.php:36
+#: includes/Integration/ACF/Pages/HomePage.php:222
+msgid "Testimonials"
+msgstr "Recomendaciones"
+
+#: includes/PostType/Testimonial.php:37
+#: includes/Integration/ACF/PostType/Testimonial.php:51
+msgid "Testimonial"
+msgstr "Recomendación"
+
+#: includes/PostType/Testimonial.php:38
+msgctxt "testimonial"
+msgid "Add New"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:44
-msgid "View Serie"
+#: includes/PostType/Testimonial.php:39
+msgid "Add New Testimonial"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:45
-msgid "Update Serie"
+#: includes/PostType/Testimonial.php:40
+msgid "New Testimonial"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:46
-msgid "Add New Serie"
+#: includes/PostType/Testimonial.php:41
+msgid "Edit Testimonial"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:47
-msgid "New Serie Name"
+#: includes/PostType/Testimonial.php:42
+msgid "View Testimonial"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:48
-msgid "Parent Serie"
+#: includes/PostType/Testimonial.php:43
+msgid "All Testimonials"
+msgstr "Todas las recomendaciones"
+
+#: includes/PostType/Testimonial.php:44
+msgid "Search Testimonials"
+msgstr "Buscar Recomendaciones"
+
+#: includes/PostType/Testimonial.php:45
+msgid "No testimonials found."
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:49
-msgid "Parent Serie:"
+#: includes/PostType/Testimonial.php:46
+msgid "No testimonials found in Trash."
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:50
-msgid "Search Series"
+#. Template Name of the theme
+#: includes/PostType/Service.php:36
+msgid "Services"
+msgstr "Servicios"
+
+#: includes/PostType/Service.php:37
+msgid "Service"
+msgstr "Servicio"
+
+#: includes/PostType/Service.php:38
+msgctxt "service"
+msgid "Add New"
 msgstr ""
 
-#: includes/Taxonomy/Serie.php:51
-msgid "Popular Series"
-msgstr "Series populares"
-
-#: includes/Taxonomy/Serie.php:52
-msgid "No series found."
+#: includes/PostType/Service.php:39
+msgid "Add New Service"
 msgstr ""
 
-#: index.php:37
+#: includes/PostType/Service.php:40
+msgid "New Service"
+msgstr ""
+
+#: includes/PostType/Service.php:41
+msgid "Edit Service"
+msgstr ""
+
+#: includes/PostType/Service.php:42
+msgid "View Service"
+msgstr ""
+
+#: includes/PostType/Service.php:43
+msgid "All Services"
+msgstr ""
+
+#: includes/PostType/Service.php:44
+msgid "Search Services"
+msgstr ""
+
+#: includes/PostType/Service.php:45
+msgid "No services found."
+msgstr ""
+
+#: includes/PostType/Service.php:46
+msgid "No services found in Trash."
+msgstr ""
+
+#: includes/PostType/Event.php:36
+msgid "Events"
+msgstr "Eventos"
+
+#: includes/PostType/Event.php:37
+#: includes/Integration/ACF/PostType/Event.php:55
+msgid "Event"
+msgstr "Evento"
+
+#: includes/PostType/Event.php:38
+msgctxt "event"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Event.php:39
+msgid "Add New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:40
+msgid "New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:41
+msgid "Edit Event"
+msgstr ""
+
+#: includes/PostType/Event.php:42
+msgid "View Event"
+msgstr ""
+
+#: includes/PostType/Event.php:43
+msgid "All Events"
+msgstr ""
+
+#: includes/PostType/Event.php:44
+msgid "Search Events"
+msgstr ""
+
+#: includes/PostType/Event.php:45
+msgid "No events found."
+msgstr ""
+
+#: includes/PostType/Event.php:46
+msgid "No events found in Trash."
+msgstr ""
+
+#. Template Name of the theme
+#: includes/PostType/Lab.php:36
+msgid "Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:37 includes/Integration/ACF/PostType/Lab.php:55
+msgid "Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:38
+msgctxt "lab"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Lab.php:39
+msgid "Add New Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:40
+msgid "New Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:41
+msgid "Edit Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:42
+msgid "View Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:43
+msgid "All Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:44
+msgid "Search Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:45
+msgid "No labs found."
+msgstr ""
+
+#: includes/PostType/Lab.php:46
+msgid "No labs found in Trash."
+msgstr ""
+
+#: includes/Integration/Polylang/Polylang.php:51
+msgid "Contact Phone"
+msgstr "Teléfono de contacto"
+
+#: includes/Integration/Polylang/Polylang.php:52
+msgid "Contact Email"
+msgstr "Email de contacto"
+
+#: includes/Integration/ACF/Taxonomy/Index.php:47
+#: includes/Integration/ACF/PostType/Service.php:65
+#: includes/Integration/ACF/Pages/About.php:84
+msgid "Page sections"
+msgstr ""
+
+#: includes/Integration/ACF/Taxonomy/Index.php:51
+msgid "Order"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Testimonial.php:57
+msgid "Position"
+msgstr "Posición"
+
+#: includes/Integration/ACF/PostType/Testimonial.php:63
+msgid "Photo"
+msgstr "Foto"
+
+#: includes/Integration/ACF/PostType/Testimonial.php:69
+msgid "Company Logo"
+msgstr "Logo de la empresa"
+
+#: includes/Integration/ACF/PostType/Event.php:69
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#: includes/Integration/ACF/PostType/Event.php:80
+msgid "End date"
+msgstr "Fecha de finalización"
+
+#: includes/Integration/ACF/PostType/Event.php:90
+msgid "Role"
+msgstr "Función"
+
+#: includes/Integration/ACF/PostType/Event.php:96
+msgid "Responsible"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Event.php:102
+#: includes/Integration/ACF/Pages/Event.php:73
+#: includes/Customize/Banner/Banner.php:87
+msgid "URL"
+msgstr "URL"
+
+#: includes/Integration/ACF/PostType/Lab.php:62
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: includes/Integration/ACF/PostType/Lab.php:74
+msgid "Repository"
+msgstr "Repositorio"
+
+#: includes/Integration/ACF/Pages/Contact.php:52
+msgid "Body"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Contact.php:59
+#: includes/Integration/ACF/Pages/Page.php:57
+#: includes/Integration/ACF/Pages/HomePage.php:61
+#: includes/Integration/ACF/Pages/HomePage.php:229
+#: includes/Customize/Newsletter.php:62 includes/Helper/PageSection.php:27
+msgid "Title"
+msgstr "Título"
+
+#: includes/Integration/ACF/Pages/Contact.php:60
+#: includes/Helper/PageSection.php:28
+msgid "Use * to bold"
+msgstr "Use * para negrita"
+
+#: includes/Integration/ACF/Pages/Contact.php:66
+#: includes/Integration/ACF/Pages/Page.php:63
+msgid "Subtitle"
+msgstr "Subtítulo"
+
+#: includes/Integration/ACF/Pages/Contact.php:72
+msgid "Description"
+msgstr "Descripción"
+
+#: includes/Integration/ACF/Pages/Contact.php:87
+msgid "Form"
+msgstr "Formulario"
+
+#: includes/Integration/ACF/Pages/Contact.php:94
+msgid "Success"
+msgstr "Éxito"
+
+#: includes/Integration/ACF/Pages/Contact.php:100
+msgid "Error Message: Empty fields"
+msgstr "Mensaje de error: Campos vacíos"
+
+#: includes/Integration/ACF/Pages/Contact.php:106
+msgid "Error Message: Spam"
+msgstr "Mensaje de error: Spam"
+
+#: includes/Integration/ACF/Pages/Contact.php:112
+msgid "Error Message: Not sent"
+msgstr "Mensaje de error: No enviado"
+
+#: includes/Integration/ACF/Pages/Page.php:51
+#: includes/Integration/ACF/Pages/HomePage.php:54
+#: includes/Integration/ACF/Pages/About.php:152
+msgid "Hero"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Page.php:69
+#: includes/Integration/ACF/Pages/HomePage.php:67
+#: includes/Integration/ACF/Pages/HomePage.php:206
+#: includes/Integration/ACF/Pages/About.php:159
+#: includes/Integration/ACF/Pages/Event.php:58
+#: includes/Customize/Banner/Banner.php:55 includes/Helper/PageSection.php:42
+msgid "Text"
+msgstr "Texto"
+
+#. Template Name of the theme
+#: includes/Integration/ACF/Pages/NewsletterForm.php:51
+msgid "Newsletter Form"
+msgstr "Boletín de noticias"
+
+#: includes/Integration/ACF/Pages/HomePage.php:73
+msgid "Button Label"
+msgstr "Etiqueta del Botón"
+
+#: includes/Integration/ACF/Pages/HomePage.php:79
+#: includes/Helper/PageSection.php:129
+msgid "Button URL"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:94
+msgid "Purpose"
+msgstr "Propósito"
+
+#: includes/Integration/ACF/Pages/HomePage.php:102
+msgid "Section title"
+msgstr "Título de la sección"
+
+#: includes/Integration/ACF/Pages/HomePage.php:108
+msgid "Icon Class 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:114
+msgid "Title 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:120
+msgid "Text 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:126
+msgid "Icon Class 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:132
+msgid "Title 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:138
+msgid "Text 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:144
+#: includes/Helper/PageSection.php:56
+msgid "Image"
+msgstr "Imagen"
+
+#: includes/Integration/ACF/Pages/HomePage.php:159
+#: includes/Integration/ACF/Pages/HomePage.php:172
+msgid "Quote"
+msgstr "Frase"
+
+#: includes/Integration/ACF/Pages/HomePage.php:166
+#: includes/Customize/Newsletter.php:87
+msgid "Background"
+msgstr "Background"
+
+#: includes/Integration/ACF/Pages/HomePage.php:178
+msgid "Quote author"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:184
+msgid "Quote job role"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:199 page-templates/home.php:37
+msgid "Blog"
+msgstr "Publicaciones"
+
+#: includes/Integration/ACF/Pages/HomePage.php:207
+msgid "Text after the section title"
+msgstr "Texto después del título de la sección"
+
+#: includes/Integration/ACF/Pages/About.php:96
+msgid "Template"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:100
+msgid "Default"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:101
+msgid "Customers"
+msgstr "Clientes"
+
+#: includes/Integration/ACF/Pages/About.php:102
+msgid "MVP"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:103
+msgid "Experience"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:118
+msgid "Items"
+msgstr "Elementos"
+
+#: includes/Integration/ACF/Pages/About.php:130
+msgid "Item"
+msgstr ""
+
+#. Template Name of the theme
+#: includes/Integration/ACF/Pages/Event.php:51
+msgid "About"
+msgstr "Sobre"
+
+#: includes/Integration/ACF/Pages/Event.php:64
+#: includes/Customize/Banner/Banner.php:73
+msgid "Label"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:47
+msgid "Newletter Form"
+msgstr "Formulario Newletter"
+
+#: includes/Customize/Newsletter.php:101
+msgid "Form action"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:102
+msgid "Form action url"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:113
+msgid "User ID"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:114
+msgid "Mailchimp user identification"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:125
+#, fuzzy
+#| msgid "Form"
+msgid "Form ID"
+msgstr "Formulario"
+
+#: includes/Customize/Newsletter.php:126
+msgid "Mailchimp form identification"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:137
+msgid "Enter the form input name tag for these fields"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:138
+msgid "Field \"Name\""
+msgstr ""
+
+#: includes/Customize/Newsletter.php:149
+#, fuzzy
+#| msgid "Surname"
+msgid "Field \"Surname\""
+msgstr "Apellido"
+
+#: includes/Customize/Newsletter.php:160
+msgid "Field \"E-mail\""
+msgstr ""
+
+#: includes/Customize/Newsletter.php:176
+msgid "Custom content field"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:177
+msgid "Field Label"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:190
+msgid "Field ID"
+msgstr ""
+
+#: includes/Customize/Newsletter.php:201
+msgid "Field Name"
+msgstr ""
+
+#: includes/Customize/Head.php:42
+msgid "Header"
+msgstr ""
+
+#: includes/Customize/Head.php:61
+#, fuzzy
+#| msgid "Logout"
+msgid "Logo"
+msgstr "Cerrar sesión"
+
+#: includes/Customize/Head.php:74
+#, fuzzy
+#| msgid "Primary"
+msgid "Primary Website"
+msgstr "Primario"
+
+#: includes/Customize/Head.php:76 includes/Customize/Head.php:99
+msgid "Website URL"
+msgstr ""
+
+#: includes/Customize/Head.php:86 includes/Customize/Head.php:109
+msgid "Website Title"
+msgstr ""
+
+#: includes/Customize/Head.php:97
+msgid "Secondary Website"
+msgstr ""
+
+#: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
+msgid "Color Scheme"
+msgstr ""
+
+#: includes/Customize/Colors.php:52
+#, fuzzy
+#| msgid "Primary"
+msgid "Primary Color"
+msgstr "Primario"
+
+#: includes/Customize/Colors.php:62
+msgid "Secondary Color"
+msgstr ""
+
+#: includes/Customize/Colors.php:73
+msgid "Main menu opacity"
+msgstr ""
+
+#: includes/Customize/Banner/Banner.php:104
+#, fuzzy
+#| msgid "Background Image - (%s)"
+msgid "Background Image"
+msgstr "Imagen de fondo - (%s)"
+
+#: includes/Customize/Banner/Footer/Promotion.php:30
+msgid "Footer promotion banner"
+msgstr "Banner de promoción de pie de página"
+
+#: includes/Customize/Banner/SinglePost/Promotion.php:30
+msgid "Single post promotion banner"
+msgstr ""
+
+#: includes/Customize/Banner/SinglePost/Contact.php:30
+msgid "Single post contact banner"
+msgstr ""
+
+#: includes/Customize/Social.php:41
+msgid "Social Media"
+msgstr ""
+
+#: includes/Customize/Social.php:52
+msgid "Twitter Account"
+msgstr ""
+
+#: includes/Setup/Navigation.php:34
+msgid "Primary"
+msgstr "Primario"
+
+#: includes/Setup/Navigation.php:35
+msgid "Social Menu"
+msgstr ""
+
+#: includes/Helper/PageSection.php:71
+msgid "Image Position"
+msgstr "Posición de la imagen"
+
+#: includes/Helper/PageSection.php:73
+msgid "Left"
+msgstr "Izquierda"
+
+#: includes/Helper/PageSection.php:74
+msgid "Right"
+msgstr "Derecha"
+
+#: includes/Helper/PageSection.php:90
+msgid "Image Align"
+msgstr "Alineación de la Imagen"
+
+#: includes/Helper/PageSection.php:92
+msgid "None"
+msgstr "Ninguno"
+
+#: includes/Helper/PageSection.php:93
+msgid "Overlap top"
+msgstr ""
+
+#: includes/Helper/PageSection.php:94
+msgid "Stick on top"
+msgstr ""
+
+#: includes/Helper/PageSection.php:95
+msgid "Stick on bottom"
+msgstr ""
+
+#: includes/Helper/PageSection.php:96
+msgid "Overlap bottom"
+msgstr ""
+
+#: includes/Helper/PageSection.php:113
+msgid "Button label"
+msgstr ""
+
+#: includes/Helper/PageSection.php:150
+msgid "Background White and Title Black"
+msgstr ""
+
+#: includes/Helper/PageSection.php:151
+msgid "Background Gray and Title Black"
+msgstr ""
+
+#: includes/Helper/PageSection.php:152
+msgid "Background Black and Title White"
+msgstr ""
+
+#: includes/Helper/PageSection.php:153
+msgid "Background Dusky and Title White"
+msgstr ""
+
+#: includes/Helper/PageSection.php:154
+msgid "Background Dark and Title White"
+msgstr ""
+
+#: includes/Helper/PageSection.php:169
+msgid "Padding Section"
+msgstr ""
+
+#: includes/Helper/PageSection.php:171
+msgid "With padding"
+msgstr ""
+
+#: includes/Helper/PageSection.php:172
+msgid "Without padding"
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: header.php:91
+msgid "Search"
+msgstr "Buscar"
+
+#: index.php:33
 msgid "Previous Page"
 msgstr "Página anterior"
 
-#: index.php:37
+#: index.php:33
 msgid "Next Page"
 msgstr "Página Siguiente"
 
-#: page-templates/contact.php:85
-msgid "Send"
-msgstr "Enviar"
+#: comments.php:58
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: 404.php:17
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: 404.php:19
+msgid "Sorry! That page doesn't seem to exist."
+msgstr "¡Lo siento! Esa página no parece existir."
+
+#: 404.php:22
+msgid "Back to home"
+msgstr "Volver al inicio"
+
+#. Template Name of the theme
+msgid "Restricted area"
+msgstr "Área restringida"
+
+#: page-templates/restricted-area.php:59
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#. Template Name of the theme
+msgid "Events Calendar"
+msgstr "Calendario de eventos"
 
 #: page-templates/events.php:36
 msgid "Calendar"
 msgstr "Calendario"
 
+#: page-templates/contact.php:85
+msgid "Send"
+msgstr "Enviar"
+
+#. Template Name of the theme
+msgid "Home"
+msgstr ""
+
 #: page-templates/home.php:51
 msgid "Last posts in English"
 msgstr "Ultimas publicaciones en inglés"
 
-#: page-templates/restricted-area.php:53
-msgid "Logout"
-msgstr "Cerrar sesión"
+#~ msgid "No Comments"
+#~ msgstr "No hay comentarios"
 
-#: searchform.php:14
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
+#~ msgid "1 Comment"
+#~ msgstr "1 Comentario"
 
-#. translators: search results
-#: template-parts/blog/breadcrumb.php:27
-msgid "Search Results for &#8220;%s&#8221;"
-msgstr "Resultados de búsqueda para &#8220;%s&#8221;"
+#~ msgid "Comments"
+#~ msgstr "Comentarios"
 
-#. translators: page number
-#: template-parts/blog/breadcrumb.php:79
-msgid "Page %s"
-msgstr "Página %s"
+#~ msgid "Text - (%s)"
+#~ msgstr "Texto - (%s)"
 
-#: template-parts/blog/category-nav.php:29
-msgid "Show All"
-msgstr "Mostrar todo"
+#~ msgid "Label - (%s)"
+#~ msgstr "Etiqueta - (%s)"
 
-#: template-parts/blog/post-list-empty.php:13
-msgid "Nothing found here."
-msgstr "No se ha encontrado nada aquí."
+#~ msgid "URL - (%s)"
+#~ msgstr "URL - (%s)"
 
-#: template-parts/blog/post-list.php:18
-msgid "Loading posts..."
-msgstr "Cargando publicaciones…"
+#~ msgid "Title - (%s)"
+#~ msgstr "Título - (%s)"
 
-#. translators: comment date
-#: template-parts/blog/single/comment.php:41
-msgid "%1$s at %2$s"
-msgstr "%1$s de %2$s"
+#~ msgid "Page %s"
+#~ msgstr "Página %s"
 
-#: template-parts/blog/single/meta.php:25
-msgid "reading time:"
-msgstr "tiempo de lectura:"
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s de %2$s"
 
-#: template-parts/blog/single/post-nav.php:27
-#: template-parts/blog/single/post-nav.php:36
-msgid "Previous"
-msgstr "Anterior"
+#~ msgid "Events in which we will speak"
+#~ msgstr "Eventos en los que hablaremos"
 
-#: template-parts/blog/single/post-nav.php:62
-#: template-parts/blog/single/post-nav.php:76
-msgid "Next"
-msgstr "Siguiente"
+#~ msgid "English content"
+#~ msgstr "Contenido en inglés"
 
-#. translators: more posts in series
-#: template-parts/blog/single/serie.php:35
-msgid "More posts in %s series"
-msgstr "Más publicaciones en la serie %s"
-
-#: template-parts/blog/single/tags.php:14
-msgid "Tags"
-msgstr "Etiquetas"
-
-#: template-parts/event/event.php:22
-msgid "and"
-msgstr "y"
-
-#: template-parts/lab/lab.php:35
-msgid "what we wrote about it"
-msgstr "lo que escribimos al respecto"
-
-#: template-parts/newsletter/form.php:47
-msgid "Surname"
-msgstr "Apellido"
-
-#: template-parts/newsletter/form.php:51
-msgid "Check the content of your interest"
-msgstr "Seleccione el contenido de su interés"
-
-#: template-parts/newsletter/form.php:56
-msgid "Events in which we will speak"
-msgstr "Eventos en los que hablaremos"
-
-#: template-parts/newsletter/form.php:64
-msgid "English content"
-msgstr "Contenido en inglés"
-
-#: template-parts/newsletter/form.php:72
-msgid "Portuguese content"
-msgstr "Contenido em portugués"
-
-#: template-parts/newsletter/form.php:80
-msgid "Offers and Promotions"
-msgstr ""
-
-#: template-parts/newsletter/form.php:88
-msgid "Select at least one interest"
-msgstr "Seleccione al menos un interés"
-
-#: template-parts/newsletter/form.php:92
-msgid "Subscribe"
-msgstr "Suscribete"
-
-#: template-parts/page/home/blog.php:52
-msgid "See more"
-msgstr "Ver más"
-
-#. Theme Name of the plugin/theme
-msgid "Elemar Jr Blog Theme"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Aztec Online Solutions"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://aztecweb.net/"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Events Calendar"
-msgstr "Calendario de eventos"
-
-#. Template Name of the plugin/theme
-msgid "Home"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Restricted area"
-msgstr "Área restringida"
+#~ msgid "Portuguese content"
+#~ msgstr "Contenido em portugués"
