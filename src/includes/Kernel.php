@@ -49,6 +49,7 @@ class Kernel {
 
 			\Aztec\Form\Contact::class,
 			\Aztec\Form\Form::class,
+			\Aztec\Form\TranslateRequest::class,
 
 			\Aztec\Integration\ACF\ACF::class,
 			\Aztec\Integration\ACF\Pages\About::class,
@@ -122,6 +123,7 @@ class Kernel {
 		$this->container->set(
 			'forms', [
 			\Aztec\Form\Contact::class,
+			\Aztec\Form\TranslateRequest::class,
 			 ]
 		);
 	}

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-08-07T16:14:52+00:00\n"
+"POT-Creation-Date: 2019-08-16T14:54:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.2.0\n"
 "X-Domain: elemarjr\n"
@@ -26,72 +26,8 @@ msgstr ""
 msgid "http://aztecweb.net/"
 msgstr ""
 
-#: header.php:28
-msgid "Skip to content"
-msgstr ""
-
-#: header.php:91
-msgid "Search"
-msgstr ""
-
-#: index.php:33
-msgid "Previous Page"
-msgstr ""
-
-#: index.php:33
-msgid "Next Page"
-msgstr ""
-
 #: template-parts/event/event.php:22
 msgid "and"
-msgstr ""
-
-#: template-parts/lab/lab.php:35
-msgid "what we wrote about it"
-msgstr ""
-
-#: template-parts/page/home/blog.php:56
-msgid "See more"
-msgstr ""
-
-#: template-parts/blog/category-nav.php:34
-msgid "Show All"
-msgstr ""
-
-#: template-parts/blog/single/post-nav.php:35
-#: template-parts/blog/single/post-nav.php:44
-msgid "Previous"
-msgstr ""
-
-#: template-parts/blog/single/post-nav.php:69
-#: template-parts/blog/single/post-nav.php:83
-msgid "Next"
-msgstr ""
-
-#: template-parts/blog/single/tags.php:14
-msgid "Tags"
-msgstr ""
-
-#: template-parts/blog/single/meta.php:25
-msgid "reading time:"
-msgstr ""
-
-#. translators: more posts in series
-#: template-parts/blog/single/serie.php:35
-msgid "More posts in %s series"
-msgstr ""
-
-#: template-parts/blog/post-list-empty.php:13
-msgid "Nothing found here."
-msgstr ""
-
-#: template-parts/blog/post-list.php:18
-msgid "Loading posts..."
-msgstr ""
-
-#. translators: search results
-#: template-parts/blog/breadcrumb.php:27
-msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
 #: template-parts/newsletter/form.php:49
@@ -119,20 +55,56 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
-#: comments.php:58
-msgid "Comments are closed."
+#. translators: search results
+#: template-parts/blog/breadcrumb.php:27
+msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
-#: 404.php:17
-msgid "Page not found"
+#: template-parts/blog/single/post-nav.php:35
+#: template-parts/blog/single/post-nav.php:44
+msgid "Previous"
 msgstr ""
 
-#: 404.php:19
-msgid "Sorry! That page doesn't seem to exist."
+#: template-parts/blog/single/post-nav.php:69
+#: template-parts/blog/single/post-nav.php:83
+msgid "Next"
 msgstr ""
 
-#: 404.php:22
-msgid "Back to home"
+#: template-parts/blog/single/meta.php:29
+msgid "reading time:"
+msgstr ""
+
+#: template-parts/blog/single/meta.php:47
+msgid "translates:"
+msgstr ""
+
+#. translators: more posts in series
+#: template-parts/blog/single/serie.php:35
+msgid "More posts in %s series"
+msgstr ""
+
+#: template-parts/blog/single/tags.php:14
+msgid "Tags"
+msgstr ""
+
+#: template-parts/blog/post-list.php:18
+msgid "Loading posts..."
+msgstr ""
+
+#: template-parts/blog/category-nav.php:34
+msgid "Show All"
+msgstr ""
+
+#: template-parts/blog/post-list-empty.php:13
+msgid "Nothing found here."
+msgstr ""
+
+#: template-parts/page/home/blog.php:56
+msgid "See more"
+msgstr ""
+
+#: template-parts/lab/lab.php:35
+msgid "what we wrote about it"
 msgstr ""
 
 #: includes/Taxonomy/Serie.php:38
@@ -241,6 +213,283 @@ msgstr ""
 msgid "No indexes found."
 msgstr ""
 
+#: includes/Form/Contact.php:45
+msgid "Your Message"
+msgstr ""
+
+#. Template Name of the theme
+#: includes/Form/Contact.php:65
+msgid "Contact"
+msgstr ""
+
+#. translators: %s: website locale
+#: includes/Form/Contact.php:80
+msgid "Email that receive the contact - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/Contact.php:95
+msgid "Email subject - (%s)"
+msgstr ""
+
+#: includes/Form/TranslateRequest.php:62
+msgid "Translate Request"
+msgstr ""
+
+#. translators: %s: website locale
+#: includes/Form/TranslateRequest.php:77
+msgid "Email that receives the request - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:92
+msgid "Email Subject - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:107
+msgid "Read link text - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:122
+msgid "Translation request link text - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:137
+msgid "Form Message - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:152
+msgid "Name field - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:167
+msgid "Email field - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:182
+msgid "Submit Button - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:197
+msgid "Success Feedback Message - (%s)"
+msgstr ""
+
+#. translators: %s: locale
+#: includes/Form/TranslateRequest.php:212
+msgid "Error Feedback Message - (%s)"
+msgstr ""
+
+#. translators: %s: website term
+#: includes/Form/Form.php:238
+msgid "Message sent by %s website"
+msgstr ""
+
+#. translators: %s: Sent from term
+#: includes/Form/Form.php:240
+msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:36
+#: includes/Integration/ACF/Pages/HomePage.php:222
+msgid "Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:37
+#: includes/Integration/ACF/PostType/Testimonial.php:51
+msgid "Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:38
+msgctxt "testimonial"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:39
+msgid "Add New Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:40
+msgid "New Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:41
+msgid "Edit Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:42
+msgid "View Testimonial"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:43
+msgid "All Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:44
+msgid "Search Testimonials"
+msgstr ""
+
+#: includes/PostType/Testimonial.php:45
+msgid "No testimonials found."
+msgstr ""
+
+#: includes/PostType/Testimonial.php:46
+msgid "No testimonials found in Trash."
+msgstr ""
+
+#. Template Name of the theme
+#: includes/PostType/Service.php:36
+msgid "Services"
+msgstr ""
+
+#: includes/PostType/Service.php:37
+msgid "Service"
+msgstr ""
+
+#: includes/PostType/Service.php:38
+msgctxt "service"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Service.php:39
+msgid "Add New Service"
+msgstr ""
+
+#: includes/PostType/Service.php:40
+msgid "New Service"
+msgstr ""
+
+#: includes/PostType/Service.php:41
+msgid "Edit Service"
+msgstr ""
+
+#: includes/PostType/Service.php:42
+msgid "View Service"
+msgstr ""
+
+#: includes/PostType/Service.php:43
+msgid "All Services"
+msgstr ""
+
+#: includes/PostType/Service.php:44
+msgid "Search Services"
+msgstr ""
+
+#: includes/PostType/Service.php:45
+msgid "No services found."
+msgstr ""
+
+#: includes/PostType/Service.php:46
+msgid "No services found in Trash."
+msgstr ""
+
+#: includes/PostType/Event.php:36
+msgid "Events"
+msgstr ""
+
+#: includes/PostType/Event.php:37
+#: includes/Integration/ACF/PostType/Event.php:55
+msgid "Event"
+msgstr ""
+
+#: includes/PostType/Event.php:38
+msgctxt "event"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Event.php:39
+msgid "Add New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:40
+msgid "New Event"
+msgstr ""
+
+#: includes/PostType/Event.php:41
+msgid "Edit Event"
+msgstr ""
+
+#: includes/PostType/Event.php:42
+msgid "View Event"
+msgstr ""
+
+#: includes/PostType/Event.php:43
+msgid "All Events"
+msgstr ""
+
+#: includes/PostType/Event.php:44
+msgid "Search Events"
+msgstr ""
+
+#: includes/PostType/Event.php:45
+msgid "No events found."
+msgstr ""
+
+#: includes/PostType/Event.php:46
+msgid "No events found in Trash."
+msgstr ""
+
+#. Template Name of the theme
+#: includes/PostType/Lab.php:36
+msgid "Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:37
+#: includes/Integration/ACF/PostType/Lab.php:55
+msgid "Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:38
+msgctxt "lab"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Lab.php:39
+msgid "Add New Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:40
+msgid "New Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:41
+msgid "Edit Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:42
+msgid "View Lab"
+msgstr ""
+
+#: includes/PostType/Lab.php:43
+msgid "All Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:44
+msgid "Search Labs"
+msgstr ""
+
+#: includes/PostType/Lab.php:45
+msgid "No labs found."
+msgstr ""
+
+#: includes/PostType/Lab.php:46
+msgid "No labs found in Trash."
+msgstr ""
+
+#: includes/Integration/Polylang/Polylang.php:51
+msgid "Contact Phone"
+msgstr ""
+
+#: includes/Integration/Polylang/Polylang.php:52
+msgid "Contact Email"
+msgstr ""
+
 #: includes/Integration/ACF/Taxonomy/Index.php:47
 #: includes/Integration/ACF/PostType/Service.php:65
 #: includes/Integration/ACF/Pages/About.php:84
@@ -249,11 +498,6 @@ msgstr ""
 
 #: includes/Integration/ACF/Taxonomy/Index.php:51
 msgid "Order"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Testimonial.php:51
-#: includes/PostType/Testimonial.php:37
-msgid "Testimonial"
 msgstr ""
 
 #: includes/Integration/ACF/PostType/Testimonial.php:57
@@ -266,24 +510,6 @@ msgstr ""
 
 #: includes/Integration/ACF/PostType/Testimonial.php:69
 msgid "Company Logo"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Lab.php:55
-#: includes/PostType/Lab.php:37
-msgid "Lab"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Lab.php:62
-msgid "Tag"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Lab.php:74
-msgid "Repository"
-msgstr ""
-
-#: includes/Integration/ACF/PostType/Event.php:55
-#: includes/PostType/Event.php:37
-msgid "Event"
 msgstr ""
 
 #: includes/Integration/ACF/PostType/Event.php:69
@@ -308,48 +534,12 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:96
-msgid "Template"
+#: includes/Integration/ACF/PostType/Lab.php:62
+msgid "Tag"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:100
-msgid "Default"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:101
-msgid "Customers"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:102
-msgid "MVP"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:103
-msgid "Experience"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:118
-msgid "Items"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:130
-msgid "Item"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:152
-#: includes/Integration/ACF/Pages/Page.php:51
-#: includes/Integration/ACF/Pages/HomePage.php:54
-msgid "Hero"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:159
-#: includes/Integration/ACF/Pages/Event.php:58
-#: includes/Integration/ACF/Pages/Page.php:69
-#: includes/Integration/ACF/Pages/HomePage.php:67
-#: includes/Integration/ACF/Pages/HomePage.php:206
-#: includes/Customize/Banner/Banner.php:55
-#: includes/Helper/PageSection.php:42
-msgid "Text"
+#: includes/Integration/ACF/PostType/Lab.php:74
+msgid "Repository"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/Contact.php:52
@@ -399,14 +589,20 @@ msgstr ""
 msgid "Error Message: Not sent"
 msgstr ""
 
-#. Template Name of the theme
-#: includes/Integration/ACF/Pages/Event.php:51
-msgid "About"
+#: includes/Integration/ACF/Pages/Page.php:51
+#: includes/Integration/ACF/Pages/HomePage.php:54
+#: includes/Integration/ACF/Pages/About.php:152
+msgid "Hero"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/Event.php:64
-#: includes/Customize/Banner/Banner.php:73
-msgid "Label"
+#: includes/Integration/ACF/Pages/Page.php:69
+#: includes/Integration/ACF/Pages/HomePage.php:67
+#: includes/Integration/ACF/Pages/HomePage.php:206
+#: includes/Integration/ACF/Pages/About.php:159
+#: includes/Integration/ACF/Pages/Event.php:58
+#: includes/Customize/Banner/Banner.php:55
+#: includes/Helper/PageSection.php:42
+msgid "Text"
 msgstr ""
 
 #. Template Name of the theme
@@ -487,17 +683,42 @@ msgstr ""
 msgid "Text after the section title"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:222
-#: includes/PostType/Testimonial.php:36
-msgid "Testimonials"
+#: includes/Integration/ACF/Pages/About.php:96
+msgid "Template"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:51
-msgid "Contact Phone"
+#: includes/Integration/ACF/Pages/About.php:100
+msgid "Default"
 msgstr ""
 
-#: includes/Integration/Polylang/Polylang.php:52
-msgid "Contact Email"
+#: includes/Integration/ACF/Pages/About.php:101
+msgid "Customers"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:102
+msgid "MVP"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:103
+msgid "Experience"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:118
+msgid "Items"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:130
+msgid "Item"
+msgstr ""
+
+#. Template Name of the theme
+#: includes/Integration/ACF/Pages/Event.php:51
+msgid "About"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Event.php:64
+#: includes/Customize/Banner/Banner.php:73
+msgid "Label"
 msgstr ""
 
 #: includes/Customize/Newsletter.php:47
@@ -603,12 +824,12 @@ msgstr ""
 msgid "Main menu opacity"
 msgstr ""
 
-#: includes/Customize/Social.php:41
-msgid "Social Media"
+#: includes/Customize/Banner/Banner.php:104
+msgid "Background Image"
 msgstr ""
 
-#: includes/Customize/Social.php:52
-msgid "Twitter Account"
+#: includes/Customize/Banner/Footer/Promotion.php:30
+msgid "Footer promotion banner"
 msgstr ""
 
 #: includes/Customize/Banner/SinglePost/Promotion.php:30
@@ -619,178 +840,12 @@ msgstr ""
 msgid "Single post contact banner"
 msgstr ""
 
-#: includes/Customize/Banner/Banner.php:104
-msgid "Background Image"
+#: includes/Customize/Social.php:41
+msgid "Social Media"
 msgstr ""
 
-#: includes/Customize/Banner/Footer/Promotion.php:30
-msgid "Footer promotion banner"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:38
-msgctxt "testimonial"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:39
-msgid "Add New Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:40
-msgid "New Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:41
-msgid "Edit Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:42
-msgid "View Testimonial"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:43
-msgid "All Testimonials"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:44
-msgid "Search Testimonials"
-msgstr ""
-
-#: includes/PostType/Testimonial.php:45
-msgid "No testimonials found."
-msgstr ""
-
-#: includes/PostType/Testimonial.php:46
-msgid "No testimonials found in Trash."
-msgstr ""
-
-#. Template Name of the theme
-#: includes/PostType/Lab.php:36
-msgid "Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:38
-msgctxt "lab"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Lab.php:39
-msgid "Add New Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:40
-msgid "New Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:41
-msgid "Edit Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:42
-msgid "View Lab"
-msgstr ""
-
-#: includes/PostType/Lab.php:43
-msgid "All Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:44
-msgid "Search Labs"
-msgstr ""
-
-#: includes/PostType/Lab.php:45
-msgid "No labs found."
-msgstr ""
-
-#: includes/PostType/Lab.php:46
-msgid "No labs found in Trash."
-msgstr ""
-
-#: includes/PostType/Event.php:36
-msgid "Events"
-msgstr ""
-
-#: includes/PostType/Event.php:38
-msgctxt "event"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Event.php:39
-msgid "Add New Event"
-msgstr ""
-
-#: includes/PostType/Event.php:40
-msgid "New Event"
-msgstr ""
-
-#: includes/PostType/Event.php:41
-msgid "Edit Event"
-msgstr ""
-
-#: includes/PostType/Event.php:42
-msgid "View Event"
-msgstr ""
-
-#: includes/PostType/Event.php:43
-msgid "All Events"
-msgstr ""
-
-#: includes/PostType/Event.php:44
-msgid "Search Events"
-msgstr ""
-
-#: includes/PostType/Event.php:45
-msgid "No events found."
-msgstr ""
-
-#: includes/PostType/Event.php:46
-msgid "No events found in Trash."
-msgstr ""
-
-#. Template Name of the theme
-#: includes/PostType/Service.php:36
-msgid "Services"
-msgstr ""
-
-#: includes/PostType/Service.php:37
-msgid "Service"
-msgstr ""
-
-#: includes/PostType/Service.php:38
-msgctxt "service"
-msgid "Add New"
-msgstr ""
-
-#: includes/PostType/Service.php:39
-msgid "Add New Service"
-msgstr ""
-
-#: includes/PostType/Service.php:40
-msgid "New Service"
-msgstr ""
-
-#: includes/PostType/Service.php:41
-msgid "Edit Service"
-msgstr ""
-
-#: includes/PostType/Service.php:42
-msgid "View Service"
-msgstr ""
-
-#: includes/PostType/Service.php:43
-msgid "All Services"
-msgstr ""
-
-#: includes/PostType/Service.php:44
-msgid "Search Services"
-msgstr ""
-
-#: includes/PostType/Service.php:45
-msgid "No services found."
-msgstr ""
-
-#: includes/PostType/Service.php:46
-msgid "No services found in Trash."
+#: includes/Customize/Social.php:52
+msgid "Twitter Account"
 msgstr ""
 
 #: includes/Setup/Navigation.php:34
@@ -873,33 +928,52 @@ msgstr ""
 msgid "Without padding"
 msgstr ""
 
-#. translators: %s: website term
-#: includes/Form/Form.php:231
-msgid "Message sent by %s website"
+#: header.php:28
+msgid "Skip to content"
 msgstr ""
 
-#. translators: %s: Sent from term
-#: includes/Form/Form.php:233
-msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
+#: header.php:91
+msgid "Search"
 msgstr ""
 
-#: includes/Form/Contact.php:45
-msgid "Your Message"
+#: index.php:33
+msgid "Previous Page"
+msgstr ""
+
+#: index.php:33
+msgid "Next Page"
+msgstr ""
+
+#: comments.php:58
+msgid "Comments are closed."
+msgstr ""
+
+#: 404.php:17
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:19
+msgid "Sorry! That page doesn't seem to exist."
+msgstr ""
+
+#: 404.php:22
+msgid "Back to home"
 msgstr ""
 
 #. Template Name of the theme
-#: includes/Form/Contact.php:65
-msgid "Contact"
+msgid "Restricted area"
 msgstr ""
 
-#. translators: %s: website locale
-#: includes/Form/Contact.php:80
-msgid "Email that receive the contact - (%s)"
+#: page-templates/restricted-area.php:59
+msgid "Logout"
 msgstr ""
 
-#. translators: %s: locale
-#: includes/Form/Contact.php:95
-msgid "Email subject - (%s)"
+#. Template Name of the theme
+msgid "Events Calendar"
+msgstr ""
+
+#: page-templates/events.php:36
+msgid "Calendar"
 msgstr ""
 
 #: page-templates/contact.php:85
@@ -912,20 +986,4 @@ msgstr ""
 
 #: page-templates/home.php:51
 msgid "Last posts in English"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Events Calendar"
-msgstr ""
-
-#: page-templates/events.php:36
-msgid "Calendar"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Restricted area"
-msgstr ""
-
-#: page-templates/restricted-area.php:59
-msgid "Logout"
 msgstr ""
