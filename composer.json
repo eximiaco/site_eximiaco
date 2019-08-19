@@ -11,9 +11,9 @@
 				"name": "wp/i18n-tools",
 				"version": "dev-master",
 				"source": {
-					"url": "https://develop.svn.wordpress.org",
+					"url": "https://i18n.svn.wordpress.org",
 					"type": "svn",
-					"reference": "trunk/tools/i18n/"
+					"reference": "tools/trunk/"
 				}
 			}
 		}
