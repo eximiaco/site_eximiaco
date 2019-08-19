@@ -20,8 +20,7 @@ require([
     'app/site-header',
     'app/site-navigation',
     'app/site-search',
-    'app/testimonial',
-    'app/translate-request'
+    'app/testimonial'
 ], function() {
     setTimeout(function() {
         jQuery( window ).trigger('resize');

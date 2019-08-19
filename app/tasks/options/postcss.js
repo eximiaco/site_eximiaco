@@ -8,15 +8,15 @@ module.exports = {
 			require('cssnano')({
 				preset: ['default', {
 					discardComments: {
-						removeAll: true,
-					},
+						removeAll: true
+					}
 				}]
 			})
-		],
+		]
 	},
 	dist: {
 		files: {
 			'<%= config.assets.build %>/css/style.css' : '<%= config.assets.build %>/css/style.css'
 		}
-	},
+	}
 };
