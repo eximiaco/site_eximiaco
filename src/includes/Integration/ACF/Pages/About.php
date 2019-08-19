@@ -91,15 +91,16 @@ class About extends Base {
 					'layout'     => 'block',
 					'sub_fields' => array(
 						array(
-							'type'          => 'select',
-							'key'           => 'template',
-							'label'         => __( 'Template', 'elemarjr' ),
-							'name'          => 'template',
-							'required'      => true,
-							'choices'       => array (
-								'default'   => __( 'Default', 'elemarjr' ),
-								'customers' => __( 'Customers', 'elemarjr' ),
-								'mvp'       => __( 'MVP', 'elemarjr' ),
+							'type'		=> 'select',
+							'key'		=> 'template',
+							'label'		=> __( 'Template', 'elemarjr' ),
+							'name'		=> 'template',
+							'required'	=> true,
+							'choices'	=> array (
+								'default'		=> __( 'Default', 'elemarjr' ),
+								'customers'		=> __( 'Customers', 'elemarjr' ),
+								'mvp'			=> __( 'MVP', 'elemarjr' ),
+								'experience'	=> __( 'Experience', 'elemarjr' ),
 							),
 							'default_value' => array (
 								0 => 'default',

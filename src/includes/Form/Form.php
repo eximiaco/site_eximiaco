@@ -151,6 +151,13 @@ class Form extends Base {
 						$form_object->set_flash();
 					}
 
+					if( ! empty( $values['language'] ) ){
+						$message = array(
+							'message' => $message,
+							'language' => $values['language']
+						);
+					}
+
 					wp_safe_redirect( add_query_arg( 'message', $message, $_SERVER['HTTP_REFERER'] ) );
 					exit;
 				}
@@ -227,7 +234,9 @@ class Form extends Base {
 		}
 
 		$message .= '<br><br>---<br>';
+		/* translators: %s: website term */
 		$message .= sprintf( __( 'Message sent by %s website', 'elemarjr' ), get_bloginfo( 'name' ) ) . '<br>';
+		/* translators: %s: Sent from term */
 		$message .= sprintf( __( 'Sent from: <a href="%1$s">%1$s</a>', 'elemarjr' ), $referer );
 
 		return $message;

@@ -54,14 +54,16 @@ foreach ( $bg_images as $size => $url ) :
 			<h4 class="newsletter--divisortitle"><?php esc_html_e( 'Check the content of your interest', 'elemarjr' ); ?></h4>
 
 			<div class="newsletter--options">
-				<?php for ( $x=1; $x <= 4; $x++ ) : ?>
-				<label for="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>">
-					<div class="newsletter--interest">
-						<span><?php echo get_theme_mod("newsletter_content_{$lang->slug}_{$x}_label"); ?></span>
-						<input id="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>" name="<?php echo get_theme_mod("newsletter_content_{$x}_name"); ?>" class="newsletter--check" type="checkbox" value="Y">
-						<span class="checkmark"></span>
-					</div>
-				</label>
+				<?php for ( $x=1; $x <= 6; $x++ ) : ?>
+					<?php if(!empty(get_theme_mod("newsletter_content_{$x}_id"))): ?>
+						<label for="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>">
+							<div class="newsletter--interest">
+								<span><?php echo get_theme_mod("newsletter_content_{$lang->slug}_{$x}_label"); ?></span>
+								<input id="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>" name="<?php echo get_theme_mod("newsletter_content_{$x}_name"); ?>" class="newsletter--check" type="checkbox" value="Y">
+								<span class="checkmark"></span>
+							</div>
+						</label>
+					<?php endif;?>
 				<?php endfor; ?>
 			</div>
 

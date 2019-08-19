@@ -1,62 +1,65 @@
+# Copyright (C) 2019 Aztec Online Solutions
+# This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-08-16T14:54:01+00:00\n"
+"POT-Creation-Date: 2019-08-15T13:33:46+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: pt_BR\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Theme Name of the theme
 msgid "Elemar Jr Blog Theme"
-msgstr "Tema do Blog do Elemar Jr"
+msgstr ""
 
 #. Author of the theme
 msgid "Aztec Online Solutions"
-msgstr "Aztec Online Solutions"
+msgstr ""
 
 #. Author URI of the theme
 msgid "http://aztecweb.net/"
-msgstr "http://aztecweb.net/"
+msgstr ""
 
 #: template-parts/event/event.php:22
 msgid "and"
-msgstr "e"
+msgstr "y"
 
 #: template-parts/newsletter/form.php:49
 #: includes/Integration/ACF/PostType/Event.php:62
 msgid "Name"
-msgstr "Nome"
+msgstr "Nombre"
 
 #: template-parts/newsletter/form.php:50
 msgid "Surname"
-msgstr "Sobrenome"
+msgstr "Apellido"
 
 #: template-parts/newsletter/form.php:51
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #: template-parts/newsletter/form.php:54
 msgid "Check the content of your interest"
-msgstr "Marque o conteúdo de seu interesse"
+msgstr "Seleccione el contenido de su interés"
 
 #: template-parts/newsletter/form.php:71
 msgid "Select at least one interest"
-msgstr "Selecione pelo menos um interesse"
+msgstr "Seleccione al menos un interés"
 
 #: template-parts/newsletter/form.php:75
 msgid "Subscribe"
-msgstr "Inscrever-se"
+msgstr "Suscribete"
 
 #. translators: search results
 #: template-parts/blog/breadcrumb.php:27
 msgid "Search Results for &#8220;%s&#8221;"
-msgstr "Resultados de Busca por &#8220;%s&#8221;"
+msgstr "Resultados de búsqueda para &#8220;%s&#8221;"
 
 #: template-parts/blog/single/post-nav.php:35
 #: template-parts/blog/single/post-nav.php:44
@@ -66,20 +69,33 @@ msgstr "Anterior"
 #: template-parts/blog/single/post-nav.php:69
 #: template-parts/blog/single/post-nav.php:83
 msgid "Next"
-msgstr "Próximo"
+msgstr "Siguiente"
 
-#: template-parts/blog/single/meta.php:29
+#: template-parts/blog/single/meta.php:25
 msgid "reading time:"
-msgstr "tempo de leitura:"
+msgstr "tiempo de lectura:"
 
-#: template-parts/blog/single/meta.php:47
+#: template-parts/blog/single/meta.php:42
 msgid "translates:"
-msgstr "traduções:"
+msgstr "traduce:"
 
 #. translators: more posts in series
 #: template-parts/blog/single/serie.php:35
 msgid "More posts in %s series"
-msgstr "Mais posts da série %s"
+msgstr "Más publicaciones en la serie %s"
+
+#: template-parts/blog/single/translate-request.php:20
+msgid ""
+"There are no translations for this language (%s) at this time. Leave your "
+"name and email and we'll get back to you when this post is translated."
+msgstr ""
+"No hay traducciones para este idioma (%s) en este momento. Deje su nombre "
+"y correo electrónico y le responderemos cuando se traduzca esta "
+"publicación."
+
+#: template-parts/blog/single/translate-request.php:34
+msgid "request translate"
+msgstr "solicitar traducción"
 
 #: template-parts/blog/single/tags.php:14
 msgid "Tags"
@@ -87,75 +103,75 @@ msgstr "Etiquetas"
 
 #: template-parts/blog/post-list.php:18
 msgid "Loading posts..."
-msgstr "Carregando posts…"
+msgstr "Cargando publicaciones…"
 
 #: template-parts/blog/category-nav.php:34
 msgid "Show All"
-msgstr "Ver Todos"
+msgstr "Mostrar todo"
 
 #: template-parts/blog/post-list-empty.php:13
 msgid "Nothing found here."
-msgstr "Nada encontrado aqui."
+msgstr "No se ha encontrado nada aquí."
 
 #: template-parts/page/home/blog.php:56
 msgid "See more"
-msgstr "Veja mais"
+msgstr "Ver más"
 
 #: template-parts/lab/lab.php:35
 msgid "what we wrote about it"
-msgstr "o que escrevemos sobre"
+msgstr "lo que escribimos al respecto"
 
 #: includes/Taxonomy/Serie.php:38 includes/Taxonomy/Serie.php:40
 msgid "Series"
-msgstr "Séries"
+msgstr "Series"
 
 #: includes/Taxonomy/Serie.php:41
 msgid "Serie"
-msgstr "Série"
+msgstr "Serie"
 
 #: includes/Taxonomy/Serie.php:42
 msgid "All Series"
-msgstr "Todas Séries"
+msgstr "Todas las series"
 
 #: includes/Taxonomy/Serie.php:43
 msgid "Edit Serie"
-msgstr "Editar Série"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:44
 msgid "View Serie"
-msgstr "Ver Série"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:45
 msgid "Update Serie"
-msgstr "Atualizar Série"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:46
 msgid "Add New Serie"
-msgstr "Adicionar Nova Série"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:47
 msgid "New Serie Name"
-msgstr "Nome da Nova Série"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:48
 msgid "Parent Serie"
-msgstr "Série Mãe"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:49
 msgid "Parent Serie:"
-msgstr "Série Mãe:"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:50
 msgid "Search Series"
-msgstr "Procurar Séries"
+msgstr ""
 
 #: includes/Taxonomy/Serie.php:51
 msgid "Popular Series"
-msgstr "Séries Populares"
+msgstr "Series populares"
 
 #: includes/Taxonomy/Serie.php:52
 msgid "No series found."
-msgstr "Nenhuma série encontrada."
+msgstr ""
 
 #: includes/Taxonomy/Index.php:39 includes/Taxonomy/Index.php:41
 msgid "Indexes"
@@ -167,225 +183,173 @@ msgstr "Índice"
 
 #: includes/Taxonomy/Index.php:43
 msgid "All Indexes"
-msgstr "Todos os Índices"
+msgstr "Todos los índices"
 
 #: includes/Taxonomy/Index.php:44
 msgid "Edit Index"
-msgstr "Editar Índice"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:45
 msgid "View Index"
-msgstr "Ver Índice"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:46
 msgid "Update Index"
-msgstr "Atualizar Índice"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:47
 msgid "Add New Index"
-msgstr "Adicionar Índice"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:48
 msgid "New Index Name"
-msgstr "Novo nome de Índice"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:49
 msgid "Parent Index"
-msgstr "Índice pai"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:50
 msgid "Parent Index:"
-msgstr "Índice pai:"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:51
 msgid "Search Indexes"
-msgstr "Procurar Índices"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:52
 msgid "Popular Indexes"
-msgstr "Índice populares"
+msgstr ""
 
 #: includes/Taxonomy/Index.php:53
 msgid "No indexes found."
-msgstr "Nenhuma índice encontrado."
+msgstr ""
 
 #: includes/Form/Contact.php:45
 msgid "Your Message"
-msgstr "Sua mensagem"
+msgstr "Su Mensaje"
 
 #. Template Name of the theme
 #: includes/Form/Contact.php:65
 msgid "Contact"
-msgstr "Contato"
+msgstr "Contacto"
 
 #. translators: %s: website locale
-#: includes/Form/Contact.php:80
+#: includes/Form/Contact.php:80 includes/Form/TranslateRequest.php:77
 msgid "Email that receive the contact - (%s)"
-msgstr "E-mail que recebe o contato - (%s)"
+msgstr "Correo electrónico que recibe el contacto - (%s)"
 
 #. translators: %s: locale
-#: includes/Form/Contact.php:95
+#: includes/Form/Contact.php:95 includes/Form/TranslateRequest.php:92
 msgid "Email subject - (%s)"
-msgstr "Assunto do e-mail - (%s)"
+msgstr "Asunto del correo electrónico - (%s)"
 
 #: includes/Form/TranslateRequest.php:62
 msgid "Translate Request"
-msgstr "Pedido de tradução"
-
-#. translators: %s: website locale
-#: includes/Form/TranslateRequest.php:77
-msgid "Email that receives the request - (%s)"
-msgstr "Email que recebe a requisição - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:92
-#, fuzzy
-#| msgid "Email subject - (%s)"
-msgid "Email Subject - (%s)"
-msgstr "Assunto do e-mail - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:107
-msgid "Read link text - (%s)"
-msgstr "Texto do link leia - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:122
-msgid "Translation request link text - (%s)"
-msgstr "Texto do link de requisição de tradução"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:137
-msgid "Form Message - (%s)"
-msgstr "Mensagem do formulário"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:152
-msgid "Name field - (%s)"
-msgstr "Campo nome - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:167
-msgid "Email field - (%s)"
-msgstr "Campo email - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:182
-msgid "Submit Button - (%s)"
-msgstr "Botão de envio - (%s)"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:197
-msgid "Success Feedback Message - (%s)"
-msgstr "Mensagem de Feedback de Sucesso"
-
-#. translators: %s: locale
-#: includes/Form/TranslateRequest.php:212
-msgid "Error Feedback Message - (%s)"
-msgstr "Mensagem de Feedback de Error"
+msgstr "Solicitud de traducción"
 
 #. translators: %s: website term
-#: includes/Form/Form.php:238
+#: includes/Form/Form.php:231
 msgid "Message sent by %s website"
-msgstr "Mensagem enviada pelo site %s"
+msgstr "Mensaje enviado por el sitio web de %s"
 
 #. translators: %s: Sent from term
-#: includes/Form/Form.php:240
+#: includes/Form/Form.php:233
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
-msgstr "Enviada por <a href=“%1$s”>%1$s</a>"
+msgstr "Enviado desde: <a href=\"%1$s\">%1$s</a>"
 
 #: includes/PostType/Testimonial.php:36
 #: includes/Integration/ACF/Pages/HomePage.php:222
 msgid "Testimonials"
-msgstr "Recomendações"
+msgstr "Recomendaciones"
 
 #: includes/PostType/Testimonial.php:37
 #: includes/Integration/ACF/PostType/Testimonial.php:51
 msgid "Testimonial"
-msgstr "Recomendação"
+msgstr "Recomendación"
 
 #: includes/PostType/Testimonial.php:38
 msgctxt "testimonial"
 msgid "Add New"
-msgstr "Adicionar Nova"
+msgstr ""
 
 #: includes/PostType/Testimonial.php:39
 msgid "Add New Testimonial"
-msgstr "Adicionar Nova Recomendação"
+msgstr ""
 
 #: includes/PostType/Testimonial.php:40
 msgid "New Testimonial"
-msgstr "Nova Recomendação"
+msgstr ""
 
 #: includes/PostType/Testimonial.php:41
 msgid "Edit Testimonial"
-msgstr "Editar Recomendação"
+msgstr ""
 
 #: includes/PostType/Testimonial.php:42
 msgid "View Testimonial"
-msgstr "Ver Recomendação"
+msgstr ""
 
 #: includes/PostType/Testimonial.php:43
 msgid "All Testimonials"
-msgstr "Todas Recomendações"
+msgstr "Todas las recomendaciones"
 
 #: includes/PostType/Testimonial.php:44
 msgid "Search Testimonials"
-msgstr "Procurar Recomendações"
+msgstr "Buscar Recomendaciones"
 
 #: includes/PostType/Testimonial.php:45
 msgid "No testimonials found."
-msgstr "Nenhuma recomendação encontrada."
+msgstr ""
 
 #: includes/PostType/Testimonial.php:46
 msgid "No testimonials found in Trash."
-msgstr "Nenhuma recomendação encontrada na lixeira."
+msgstr ""
 
 #. Template Name of the theme
 #: includes/PostType/Service.php:36
 msgid "Services"
-msgstr "Serviços"
+msgstr "Servicios"
 
 #: includes/PostType/Service.php:37
 msgid "Service"
-msgstr "Serviço"
+msgstr "Servicio"
 
 #: includes/PostType/Service.php:38
 msgctxt "service"
 msgid "Add New"
-msgstr "Adicionar Novo"
+msgstr ""
 
 #: includes/PostType/Service.php:39
 msgid "Add New Service"
-msgstr "Adicionar Nova Serviço"
+msgstr ""
 
 #: includes/PostType/Service.php:40
 msgid "New Service"
-msgstr "Ver Serviço"
+msgstr ""
 
 #: includes/PostType/Service.php:41
 msgid "Edit Service"
-msgstr "Editar Serviço"
+msgstr ""
 
 #: includes/PostType/Service.php:42
 msgid "View Service"
-msgstr "Ver Serviço"
+msgstr ""
 
 #: includes/PostType/Service.php:43
 msgid "All Services"
-msgstr "Todos Serviços"
+msgstr ""
 
 #: includes/PostType/Service.php:44
 msgid "Search Services"
-msgstr "Procurar Serviços"
+msgstr ""
 
 #: includes/PostType/Service.php:45
 msgid "No services found."
-msgstr "Nenhuma serviço encontrada."
+msgstr ""
 
 #: includes/PostType/Service.php:46
 msgid "No services found in Trash."
-msgstr "Nenhum serviço encontrado na lixeira."
+msgstr ""
 
 #: includes/PostType/Event.php:36
 msgid "Events"
@@ -399,107 +363,107 @@ msgstr "Evento"
 #: includes/PostType/Event.php:38
 msgctxt "event"
 msgid "Add New"
-msgstr "Adicionar Novo"
+msgstr ""
 
 #: includes/PostType/Event.php:39
 msgid "Add New Event"
-msgstr "Adicionar Novo"
+msgstr ""
 
 #: includes/PostType/Event.php:40
 msgid "New Event"
-msgstr "Novo Evento"
+msgstr ""
 
 #: includes/PostType/Event.php:41
 msgid "Edit Event"
-msgstr "Editar Evento"
+msgstr ""
 
 #: includes/PostType/Event.php:42
 msgid "View Event"
-msgstr "Ver Evento"
+msgstr ""
 
 #: includes/PostType/Event.php:43
 msgid "All Events"
-msgstr "Todos Eventos"
+msgstr ""
 
 #: includes/PostType/Event.php:44
 msgid "Search Events"
-msgstr "Procurar Eventos"
+msgstr ""
 
 #: includes/PostType/Event.php:45
 msgid "No events found."
-msgstr "Nenhum evento encontrado."
+msgstr ""
 
 #: includes/PostType/Event.php:46
 msgid "No events found in Trash."
-msgstr "Nenhum evento encontrado na lixeira."
+msgstr ""
 
 #. Template Name of the theme
 #: includes/PostType/Lab.php:36
 msgid "Labs"
-msgstr "Labs"
+msgstr ""
 
 #: includes/PostType/Lab.php:37 includes/Integration/ACF/PostType/Lab.php:55
 msgid "Lab"
-msgstr "Lab"
+msgstr ""
 
 #: includes/PostType/Lab.php:38
 msgctxt "lab"
 msgid "Add New"
-msgstr "Adicionar Novo"
+msgstr ""
 
 #: includes/PostType/Lab.php:39
 msgid "Add New Lab"
-msgstr "Adicionar Novo Lab"
+msgstr ""
 
 #: includes/PostType/Lab.php:40
 msgid "New Lab"
-msgstr "Novo Lab"
+msgstr ""
 
 #: includes/PostType/Lab.php:41
 msgid "Edit Lab"
-msgstr "Editar Lab"
+msgstr ""
 
 #: includes/PostType/Lab.php:42
 msgid "View Lab"
-msgstr "Visualizar Lab"
+msgstr ""
 
 #: includes/PostType/Lab.php:43
 msgid "All Labs"
-msgstr "Todos Labs"
+msgstr ""
 
 #: includes/PostType/Lab.php:44
 msgid "Search Labs"
-msgstr "Buscar Labs"
+msgstr ""
 
 #: includes/PostType/Lab.php:45
 msgid "No labs found."
-msgstr "Nenhum Lab encontrado."
+msgstr ""
 
 #: includes/PostType/Lab.php:46
 msgid "No labs found in Trash."
-msgstr "Nenhum lab encontrado na lixeira."
+msgstr ""
 
 #: includes/Integration/Polylang/Polylang.php:51
 msgid "Contact Phone"
-msgstr "Telefone de contato"
+msgstr "Teléfono de contacto"
 
 #: includes/Integration/Polylang/Polylang.php:52
 msgid "Contact Email"
-msgstr "E-mail de contato"
+msgstr "Email de contacto"
 
 #: includes/Integration/ACF/Taxonomy/Index.php:47
 #: includes/Integration/ACF/PostType/Service.php:65
 #: includes/Integration/ACF/Pages/About.php:84
 msgid "Page sections"
-msgstr "Seções da página"
+msgstr ""
 
 #: includes/Integration/ACF/Taxonomy/Index.php:51
 msgid "Order"
-msgstr "Ordem"
+msgstr ""
 
 #: includes/Integration/ACF/PostType/Testimonial.php:57
 msgid "Position"
-msgstr "Cargo"
+msgstr "Posición"
 
 #: includes/Integration/ACF/PostType/Testimonial.php:63
 msgid "Photo"
@@ -507,23 +471,23 @@ msgstr "Foto"
 
 #: includes/Integration/ACF/PostType/Testimonial.php:69
 msgid "Company Logo"
-msgstr "Logo da Empresa"
+msgstr "Logo de la empresa"
 
 #: includes/Integration/ACF/PostType/Event.php:69
 msgid "Start date"
-msgstr "Data inicial"
+msgstr "Fecha de inicio"
 
 #: includes/Integration/ACF/PostType/Event.php:80
 msgid "End date"
-msgstr "Data final"
+msgstr "Fecha de finalización"
 
 #: includes/Integration/ACF/PostType/Event.php:90
 msgid "Role"
-msgstr "Posição"
+msgstr "Función"
 
 #: includes/Integration/ACF/PostType/Event.php:96
 msgid "Responsible"
-msgstr "Responsável"
+msgstr ""
 
 #: includes/Integration/ACF/PostType/Event.php:102
 #: includes/Integration/ACF/Pages/Event.php:73
@@ -533,15 +497,15 @@ msgstr "URL"
 
 #: includes/Integration/ACF/PostType/Lab.php:62
 msgid "Tag"
-msgstr "Etiquetas"
+msgstr "Etiqueta"
 
 #: includes/Integration/ACF/PostType/Lab.php:74
 msgid "Repository"
-msgstr "Repositório"
+msgstr "Repositorio"
 
 #: includes/Integration/ACF/Pages/Contact.php:52
 msgid "Body"
-msgstr "Corpo"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/Contact.php:59
 #: includes/Integration/ACF/Pages/Page.php:57
@@ -554,42 +518,42 @@ msgstr "Título"
 #: includes/Integration/ACF/Pages/Contact.php:60
 #: includes/Helper/PageSection.php:28
 msgid "Use * to bold"
-msgstr "Use * para negrito"
+msgstr "Use * para negrita"
 
 #: includes/Integration/ACF/Pages/Contact.php:66
 #: includes/Integration/ACF/Pages/Page.php:63
 msgid "Subtitle"
-msgstr "Sub-título"
+msgstr "Subtítulo"
 
 #: includes/Integration/ACF/Pages/Contact.php:72
 msgid "Description"
-msgstr "Descrição"
+msgstr "Descripción"
 
 #: includes/Integration/ACF/Pages/Contact.php:87
 msgid "Form"
-msgstr "Formulário"
+msgstr "Formulario"
 
 #: includes/Integration/ACF/Pages/Contact.php:94
 msgid "Success"
-msgstr "Sucesso"
+msgstr "Éxito"
 
 #: includes/Integration/ACF/Pages/Contact.php:100
 msgid "Error Message: Empty fields"
-msgstr "Mensagem de erro: Campos vazios"
+msgstr "Mensaje de error: Campos vacíos"
 
 #: includes/Integration/ACF/Pages/Contact.php:106
 msgid "Error Message: Spam"
-msgstr "Mensagem de erro: Spam"
+msgstr "Mensaje de error: Spam"
 
 #: includes/Integration/ACF/Pages/Contact.php:112
 msgid "Error Message: Not sent"
-msgstr "Mensagem de erro: Não enviado"
+msgstr "Mensaje de error: No enviado"
 
 #: includes/Integration/ACF/Pages/Page.php:51
 #: includes/Integration/ACF/Pages/HomePage.php:54
 #: includes/Integration/ACF/Pages/About.php:152
 msgid "Hero"
-msgstr "Hero"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/Page.php:69
 #: includes/Integration/ACF/Pages/HomePage.php:67
@@ -603,16 +567,16 @@ msgstr "Texto"
 #. Template Name of the theme
 #: includes/Integration/ACF/Pages/NewsletterForm.php:51
 msgid "Newsletter Form"
-msgstr "Formulário de Newsletter"
+msgstr "Boletín de noticias"
 
 #: includes/Integration/ACF/Pages/HomePage.php:73
 msgid "Button Label"
-msgstr "Rótulo do botão"
+msgstr "Etiqueta del Botón"
 
 #: includes/Integration/ACF/Pages/HomePage.php:79
 #: includes/Helper/PageSection.php:129
 msgid "Button URL"
-msgstr "URL do botão"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:94
 msgid "Purpose"
@@ -620,70 +584,70 @@ msgstr "Propósito"
 
 #: includes/Integration/ACF/Pages/HomePage.php:102
 msgid "Section title"
-msgstr "Título da seção"
+msgstr "Título de la sección"
 
 #: includes/Integration/ACF/Pages/HomePage.php:108
 msgid "Icon Class 1"
-msgstr "Classe do ícone 1"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:114
 msgid "Title 1"
-msgstr "Título 1"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:120
 msgid "Text 1"
-msgstr "Texto 1"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:126
 msgid "Icon Class 2"
-msgstr "Classe do ícone 2"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:132
 msgid "Title 2"
-msgstr "Título 2"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:138
 msgid "Text 2"
-msgstr "Texto 2"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:144
 #: includes/Helper/PageSection.php:56
 msgid "Image"
-msgstr "Imagem"
+msgstr "Imagen"
 
 #: includes/Integration/ACF/Pages/HomePage.php:159
 #: includes/Integration/ACF/Pages/HomePage.php:172
 msgid "Quote"
-msgstr "Citação"
+msgstr "Frase"
 
 #: includes/Integration/ACF/Pages/HomePage.php:166
 #: includes/Customize/Newsletter.php:87
 msgid "Background"
-msgstr "Fundo"
+msgstr "Background"
 
 #: includes/Integration/ACF/Pages/HomePage.php:178
 msgid "Quote author"
-msgstr "Citação autor"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:184
 msgid "Quote job role"
-msgstr "Citação cargo"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:199 page-templates/home.php:37
 msgid "Blog"
-msgstr "Blog"
+msgstr "Publicaciones"
 
 #: includes/Integration/ACF/Pages/HomePage.php:207
 msgid "Text after the section title"
-msgstr "Texto após o título da seção"
+msgstr "Texto después del título de la sección"
 
 #: includes/Integration/ACF/Pages/About.php:96
 msgid "Template"
-msgstr "Modelo"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:100
 msgid "Default"
-msgstr "Padrão"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:101
 msgid "Customers"
@@ -691,19 +655,19 @@ msgstr "Clientes"
 
 #: includes/Integration/ACF/Pages/About.php:102
 msgid "MVP"
-msgstr "MVP"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:103
 msgid "Experience"
-msgstr "Experiência"
+msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:118
 msgid "Items"
-msgstr "Itens"
+msgstr "Elementos"
 
 #: includes/Integration/ACF/Pages/About.php:130
 msgid "Item"
-msgstr "Item"
+msgstr ""
 
 #. Template Name of the theme
 #: includes/Integration/ACF/Pages/Event.php:51
@@ -713,215 +677,227 @@ msgstr "Sobre"
 #: includes/Integration/ACF/Pages/Event.php:64
 #: includes/Customize/Banner/Banner.php:73
 msgid "Label"
-msgstr "Rótulo"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:47
 msgid "Newletter Form"
-msgstr "Formulário de Newsletter"
+msgstr "Formulario Newletter"
 
 #: includes/Customize/Newsletter.php:101
 msgid "Form action"
-msgstr "Ação do formulário"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:102
 msgid "Form action url"
-msgstr "Url da ação do formulário"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:113
 msgid "User ID"
-msgstr "Id do usuário"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:114
 msgid "Mailchimp user identification"
-msgstr "Usuário de identificação do Mailchimp"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:125
+#, fuzzy
+#| msgid "Form"
 msgid "Form ID"
-msgstr "Id do formulário"
+msgstr "Formulario"
 
 #: includes/Customize/Newsletter.php:126
 msgid "Mailchimp form identification"
-msgstr "Formulário de identificação do Mailchimp"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:137
 msgid "Enter the form input name tag for these fields"
-msgstr "Informe o nome da tag de formulário para estes campos"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:138
 msgid "Field \"Name\""
-msgstr "Campo \"Nome\""
+msgstr ""
 
 #: includes/Customize/Newsletter.php:149
+#, fuzzy
+#| msgid "Surname"
 msgid "Field \"Surname\""
-msgstr "Campo \"Sobrenome\""
+msgstr "Apellido"
 
 #: includes/Customize/Newsletter.php:160
 msgid "Field \"E-mail\""
-msgstr "Campo \"Email\""
+msgstr ""
 
 #: includes/Customize/Newsletter.php:176
 msgid "Custom content field"
-msgstr "Campo de conteúdo personalizado"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:177
 msgid "Field Label"
-msgstr "Rótulo do campo"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:190
 msgid "Field ID"
-msgstr "Id do campo"
+msgstr ""
 
 #: includes/Customize/Newsletter.php:201
 msgid "Field Name"
-msgstr "Nome do Campo"
+msgstr ""
 
 #: includes/Customize/Head.php:42
 msgid "Header"
-msgstr "Cabeçalho"
+msgstr ""
 
 #: includes/Customize/Head.php:61
+#, fuzzy
+#| msgid "Logout"
 msgid "Logo"
-msgstr "Logo"
+msgstr "Cerrar sesión"
 
 #: includes/Customize/Head.php:74
+#, fuzzy
+#| msgid "Primary"
 msgid "Primary Website"
-msgstr "Site Primário"
+msgstr "Primario"
 
 #: includes/Customize/Head.php:76 includes/Customize/Head.php:99
 msgid "Website URL"
-msgstr "URL do website"
+msgstr ""
 
 #: includes/Customize/Head.php:86 includes/Customize/Head.php:109
 msgid "Website Title"
-msgstr "Título do Website"
+msgstr ""
 
 #: includes/Customize/Head.php:97
 msgid "Secondary Website"
-msgstr "Site Secundário"
+msgstr ""
 
 #: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
 msgid "Color Scheme"
-msgstr "Esquema de cores"
+msgstr ""
 
 #: includes/Customize/Colors.php:52
+#, fuzzy
+#| msgid "Primary"
 msgid "Primary Color"
-msgstr "Cor Primária"
+msgstr "Primario"
 
 #: includes/Customize/Colors.php:62
 msgid "Secondary Color"
-msgstr "Cor Secundária"
+msgstr ""
 
 #: includes/Customize/Colors.php:73
 msgid "Main menu opacity"
-msgstr "Opacidade do menu principal"
+msgstr ""
 
 #: includes/Customize/Banner/Banner.php:104
+#, fuzzy
+#| msgid "Background Image - (%s)"
 msgid "Background Image"
-msgstr "Imagem de fundo"
+msgstr "Imagen de fondo - (%s)"
 
 #: includes/Customize/Banner/Footer/Promotion.php:30
 msgid "Footer promotion banner"
-msgstr "Banner de promoção do rodapé"
+msgstr "Banner de promoción de pie de página"
 
 #: includes/Customize/Banner/SinglePost/Promotion.php:30
 msgid "Single post promotion banner"
-msgstr "Banner na página do post"
+msgstr ""
 
 #: includes/Customize/Banner/SinglePost/Contact.php:30
 msgid "Single post contact banner"
-msgstr "Banner na página do post"
+msgstr ""
 
 #: includes/Customize/Social.php:41
 msgid "Social Media"
-msgstr "Mídia Social"
+msgstr ""
 
 #: includes/Customize/Social.php:52
 msgid "Twitter Account"
-msgstr "Conta do Twitter"
+msgstr ""
 
 #: includes/Setup/Navigation.php:34
 msgid "Primary"
-msgstr "Primário"
+msgstr "Primario"
 
 #: includes/Setup/Navigation.php:35
 msgid "Social Menu"
-msgstr "Menu Social"
+msgstr ""
 
 #: includes/Helper/PageSection.php:71
 msgid "Image Position"
-msgstr "Posição da imagem"
+msgstr "Posición de la imagen"
 
 #: includes/Helper/PageSection.php:73
 msgid "Left"
-msgstr "Esquerda"
+msgstr "Izquierda"
 
 #: includes/Helper/PageSection.php:74
 msgid "Right"
-msgstr "Direita"
+msgstr "Derecha"
 
 #: includes/Helper/PageSection.php:90
 msgid "Image Align"
-msgstr "Alinhamento da imagem"
+msgstr "Alineación de la Imagen"
 
 #: includes/Helper/PageSection.php:92
 msgid "None"
-msgstr "Nenhum"
+msgstr "Ninguno"
 
 #: includes/Helper/PageSection.php:93
 msgid "Overlap top"
-msgstr "Sobreposição para cima"
+msgstr ""
 
 #: includes/Helper/PageSection.php:94
 msgid "Stick on top"
-msgstr "Grudar acima"
+msgstr ""
 
 #: includes/Helper/PageSection.php:95
 msgid "Stick on bottom"
-msgstr "Grudar abaixo"
+msgstr ""
 
 #: includes/Helper/PageSection.php:96
 msgid "Overlap bottom"
-msgstr "Sobreposição para baixo"
+msgstr ""
 
 #: includes/Helper/PageSection.php:113
 msgid "Button label"
-msgstr "Rótulo do botão"
+msgstr ""
 
 #: includes/Helper/PageSection.php:150
 msgid "Background White and Title Black"
-msgstr "Fundo Branco e Título Preto"
+msgstr ""
 
 #: includes/Helper/PageSection.php:151
 msgid "Background Gray and Title Black"
-msgstr "Fundo Cinza e Título Preto"
+msgstr ""
 
 #: includes/Helper/PageSection.php:152
 msgid "Background Black and Title White"
-msgstr "Fundo Preto e Título Branco"
+msgstr ""
 
 #: includes/Helper/PageSection.php:153
 msgid "Background Dusky and Title White"
-msgstr "Fundo Escuro e Título Branco"
+msgstr ""
 
 #: includes/Helper/PageSection.php:154
 msgid "Background Dark and Title White"
-msgstr "Fundo Mais Escuro e Título Branco"
+msgstr ""
 
 #: includes/Helper/PageSection.php:169
 msgid "Padding Section"
-msgstr "Espaçamento da seção"
+msgstr ""
 
 #: includes/Helper/PageSection.php:171
 msgid "With padding"
-msgstr "Com espaçamento"
+msgstr ""
 
 #: includes/Helper/PageSection.php:172
 msgid "Without padding"
-msgstr "Sem espaçamento"
+msgstr ""
 
 #: header.php:28
 msgid "Skip to content"
-msgstr "Pular para o conteúdo"
+msgstr "Saltar al contenido"
 
 #: header.php:91
 msgid "Search"
@@ -929,43 +905,43 @@ msgstr "Buscar"
 
 #: index.php:33
 msgid "Previous Page"
-msgstr "Página Anterior"
+msgstr "Página anterior"
 
 #: index.php:33
 msgid "Next Page"
-msgstr "Próxima Página"
+msgstr "Página Siguiente"
 
 #: comments.php:58
 msgid "Comments are closed."
-msgstr "Comentários estão fechados."
+msgstr "Los comentarios están cerrados."
 
 #: 404.php:17
 msgid "Page not found"
-msgstr "Página não encontrada"
+msgstr "Página no encontrada"
 
 #: 404.php:19
 msgid "Sorry! That page doesn't seem to exist."
-msgstr "Desculpe! Esta página não parece existir."
+msgstr "¡Lo siento! Esa página no parece existir."
 
 #: 404.php:22
 msgid "Back to home"
-msgstr "Voltar para página inicial"
+msgstr "Volver al inicio"
 
 #. Template Name of the theme
 msgid "Restricted area"
-msgstr "Área restrita"
+msgstr "Área restringida"
 
 #: page-templates/restricted-area.php:59
 msgid "Logout"
-msgstr "Logout"
+msgstr "Cerrar sesión"
 
 #. Template Name of the theme
 msgid "Events Calendar"
-msgstr "Agenda de Eventos"
+msgstr "Calendario de eventos"
 
 #: page-templates/events.php:36
 msgid "Calendar"
-msgstr "Agenda"
+msgstr "Calendario"
 
 #: page-templates/contact.php:85
 msgid "Send"
@@ -973,26 +949,26 @@ msgstr "Enviar"
 
 #. Template Name of the theme
 msgid "Home"
-msgstr "Página Inicial"
+msgstr ""
 
 #: page-templates/home.php:51
 msgid "Last posts in English"
-msgstr "Últimos posts em Inglês"
-
-#~ msgid "There are no translations for this language (%s) at this time. Leave your name and email and we'll get back to you when this post is translated."
-#~ msgstr "Não há traduções para este idioma (%s) no momento. Deixe seu nome e e-mail e entraremos em contato quando esta postagem for traduzida."
-
-#~ msgid "request translate"
-#~ msgstr "solicitar tradução"
+msgstr "Ultimas publicaciones en inglés"
 
 #~ msgid "No Comments"
-#~ msgstr "Sem Comentários"
+#~ msgstr "No hay comentarios"
 
 #~ msgid "1 Comment"
-#~ msgstr "1 Comentário"
+#~ msgstr "1 Comentario"
 
 #~ msgid "Comments"
-#~ msgstr "Comentários"
+#~ msgstr "Comentarios"
+
+#~ msgid "Text - (%s)"
+#~ msgstr "Texto - (%s)"
+
+#~ msgid "Label - (%s)"
+#~ msgstr "Etiqueta - (%s)"
 
 #~ msgid "URL - (%s)"
 #~ msgstr "URL - (%s)"
@@ -1000,75 +976,17 @@ msgstr "Últimos posts em Inglês"
 #~ msgid "Title - (%s)"
 #~ msgstr "Título - (%s)"
 
-#~ msgctxt "label"
-#~ msgid "Search for:"
-#~ msgstr "Procurar por:"
-
 #~ msgid "Page %s"
 #~ msgstr "Página %s"
 
 #~ msgid "%1$s at %2$s"
-#~ msgstr "%1$s às %2$s"
+#~ msgstr "%1$s de %2$s"
 
 #~ msgid "Events in which we will speak"
-#~ msgstr "Eventos em que iremos palestrar"
+#~ msgstr "Eventos en los que hablaremos"
 
 #~ msgid "English content"
-#~ msgstr "Conteúdo em inglês"
+#~ msgstr "Contenido en inglés"
 
 #~ msgid "Portuguese content"
-#~ msgstr "Conteúdo em Português"
-
-#~ msgid "Offers and Promotions"
-#~ msgstr "Ofertas e Promoções"
-
-#~ msgid "Gallery"
-#~ msgstr "Galeria"
-
-#~ msgid "Overlap down"
-#~ msgstr "Sobreposição para baixo"
-
-#~ msgid "Photos"
-#~ msgstr "Fotos"
-
-#~ msgid "Type your email"
-#~ msgstr "Digite seu e-mail"
-
-#~ msgid "Last Name"
-#~ msgstr "Sobrenome"
-
-#~ msgid "Follow us"
-#~ msgstr "Siga-nos"
-
-#~ msgid "Background White and Title Red"
-#~ msgstr "Fundo Branco e Título Vermelho"
-
-#~ msgid "Category: %s"
-#~ msgstr "Categoria: %s"
-
-#~ msgid "Share"
-#~ msgstr "Compartilhe"
-
-#~ msgid "My Abilities"
-#~ msgstr "Minhas habilidades"
-
-#~ msgid "My Clients"
-#~ msgstr "Meus Clientes"
-
-#~ msgid "RavenDB"
-#~ msgstr "RavenDB"
-
-#~ msgid "Most Valuable Professional"
-#~ msgstr "Most Valuable Professional"
-
-#~ msgid "Newsletter"
-#~ msgstr "Newsletter"
-
-#~ msgid "Stay informed with our publications"
-#~ msgstr "Mantenha-se informado com nossas publicações"
-
-#~ msgid "Eventos em que irei palestrar"
-#~ msgstr "Events in which I will speak"
-
-#~ msgid "Phone"
-#~ msgstr "Fone"
+#~ msgstr "Contenido em portugués"

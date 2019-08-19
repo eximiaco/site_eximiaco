@@ -26,6 +26,13 @@
             @media screen and ( min-width $screen-md )
                 margin-bottom 0
 
+        &-translate
+            text-decoration none
+            color var-use( color-primary )
+
+            @media screen and ( min-width $screen-md )
+                margin-bottom 0
+
         &-date
             @media screen and ( min-width $screen-md )
                 margin 0 60px
@@ -33,9 +40,20 @@
         &-reading
             line-height 1
 
+        &-lang
+            @media screen and ( min-width $screen-md )
+                margin 0 60px
+
     &--icon__time
         color var-use( color-primary )
         float left
         font-size 24px
         icon( i-time )
+        margin-right 10px
+
+    &--icon__language
+        color var-use( color-primary )
+        float left
+        font-size 24px
+        icon( i-language )
         margin-right 10px

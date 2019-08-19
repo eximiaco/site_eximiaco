@@ -44,7 +44,6 @@
 		"deployer/deployer" : "^6.0",
 		"deployer/recipes" : "^6.0",
 		"wpackagist-plugin/query-monitor" : "^3.0",
-		"wp/i18n-tools" : "dev-master",
 		"wp-coding-standards/wpcs" : "^0.14.0"
 	},
 	"autoload" : {

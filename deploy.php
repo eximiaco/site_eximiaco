@@ -12,9 +12,17 @@ require 'app/recipe/grunt.php';
 host('eximia.co')
 	->port(2201)
 	->stage('production')
-    ->user('eximia')
-    ->set('branch', 'develop')
-    ->set('deploy_path', '/home/eximia/production');
+	->user('eximia')
+	->set('branch', 'master')
+	->set('deploy_path', '/home/eximia/production');
+
+host('staging.eximia.co')
+	->port(2201)
+	->stage('staging')
+	->user('eximia_staging')
+	->set('branch', 'develop')
+	->set('deploy_path', '/home/eximia_staging');
+
 
 set('http_user', 'www-data');
 
@@ -35,7 +43,7 @@ set('writable_dirs', [
 ]);
 
 task('deploy:install', function () {
-    run('cd {{release_path}} && bin/install');
+    run('cd {{release_path}} && bin/install', [ 'timeout' => null ]);
 });
 
 task('deploy:notes', function () {

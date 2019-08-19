@@ -7,9 +7,10 @@
         justify-content space-between
         padding 50px $page-section-padding-horizontal-sm
         position relative
+        display flex
+        flex-wrap wrap
 
         @media screen and ( min-width $screen-md )
-            display flex
             padding 70px $page-section-padding-horizontal-md
 
     &--content
@@ -84,6 +85,12 @@
 
         & ^[0..-2]--button
             @extend $placeholder
+
+    &__darken
+        background-color var( --color-secondary )
+        color $white
+        .page-section--title
+            color white
 
     // Right modifier
     &__invert
@@ -181,6 +188,30 @@
 
             @media screen and ( min-width $screen-lg )
                 width 55%
+
+    // Experience template
+    &__experience
+        & ^[0..-2]--container
+            padding-top 0
+            padding-bottom 0
+            text-align right
+
+        & ^[0..-2]--content
+            padding-top 30px
+            padding-bottom 30px
+
+            h2
+                margin-bottom 0
+                padding-bottom 20px
+                position relative
+
+                &::after
+                    border-bottom 1px solid white
+                    bottom 0
+                    content ''
+                    position absolute
+                    width 40px
+                    right 0
 
     // Image align top
     &__image-top

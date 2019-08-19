@@ -71,9 +71,9 @@ class Head extends Base {
 			)
 		);
 		$wp_customize->add_control( "{$section_id}_primary_url", array(
-			'label' => __( 'Primary Website' ),
+			'label' => __( 'Primary Website', 'elemarjr' ),
 			'type' => 'text',
-			'description' => 'Website URL',
+			'description' => __( 'Website URL', 'elemarjr' ),
 			'section' => $section_id,
 		) );
 		$wp_customize->add_setting(
@@ -83,7 +83,7 @@ class Head extends Base {
 		);
 		$wp_customize->add_control( "{$section_id}_primary_title", array(
 			'type' => 'text',
-			'description' => 'Website Title',
+			'description' => __( 'Website Title', 'elemarjr' ),
 			'section' => $section_id,
 		) );
 
@@ -94,9 +94,9 @@ class Head extends Base {
 			)
 		);
 		$wp_customize->add_control( "{$section_id}_secondary_url", array(
-			'label' => __( 'Secondary Website' ),
+			'label' => __( 'Secondary Website', 'elemarjr' ),
 			'type' => 'text',
-			'description' => 'Website URL',
+			'description' => __( 'Website URL', 'elemarjr' ),
 			'section' => $section_id,
 		) );
 		$wp_customize->add_setting(
@@ -106,7 +106,7 @@ class Head extends Base {
 		);
 		$wp_customize->add_control( "{$section_id}_secondary_title", array(
 			'type' => 'text',
-			'description' => 'Website Title',
+			'description' => __( 'Website Title', 'elemarjr' ),
 			'section' => $section_id,
 		) );
 	}

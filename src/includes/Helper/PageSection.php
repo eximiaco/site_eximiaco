@@ -151,6 +151,25 @@ class PageSection extends Base {
 				'light' => __( 'Background Gray and Title Black', 'elemarjr' ),
 				'dark'  => __( 'Background Black and Title White', 'elemarjr' ),
 				'dusky' => __( 'Background Dusky and Title White', 'elemarjr' ),
+				'darken' => __( 'Background Dark and Title White', 'elemarjr' ),
+			)
+		);
+	}
+
+	/**
+	 * Add padding section field.
+	 *
+	 * @return array
+	 */
+	public function add_padding_field() {
+		return array(
+			'type'    => 'radio',
+			'key'     => 'padding',
+			'name'    => 'padding',
+			'label'   => __( 'Padding Section', 'elemarjr' ),
+			'choices' => array(
+				'with'  => __( 'With padding', 'elemarjr' ),
+				'without' => __( 'Without padding', 'elemarjr' ),
 			)
 		);
 	}
@@ -193,6 +212,9 @@ class PageSection extends Base {
 				case 'dusky':
 					$classes[] = 'page-section__dusky';
 					break;
+				case 'darken':
+					$classes[] = 'page-section__darken';
+					break;
 			}
 		}
 	}
@@ -204,7 +226,7 @@ class PageSection extends Base {
 	 * @return void
 	 */
 	private function get_template_class( &$classes ) {
-		$classes[] = 'page-section__' . $this->get_field( 'template' )[0];
+		$classes[] = 'page-section__' . $this->get_field( 'template' );
 	}
 
 	/**
