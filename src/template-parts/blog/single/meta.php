@@ -57,6 +57,7 @@ $form   = $container->get( TranslateRequestForm::class );
 								<a href="<?php echo esc_url( get_permalink( $translations[$language->slug] ) ); ?>" class="post--meta-translate">
 									<?php echo esc_html( $labels['read'] ); ?>
 								</a>
+								<br>
 							<?php
 						else:
 							?>
