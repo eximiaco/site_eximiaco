@@ -42,4 +42,5 @@ class Single extends Base {
 	public function fix_title_format() {
 		return '%s';
 	}
+
 }
