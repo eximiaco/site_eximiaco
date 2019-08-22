@@ -21,7 +21,8 @@ require([
     'app/site-navigation',
     'app/site-search',
     'app/testimonial',
-    'app/translate-request'
+    'app/translate-request',
+    'app/message'
 
 ], function() {
     setTimeout(function() {
