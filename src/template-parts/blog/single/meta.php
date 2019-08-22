@@ -38,6 +38,14 @@ $form   = $container->get( TranslateRequestForm::class );
 				$languages_list = PLL()->model->get_languages_list();
 				$translations = $GLOBALS["polylang"]->model->post->get_translations($post->ID);
 
+				?>
+
+				<!-- <span class="post--icon__time"></span> -->
+				<span class="post--icon__language"></span>
+
+				<?php
+				echo esc_html_e( 'translates:', 'elemarjr' );
+
 				foreach( $languages_list as $language ){
 					$labels = array(
 						'read' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'link_read' ), false ),
@@ -72,7 +80,6 @@ $form   = $container->get( TranslateRequestForm::class );
 										class="post--meta-translate request-translate">
 									<?php echo esc_html( $labels['request'] ); ?>
 								</a>
-								<br>
 							<?php
 						endif;
 					endif;
