@@ -10,16 +10,6 @@ define(function () {
         display_hide_translate_request_box('open');
     }
 
-    var elements = document.querySelectorAll('.request-translate');
-
-    elements.forEach(function (item) {
-        item.addEventListener('click', translate_request);
-    });
-
-    document.querySelector('.btn-close-icon').addEventListener('click', function () {
-        display_hide_translate_request_box('close');
-    });
-
     function display_hide_translate_request_box(action) {
         var translate_request_box = document.getElementById('translate-request-box'),
             inverse_action = 'close';
@@ -28,5 +18,17 @@ define(function () {
 
         translate_request_box.classList.remove(inverse_action);
         translate_request_box.classList.add(action);
+    }
+
+    if (document.body.contains(document.getElementById('translate-request-box'))) {
+        var elements = document.querySelectorAll('.request-translate');
+
+        elements.forEach(function (item) {
+            item.addEventListener('click', translate_request);
+        });
+
+        document.querySelector('#close-translate-form').addEventListener('click', function () {
+            display_hide_translate_request_box('close');
+        });
     }
 });

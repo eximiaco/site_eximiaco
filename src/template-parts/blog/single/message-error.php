@@ -10,6 +10,11 @@
 
 global $container;
 ?>
-<p class="return-message return-message--error">
-	<?php echo esc_html( get_query_var( 'translate-request-message' ) ); ?>
-</p>
+<div class="return-message-box">
+	<p class="btn-close text-right">
+		<i class="i-cross btn-close-icon" id="close-message-box"></i>
+	</p>
+	<p class="return-message return-message--error">
+		<?php echo esc_html( get_query_var( 'translate-request-message' ) ); ?>
+	</p>
+</div>
