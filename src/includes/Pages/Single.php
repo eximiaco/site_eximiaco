@@ -21,6 +21,7 @@ class Single extends Base {
 		add_filter( 'wp_link_pages_link', $this->callback( 'custom_post_page_link' ), 10, 2 );
 		add_filter( 'private_title_format', $this->callback( 'fix_title_format' ) );
 		add_filter( 'protected_title_format', $this->callback( 'fix_title_format' ) );
+		add_action( 'wp_enqueue_scripts', $this->callback( 'enqueue_script' ) );
 	}
 
 	/**
@@ -43,4 +44,15 @@ class Single extends Base {
 		return '%s';
 	}
 
+	/**
+	 * Enqueue the JavaScript theme application
+	 *
+	 * If the dist file was generated, load it. Otherwise load the development application.
+	 *
+	 * Enqueue the RequireJS library file. Define the base url to the library
+	 * file url path.
+	 */
+	function enqueue_script() {
+		wp_enqueue_script( 'elemarjr-script', get_template_directory_uri() . '/assets/js/app/translate-request.js', [ 'jquery' ], false, true );
+	}
 }
