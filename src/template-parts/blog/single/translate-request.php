@@ -35,8 +35,13 @@ if ( ! empty( $message ) ) {
 }
 ?>
 
-<div id="translate-request-box" data-wow-duration="2s">
-	<p class="contact--description"><span id="request-message"></span></p>
+<div id="translate-request-box">
+	<p class="btn-close text-right">
+		<i class="i-cross btn-close-icon"></i>
+	</p>
+	<p class="contact--description text-center">
+		<span id="request-message"></span>
+	</p>
 
 	<div class="contact">
 		<form action="<?php echo esc_url( $form->get_action() ); ?>" method="POST" class="contact--form form">

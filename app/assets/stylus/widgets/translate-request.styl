@@ -1,11 +1,52 @@
 #translate-request-box
-    display: none
-    margin-bottom: 3rem;
+    overflow hidden
+    max-height 0px
+    transition max-height 1s ease-in-out
+    font-size 16px
+
+    @media screen and ( max-width $screen-sm )
+        font-size 14px
 
     input
+        padding 0 10px
+
+    input[type="text"],
+    input[type="email"]
         color $black
+        height 39px
+
+    .contact--form label
+        margin-bottom 10px
+
+    p
+        margin-bottom 25px
+        text-align center
+
+    .form--submit-wrapper
+        margin-top 25px
+
+        @media screen and ( min-width $screen-sm )
+            margin-top 35px
 
     .contact
+        border-bottom 1px solid $black-light
         color $black
-        padding-bottom 70px
+        margin-bottom 25px
+        padding-bottom 25px
         text-align center
+
+    .btn-close
+        margin-bottom 10px
+        text-align right
+
+    .btn-close-icon
+        cursor pointer
+        font-size 10px
+
+
+    &.open
+        max-height 400px
+
+    &.close
+        max-height 0
+
