@@ -23,7 +23,6 @@ require([
     'app/testimonial',
     'app/translate-request',
     'app/message'
-
 ], function() {
     setTimeout(function() {
         jQuery( window ).trigger('resize');

@@ -10,7 +10,7 @@
 
 global $container;
 ?>
-<div class="return-message-box">
+<div class="return-message-box container">
 	<p class="btn-close text-right">
 		<i class="i-cross btn-close-icon" id="close-message-box"></i>
 	</p>
