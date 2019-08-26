@@ -1,4 +1,6 @@
 .return-message-box
+    margin auto
+    max-width 900px
     max-height 200px
     overflow hidden
     transition max-height 1s ease-in-out
@@ -15,7 +17,7 @@
         max-height 0
 
     .return-message
-        border 1px solid #000
+        border 1px solid $black
         font-size 16px
         margin-bottom 50px
         padding 5px
@@ -26,9 +28,9 @@
             font-size 14px
 
         &--success
-            border-color #51b51b
-            color #51b51b
+            border-color $success
+            color $success
 
         &--error
-            border-color #d0021b
-            color #d0021b
+            border-color $danger
+            color $danger

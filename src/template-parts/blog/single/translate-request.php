@@ -35,7 +35,7 @@ if ( ! empty( $message ) ) {
 	}
 }
 ?>
-<div id="translate-request-box">
+<div id="translate-request-box" class="container">
 	<p class="btn-close text-right">
 		<i class="i-cross btn-close-icon" id="close-translate-form"></i>
 	</p>

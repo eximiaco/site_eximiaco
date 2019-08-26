@@ -1,8 +1,8 @@
 #translate-request-box
-    overflow hidden
-    max-height 0px
-    transition max-height 1s ease-in-out
     font-size 16px
+    max-height 0
+    overflow hidden
+    transition max-height 1s ease-in-out
 
     @media screen and ( max-width $screen-sm )
         font-size 14px
@@ -10,8 +10,8 @@
     input
         padding 0 10px
 
-    input[type="text"],
-    input[type="email"]
+    input[type='text'],
+    input[type='email']
         color $black
         height 39px
 
@@ -36,6 +36,8 @@
         text-align center
 
     .btn-close
+        max-width 900px
+        margin auto
         margin-bottom 10px
         text-align right
 
