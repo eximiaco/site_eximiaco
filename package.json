@@ -1,6 +1,6 @@
 {
   "name": "elemarjr",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A quick way to start a project with WordPress using Docker.",
   "repository": {
     "type": "git",

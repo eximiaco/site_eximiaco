@@ -17,6 +17,7 @@ $values = $form->get_flash();
 
 $message = $container->get( 'contact.message_id' );
 
+
 if ( ! empty( $message ) ) {
 	$message_language = '';
 	$languages_list = PLL()->model->get_languages_list();
@@ -34,9 +35,13 @@ if ( ! empty( $message ) ) {
 	}
 }
 ?>
-
-<div id="translate-request-box" data-wow-duration="2s">
-	<p class="contact--description"><span id="request-message"></span></p>
+<div id="translate-request-box" class="container">
+	<p class="btn-close text-right">
+		<i class="i-cross btn-close-icon" id="close-translate-form"></i>
+	</p>
+	<p class="contact--description text-center">
+		<span id="request-message"></span>
+	</p>
 
 	<div class="contact">
 		<form action="<?php echo esc_url( $form->get_action() ); ?>" method="POST" class="contact--form form">

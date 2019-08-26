@@ -3,7 +3,7 @@
         color $brownish-grey
         font-size 20px
         font-weight 100
-        margin 12px 0 40px
+        margin 12px 0 0
 
         @media screen and ( min-width $screen-md )
             align-items flex-end
@@ -27,8 +27,8 @@
                 margin-bottom 0
 
         &-translate
-            text-decoration none
             color var-use( color-primary )
+            text-decoration none
 
             @media screen and ( min-width $screen-md )
                 margin-bottom 0
@@ -41,8 +41,11 @@
             line-height 1
 
         &-lang
+            display block
+            margin-bottom 30px
+
             @media screen and ( min-width $screen-md )
-                margin 0 60px
+                margin-top 5px
 
     &--icon__time
         color var-use( color-primary )

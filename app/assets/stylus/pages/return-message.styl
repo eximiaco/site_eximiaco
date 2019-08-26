@@ -1,14 +1,36 @@
-.return-message
+.return-message-box
+    margin auto
+    max-width 900px
+    max-height 200px
+    overflow hidden
+    transition max-height 1s ease-in-out
 
-    width: 100%;
-    border: 1px solid #000;
-    text-align: center;
-    padding: 0.5rem;
+    .btn-close
+        margin-bottom 10px
+        text-align right
 
-    &--success
-        border-color: #51b51b
-        color: #51b51b
+        .btn-close-icon
+            cursor pointer
+            font-size 10px
 
-    &--error
-        border-color: #d0021b
-        color: #d0021b
+    &.close
+        max-height 0
+
+    .return-message
+        border 1px solid $black
+        font-size 16px
+        margin-bottom 50px
+        padding 5px
+        text-align center
+        width 100%
+
+        @media screen and ( max-width $screen-sm )
+            font-size 14px
+
+        &--success
+            border-color $success
+            color $success
+
+        &--error
+            border-color $danger
+            color $danger
