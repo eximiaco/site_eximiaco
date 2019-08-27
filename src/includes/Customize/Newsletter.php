@@ -162,6 +162,11 @@ class Newsletter extends Base {
 		) );
 
 		$languages_list = PLL()->model->get_languages_list();
+
+		/*
+			Multiplica o número de linguas por dois, pois ele possui dois tipos
+			de newsletter.
+		*/
 		for ( $x=1; $x <= ( count($languages_list) * 2 ); $x++ ) {
 
 			$y = true;
