@@ -27,6 +27,7 @@ get_header(); ?>
 
 <main>
 	<?php
+	switch_to_blog( get_network()->site_id );
 	while ( have_posts() ) :
 		the_post();
 		?>
@@ -55,7 +56,10 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<?php endwhile; ?>
+	<?php
+	endwhile;
+	restore_current_blog();
+	?>
 </main>
 
 <?php get_footer(); ?>
