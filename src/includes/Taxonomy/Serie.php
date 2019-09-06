@@ -32,7 +32,11 @@ class Serie extends Base {
 	 */
 	public function register_taxonomy() {
 		register_taxonomy(
-			$this->slug, 'post',
+			$this->slug,
+			array(
+				'post',
+				'bliki'
+			),
 			array(
 				'hierarchical' => true,
 				'label' => __( 'Series', 'elemarjr' ),

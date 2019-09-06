@@ -90,6 +90,7 @@ class Kernel {
 			\Aztec\PostType\Event::class,
 			\Aztec\PostType\Service::class,
 			\Aztec\PostType\Testimonial::class,
+			\Aztec\PostType\Bliki::class,
 
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\Comments::class,
