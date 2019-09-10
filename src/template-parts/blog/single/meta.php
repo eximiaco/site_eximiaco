@@ -20,9 +20,11 @@ $form   = $container->get( TranslateRequestForm::class );
 		<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
 	</a><!-- .post--meta-author -->
 
+	<?php if( get_post_type() !== 'bliki' ): ?>
 	<div class="post--meta-date">
 		<?php echo esc_html( get_the_date() ); ?>
 	</div><!-- .post--meta-data -->
+	<?php endif;?>
 
 	<div class="post--meta-reading">
 		<span class="post--icon__time"></span>
