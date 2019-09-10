@@ -158,6 +158,66 @@ button
             text-decoration none
             text-transform uppercase
 
+        .current_page_item
+            a
+                color var-use( color-primary )
+
+        &-has-children
+            &--icon
+                &-open
+                    a
+                        border-bottom-color: #333333
+
+                        &::after
+                            position: relative;
+                            content i-arrow-down
+                            font-family 'icomoon'
+                            float: right;
+                            height: 48px;
+                            padding: 15px 20px;
+                            margin-top: -15px;
+                            margin-right: -20px;
+                            transform: rotate(0deg);
+                &-close
+                    a
+                        &::after
+                            position: relative;
+                            content i-arrow-down
+                            font-family 'icomoon'
+                            float: right;
+                            height: 48px;
+                            padding: 15px 20px;
+                            margin-top: -15px;
+                            margin-right: -20px;
+                            transform: rotate(180deg);
+            &--open
+                a
+                    border-bottom-width:  0.1px
+                    &::after
+                        background-color #333333
+
+
+
+        .sub-menu
+            // max-height 0
+            // transition max-height 1s ease-in-out
+            display none
+            padding-left 65px;
+            background-color: #333333
+            padding-bottom 25px
+            margin-left: -20px;
+            width: 100vw;
+
+            li
+                padding-right 20px
+                width 100%
+                list-style-type none
+
+
+            &--open
+                display block
+                // max-height 400px
+
     @media screen and ( min-width $nav-breakpoint )
         margin-left auto
 

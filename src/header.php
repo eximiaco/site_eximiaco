@@ -69,7 +69,7 @@ $display_hero = $container->get( 'display_hero' );
 							array(
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
-								'depth'          => 1,
+								'depth'          => 2,
 							)
 						)
 						?>

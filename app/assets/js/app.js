@@ -11,6 +11,7 @@ require([
     'app/font',
     'app/hero',
     'app/image-bg',
+    'app/menu',
     'app/newsletter',
     'app/post-list',
     'app/scroll-button',
