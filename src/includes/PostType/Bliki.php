@@ -71,19 +71,22 @@ class Bliki extends Base {
 	}
 
 	/**
-	 * Get all blikis.
+	 * Get blikis.
 	 *
 	 * @return \WP_Query
 	 */
-	public function get_blikis() {
+	public function get_blikis( $paged ) {
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$query = new \WP_Query(
 			array(
+				'posts_per_page' => 9,
 				'post_type' => 'bliki',
 				'order' => 'ASC',
 				'orderby' => 'menu_order',
+				'paged' => $paged
 			)
 		);
 
-		return $query->posts;
+		return $query;
 	}
 }
