@@ -45,6 +45,16 @@ define(function () {
             onclick_toogle_menu(event, this);
         });
 
+        // item.addEventListener('mouseover', function(){
+        //     var ul = this.querySelector('.sub-menu');
+
+        //     ul.classList.add(class_submenu);
+
+        //     ul.addEventListener('mouseout', function(event){
+        //         console.log(event.target);
+        //     });
+        //  });
+
         open_current_submenu(item);
     });
 });
