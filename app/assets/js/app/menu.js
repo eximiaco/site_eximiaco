@@ -1,60 +1,87 @@
+/**
+ * Manipulate touch and over events on main navigation items with children
+ */
 define(function () {
-    var class_submenu = 'sub-menu--open',
-        class_prefix = 'menu-item-has-children',
-        class_opened = 'menu-item-has-children--opened';
 
+    /**
+     * Opened sub menu state class
+     */
+    var opened_class = 'menu-item--opened';
 
-    function onclick_toogle_menu(event, menu) {
-        if (event.target.classList.contains('menu-item-has-children')){
-            event.preventDefault();
-        }
-        toggle_menu(menu);
+    /**
+     * Menu elements with children
+     */
+    var hasChildrenItems = document.querySelector('.main-navigation').querySelectorAll('.menu-item-has-children');
+
+    /**
+     * Event callback to toggle menu
+     *
+     * @param {TouchEvent} event
+     */
+    function toggle_submenu_event(event) {
+        event.preventDefault();
+        toggle_submenu(this);
     }
 
-    function toggle_menu(menu){
-        var submenu = menu.querySelectorAll('.sub-menu')[0],
-            a = menu.getElementsByTagName('a')[0];
+    /**
+     * Event callback when enter on menu item with mouse pointer
+     */
+    function enter_event() {
+        open(this);
+    }
 
+    /**
+     * Envent callback when leave the menu item with mouse pointer
+     */
+    function leave_event() {
+        close(this);
+    }
 
-        if(submenu.classList.contains(class_submenu)){
-            submenu.classList.remove(class_submenu);
-            a.classList.remove(class_opened);
+    /**
+     * Toggle opened state
+     *
+     * @param {HTMLLIElement} menu
+     */
+    function toggle_submenu(item) {
+        if(item.classList.contains(opened_class)){
+            item.classList.remove(opened_class);
         } else {
-            submenu.classList.add(class_submenu);
-            a.classList.add(class_opened);
+            item.classList.add(opened_class);
         }
     }
 
-    function open_current_submenu(menu){
-        var current_submenu = menu.querySelectorAll('.current_page_item'),
-            a = menu.getElementsByTagName('a')[0];
-
-        a.classList.add(class_prefix);
-
-        if(jQuery(window).width() < 897 && current_submenu.length > 0){
-            toggle_menu(menu);
-        } else if(current_submenu.length > 0) {
-            menu.classList.add('current-menu-item');
+    /**
+     * Set opened state as true
+     *
+     * @param {HTMLLIElement} item
+     */
+    function open(item) {
+        if(item.classList.contains(opened_class)){
+            return;
         }
+
+        item.classList.add(opened_class);
     }
 
-    var elements = document.querySelectorAll('.menu-item-has-children');
+    /**
+     * Set opened state as true
+     *
+     * @param {HTMLLIElement} item
+     */
+    function close(item) {
+        if(!item.classList.contains(opened_class)){
+            return;
+        }
 
-    elements.forEach(function (item) {
-        item.addEventListener('click', function(event){
-            onclick_toogle_menu(event, this);
-        });
+        item.classList.remove(opened_class);
+    }
 
-        // item.addEventListener('mouseover', function(){
-        //     var ul = this.querySelector('.sub-menu');
-
-        //     ul.classList.add(class_submenu);
-
-        //     ul.addEventListener('mouseout', function(event){
-        //         console.log(event.target);
-        //     });
-        //  });
-
-        open_current_submenu(item);
+    /**
+     * Add event listeners for all main navigation that has children
+     */
+    hasChildrenItems.forEach(function (item) {
+        item.addEventListener('touchstart', toggle_submenu_event);
+        item.addEventListener('mouseover', enter_event);
+        item.addEventListener('mouseout', leave_event);
     });
 });
