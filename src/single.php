@@ -50,7 +50,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/blog/single/tags' ); ?>
 
 			<?php
-				if ( get_post_type() !== 'bliki'){
+				if ( 'bliki' !== get_post_type() ){
 					get_template_part( 'template-parts/blog/single/post-nav' );
 				}
 			?>

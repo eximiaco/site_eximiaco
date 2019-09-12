@@ -18,7 +18,7 @@ if ( empty( $categories ) ) {
 <ul class="listing-post__categories">
 	<?php foreach ( $categories as $term ) : ?>
 	<li>
-		<?php if ( 'private' !== get_post_status() ) : ?>
+		<?php if ( 'private' !== get_post_status() && 'bliki' !== get_post_type() ) : ?>
 		<a href="<?php echo esc_url( get_term_link( $term, 'category' ) ); ?>">
 			<?php echo esc_html( $term->name ); ?>
 		</a>
