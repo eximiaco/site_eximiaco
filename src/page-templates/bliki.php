@@ -24,8 +24,6 @@ $blikis = $bliki_query->posts;
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/blog/category-nav' ); ?>
-
 <main>
 	<?php
 	while ( have_posts() ) :

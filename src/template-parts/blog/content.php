@@ -18,8 +18,10 @@
 				<header class="listing-post__header">
 					<div class="listing-post__header-meta">
 						<?php
-							get_template_part( 'template-parts/blog/content-parts/category' );
-							get_template_part( 'template-parts/blog/content-parts/serie' );
+							if ( 'bliki' !== get_post_type() ){
+								get_template_part( 'template-parts/blog/content-parts/category' );
+								get_template_part( 'template-parts/blog/content-parts/serie' );
+							}
 						?>
 					</div>
 					<?php
