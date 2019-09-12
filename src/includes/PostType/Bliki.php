@@ -81,8 +81,8 @@ class Bliki extends Base {
 			array(
 				'posts_per_page' => 9,
 				'post_type' => 'bliki',
-				'order' => 'ASC',
-				'orderby' => 'menu_order',
+				'order' => 'DESC',
+				'orderby' => 'modified',
 				'paged' => $paged
 			)
 		);
