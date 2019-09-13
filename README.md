@@ -117,6 +117,12 @@ And to fix some warnings using the _PHP Code Beautifier and Fixer_, execute:
 
     $ docker-compose run --rm php phpcbf
 
+## Linters
+
+The project is configured to validate the quality of the Stylus and Javascript code
+
+	$ docker-compose run --rm node grunt lint
+
 ## Database dump
 
 ### Import
