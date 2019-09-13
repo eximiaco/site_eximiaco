@@ -46,25 +46,25 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 				</a>
 			</li>
 					<?php
-				elseif ( is_single() ) :
-					$categories = get_the_category();
+					elseif ( is_single() ) :
+						$categories = get_the_category();
 
-					if ( $categories ) :
-						$category = $categories[0];
-						$url      = get_category_link( $category );
-						?>
+						if ( $categories ) :
+							$category = $categories[0];
+							$url      = get_category_link( $category );
+							?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="url">
 					<span itemprop="title"><?php echo esc_html( $category->name ); ?></span>
 				</a>
 			</li>
-			<?php endif; ?>
+				<?php endif; ?>
 			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 				<a class="breadcrumb--link" href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url">
 					<span itemprop="title"><?php echo esc_html( get_the_title() ); ?></span>
 				</a>
 			</li>
-			<?php endif; ?>
+				<?php endif; ?>
 			<?php
 			$paged = get_query_var( 'paged' );
 

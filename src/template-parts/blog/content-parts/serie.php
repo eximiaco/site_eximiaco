@@ -36,7 +36,7 @@ if ( $series ) :
 </a>
 		<?php
 	endforeach;
-else :
-	?>
+	else :
+		?>
 <div class="listing-post__serie"></div>
-<?php endif; ?>
+	<?php endif; ?>

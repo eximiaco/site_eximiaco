@@ -56,7 +56,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<?php
+		<?php
 	endwhile;
 	restore_current_blog();
 	?>

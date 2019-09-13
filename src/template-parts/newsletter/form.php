@@ -59,16 +59,17 @@ foreach ( $bg_images as $size => $url ) :
 						Multiplica o número de linguas por dois, pois ele possui dois tipos
 						de newsletter.
 					*/
-					for ( $x=1; $x <= count( PLL()->model->get_languages_list() ) * 2; $x++ ) : ?>
-					<?php if( !empty( get_theme_mod( "newsletter_content_{$x}_id" ) ) ): ?>
-						<label for="<?php echo get_theme_mod("newsletter_content_{$x}_id"); ?>">
+				for ( $x = 1; $x <= count( PLL()->model->get_languages_list() ) * 2; $x++ ) :
+					?>
+					<?php if ( ! empty( get_theme_mod( "newsletter_content_{$x}_id" ) ) ) : ?>
+						<label for="<?php echo get_theme_mod( "newsletter_content_{$x}_id" ); ?>">
 							<div class="newsletter--interest">
 								<span><?php echo get_theme_mod( "newsletter_content_{$lang->slug}_{$x}_label" ); ?></span>
 								<input id="<?php echo get_theme_mod( "newsletter_content_{$x}_id" ); ?>" name="<?php echo get_theme_mod( "newsletter_content_{$x}_name" ); ?>" class="newsletter--check" type="checkbox" value="Y">
 								<span class="checkmark"></span>
 							</div>
 						</label>
-					<?php endif;?>
+					<?php endif; ?>
 				<?php endfor; ?>
 			</div>
 

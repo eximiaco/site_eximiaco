@@ -151,7 +151,7 @@ class Form extends Base {
 						$form_object->set_flash();
 					}
 
-					if( ! empty( $values['language'] ) ){
+					if ( ! empty( $values['language'] ) ) {
 						$message = array(
 							'message' => $message,
 							'language' => $values['language']

@@ -12,7 +12,7 @@ use Bookworm\Bookworm;
 
 global $container;
 
-$form   = $container->get( TranslateRequestForm::class );
+$form = $container->get( TranslateRequestForm::class );
 ?>
 
 <div class="post--meta">
@@ -34,35 +34,35 @@ $form   = $container->get( TranslateRequestForm::class );
 <div class="post--meta post--meta-lang">
 	<?php
 		// test if the plugin polylang is present
-		if ( isset( $GLOBALS["polylang"] ) ) {
+	if ( isset( $GLOBALS['polylang'] ) ) {
 
-			$languages_list = PLL()->model->get_languages_list();
-			$translations = $GLOBALS["polylang"]->model->post->get_translations( $post->ID );
+		$languages_list = PLL()->model->get_languages_list();
+		$translations   = $GLOBALS['polylang']->model->post->get_translations( $post->ID );
 
-			foreach( $languages_list as $language ){
-				$labels = array(
-					'read' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'link_read' ), false ),
-					'request' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'link_request' ), false ),
-					'message' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_message' ), false ),
-					'input_name' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_input_name' ), false ),
-					'input_email' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_input_email' ), false ),
-					'btn_submit' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_btn_submit' ), false ),
-					'message_success' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_feedback_message_success' ), false ),
-					'message_error' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_feedback_message_error' ), false ),
-				);
+		foreach ( $languages_list as $language ) {
+			$labels = array(
+				'read'            => get_theme_mod( $form->get_theme_mod_control_id( $language, 'link_read' ), false ),
+				'request'         => get_theme_mod( $form->get_theme_mod_control_id( $language, 'link_request' ), false ),
+				'message'         => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_message' ), false ),
+				'input_name'      => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_input_name' ), false ),
+				'input_email'     => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_input_email' ), false ),
+				'btn_submit'      => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_btn_submit' ), false ),
+				'message_success' => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_feedback_message_success' ), false ),
+				'message_error'   => get_theme_mod( $form->get_theme_mod_control_id( $language, 'form_feedback_message_error' ), false ),
+			);
 
-				if( $GLOBALS["polylang"]->curlang->slug !== $language->slug && ! empty( $labels['message'] ) ):
+			if ( $GLOBALS['polylang']->curlang->slug !== $language->slug && ! empty( $labels['message'] ) ) :
 
-					if( isset( $translations[$language->slug] ) ):
-						?>
-							<a href="<?php echo esc_url( get_permalink( $translations[$language->slug] ) ); ?>" class="post--meta-translate">
-								<?php echo esc_html( $labels['read'] ); ?>
+				if ( isset( $translations[ $language->slug ] ) ) :
+					?>
+							<a href="<?php echo esc_url( get_permalink( $translations[ $language->slug ] ) ); ?>" class="post--meta-translate">
+							<?php echo esc_html( $labels['read'] ); ?>
 							</a>
 						<?php
-					else:
+					else :
 						?>
 							<a href="javascript:void(0)"
-									data-language="<?php echo $language->slug?>"
+									data-language="<?php echo $language->slug; ?>"
 									data-form-message="<?php echo esc_html( $labels['message'] ); ?>"
 									data-input-name="<?php echo esc_html( $labels['input_name'] ); ?>"
 									data-input-email="<?php echo esc_html( $labels['input_email'] ); ?>"
@@ -75,7 +75,7 @@ $form   = $container->get( TranslateRequestForm::class );
 						<?php
 					endif;
 				endif;
-			}
 		}
+	}
 	?>
 </div><!-- .post--meta -->
