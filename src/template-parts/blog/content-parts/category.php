@@ -23,9 +23,9 @@ if ( empty( $categories ) ) {
 			<?php echo esc_html( $term->name ); ?>
 		</a>
 		<?php else : ?>
-		<p>
+		<span>
 			<?php echo esc_html( $term->name ); ?>
-		</p>
+		</span>
 		<?php endif; ?>
 	</li>
 	<?php endforeach; ?>

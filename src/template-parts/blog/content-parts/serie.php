@@ -36,9 +36,9 @@ if ( $series ) :
 			<?php echo esc_html( $term->name ); ?>
 		</a>
 		<?php else : ?>
-		<p class="listing-post__serie">
+		<span class="listing-post__serie">
 			<?php echo esc_html( $term->name ); ?>
-		</p>
+		</span>
 		<?php endif; ?>
 		<?php
 	endforeach;
