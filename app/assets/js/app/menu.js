@@ -9,9 +9,14 @@ define(function () {
     var opened_class = 'menu-item--opened';
 
     /**
+     * Class that represent menu items with children
+     */
+    var hasChildrenClass = 'menu-item-has-children';
+
+    /**
      * Menu elements with children
      */
-    var hasChildrenItems = document.querySelector('.main-navigation').querySelectorAll('.menu-item-has-children');
+    var hasChildrenItems = document.querySelector('.main-navigation').querySelectorAll('.' + hasChildrenClass);
 
     /**
      * Event callback to toggle menu
@@ -19,8 +24,14 @@ define(function () {
      * @param {TouchEvent} event
      */
     function toggle_submenu_event(event) {
+        // Ignore touch event when a sub item is touched
+        if( ! event.target.parentElement.classList.contains('menu-item-has-children') ) {
+            return true;
+        }
+
         event.preventDefault();
         toggle_submenu(this);
+        return false;
     }
 
     /**
