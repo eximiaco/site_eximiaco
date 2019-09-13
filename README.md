@@ -116,3 +116,13 @@ The validation isn't done by the _watch_ service. Because is a PHP execution and
 And to fix some warnings using the _PHP Code Beautifier and Fixer_, execute:
 
     $ docker-compose run --rm php phpcbf
+
+## Database dump
+
+### Import
+
+A database dump can be found on branch `data`, you can import with the following commands:
+
+	$ git checkout origin/data app/initdb
+	$ wp db reset --yes
+	$ zcat app/initdb/initdb.sql.gz | wp db import -
