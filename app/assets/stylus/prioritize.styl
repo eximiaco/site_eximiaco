@@ -167,9 +167,6 @@ button
             display flex
             height 100%
 
-        &.current-menu-item a
-            border-bottom 1px solid var-use( color-primary )
-
         a
             border-bottom 1px solid $white
             color $white
@@ -187,9 +184,10 @@ button
             @media screen and ( min-width $screen-lg )
                 margin 0 12.5px
 
-        .current_page_item
-            a
-                color var-use( color-primary )
+        &.current-menu-item,
+        &.current-menu-ancestor
+            > a
+                border-bottom 1px solid var-use( color-primary )
 
         &-has-children
             position relative
@@ -215,9 +213,13 @@ button
                         padding 0
                         position static
 
-        &--opened
+        &--opened,
+        &--opened.current-menu-ancestor
             > a
-                border-bottom-width  0
+                border-bottom-width 0
+
+                @media screen and ( min-width $nav-breakpoint )
+                    border-bottom-width 1px
 
                 &:after
                     background-color $gray-dark
@@ -266,20 +268,11 @@ button
                     padding-bottom 5px
                     width 100%
 
-                &:hover
-                    @media screen and ( min-width $nav-breakpoint )
-                        border-bottom-color: var-use( color-primary )
-                        color var-use( color-primary )
-
-        .current-menu-item
-            a
-                @media screen and ( min-width $nav-breakpoint )
-                    border-bottom 1px solid var-use( color-primary )
-
-    .current-menu-ancestor
-        a
-            @media screen and ( min-width $nav-breakpoint )
-                border-bottom 1px solid var-use( color-primary )
+                &:hover,
+                // .main-navigation .menu-item--opened .sub-menu .current-menu-item a
+                ^[0] .menu-item--opened ^[1..1] .current-menu-item ^[-1..-1]
+                    border-bottom-color var-use( color-primary )
+                    color var-use( color-primary )
 
 .menu-toggle
     padding 6px
@@ -348,7 +341,6 @@ button
                 margin-left 15px
 
             &.current-menu-item a
-                border-bottom 1px solid var-use( color-primary )
                 color $white
 
 .websites-navegation
