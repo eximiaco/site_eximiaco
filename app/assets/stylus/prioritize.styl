@@ -99,6 +99,7 @@ button
             align-items center
             background transparent
             display flex
+            height 100%
             padding 0
             position static
             top 0
@@ -137,15 +138,35 @@ button
     @media screen and ( min-width $nav-breakpoint )
         width 200px
 
+
 // Nav
 .main-navigation
+    @media screen and ( min-width $nav-breakpoint )
+        height 100%
+        margin-left auto
+
+    > div
+        @media screen and ( min-width $nav-breakpoint )
+            height 100%
+
     .menu
         list-style none
         margin 0
         padding 0
         text-align left
 
+        @media screen and ( min-width $nav-breakpoint )
+            align-items center
+            display flex
+            font-weight bold
+            height 100%
+
     .menu-item
+        @media screen and ( min-width $nav-breakpoint )
+            align-items center
+            display flex
+            height 100%
+
         &.current-menu-item a
             border-bottom 1px solid var-use( color-primary )
 
@@ -158,33 +179,107 @@ button
             text-decoration none
             text-transform uppercase
 
-    @media screen and ( min-width $nav-breakpoint )
-        margin-left auto
-
-        .menu
-            font-weight bold
-
-        .menu-item
-            display inline-block
-
-            a
+            @media screen and ( min-width $nav-breakpoint )
                 border-bottom 1px solid transparent
                 margin 0 10px
                 padding 3px 0 0
 
-    @media screen and ( min-width $screen-lg )
-        margin-left auto
+            @media screen and ( min-width $screen-lg )
+                margin 0 12.5px
 
-        .menu
-            font-weight bold
+        .current_page_item
+            a
+                color var-use( color-primary )
+
+        &-has-children
+            position relative
+
+            > a
+                &:after
+                    absolute top right -20px
+                    align-items center
+                    color $white
+                    content i-arrow-down
+                    cursor pointer
+                    display flex
+                    font-family 'icomoon'
+                    height 48px
+                    justify-content center
+                    width 60px
+
+                    @media screen and ( min-width $nav-breakpoint )
+                        display inline
+                        font-size 6px
+                        height auto
+                        margin-left 5px
+                        padding 0
+                        position static
+
+        &--opened
+            > a
+                border-bottom-width  0
+
+                &:after
+                    background-color $gray-dark
+                    transform rotate( 180deg )
+
+                    @media screen and ( min-width $nav-breakpoint )
+                        background-color transparent
+
+    .sub-menu
+        background-color $gray-dark
+        display none
+        margin-left -20px
+        padding-bottom 25px
+        padding-left 65px
+        padding-top 15px
+        width 100vw
+
+        @media screen and ( min-width $nav-breakpoint )
+            margin-left 0
+            min-width 180px
+            padding 10px 20px 0
+            position absolute
+            top 100%
+            width auto
+
+        ^[0] .menu-item--opened ^[-1..-1] // @stylint off valid warning property is not valid
+            display block
 
         .menu-item
-            display inline-block
+            list-style-type none
+            padding-right 20px
+            width 100%
+
+            @media screen and ( min-width $nav-breakpoint )
+                font-weight normal
+                margin 0
+                padding-right 0
 
             a
-                border-bottom 1px solid transparent
-                margin 0 12.5px
-                padding 3px 0 0
+                padding-bottom 5px
+
+                @media screen and ( min-width $nav-breakpoint )
+                    border-bottom 1px solid $white
+                    display block
+                    margin 0 0 15px
+                    padding-bottom 5px
+                    width 100%
+
+                &:hover
+                    @media screen and ( min-width $nav-breakpoint )
+                        border-bottom-color: var-use( color-primary )
+                        color var-use( color-primary )
+
+        .current-menu-item
+            a
+                @media screen and ( min-width $nav-breakpoint )
+                    border-bottom 1px solid var-use( color-primary )
+
+    .current-menu-ancestor
+        a
+            @media screen and ( min-width $nav-breakpoint )
+                border-bottom 1px solid var-use( color-primary )
 
 .menu-toggle
     padding 6px

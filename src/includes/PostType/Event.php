@@ -28,7 +28,7 @@ class Event extends Base {
 	 * Register post type
 	 */
 	public function register_post_type() {
-		if ( get_network()->site_id !== get_current_blog_id() ){
+		if ( get_network()->site_id !== get_current_blog_id() ) {
 			return;
 		}
 

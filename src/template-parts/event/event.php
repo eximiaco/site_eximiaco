@@ -57,13 +57,15 @@ if ( '' === $url ) {
 }
 
 ?>
-<<?php
+<
+<?php
 	echo esc_html( $el['tag'] . ' ' );
 
-	if ( ! empty( $el['href'] ) ) :
-		echo ' href="' . esc_url( $el['href'] ) . '" target="' . esc_attr( $el['target'] ) . '"';
+if ( ! empty( $el['href'] ) ) :
+	echo ' href="' . esc_url( $el['href'] ) . '" target="' . esc_attr( $el['target'] ) . '"';
 	endif;
-?>class="card card--white card--event <?php echo esc_attr( $event_class ); ?>">
+?>
+class="card card--white card--event <?php echo esc_attr( $event_class ); ?>">
 	<div class="card__wrapper">
 		<div class="card__header">
 			<time class="card__date">

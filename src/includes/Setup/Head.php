@@ -89,7 +89,7 @@ class Head extends Base {
 	public function author() {
 		if ( is_single() ) {
 			global $post;
-			$author = get_the_author_meta('user_nicename', $post->post_author);
+			$author = get_the_author_meta( 'user_nicename', $post->post_author );
 			if ( '' != $author ) {
 				echo sprintf( '<meta name="author" content="%s" />', $author ) . esc_html( PHP_EOL );
 			}
@@ -139,28 +139,29 @@ class Head extends Base {
 	 * Add multiples custom_css
 	 */
 	public function custom_css() {
-		echo sprintf( '<style>:root{ --color-primary: %s; --color-secondary: %s; } .top-header-wrapper{ background-color: rgba(%s, %s) }</style>',
-			get_theme_mod('colors_primary'),
-			get_theme_mod('colors_secondary'),
-			$this->hex2rgb(get_theme_mod('colors_secondary')),
-			get_theme_mod('colors_opacity')
+		echo sprintf(
+			'<style>:root{ --color-primary: %s; --color-secondary: %s; } .top-header-wrapper{ background-color: rgba(%s, %s) }</style>',
+			get_theme_mod( 'colors_primary' ),
+			get_theme_mod( 'colors_secondary' ),
+			$this->hex2rgb( get_theme_mod( 'colors_secondary' ) ),
+			get_theme_mod( 'colors_opacity' )
 		);
 	}
 
 	/**
 	 * Generate RGB color by HEX
 	 */
-	public function hex2rgb($hex) {
-		$hex = str_replace("#", "", $hex);
+	public function hex2rgb( $hex) {
+		$hex = str_replace( '#', '', $hex );
 
-		if(strlen($hex) == 3) {
-		   $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-		   $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-		   $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+		if (strlen( $hex ) == 3) {
+			$r = hexdec( substr( $hex, 0, 1 ) . substr( $hex, 0, 1 ) );
+			$g = hexdec( substr( $hex, 1, 1 ) . substr( $hex, 1, 1 ) );
+			$b = hexdec( substr( $hex, 2, 1 ) . substr( $hex, 2, 1 ) );
 		} else {
-		   $r = hexdec(substr($hex,0,2));
-		   $g = hexdec(substr($hex,2,2));
-		   $b = hexdec(substr($hex,4,2));
+			$r = hexdec( substr( $hex, 0, 2 ) );
+			$g = hexdec( substr( $hex, 2, 2 ) );
+			$b = hexdec( substr( $hex, 4, 2 ) );
 		}
 		$rgb = "{$r}, {$g}, {$b}";
 		return $rgb;

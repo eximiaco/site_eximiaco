@@ -30,9 +30,8 @@ class Login extends Base {
 		wp_enqueue_style( 'elemar-login', get_stylesheet_directory_uri() . '/assets/css/login.css' );
 	}
 
-	public function get_logo()
-	{
-		$logo_url = get_theme_mod('head_logo') ? get_theme_mod('head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' );
+	public function get_logo() {
+		$logo_url = get_theme_mod( 'head_logo' ) ? get_theme_mod( 'head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' );
 		echo "<a href=\"#\" class=\"logo-header\"><img src=\"{$logo_url}\" alt=\"\" /></a>";
 	}
 
@@ -40,9 +39,10 @@ class Login extends Base {
 	 * Add multiples custom_css
 	 */
 	public function custom_css() {
-		echo sprintf( '<style>:root{ --color-primary: %s; --color-secondary: %s; }</style>',
-			get_theme_mod('colors_primary'),
-			get_theme_mod('colors_secondary')
+		echo sprintf(
+			'<style>:root{ --color-primary: %s; --color-secondary: %s; }</style>',
+			get_theme_mod( 'colors_primary' ),
+			get_theme_mod( 'colors_secondary' )
 		);
 	}
 }
