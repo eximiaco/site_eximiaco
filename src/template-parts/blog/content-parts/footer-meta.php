@@ -10,11 +10,11 @@
 
 use Bookworm\Bookworm;
 ?>
-<?php if ( 'bliki' !== get_post_type() ):?>
+<?php if ( 'bliki' !== get_post_type() ) : ?>
 	<div class="listing-post--date">
 		<?php echo esc_html( get_the_date() ); ?>
 	</div>
-<?php endif;?>
+<?php endif; ?>
 
 <div class="listing-post__footer__right">
 	<span class="listing-post--reading">

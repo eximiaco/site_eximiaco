@@ -20,7 +20,7 @@
 global $container;
 
 $bliki_query = $container->get( Aztec\PostType\Bliki::class )->get_blikis( $paged );
-$blikis = $bliki_query->posts;
+$blikis      = $bliki_query->posts;
 
 get_header(); ?>
 
@@ -37,9 +37,9 @@ get_header(); ?>
 			<div class="cards-list">
 				<div class="cards-list__wrapper">
 				<?php
-					foreach ( $blikis as $post ) :
-						setup_postdata( $post );
-						get_template_part( 'template-parts/blog/content' );
+				foreach ( $blikis as $post ) :
+					setup_postdata( $post );
+					get_template_part( 'template-parts/blog/content' );
 					endforeach;
 					wp_reset_postdata();
 				?>
@@ -49,14 +49,14 @@ get_header(); ?>
 	</div>
 	<div class="posts-nav">
 		<?php
-			// Change the custom query to use the default pagination
+			// Change the custom query to use the default pagination.
 			query_posts( $bliki_query->query );
 			posts_nav_link( ' ', __( 'Previous Page', 'elemarjr' ), __( 'Next Page', 'elemarjr' ) );
-			// Restore to custom query
+			// Restore to custom query.
 			wp_reset_query();
 		?>
 	</div>
-	<?php
+		<?php
 	endwhile;
 	?>
 </main>

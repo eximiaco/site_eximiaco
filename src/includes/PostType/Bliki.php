@@ -52,7 +52,7 @@ class Bliki extends Base {
 				'taxonomies' => array( 'category', 'post_tag' ),
 				'show_ui' => true,
 				'public' => true,
-				'has_archive' => true,
+				'has_archive' => false,
 				'supports'  => array( 'author', 'title', 'editor', 'thumbnail', 'page-attributes', 'comments' ),
 				'menu_icon' => 'dashicons-admin-post',
 			)
@@ -73,6 +73,7 @@ class Bliki extends Base {
 	/**
 	 * Get blikis.
 	 *
+	 * @param int $paged The current page.
 	 * @return \WP_Query
 	 */
 	public function get_blikis( $paged ) {

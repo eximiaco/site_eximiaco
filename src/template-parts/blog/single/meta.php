@@ -7,6 +7,7 @@
  * @since 0.1.0
  * @version 0.1.0
  */
+
 use Aztec\Form\TranslateRequest as TranslateRequestForm;
 use Bookworm\Bookworm;
 
@@ -20,11 +21,11 @@ $form = $container->get( TranslateRequestForm::class );
 		<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
 	</a><!-- .post--meta-author -->
 
-	<?php if( get_post_type() !== 'bliki' ): ?>
+	<?php if ( get_post_type() !== 'bliki' ) : ?>
 	<div class="post--meta-date">
 		<?php echo esc_html( get_the_date() ); ?>
 	</div><!-- .post--meta-data -->
-	<?php endif;?>
+	<?php endif; ?>
 
 	<div class="post--meta-reading">
 		<span class="post--icon__time"></span>
@@ -35,7 +36,7 @@ $form = $container->get( TranslateRequestForm::class );
 </div><!-- .post--meta -->
 <div class="post--meta post--meta-lang">
 	<?php
-		// test if the plugin polylang is present
+		// test if the plugin polylang is present.
 	if ( isset( $GLOBALS['polylang'] ) ) {
 
 		$languages_list = PLL()->model->get_languages_list();
@@ -64,7 +65,7 @@ $form = $container->get( TranslateRequestForm::class );
 					else :
 						?>
 							<a href="javascript:void(0)"
-									data-language="<?php echo $language->slug; ?>"
+									data-language="<?php echo esc_html( $language->slug ); ?>"
 									data-form-message="<?php echo esc_html( $labels['message'] ); ?>"
 									data-input-name="<?php echo esc_html( $labels['input_name'] ); ?>"
 									data-input-email="<?php echo esc_html( $labels['input_email'] ); ?>"
