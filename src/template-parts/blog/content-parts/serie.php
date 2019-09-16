@@ -31,12 +31,18 @@ if ( $series ) :
 	foreach ( $series as $term ) :
 		$link = is_single() ? $serie_helper->get_serie_link( $term ) : get_the_permalink();
 		?>
-<a class="listing-post__serie" href="<?php echo esc_url( $link ); ?>">
-		<?php echo esc_html( $term->name ); ?>
-</a>
+		<?php if ( 'bliki' !== get_post_type() ) : ?>
+		<a class="listing-post__serie" href="<?php echo esc_url( $link ); ?>">
+			<?php echo esc_html( $term->name ); ?>
+		</a>
+		<?php else : ?>
+		<span class="listing-post__serie">
+			<?php echo esc_html( $term->name ); ?>
+		</span>
+		<?php endif; ?>
 		<?php
 	endforeach;
-else :
-	?>
+	else :
+		?>
 <div class="listing-post__serie"></div>
-<?php endif; ?>
+	<?php endif; ?>

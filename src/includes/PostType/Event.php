@@ -28,6 +28,10 @@ class Event extends Base {
 	 * Register post type
 	 */
 	public function register_post_type() {
+		if ( get_network()->site_id !== get_current_blog_id() ) {
+			return;
+		}
+
 		register_post_type(
 			'event',
 			array(
@@ -70,13 +74,14 @@ class Event extends Base {
 	}
 
 	/**
-	 * Get all events grouped by year.
+	 * Get all events grouped by year from the main site.
 	 *
 	 * @return array
 	 */
 	public function get_events_by_year() {
-		$years = array();
+		switch_to_blog( get_network()->site_id );
 
+		$years = array();
 		foreach ($this->get_events() as $event) {
 			$start = get_field( 'event_start', $event->ID );
 
@@ -85,6 +90,8 @@ class Event extends Base {
 				$years[ $year ][] = $event;
 			}
 		}
+
+		restore_current_blog();
 
 		return $years;
 	}

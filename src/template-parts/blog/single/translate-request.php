@@ -20,15 +20,15 @@ $message = $container->get( 'contact.message_id' );
 
 if ( ! empty( $message ) ) {
 	$message_language = '';
-	$languages_list = PLL()->model->get_languages_list();
-	foreach( $languages_list as $language ){
-		if( $message['language'] === $language->slug ){
+	$languages_list   = PLL()->model->get_languages_list();
+	foreach ( $languages_list as $language ) {
+		if ( $message['language'] === $language->slug ) {
 			$message_language = $language;
 		}
 	}
-	if( !empty( $message_language ) ){
-		$return_status =  $message['message'] ? 'success' : 'error';
-		$message_text = get_theme_mod( $form->get_theme_mod_control_id( $message_language, "form_feedback_message_{$return_status}" ), false );
+	if ( ! empty( $message_language ) ) {
+		$return_status = $message['message'] ? 'success' : 'error';
+		$message_text  = get_theme_mod( $form->get_theme_mod_control_id( $message_language, "form_feedback_message_{$return_status}" ), false );
 
 		set_query_var( 'translate-request-message', $message_text );
 		get_template_part( 'template-parts/blog/single/message', $return_status );

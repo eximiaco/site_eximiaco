@@ -48,11 +48,13 @@ class Social extends Base {
 			'default' => '',
 			)
 		);
-		$wp_customize->add_control( "{$section_id}_twitter", array(
+		$wp_customize->add_control(
+			"{$section_id}_twitter", array(
 			'label' => __( 'Twitter Account', 'elemarjr' ),
 			'type' => 'text',
 			'section' => $section_id,
-		) );
+			)
+		);
 	}
 
 	/**

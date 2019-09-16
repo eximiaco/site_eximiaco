@@ -49,7 +49,11 @@ get_header(); ?>
 			<section class="container">
 			<?php get_template_part( 'template-parts/blog/single/tags' ); ?>
 
-			<?php get_template_part( 'template-parts/blog/single/post-nav' ); ?>
+			<?php
+			if ( 'bliki' !== get_post_type() ) {
+				get_template_part( 'template-parts/blog/single/post-nav' );
+			}
+			?>
 
 			<?php get_template_part( 'template-parts/blog/single/serie' ); ?>
 

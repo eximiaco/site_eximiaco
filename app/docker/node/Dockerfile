@@ -30,14 +30,14 @@ FROM node:alpine
 # Install Alpine packages
 RUN apk update && apk upgrade && \
 	apk add --no-cache \
-		bash \
 		git \
+		bash \
+		python \
 		openssh \
 		automake \
-		git \
-		alpine-sdk  \
-		nasm  \
-		autoconf  \
+		alpine-sdk \
+		nasm \
+		autoconf \
 		build-base \
 		zlib \
 		zlib-dev \
