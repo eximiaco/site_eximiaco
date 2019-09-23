@@ -49,7 +49,6 @@ class Bliki extends Base {
 				'rewrite'                => array(
 					'slug' => 'bliki'
 				),
-				'taxonomies' => array( 'category', 'post_tag' ),
 				'show_ui' => true,
 				'public' => true,
 				'has_archive' => false,
