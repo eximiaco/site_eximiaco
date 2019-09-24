@@ -23,9 +23,9 @@ global $container;
  * @var Serie $serie_helper
  */
 
- if( 'post' !== get_post_type() ){
-	 return;
- }
+if ( 'post' !== get_post_type() ) {
+	return;
+}
 $serie_helper = $container->get( Serie::class );
 
 $series = $serie_helper->get_post_terms( get_the_ID() );

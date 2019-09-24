@@ -70,7 +70,9 @@ class Bliki extends Base {
 		return preg_replace( '/\*/', '', $title );
 	}
 
-
+	/**
+	 * Hide category nav when is a Bliki post.
+	 */
 	public function hide_category_nav() {
 		return false;
 	}

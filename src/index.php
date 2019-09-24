@@ -20,8 +20,8 @@ global $wp_query;
 get_header(); ?>
 
 <?php
-	if ( $container->get( 'display_category_nav' ) ) :
-		get_template_part( 'template-parts/blog/category-nav' );
+if ( $container->get( 'display_category_nav' ) ) :
+	get_template_part( 'template-parts/blog/category-nav' );
 	endif;
 ?>
 

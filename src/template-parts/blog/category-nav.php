@@ -9,17 +9,16 @@
  */
 
 /**
- * The application container
+ * The application container.
  *
  * @var DI\Container
  */
 global $container;
 
 $current_category = single_cat_title( '', false );
-if ( '' != $current_category ) {
-	echo '<h1 style="display:none;">' . $current_category . '</h1>';
-}
-?>
+if ( '' !== $current_category ) { ?>
+	<h1 style="display:none;"><?php echo esc_html( $current_category ); ?></h1>
+<?php } ?>
 <nav class="category-nav">
 	<ul>
 		<?php
