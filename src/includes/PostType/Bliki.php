@@ -72,8 +72,14 @@ class Bliki extends Base {
 
 	/**
 	 * Hide category nav when is a Bliki post.
+	 *
+	 * @param bool $display
 	 */
-	public function hide_category_nav() {
+	public function hide_category_nav( $display ) {
+		if ( ! is_post_type_archive( 'bliki' ) ) {
+			return $display;
+		}
+
 		return false;
 	}
 }
