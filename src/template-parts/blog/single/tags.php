@@ -14,7 +14,7 @@
 	$terms = get_the_terms( get_the_ID(), 'post_tag' );
 	$tags  = wp_list_pluck( $terms, 'name' );
 ?>
-<?php if( ! empty( $tags ) ):?>
+<?php if ( ! empty( $tags ) ) : ?>
 <footer class="post--footer">
 	<div class="post--tags">
 		<strong><?php echo esc_html_e( 'Tags', 'elemarjr' ); ?></strong>
@@ -31,4 +31,4 @@
 		?>
 	</div>
 </footer>
-<?php endif;?>
+<?php endif; ?>
