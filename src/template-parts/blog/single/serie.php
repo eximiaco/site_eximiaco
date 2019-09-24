@@ -28,7 +28,7 @@ if ( false === $series ) {
 foreach ( $series as $serie ) :
 	$posts = $serie_helper->get_serie_posts( $serie );
 	?>
-<?php if( ! empty( $posts ) ):?>
+	<?php if ( ! empty( $posts ) ) : ?>
 	<div class="post-serie">
 		<h3 class="post-serie--title">
 			<?php
@@ -56,5 +56,5 @@ foreach ( $series as $serie ) :
 			<?php endforeach; ?>
 		</ul>
 	</div>
-<?php endif;?>
+	<?php endif; ?>
 <?php endforeach; ?>
