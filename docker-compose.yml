@@ -24,7 +24,7 @@ services:
 
   # Database image to run the mysql
   db:
-    image: mariadb:10.3
+    image: mysql:5.7
     ports:
         - "3306:3306"
     volumes:
