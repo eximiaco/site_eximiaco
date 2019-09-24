@@ -19,7 +19,11 @@ global $wp_query;
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/blog/category-nav' ); ?>
+<?php
+	if ( $container->get( 'display_category_nav' ) ) :
+		get_template_part( 'template-parts/blog/category-nav' );
+	endif;
+?>
 
 <main>
 	<?php

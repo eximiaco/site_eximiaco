@@ -20,6 +20,7 @@ class Blog extends Base {
 	 */
 	public function init() {
 		add_action( 'pre_get_posts', $this->callback( 'limit_posts_per_page' ) );
+		add_action( 'template_redirect', $this->callback( 'display_category_nav' ) );
 
 		add_filter( 'elemarjr_display_hero', $this->callback( 'display_hero' ) );
 		add_filter( 'elemarjr_display_breadcrumb', $this->callback( 'display_breadcrumb' ) );
@@ -101,7 +102,7 @@ class Blog extends Base {
 	 * Check if is post list.
 	 */
 	public function is_post_list() {
-		return ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive();
+		return ! is_post_type_archive() && ( ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive() );
 	}
 
 	/**
@@ -170,5 +171,14 @@ class Blog extends Base {
 		$classes[] = 'current_page_parent';
 
 		return $classes;
+	}
+
+	/**
+	 * Store in the container if the category nav will be showed in the request
+	 * or not
+	 */
+	public function display_category_nav() {
+		$display_category_nav = apply_filters( 'elemarjr_display_category_nav', true );
+		$this->container->set( 'display_category_nav', $display_category_nav );
 	}
 }

@@ -23,6 +23,7 @@ class Bliki extends Base {
 	public function init() {
 		add_action( 'init', $this->callback( 'register_post_type' ) );
 		add_filter( 'wpseo_title', $this->callback( 'remove_asterisk_from_title' ), 10, 3 );
+		add_filter( 'elemarjr_display_category_nav', $this->callback( 'hide_category_nav' ) );
 	}
 
 	/**
@@ -46,12 +47,12 @@ class Bliki extends Base {
 					'not_found' => __( 'No blikis found.', 'elemarjr' ),
 					'not_found_in_trash' => __( 'No blikis found in Trash.', 'elemarjr' ),
 				),
-				'rewrite'                => array(
+				'rewrite'  => array(
 					'slug' => 'bliki'
 				),
 				'show_ui' => true,
 				'public' => true,
-				'has_archive' => false,
+				'has_archive' => true,
 				'supports'  => array( 'author', 'title', 'editor', 'thumbnail', 'page-attributes', 'comments' ),
 				'menu_icon' => 'dashicons-admin-post',
 			)
@@ -69,24 +70,8 @@ class Bliki extends Base {
 		return preg_replace( '/\*/', '', $title );
 	}
 
-	/**
-	 * Get blikis.
-	 *
-	 * @param int $paged The current page.
-	 * @return \WP_Query
-	 */
-	public function get_blikis( $paged ) {
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-		$query = new \WP_Query(
-			array(
-				'posts_per_page' => 9,
-				'post_type' => 'bliki',
-				'order' => 'DESC',
-				'orderby' => 'modified',
-				'paged' => $paged
-			)
-		);
 
-		return $query;
+	public function hide_category_nav() {
+		return false;
 	}
 }
