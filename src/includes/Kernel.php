@@ -83,6 +83,7 @@ class Kernel {
 
 			\Aztec\Performance\Css::class,
 
+			\Aztec\Query\Bliki::class,
 			\Aztec\Query\Post::class,
 			\Aztec\Query\PostNav::class,
 
