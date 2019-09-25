@@ -54,46 +54,46 @@ class Feature extends Base {
 	public function add_about_event_fields() {
 		acf_add_local_field_group(
 			array(
-			'key' => 'post_features',
-			'title' => __( 'Features', 'elemarjr' ),
-			'fields' => array(
-				array(
-					'type' => 'repeater',
-					'key' => 'feature_repeater',
-					'name' => 'feature_repeater',
-					'layout' => 'block',
-					'sub_fields' => array(
-						array(
-							'type' => 'text',
-							'key' => 'feature_site',
-							'name' => 'feature_site',
-							'label' => __( 'Site', 'elemarjr' ),
-							'wrapper' => array(
-								'width' => '33.3%',
+				'key' => 'post_features',
+				'title' => __( 'Features', 'elemarjr' ),
+				'fields' => array(
+					array(
+						'type' => 'repeater',
+						'key' => 'feature_repeater',
+						'name' => 'feature_repeater',
+						'layout' => 'block',
+						'sub_fields' => array(
+							array(
+								'type' => 'text',
+								'key' => 'feature_site',
+								'name' => 'feature_site',
+								'label' => __( 'Site', 'elemarjr' ),
+								'wrapper' => array(
+									'width' => '33.3%',
+								),
 							),
-						),
-						array(
-							'type' => 'url',
-							'key' => 'feature_url',
-							'name' => 'feature_url',
-							'label' => __( 'URL', 'elemarjr' ),
-							'wrapper' => array(
-								'width' => '33.3%',
+							array(
+								'type' => 'url',
+								'key' => 'feature_url',
+								'name' => 'feature_url',
+								'label' => __( 'URL', 'elemarjr' ),
+								'wrapper' => array(
+									'width' => '33.3%',
+								),
 							),
-						),
-						array(
-							'type' => 'text',
-							'key' => 'feature_title',
-							'name' => 'feature_title',
-							'label' => __( 'Title', 'elemarjr' ),
-							'wrapper' => array(
-								'width' => '33.3%',
+							array(
+								'type' => 'text',
+								'key' => 'feature_title',
+								'name' => 'feature_title',
+								'label' => __( 'Title', 'elemarjr' ),
+								'wrapper' => array(
+									'width' => '33.3%',
+								),
 							),
-						),
+						)
 					)
-				)
-			 ),
-			 'location' => $this->location,
+				),
+				'location' => $this->location,
 			)
 		);
 	}

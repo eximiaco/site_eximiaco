@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-09-23T13:53:16+00:00\n"
+"POT-Creation-Date: 2019-09-25T13:15:59+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -815,107 +815,107 @@ msgstr "Primário"
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: includes/Taxonomy/Index.php:42 includes/Taxonomy/Index.php:44
+#: includes/Taxonomy/Index.php:41 includes/Taxonomy/Index.php:43
 msgid "Indexes"
 msgstr "Índices"
 
-#: includes/Taxonomy/Index.php:45
+#: includes/Taxonomy/Index.php:44
 msgid "Index"
 msgstr "Índice"
 
-#: includes/Taxonomy/Index.php:46
+#: includes/Taxonomy/Index.php:45
 msgid "All Indexes"
 msgstr "Todos os Índices"
 
-#: includes/Taxonomy/Index.php:47
+#: includes/Taxonomy/Index.php:46
 msgid "Edit Index"
 msgstr "Editar Índice"
 
-#: includes/Taxonomy/Index.php:48
+#: includes/Taxonomy/Index.php:47
 msgid "View Index"
 msgstr "Ver Índice"
 
-#: includes/Taxonomy/Index.php:49
+#: includes/Taxonomy/Index.php:48
 msgid "Update Index"
 msgstr "Atualizar Índice"
 
-#: includes/Taxonomy/Index.php:50
+#: includes/Taxonomy/Index.php:49
 msgid "Add New Index"
 msgstr "Adicionar Índice"
 
-#: includes/Taxonomy/Index.php:51
+#: includes/Taxonomy/Index.php:50
 msgid "New Index Name"
 msgstr "Novo nome de Índice"
 
-#: includes/Taxonomy/Index.php:52
+#: includes/Taxonomy/Index.php:51
 msgid "Parent Index"
 msgstr "Índice pai"
 
-#: includes/Taxonomy/Index.php:53
+#: includes/Taxonomy/Index.php:52
 msgid "Parent Index:"
 msgstr "Índice pai:"
 
-#: includes/Taxonomy/Index.php:54
+#: includes/Taxonomy/Index.php:53
 msgid "Search Indexes"
 msgstr "Procurar Índices"
 
-#: includes/Taxonomy/Index.php:55
+#: includes/Taxonomy/Index.php:54
 msgid "Popular Indexes"
 msgstr "Índice populares"
 
-#: includes/Taxonomy/Index.php:56
+#: includes/Taxonomy/Index.php:55
 msgid "No indexes found."
 msgstr "Nenhuma índice encontrado."
 
-#: includes/Taxonomy/Serie.php:42 includes/Taxonomy/Serie.php:44
+#: includes/Taxonomy/Serie.php:41 includes/Taxonomy/Serie.php:43
 msgid "Series"
 msgstr "Séries"
 
-#: includes/Taxonomy/Serie.php:45
+#: includes/Taxonomy/Serie.php:44
 msgid "Serie"
 msgstr "Série"
 
-#: includes/Taxonomy/Serie.php:46
+#: includes/Taxonomy/Serie.php:45
 msgid "All Series"
 msgstr "Todas Séries"
 
-#: includes/Taxonomy/Serie.php:47
+#: includes/Taxonomy/Serie.php:46
 msgid "Edit Serie"
 msgstr "Editar Série"
 
-#: includes/Taxonomy/Serie.php:48
+#: includes/Taxonomy/Serie.php:47
 msgid "View Serie"
 msgstr "Ver Série"
 
-#: includes/Taxonomy/Serie.php:49
+#: includes/Taxonomy/Serie.php:48
 msgid "Update Serie"
 msgstr "Atualizar Série"
 
-#: includes/Taxonomy/Serie.php:50
+#: includes/Taxonomy/Serie.php:49
 msgid "Add New Serie"
 msgstr "Adicionar Nova Série"
 
-#: includes/Taxonomy/Serie.php:51
+#: includes/Taxonomy/Serie.php:50
 msgid "New Serie Name"
 msgstr "Nome da Nova Série"
 
-#: includes/Taxonomy/Serie.php:52
+#: includes/Taxonomy/Serie.php:51
 msgid "Parent Serie"
 msgstr "Série Mãe"
 
-#: includes/Taxonomy/Serie.php:53
+#: includes/Taxonomy/Serie.php:52
 msgid "Parent Serie:"
 msgstr "Série Mãe:"
 
-#: includes/Taxonomy/Serie.php:54
+#: includes/Taxonomy/Serie.php:53
 msgid "Search Series"
 msgstr "Procurar Séries"
 
-#: includes/Taxonomy/Serie.php:55
+#: includes/Taxonomy/Serie.php:54
 msgid "Popular Series"
 msgstr "Séries Populares"
 
-#: includes/Taxonomy/Serie.php:56
+#: includes/Taxonomy/Serie.php:55
 msgid "No series found."
 msgstr "Nenhuma série encontrada."
 
