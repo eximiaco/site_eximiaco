@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Docker
-## Kill and remove all existing Docker containers
-function kill() {
-	docker kill $(docker ps -qa) 2> /dev/null || docker rm $(docker ps -qa) 2> /dev/null
-}
-
 # Docker Compose services
 
 compose="docker-compose -f docker-compose.yml"

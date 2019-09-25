@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-09-06T11:13:36+00:00\n"
+"POT-Creation-Date: 2019-09-25T13:15:59+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -44,7 +44,7 @@ msgstr "Comentários estão fechados."
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: header.php:91
+#: header.php:92
 msgid "Search"
 msgstr "Buscar"
 
@@ -64,6 +64,7 @@ msgstr "Rótulo"
 
 #: includes/Customize/Banner/Banner.php:87
 #: includes/Integration/ACF/Pages/Event.php:73
+#: includes/Integration/ACF/Pages/Feature.php:79
 #: includes/Integration/ACF/PostType/Event.php:102
 msgid "URL"
 msgstr "URL"
@@ -88,15 +89,15 @@ msgstr "Banner na página do post"
 msgid "Color Scheme"
 msgstr "Esquema de cores"
 
-#: includes/Customize/Colors.php:52
+#: includes/Customize/Colors.php:53
 msgid "Primary Color"
 msgstr "Cor Primária"
 
-#: includes/Customize/Colors.php:62
+#: includes/Customize/Colors.php:65
 msgid "Secondary Color"
 msgstr "Cor Secundária"
 
-#: includes/Customize/Colors.php:73
+#: includes/Customize/Colors.php:78
 msgid "Main menu opacity"
 msgstr "Opacidade do menu principal"
 
@@ -108,19 +109,19 @@ msgstr "Cabeçalho"
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/Customize/Head.php:74
+#: includes/Customize/Head.php:75
 msgid "Primary Website"
 msgstr "Site Primário"
 
-#: includes/Customize/Head.php:76 includes/Customize/Head.php:99
+#: includes/Customize/Head.php:77 includes/Customize/Head.php:104
 msgid "Website URL"
 msgstr "URL do website"
 
-#: includes/Customize/Head.php:86 includes/Customize/Head.php:109
+#: includes/Customize/Head.php:89 includes/Customize/Head.php:116
 msgid "Website Title"
 msgstr "Título do Website"
 
-#: includes/Customize/Head.php:97
+#: includes/Customize/Head.php:102
 msgid "Secondary Website"
 msgstr "Site Secundário"
 
@@ -130,6 +131,7 @@ msgstr "Formulário de Newsletter"
 
 #: includes/Customize/Newsletter.php:62 includes/Helper/PageSection.php:27
 #: includes/Integration/ACF/Pages/Contact.php:59
+#: includes/Integration/ACF/Pages/Feature.php:88
 #: includes/Integration/ACF/Pages/HomePage.php:61
 #: includes/Integration/ACF/Pages/HomePage.php:229
 #: includes/Integration/ACF/Pages/Page.php:57
@@ -141,59 +143,59 @@ msgstr "Título"
 msgid "Background"
 msgstr "Fundo"
 
-#: includes/Customize/Newsletter.php:101
+#: includes/Customize/Newsletter.php:102
 msgid "Form action"
 msgstr "Ação do formulário"
 
-#: includes/Customize/Newsletter.php:102
+#: includes/Customize/Newsletter.php:103
 msgid "Form action url"
 msgstr "Url da ação do formulário"
 
-#: includes/Customize/Newsletter.php:113
+#: includes/Customize/Newsletter.php:116
 msgid "User ID"
 msgstr "Id do usuário"
 
-#: includes/Customize/Newsletter.php:114
+#: includes/Customize/Newsletter.php:117
 msgid "Mailchimp user identification"
 msgstr "Usuário de identificação do Mailchimp"
 
-#: includes/Customize/Newsletter.php:125
+#: includes/Customize/Newsletter.php:130
 msgid "Form ID"
 msgstr "Id do formulário"
 
-#: includes/Customize/Newsletter.php:126
+#: includes/Customize/Newsletter.php:131
 msgid "Mailchimp form identification"
 msgstr "Formulário de identificação do Mailchimp"
 
-#: includes/Customize/Newsletter.php:137
+#: includes/Customize/Newsletter.php:144
 msgid "Enter the form input name tag for these fields"
 msgstr "Informe o nome da tag de formulário para estes campos"
 
-#: includes/Customize/Newsletter.php:138
+#: includes/Customize/Newsletter.php:145
 msgid "Field \"Name\""
 msgstr "Campo \"Nome\""
 
-#: includes/Customize/Newsletter.php:149
+#: includes/Customize/Newsletter.php:158
 msgid "Field \"Surname\""
 msgstr "Campo \"Sobrenome\""
 
-#: includes/Customize/Newsletter.php:160
+#: includes/Customize/Newsletter.php:171
 msgid "Field \"E-mail\""
 msgstr "Campo \"Email\""
 
-#: includes/Customize/Newsletter.php:181
+#: includes/Customize/Newsletter.php:194
 msgid "Custom content field"
 msgstr "Campo de conteúdo personalizado"
 
-#: includes/Customize/Newsletter.php:182
+#: includes/Customize/Newsletter.php:195
 msgid "Field Label"
 msgstr "Rótulo do campo"
 
-#: includes/Customize/Newsletter.php:195
+#: includes/Customize/Newsletter.php:210
 msgid "Field ID"
 msgstr "Id do campo"
 
-#: includes/Customize/Newsletter.php:206
+#: includes/Customize/Newsletter.php:223
 msgid "Field Name"
 msgstr "Nome do Campo"
 
@@ -201,7 +203,7 @@ msgstr "Nome do Campo"
 msgid "Social Media"
 msgstr "Mídia Social"
 
-#: includes/Customize/Social.php:52
+#: includes/Customize/Social.php:53
 msgid "Twitter Account"
 msgstr "Conta do Twitter"
 
@@ -455,6 +457,14 @@ msgstr "Mensagem de erro: Não enviado"
 msgid "About"
 msgstr "Sobre"
 
+#: includes/Integration/ACF/Pages/Feature.php:58
+msgid "Features"
+msgstr "Destaques"
+
+#: includes/Integration/ACF/Pages/Feature.php:70
+msgid "Site"
+msgstr ""
+
 #: includes/Integration/ACF/Pages/HomePage.php:73
 msgid "Button Label"
 msgstr "Rótulo do botão"
@@ -523,7 +533,7 @@ msgid "Newsletter Form"
 msgstr "Formulário de Newsletter"
 
 #: includes/Integration/ACF/PostType/Event.php:55
-#: includes/PostType/Event.php:37
+#: includes/PostType/Event.php:41
 msgid "Event"
 msgstr "Evento"
 
@@ -589,6 +599,7 @@ msgstr "Telefone de contato"
 msgid "Contact Email"
 msgstr "E-mail de contato"
 
+#. Template Name of the theme
 #: includes/PostType/Bliki.php:37 includes/PostType/Bliki.php:38
 msgid "Bliki"
 msgstr "Bliki"
@@ -630,44 +641,44 @@ msgstr "Nenhuma Bliki encontrada."
 msgid "No blikis found in Trash."
 msgstr "Nenhuma bliki encontrada na lixeira."
 
-#: includes/PostType/Event.php:36
+#: includes/PostType/Event.php:40
 msgid "Events"
 msgstr "Eventos"
 
-#: includes/PostType/Event.php:38
+#: includes/PostType/Event.php:42
 msgctxt "event"
 msgid "Add New"
 msgstr "Adicionar Novo"
 
-#: includes/PostType/Event.php:39
+#: includes/PostType/Event.php:43
 msgid "Add New Event"
 msgstr "Adicionar Novo"
 
-#: includes/PostType/Event.php:40
+#: includes/PostType/Event.php:44
 msgid "New Event"
 msgstr "Novo Evento"
 
-#: includes/PostType/Event.php:41
+#: includes/PostType/Event.php:45
 msgid "Edit Event"
 msgstr "Editar Evento"
 
-#: includes/PostType/Event.php:42
+#: includes/PostType/Event.php:46
 msgid "View Event"
 msgstr "Ver Evento"
 
-#: includes/PostType/Event.php:43
+#: includes/PostType/Event.php:47
 msgid "All Events"
 msgstr "Todos Eventos"
 
-#: includes/PostType/Event.php:44
+#: includes/PostType/Event.php:48
 msgid "Search Events"
 msgstr "Procurar Eventos"
 
-#: includes/PostType/Event.php:45
+#: includes/PostType/Event.php:49
 msgid "No events found."
 msgstr "Nenhum evento encontrado."
 
-#: includes/PostType/Event.php:46
+#: includes/PostType/Event.php:50
 msgid "No events found in Trash."
 msgstr "Nenhum evento encontrado na lixeira."
 
@@ -804,117 +815,121 @@ msgstr "Primário"
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: includes/Taxonomy/Index.php:42 includes/Taxonomy/Index.php:44
+#: includes/Taxonomy/Index.php:41 includes/Taxonomy/Index.php:43
 msgid "Indexes"
 msgstr "Índices"
 
-#: includes/Taxonomy/Index.php:45
+#: includes/Taxonomy/Index.php:44
 msgid "Index"
 msgstr "Índice"
 
-#: includes/Taxonomy/Index.php:46
+#: includes/Taxonomy/Index.php:45
 msgid "All Indexes"
 msgstr "Todos os Índices"
 
-#: includes/Taxonomy/Index.php:47
+#: includes/Taxonomy/Index.php:46
 msgid "Edit Index"
 msgstr "Editar Índice"
 
-#: includes/Taxonomy/Index.php:48
+#: includes/Taxonomy/Index.php:47
 msgid "View Index"
 msgstr "Ver Índice"
 
-#: includes/Taxonomy/Index.php:49
+#: includes/Taxonomy/Index.php:48
 msgid "Update Index"
 msgstr "Atualizar Índice"
 
-#: includes/Taxonomy/Index.php:50
+#: includes/Taxonomy/Index.php:49
 msgid "Add New Index"
 msgstr "Adicionar Índice"
 
-#: includes/Taxonomy/Index.php:51
+#: includes/Taxonomy/Index.php:50
 msgid "New Index Name"
 msgstr "Novo nome de Índice"
 
-#: includes/Taxonomy/Index.php:52
+#: includes/Taxonomy/Index.php:51
 msgid "Parent Index"
 msgstr "Índice pai"
 
-#: includes/Taxonomy/Index.php:53
+#: includes/Taxonomy/Index.php:52
 msgid "Parent Index:"
 msgstr "Índice pai:"
 
-#: includes/Taxonomy/Index.php:54
+#: includes/Taxonomy/Index.php:53
 msgid "Search Indexes"
 msgstr "Procurar Índices"
 
-#: includes/Taxonomy/Index.php:55
+#: includes/Taxonomy/Index.php:54
 msgid "Popular Indexes"
 msgstr "Índice populares"
 
-#: includes/Taxonomy/Index.php:56
+#: includes/Taxonomy/Index.php:55
 msgid "No indexes found."
 msgstr "Nenhuma índice encontrado."
 
-#: includes/Taxonomy/Serie.php:42 includes/Taxonomy/Serie.php:44
+#: includes/Taxonomy/Serie.php:41 includes/Taxonomy/Serie.php:43
 msgid "Series"
 msgstr "Séries"
 
-#: includes/Taxonomy/Serie.php:45
+#: includes/Taxonomy/Serie.php:44
 msgid "Serie"
 msgstr "Série"
 
-#: includes/Taxonomy/Serie.php:46
+#: includes/Taxonomy/Serie.php:45
 msgid "All Series"
 msgstr "Todas Séries"
 
-#: includes/Taxonomy/Serie.php:47
+#: includes/Taxonomy/Serie.php:46
 msgid "Edit Serie"
 msgstr "Editar Série"
 
-#: includes/Taxonomy/Serie.php:48
+#: includes/Taxonomy/Serie.php:47
 msgid "View Serie"
 msgstr "Ver Série"
 
-#: includes/Taxonomy/Serie.php:49
+#: includes/Taxonomy/Serie.php:48
 msgid "Update Serie"
 msgstr "Atualizar Série"
 
-#: includes/Taxonomy/Serie.php:50
+#: includes/Taxonomy/Serie.php:49
 msgid "Add New Serie"
 msgstr "Adicionar Nova Série"
 
-#: includes/Taxonomy/Serie.php:51
+#: includes/Taxonomy/Serie.php:50
 msgid "New Serie Name"
 msgstr "Nome da Nova Série"
 
-#: includes/Taxonomy/Serie.php:52
+#: includes/Taxonomy/Serie.php:51
 msgid "Parent Serie"
 msgstr "Série Mãe"
 
-#: includes/Taxonomy/Serie.php:53
+#: includes/Taxonomy/Serie.php:52
 msgid "Parent Serie:"
 msgstr "Série Mãe:"
 
-#: includes/Taxonomy/Serie.php:54
+#: includes/Taxonomy/Serie.php:53
 msgid "Search Series"
 msgstr "Procurar Séries"
 
-#: includes/Taxonomy/Serie.php:55
+#: includes/Taxonomy/Serie.php:54
 msgid "Popular Series"
 msgstr "Séries Populares"
 
-#: includes/Taxonomy/Serie.php:56
+#: includes/Taxonomy/Serie.php:55
 msgid "No series found."
 msgstr "Nenhuma série encontrada."
 
-#: index.php:33
+#: index.php:33 page-templates/bliki.php:54
 msgid "Previous Page"
 msgstr "Página Anterior"
 
-#: index.php:33
+#: index.php:33 page-templates/bliki.php:54
 msgid "Next Page"
 msgstr "Próxima Página"
+
+#: page-templates/bliki.php:35 template-parts/blog/post-list.php:18
+msgid "Loading posts..."
+msgstr "Carregando posts…"
 
 #: page-templates/contact.php:85
 msgid "Send"
@@ -924,7 +939,7 @@ msgstr "Enviar"
 msgid "Events Calendar"
 msgstr "Agenda de Eventos"
 
-#: page-templates/events.php:36
+#: page-templates/events.php:37
 msgid "Calendar"
 msgstr "Agenda"
 
@@ -957,11 +972,12 @@ msgstr "Ver Todos"
 msgid "Nothing found here."
 msgstr "Nada encontrado aqui."
 
-#: template-parts/blog/post-list.php:18
-msgid "Loading posts..."
-msgstr "Carregando posts…"
+#. translators: more posts in series
+#: template-parts/blog/single/feature.php:22
+msgid "This post was featured in"
+msgstr "Essa publicação foi destaque em"
 
-#: template-parts/blog/single/meta.php:29
+#: template-parts/blog/single/meta.php:32
 msgid "reading time:"
 msgstr "tempo de leitura:"
 
@@ -976,11 +992,11 @@ msgid "Next"
 msgstr "Próximo"
 
 #. translators: more posts in series
-#: template-parts/blog/single/serie.php:35
+#: template-parts/blog/single/serie.php:36
 msgid "More posts in %s series"
 msgstr "Mais posts da série %s"
 
-#: template-parts/blog/single/tags.php:14
+#: template-parts/blog/single/tags.php:20
 msgid "Tags"
 msgstr "Etiquetas"
 
@@ -1004,11 +1020,11 @@ msgstr "E-mail"
 msgid "Check the content of your interest"
 msgstr "Marque o conteúdo de seu interesse"
 
-#: template-parts/newsletter/form.php:76
+#: template-parts/newsletter/form.php:77
 msgid "Select at least one interest"
 msgstr "Selecione pelo menos um interesse"
 
-#: template-parts/newsletter/form.php:80
+#: template-parts/newsletter/form.php:81
 msgid "Subscribe"
 msgstr "Inscrever-se"
 

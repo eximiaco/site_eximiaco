@@ -54,6 +54,7 @@ class Kernel {
 			\Aztec\Integration\ACF\ACF::class,
 			\Aztec\Integration\ACF\Pages\About::class,
 			\Aztec\Integration\ACF\Pages\Contact::class,
+			\Aztec\Integration\ACF\Pages\Feature::class,
 			\Aztec\Integration\ACF\Pages\HomePage::class,
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
 			\Aztec\Integration\ACF\Pages\Page::class,
@@ -82,6 +83,7 @@ class Kernel {
 
 			\Aztec\Performance\Css::class,
 
+			\Aztec\Query\Bliki::class,
 			\Aztec\Query\Post::class,
 			\Aztec\Query\PostNav::class,
 

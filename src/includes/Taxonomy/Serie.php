@@ -35,7 +35,6 @@ class Serie extends Base {
 			$this->slug,
 			array(
 				'post',
-				'bliki'
 			),
 			array(
 				'hierarchical' => true,

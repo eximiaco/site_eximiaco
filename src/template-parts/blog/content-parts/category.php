@@ -8,25 +8,28 @@
  * @version 0.1.0
  */
 
-$categories = get_the_category();
-
-if ( empty( $categories ) ) {
+if ( is_post_type_archive( 'bliki' ) ) {
 	return;
 }
 
 ?>
 <ul class="listing-post__categories">
-	<?php foreach ( $categories as $term ) : ?>
+	<?php if ( is_singular( 'bliki' ) ) : ?>
 	<li>
-		<?php if ( 'private' !== get_post_status() && 'bliki' !== get_post_type() ) : ?>
-		<a href="<?php echo esc_url( get_term_link( $term, 'category' ) ); ?>">
-			<?php echo esc_html( $term->name ); ?>
-		</a>
-		<?php else : ?>
-		<span>
-			<?php echo esc_html( $term->name ); ?>
-		</span>
-		<?php endif; ?>
+		<a href="<?php echo esc_url( get_post_type_archive_link( 'bliki' ) ); ?>">Bliki</a>
 	</li>
-	<?php endforeach; ?>
+		<?php
+		elseif ( 'private' !== get_post_status() ) :
+			$categories = get_the_category();
+			foreach ( $categories as $term ) :
+				?>
+	<li>
+		<a href="<?php echo esc_url( get_term_link( $term, 'category' ) ); ?>">
+				<?php echo esc_html( $term->name ); ?>
+		</a>
+	</li>
+				<?php
+			endforeach;
+		endif;
+		?>
 </ul>
