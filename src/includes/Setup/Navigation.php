@@ -23,6 +23,8 @@ class Navigation extends Base {
 		add_filter( 'walker_nav_menu_start_el', $this->callback( 'social_walker_nav_menu_start_el' ), 10, 4 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_services_custom_post_type_highlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_restricted_area_link_hightlight' ), 10, 2 );
+		add_filter( 'nav_menu_css_class', $this->callback( 'fix_thinking_link_highlight' ), 10, 2 );
+		add_filter( 'nav_menu_css_class', $this->callback( 'fix_thinking_sub_menu_link_highlight' ), 10, 2 );
 	}
 
 	/**
@@ -122,6 +124,22 @@ class Navigation extends Base {
 	}
 
 	/**
+	 * Add active class from blog item.
+	 *
+	 * @param  array $classes All classes from the current item.
+	 * @return array
+	 */
+	private function add_blog_active_class( $classes ) {
+		$key = array_search( 'current-menu-item', $classes );
+
+		if ( false === $key ) {
+			$classes[] = 'current-menu-item';
+		}
+
+		return $classes;
+	}
+
+	/**
 	 * Fix menu hightlight on services custom post type listing.
 	 *
 	 * @param  array    $classes Current menu classes.
@@ -138,6 +156,72 @@ class Navigation extends Base {
 		}
 
 		return $classes;
+	}
+
+	/**
+	 * Fix menu highlight on services custom post type listing.
+	 *
+	 * @param array    $classes    Current menu classes.
+	 * @param \WP_Post $item       Current menu item.
+	 * @return array
+	 */
+	public function fix_thinking_link_highlight( $classes, $item ) {
+		$post_types_sub_menus = array( 'blog', 'bliki', 'post' );
+		if ( 'Thinking' === $item->title && in_array( get_post_type(), $post_types_sub_menus ) ) {
+			$classes = $this->add_blog_active_class( $classes );
+		}
+
+		return $classes;
+	}
+
+	 /**
+	  * Fix menu highlight on services custom post type listing.
+
+	  * @param array    $classes    Current menu classes.
+	  * @param \WP_Post $item       Current menu item.
+	  * @return array
+	  */
+	public function fix_thinking_sub_menu_link_highlight( $classes, $item ) {
+		if ( 'Blog' === $item->title && 'bliki' === get_post_type() ) {
+			$classes = $this->remove_blog_active_class( $classes );
+		}
+		if ( $this->check_menu_item_post_type( $item, 'bliki', 'Bliki' ) || 'post' == get_post_type() ) {
+			$classes = $this->maybe_add_or_remove_active_menu( $classes, $item, 'bliki', 'Bliki' );
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Maybe add or remove active class from menu.
+	 *
+	 * @param array    $classes    Current menu classes.
+	 * @param \WP_Post $item       Current menu item.
+	 * @param string   $post_type  Desired menu post type.
+	 * @param string   $menu_title Current menu title.
+	 */
+	public function maybe_add_or_remove_active_menu( $classes, $item, $post_type, $menu_title ) {
+		if ( $menu_title === $item->title ) {
+			if ( $post_type === get_post_type() ) {
+				$classes = $this->add_blog_active_class( $classes );
+			} else {
+				$classes = $this->remove_blog_active_class( $classes );
+			}
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Check if the item menu.
+	 *
+	 * @param \WP_Post $item           Current menu item.
+	 * @param string   $post_type      Desired post type.
+	 * @param string   $item_title     Desired menu title.
+	 * @return bool
+	 */
+	public function check_menu_item_post_type( $item, $post_type, $item_title ) {
+		return ( ( $post_type === get_post_type() ) && $item_title === $item->title );
 	}
 
 	/**
