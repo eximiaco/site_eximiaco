@@ -107,6 +107,7 @@ class Kernel {
 			\Aztec\Setup\Thumbnail::class,
 
 			\Aztec\Shortcode\Twitter::class,
+			\Aztec\Shortcode\Veja::class,
 
 			\Aztec\Taxonomy\Serie::class,
 			\Aztec\Taxonomy\Index::class,
