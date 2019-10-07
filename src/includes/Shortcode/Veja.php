@@ -29,7 +29,17 @@ class Veja extends Base {
 	 * @return string
 	 */
 	public function shortcode_veja( $atts, $content = null ) {
-		$html = '<div class="shortcode-veja">' . $content . '</div>';
+		$content = ltrim($content,"</p>");
+		$content = rtrim($content,"<p>");
+
+		$html = '</p>
+				<div class="shortcode-veja">
+					<span class="shortcode-veja__title">
+						Veja
+					</span>'
+					. $content .
+				'</div>
+				<p>';
 		return $html;
 	}
 }
