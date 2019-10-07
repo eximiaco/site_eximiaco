@@ -10,7 +10,7 @@
 
 global $container;
 
-if( ! have_rows( 'feature_repeater' ) ){
+if ( ! have_rows( 'feature_repeater' ) ) {
 	return;
 }
 ?>
@@ -24,7 +24,10 @@ if( ! have_rows( 'feature_repeater' ) ){
 	</h3>
 
 	<ul class="post-feature--list">
-		<?php while ( have_rows( 'feature_repeater' ) ) : the_row(); ?>
+		<?php
+		while ( have_rows( 'feature_repeater' ) ) :
+			the_row();
+			?>
 			<li class="post-feature--item">
 				<a class="post-feature--item-title" href="<?php echo esc_url( the_sub_field( 'feature_url' ) ); ?>" title="<?php echo esc_attr( the_sub_field( 'feature_title' ) ); ?>" target="_black">
 				<span class="post-feature--item-site">

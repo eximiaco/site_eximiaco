@@ -57,14 +57,14 @@ if ( '' === $url ) {
 }
 // phpcs:disable
 echo '<';
-// phpcs:enable
 echo esc_html( $el['tag'] . ' ' );
 
 if ( ! empty( $el['href'] ) ) :
 	echo ' href="' . esc_url( $el['href'] ) . '" target="' . esc_attr( $el['target'] ) . '"';
-	endif;
+endif;
 ?>
  class="card card--white card--event <?php echo esc_attr( $event_class ); ?>">
+ <?php // phpcs:enable ?>
 	<div class="card__wrapper">
 		<div class="card__header">
 			<time class="card__date">

@@ -91,7 +91,7 @@ class Head extends Base {
 			)
 		);
 
-		// Secondary link
+		// Secondary link.
 		$wp_customize->add_setting(
 			"{$section_id}_secondary_url", array(
 			'default' => '',

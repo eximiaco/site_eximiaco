@@ -150,8 +150,11 @@ class Head extends Base {
 
 	/**
 	 * Generate RGB color by HEX
+	 *
+	 * @param string $hex Hexadecimal color.
+	 * @return string $rgb
 	 */
-	public function hex2rgb( $hex) {
+	public function hex2rgb( $hex ) {
 		$hex = str_replace( '#', '', $hex );
 
 		if (strlen( $hex ) == 3) {

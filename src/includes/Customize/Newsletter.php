@@ -179,7 +179,10 @@ class Newsletter extends Base {
 			Multiplica o número de linguas por dois, pois ele possui dois tipos
 			de newsletter.
 		*/
-		for ( $x=1; $x <= ( count( $languages_list ) * 2 ); $x++ ) {
+		$languages_count = count( $languages_list );
+		$num_fields      = 2;
+
+		for ( $x=1; $x <= ( $languages_count * $num_fields ); $x++ ) {
 
 			$y = true;
 			foreach ( $languages_list as $lang ) {

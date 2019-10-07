@@ -30,6 +30,9 @@ class Login extends Base {
 		wp_enqueue_style( 'elemar-login', get_stylesheet_directory_uri() . '/assets/css/login.css' );
 	}
 
+	/**
+	 * Get the site logo
+	 */
 	public function get_logo() {
 		$logo_url = get_theme_mod( 'head_logo' ) ? get_theme_mod( 'head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' );
 		echo "<a href=\"#\" class=\"logo-header\"><img src=\"{$logo_url}\" alt=\"\" /></a>";
