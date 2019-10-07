@@ -31,6 +31,64 @@ get_header(); ?>
 	while ( have_posts() ) :
 		the_post();
 		?>
+	<div class="container divulgation--container">
+		<?php
+			$slug = PLL()->curlang->slug;
+			switch_to_blog( get_network()->site_id );
+			$divulgation_data = array(
+				1 => array(
+					'text' => get_theme_mod( "head_{$slug}_co_divulgation_text" ),
+					'img'  => get_theme_mod( 'head_co_divulgation_logo' ),
+					'url'  => get_blog_option( 1, 'siteurl' ),
+				),
+				2 => array(
+					'text' => get_theme_mod( "head_{$slug}_tech_divulgation_text" ),
+					'img'  => get_theme_mod( 'head_tech_divulgation_logo' ),
+					'url'  => get_blog_option( 2, 'siteurl' ),
+				),
+				3 => array(
+					'text' => get_theme_mod( "head_{$slug}_ms_divulgation_text" ),
+					'img'  => get_theme_mod( 'head_ms_divulgation_logo' ),
+					'url'  => get_blog_option( 3, 'siteurl' ),
+				),
+			);
+			restore_current_blog();
+
+			$current_divulgation = $divulgation_data[ get_current_blog_id() ];
+			unset( $divulgation_data[ get_current_blog_id() ] );
+			?>
+		<?php
+			$data = reset( $divulgation_data );
+
+			if ( $data['img'] && $data['text'] ) :
+		?>
+		<div class="item">
+			<a href="<?php echo esc_url( $data['url'] ); ?>">
+				<span><?php echo esc_html( $data['text'] ); ?></span>
+				<img src="<?php echo esc_html( $data['img'] ); ?>" alt="">
+			</a>
+		</div>
+		<?php endif; ?>
+		<?php if ( $current_divulgation['img'] && $current_divulgation['text'] ) : ?>
+		<div class="item item--current">
+			<span><?php echo esc_html( $current_divulgation['text'] ); ?></span>
+			<img src="<?php echo esc_html( $current_divulgation['img'] ); ?>" alt="">
+		</div>
+		<?php endif; ?>
+		<?php
+			$data = end( $divulgation_data );
+
+			if ( $data['img'] && $data['text'] ) :
+		?>
+		<div class="item">
+			<a href="<?php echo esc_url( $data['url'] ); ?>">
+				<span><?php echo esc_html( $data['text'] ); ?></span>
+				<img src="<?php echo esc_html( $data['img'] ); ?>" alt="">
+			</a>
+		</div>
+		<?php endif; ?>
+	</div>
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
 		<div class="front-page--blog">
 			<div class="container container__xs-small-margin">

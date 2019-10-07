@@ -228,3 +228,65 @@
 
     .hero--container
             padding-top 60px
+
+    .divulgation--container
+        align-items center
+        display flex
+        font-size 14px
+        flex-direction row
+        padding  30px 10px
+
+        @media screen and ( min-width $screen-md )
+            padding-bottom 30px
+            padding-top 20px
+
+        .item
+            align-items center
+            flex 1
+            font-weight 600
+            margin 2px 0
+            text-align center
+            padding-left 10px
+            padding-right 10px
+
+            a
+                color $black-two
+                text-decoration none
+
+            img
+                display block
+                margin-left auto
+                margin-right auto
+                margin-top 5px
+                max-height 24px
+                max-width 80px
+                padding 5px 10px
+
+            span
+                display block
+
+            &--current
+                color $gray
+                position relative
+
+                &::after,
+                &::before
+                    background $brown-grey
+                    content ''
+                    display block
+                    height 85%
+                    top 0
+                    position absolute
+                    width 1px
+
+                &::after
+                    right 0
+
+                &::before
+                    left 0
+
+                img
+                    border-bottom 2px solid var-use( color-primary )
+                    max-height 30px
+                    max-width 80px
+
