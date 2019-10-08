@@ -13,7 +13,7 @@ host('eximia.co')
 	->port(2201)
 	->stage('production')
 	->user('eximia')
-	->set('branch', 'master')
+	->set('branch', 'production')
 	->set('deploy_path', '/home/eximia/production');
 
 host('staging.eximia.co')

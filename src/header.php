@@ -44,17 +44,17 @@ $display_hero = $container->get( 'display_hero' );
 				</ul><!-- .langs-navigation -->
 				<ul class="websites-navegation">
 					<?php if ( ! empty( get_theme_mod( 'head_primary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_primary_url' ) == get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo get_theme_mod( 'head_primary_url' ); ?>" class="menu-link"><?php echo get_theme_mod( 'head_primary_title' ); ?></a></li>
+						<li class="menu-item<?php echo ( get_theme_mod( 'head_primary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_primary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_primary_title' ) ); ?></a></li>
 					<?php endif; ?>
 					<?php if ( ! empty( get_theme_mod( 'head_secondary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_secondary_url' ) == get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo get_theme_mod( 'head_secondary_url' ); ?>" class="menu-link"><?php echo get_theme_mod( 'head_secondary_title' ); ?></a></li>
+						<li class="menu-item<?php echo ( get_theme_mod( 'head_secondary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_secondary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_secondary_title' ) ); ?></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
 		<div class="top-header container">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-branding">
-				<img src="<?php echo ( get_theme_mod( 'head_logo' ) ? get_theme_mod( 'head_logo' ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+				<img src="<?php echo ( get_theme_mod( 'head_logo' ) ? esc_url( get_theme_mod( 'head_logo' ) ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			</a><!-- .site-branding -->
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
