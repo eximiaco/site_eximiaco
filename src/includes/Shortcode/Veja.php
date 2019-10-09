@@ -24,13 +24,13 @@ class Veja extends Base {
 	/**
 	 * Veja Shortcode.
 	 *
-	 * @param  array $atts Atts.
+	 * @param  array  $atts Atts.
 	 * @param  string $content The content.
 	 * @return string
 	 */
 	public function shortcode_veja( $atts, $content = null ) {
-		$content = ltrim($content,"</p>");
-		$content = rtrim($content,"<p>");
+		$content = ltrim( $content, '</p>' );
+		$content = rtrim( $content, '<p>' );
 
 		$html = '</p>
 				<div class="shortcode-veja">

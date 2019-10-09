@@ -136,7 +136,7 @@ class Head extends Base {
 				)
 			);
 
-			// TECH
+			// TECH.
 			$title_id = $this->get_theme_mod_control_id( $lang, 'tech_divulgation_text' );
 			$wp_customize->add_setting(
 				$title_id, array(
@@ -151,7 +151,7 @@ class Head extends Base {
 				)
 			);
 
-			// MS
+			// MS.
 			$title_id = $this->get_theme_mod_control_id( $lang, 'ms_divulgation_text' );
 			$wp_customize->add_setting(
 				$title_id, array(
@@ -167,7 +167,7 @@ class Head extends Base {
 			);
 		}
 
-		// CO
+		// CO.
 		$setting_id = $this->get_theme_mod_section_id() . '_co_divulgation_logo';
 		$control_id = $setting_id . '_control';
 
@@ -189,7 +189,7 @@ class Head extends Base {
 			)
 		);
 
-		// TECH
+		// TECH.
 		$setting_id = $this->get_theme_mod_section_id() . '_tech_divulgation_logo';
 		$control_id = $setting_id . '_control';
 
@@ -211,7 +211,7 @@ class Head extends Base {
 			)
 		);
 
-		// MS
+		// MS.
 		$setting_id = $this->get_theme_mod_section_id() . '_ms_divulgation_logo';
 		$control_id = $setting_id . '_control';
 
