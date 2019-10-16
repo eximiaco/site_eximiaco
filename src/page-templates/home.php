@@ -60,8 +60,8 @@ get_header(); ?>
 		<?php
 			$data = reset( $divulgation_data );
 
-			if ( $data['img'] && $data['text'] ) :
-		?>
+		if ( $data['img'] && $data['text'] ) :
+			?>
 		<div class="item">
 			<a href="<?php echo esc_url( $data['url'] ); ?>">
 				<span><?php echo esc_html( $data['text'] ); ?></span>
@@ -78,8 +78,8 @@ get_header(); ?>
 		<?php
 			$data = end( $divulgation_data );
 
-			if ( $data['img'] && $data['text'] ) :
-		?>
+		if ( $data['img'] && $data['text'] ) :
+			?>
 		<div class="item">
 			<a href="<?php echo esc_url( $data['url'] ); ?>">
 				<span><?php echo esc_html( $data['text'] ); ?></span>
