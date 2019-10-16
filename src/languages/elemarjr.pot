@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elemar Jr Blog Theme 1.0.8\n"
+"Project-Id-Version: Elemar Jr Blog Theme 1.0.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-09-23T13:53:16+00:00\n"
+"POT-Creation-Date: 2019-10-15T14:31:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: elemarjr\n"
@@ -57,6 +57,7 @@ msgstr ""
 #: includes/Integration/ACF/Pages/HomePage.php:67
 #: includes/Integration/ACF/Pages/HomePage.php:206
 #: includes/Integration/ACF/Pages/Page.php:69
+#: includes/Integration/ACF/Pages/Resums.php:82
 msgid "Text"
 msgstr ""
 
@@ -105,30 +106,54 @@ msgstr ""
 msgid "Main menu opacity"
 msgstr ""
 
-#: includes/Customize/Head.php:42
+#: includes/Customize/Head.php:44
 msgid "Header"
 msgstr ""
 
-#: includes/Customize/Head.php:61
+#: includes/Customize/Head.php:63
 msgid "Logo"
 msgstr ""
 
-#: includes/Customize/Head.php:75
+#: includes/Customize/Head.php:77
 msgid "Primary Website"
 msgstr ""
 
-#: includes/Customize/Head.php:77
-#: includes/Customize/Head.php:104
+#: includes/Customize/Head.php:79
+#: includes/Customize/Head.php:106
 msgid "Website URL"
 msgstr ""
 
-#: includes/Customize/Head.php:89
-#: includes/Customize/Head.php:116
+#: includes/Customize/Head.php:91
+#: includes/Customize/Head.php:118
 msgid "Website Title"
 msgstr ""
 
-#: includes/Customize/Head.php:102
+#: includes/Customize/Head.php:104
 msgid "Secondary Website"
+msgstr ""
+
+#: includes/Customize/Head.php:134
+msgid "Divulgation Exímia CO "
+msgstr ""
+
+#: includes/Customize/Head.php:149
+msgid "Divulgation Exímia Tech "
+msgstr ""
+
+#: includes/Customize/Head.php:164
+msgid "Divulgation Exímia MS "
+msgstr ""
+
+#: includes/Customize/Head.php:185
+msgid "Upload CO Divulgation logo"
+msgstr ""
+
+#: includes/Customize/Head.php:207
+msgid "Upload Tech Divulgation logo"
+msgstr ""
+
+#: includes/Customize/Head.php:229
+msgid "Upload MS Divulgation logo"
 msgstr ""
 
 #: includes/Customize/Newsletter.php:47
@@ -142,6 +167,7 @@ msgstr ""
 #: includes/Integration/ACF/Pages/HomePage.php:61
 #: includes/Integration/ACF/Pages/HomePage.php:229
 #: includes/Integration/ACF/Pages/Page.php:57
+#: includes/Integration/ACF/Pages/Resums.php:75
 msgid "Title"
 msgstr ""
 
@@ -190,19 +216,19 @@ msgstr ""
 msgid "Field \"E-mail\""
 msgstr ""
 
-#: includes/Customize/Newsletter.php:194
+#: includes/Customize/Newsletter.php:197
 msgid "Custom content field"
 msgstr ""
 
-#: includes/Customize/Newsletter.php:195
+#: includes/Customize/Newsletter.php:198
 msgid "Field Label"
 msgstr ""
 
-#: includes/Customize/Newsletter.php:210
+#: includes/Customize/Newsletter.php:213
 msgid "Field ID"
 msgstr ""
 
-#: includes/Customize/Newsletter.php:223
+#: includes/Customize/Newsletter.php:226
 msgid "Field Name"
 msgstr ""
 
@@ -520,7 +546,7 @@ msgid "Quote job role"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:199
-#: page-templates/home.php:37
+#: page-templates/home.php:95
 msgid "Blog"
 msgstr ""
 
@@ -536,6 +562,10 @@ msgstr ""
 #. Template Name of the theme
 #: includes/Integration/ACF/Pages/NewsletterForm.php:51
 msgid "Newsletter Form"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/Resums.php:61
+msgid "Resums"
 msgstr ""
 
 #: includes/Integration/ACF/PostType/Event.php:55
@@ -606,46 +636,45 @@ msgstr ""
 msgid "Contact Email"
 msgstr ""
 
-#. Template Name of the theme
-#: includes/PostType/Bliki.php:37
 #: includes/PostType/Bliki.php:38
+#: includes/PostType/Bliki.php:39
 msgid "Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:39
+#: includes/PostType/Bliki.php:40
 msgctxt "bliki"
 msgid "Add New"
 msgstr ""
 
-#: includes/PostType/Bliki.php:40
+#: includes/PostType/Bliki.php:41
 msgid "Add New Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:41
+#: includes/PostType/Bliki.php:42
 msgid "New Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:42
+#: includes/PostType/Bliki.php:43
 msgid "Edit Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:43
+#: includes/PostType/Bliki.php:44
 msgid "View Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:44
+#: includes/PostType/Bliki.php:45
 msgid "All Blikis"
 msgstr ""
 
-#: includes/PostType/Bliki.php:45
+#: includes/PostType/Bliki.php:46
 msgid "Search Bliki"
 msgstr ""
 
-#: includes/PostType/Bliki.php:46
+#: includes/PostType/Bliki.php:47
 msgid "No blikis found."
 msgstr ""
 
-#: includes/PostType/Bliki.php:47
+#: includes/PostType/Bliki.php:48
 msgid "No blikis found in Trash."
 msgstr ""
 
@@ -815,11 +844,11 @@ msgstr ""
 msgid "No testimonials found in Trash."
 msgstr ""
 
-#: includes/Setup/Navigation.php:34
+#: includes/Setup/Navigation.php:36
 msgid "Primary"
 msgstr ""
 
-#: includes/Setup/Navigation.php:35
+#: includes/Setup/Navigation.php:37
 msgid "Social Menu"
 msgstr ""
 
@@ -929,19 +958,12 @@ msgstr ""
 msgid "No series found."
 msgstr ""
 
-#: index.php:33
-#: page-templates/bliki.php:54
+#: index.php:37
 msgid "Previous Page"
 msgstr ""
 
-#: index.php:33
-#: page-templates/bliki.php:54
+#: index.php:37
 msgid "Next Page"
-msgstr ""
-
-#: page-templates/bliki.php:35
-#: template-parts/blog/post-list.php:18
-msgid "Loading posts..."
 msgstr ""
 
 #: page-templates/contact.php:85
@@ -960,7 +982,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: page-templates/home.php:51
+#: page-templates/home.php:109
 msgid "Last posts in English"
 msgstr ""
 
@@ -977,12 +999,16 @@ msgstr ""
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
-#: template-parts/blog/category-nav.php:34
+#: template-parts/blog/category-nav.php:33
 msgid "Show All"
 msgstr ""
 
 #: template-parts/blog/post-list-empty.php:13
 msgid "Nothing found here."
+msgstr ""
+
+#: template-parts/blog/post-list.php:18
+msgid "Loading posts..."
 msgstr ""
 
 #. translators: more posts in series
@@ -1002,6 +1028,11 @@ msgstr ""
 #: template-parts/blog/single/post-nav.php:69
 #: template-parts/blog/single/post-nav.php:83
 msgid "Next"
+msgstr ""
+
+#. translators: more posts in series
+#: template-parts/blog/single/resums.php:22
+msgid "In Resum"
 msgstr ""
 
 #. translators: more posts in series
@@ -1033,11 +1064,11 @@ msgstr ""
 msgid "Check the content of your interest"
 msgstr ""
 
-#: template-parts/newsletter/form.php:77
+#: template-parts/newsletter/form.php:80
 msgid "Select at least one interest"
 msgstr ""
 
-#: template-parts/newsletter/form.php:81
+#: template-parts/newsletter/form.php:84
 msgid "Subscribe"
 msgstr ""
 
