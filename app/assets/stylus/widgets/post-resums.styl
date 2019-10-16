@@ -1,0 +1,56 @@
+.post-resums
+    var-declare( post_resums_margin, 0 ( - $container-padding ) 30px ( - $container-padding ) )
+    var-declare( post_resums__item_border-right, transparent )
+    var-declare( post_resums__item_border-bottom, $brown-grey )
+    var-declare( post_resums__list_flex-wrap, wrap )
+    var-declare( post_resums__item_margin, 30px 30px 0 30px )
+    var-declare( post_resums__item_padding, 0 0 30px 0 )
+
+    @media screen and ( min-width $screen-lg )
+        var-declare( post_resums_margin, 0 0 30px )
+        var-declare( post_resums__item_border-right, $brown-grey )
+        var-declare( post_resums__item_border-bottom, transparent )
+        var-declare( post_resums__list_flex-wrap, unset )
+        var-declare( post_resums__item_margin, 30px 0 0 0 )
+        var-declare( post_resums__item_padding, 0 30px )
+
+    color $black
+    margin var-use( post_resums_margin )
+
+    &__title
+        background-color $gray-light-50
+        border-radius 10px 10px 0 0
+        color $black
+        display inline-block
+        font-size 14px
+        font-weight bold
+        margin-left 15px
+        padding 5px 15px
+        text-align center
+        text-transform uppercase
+
+    &__list
+        background-color $gray-light-50
+        display flex
+        flex-wrap var-use( post_resums__list_flex-wrap )
+        list-style none
+        margin 0
+        padding 0 0 40px
+
+    &__item
+        border-bottom 1px solid var-use( post_resums__item_border-bottom )
+        border-right 1px solid var-use( post_resums__item_border-right )
+        font-size 16px
+        margin var-use( post_resums__item_margin )
+        padding var-use( post_resums__item_padding )
+        width 100%
+
+        &:last-child
+            border-color transparent
+            padding-bottom 0
+
+        &-title
+            color var-use( color-primary )
+            font-size 16px
+            margin 0 0 5px
+            text-transform uppercase

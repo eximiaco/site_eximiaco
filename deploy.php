@@ -20,7 +20,7 @@ host('staging.eximia.co')
 	->port(2201)
 	->stage('staging')
 	->user('eximia_staging')
-	->set('branch', 'develop')
+	->set('branch', 'staging')
 	->set('deploy_path', '/home/eximia_staging');
 
 

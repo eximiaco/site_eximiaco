@@ -47,6 +47,8 @@ get_header(); ?>
 			</section>
 
 			<section class="container">
+			<?php get_template_part( 'template-parts/blog/single/resums' ); ?>
+
 			<?php get_template_part( 'template-parts/blog/single/feature' ); ?>
 
 			<?php get_template_part( 'template-parts/blog/single/tags' ); ?>
