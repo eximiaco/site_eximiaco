@@ -1,14 +1,10 @@
 ## Feature
-
- * [USX](https://greatcode.aztecweb.net/aztecwebteam/project/issue/X)
+#<ID da feature>
 
 ## Narrativa
 **Sendo** <persona (quem)>.\
 **Posso** <ação (o que)>.\
 **Pois assim** <motivo (porquê)>.
-
-## Histórias relacionadas
-Não possui relação com nenhuma outra história.
 
 ## Critérios de aceitação
 
@@ -18,21 +14,10 @@ Não possui relação com nenhuma outra história.
 **Quando** <ação>.\
 **Então** <reação>.
 
-## Outros artefatos
-Nenhum outro artefato gerado para essa história.
 
 ## Observações técnicas
+(Adicionar observações que podem ajudar no desenvolvimento da user story.)
+
 Nenhuma observação técnica.
-
-## Atividades
-* [ ] Pesquisa
-* [ ] Design
-* [ ] Desenvolvimento
-* [ ] Deploy staging
-* [ ] Deploy produção
-* [ ] Manual de usuário
-
-## Histórico de evolução
-* 01/01/2000 - @autor - Primeira versão
 
 /label ~"User story"
