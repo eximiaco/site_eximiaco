@@ -107,6 +107,10 @@ class Form extends Base {
 					$email   = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'email' ), false );
 					$subject = get_theme_mod( $form_object->get_theme_mod_control_id( $curlang, 'subject' ), false );
 
+					if ( false === wp_verify_nonce( $_REQUEST['_wpnonce'], $form_slug ) ) {
+						$message = 'spam';
+					}
+
 					if ( false === $email ) {
 						$message = 'not-sent';
 					}

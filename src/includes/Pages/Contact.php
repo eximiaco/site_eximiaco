@@ -67,7 +67,7 @@ class Contact extends Base {
 
 		if ( false !== $message_id ) {
 
-			$message = get_field( 'message_success' );
+			$message = get_field( 'message_' . $message_id );
 			if ( false === $message ) {
 				$message_id = false;
 			}
