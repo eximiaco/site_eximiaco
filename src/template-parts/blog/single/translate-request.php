@@ -27,7 +27,7 @@ if ( ! empty( $message ) ) {
 		}
 	}
 	if ( ! empty( $message_language ) ) {
-		$return_status = $message['message'] ? 'success' : 'error';
+		$return_status = ( 'success' === $message['message'] ) ? 'success' : 'error';
 		$message_text  = get_theme_mod( $form->get_theme_mod_control_id( $message_language, "form_feedback_message_{$return_status}" ), false );
 
 		set_query_var( 'translate-request-message', $message_text );
@@ -44,7 +44,8 @@ if ( ! empty( $message ) ) {
 	</p>
 
 	<div class="contact">
-		<form action="<?php echo esc_url( $form->get_action() ); ?>" method="POST" class="contact--form form">
+		<form action="<?php echo esc_url( wp_nonce_url( $form->get_action() ) ); ?>" method="POST" class="contact--form form">
+
 			<label for="name">
 				<input type="text" name="name" placeholder="" value="" id="translate-request-input-name" required />
 			</label>
@@ -54,6 +55,7 @@ if ( ! empty( $message ) ) {
 			<input type="hidden" name="language" value="" id="language-input">
 			<input type="hidden" name="message_success" value="" id="language-message-success">
 			<input type="hidden" name="message_error" value="" id="language-message-error">
+			<?php wp_nonce_field( 'translate-request' ); ?>
 			<div class="form--submit-wrapper">
 				<input type="submit" class="button button__bordered" value=""  id="translate-request-submit"/>
 			</div>

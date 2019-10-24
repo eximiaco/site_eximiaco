@@ -81,6 +81,7 @@ get_header(); ?>
 					<span class="screen-reader-text"><?php esc_html( $form->get_label( 'message' ) ); ?></span>
 					<textarea name="message" placeholder="<?php echo esc_attr( $form->get_label( 'message' ) ); ?>" required><?php echo esc_textarea( $values['message'] ); ?></textarea>
 				</label>
+				<?php wp_nonce_field( 'contact' ); ?>
 				<div class="form--submit-wrapper">
 					<input type="submit" class="button button__bordered" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ); ?>" />
 				</div>
