@@ -28,15 +28,16 @@ if ( ! have_rows( 'resums_repeater' ) ) {
 		while ( have_rows( 'resums_repeater' ) ) :
 			the_row();
 			if ( ! empty( get_sub_field( 'resum_title' ) ) ) :
-			?>
+				?>
 			<li class="post-resums__item">
 				<h3 class="post-resums__item-title">
 					<?php echo esc_html( the_sub_field( 'resum_title' ) ); ?>
 				</h3>
 				<?php echo esc_html( the_sub_field( 'resum_text' ) ); ?>
 			</li>
-			<?php
+				<?php
 			endif;
-		endwhile; ?>
+		endwhile;
+		?>
 	</ul>
 </div>

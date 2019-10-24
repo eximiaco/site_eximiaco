@@ -277,6 +277,15 @@ class PageSection extends Base {
 	}
 
 	/**
+	 * Get the custom template of current section
+	 *
+	 * @return string
+	 */
+	public function get_template() {
+		return $this->get_field( 'template' );
+	}
+
+	/**
 	 * Get the section title
 	 *
 	 * @return string The the section title.

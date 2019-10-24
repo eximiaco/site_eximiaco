@@ -160,6 +160,23 @@
                 text-align left
                 width 410px
 
+        &--client-list
+            background-color $white
+
+            h2.page-section--title
+                color var-use( color-primary )
+                margin-bottom 30px
+                padding-bottom 5px
+                position relative
+
+                &::after
+                    border-bottom 1px solid var-use( color-primary )
+                    bottom 0
+                    content ''
+                    left 0
+                    position absolute
+                    width 40px
+
     // MVP template
     &__mvp
         & ^[0..-2]--container

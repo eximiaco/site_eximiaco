@@ -39,6 +39,7 @@ class Kernel {
 
 			\Aztec\Setup\Textdomain::class,
 
+			\Aztec\Customize\Client::class,
 			\Aztec\Customize\Colors::class,
 			\Aztec\Customize\Head::class,
 			\Aztec\Customize\Newsletter::class,
@@ -61,6 +62,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\Event::class,
 			\Aztec\Integration\ACF\Pages\Resums::class,
 			\Aztec\Integration\ACF\Pages\Services::class,
+			\Aztec\Integration\ACF\PostType\Client::class,
 			\Aztec\Integration\ACF\PostType\Lab::class,
 			\Aztec\Integration\ACF\PostType\Event::class,
 			\Aztec\Integration\ACF\PostType\Service::class,
@@ -94,6 +96,7 @@ class Kernel {
 			\Aztec\PostType\Service::class,
 			\Aztec\PostType\Testimonial::class,
 			\Aztec\PostType\Bliki::class,
+			\Aztec\PostType\Client::class,
 
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\Comments::class,
