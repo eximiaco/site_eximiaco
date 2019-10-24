@@ -57,3 +57,16 @@ $page_section = $container->get( PageSection::class );
 		<?php echo wp_kses_post( $page_section->get_image() ); ?>
 	</div>
 </div>
+
+<?php
+
+/*
+* Código exclusivo para seção de clientes. Ele deve ficar fora do
+* container da Page Section porque é uma linha com fundo diferente.
+*/
+if ( 'customers' === $page_section->get_template() ) {
+	switch_to_blog( get_network()->site_id );
+	get_template_part( 'template-parts/client/clients' );
+	restore_current_blog();
+}
+?>

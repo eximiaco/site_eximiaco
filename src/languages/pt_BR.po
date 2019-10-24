@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-10-15T14:31:29+00:00\n"
+"POT-Creation-Date: 2019-10-16T14:41:22+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -66,6 +66,7 @@ msgstr "Rótulo"
 #: includes/Customize/Banner/Banner.php:87
 #: includes/Integration/ACF/Pages/Event.php:73
 #: includes/Integration/ACF/Pages/Feature.php:79
+#: includes/Integration/ACF/PostType/Client.php:67
 #: includes/Integration/ACF/PostType/Event.php:102
 msgid "URL"
 msgstr "URL"
@@ -85,6 +86,15 @@ msgstr "Banner na página do post"
 #: includes/Customize/Banner/SinglePost/Promotion.php:30
 msgid "Single post promotion banner"
 msgstr "Banner na página do post"
+
+#: includes/Customize/Client.php:41 includes/PostType/Client.php:40
+msgid "Our Clients"
+msgstr "Nossos Clientes"
+
+#. translators: %s: website locale
+#: includes/Customize/Client.php:56
+msgid "Title of \"Our Clients\" - (%s)"
+msgstr "Título de \"Nossos Clientes\" - (%s)"
 
 #: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
 msgid "Color Scheme"
@@ -558,9 +568,14 @@ msgstr "Recomendações"
 msgid "Newsletter Form"
 msgstr "Formulário de Newsletter"
 
-#: includes/Integration/ACF/Pages/Resums.php:61
-msgid "Resums"
-msgstr "Resumos"
+#: includes/Integration/ACF/PostType/Client.php:55
+#: includes/PostType/Client.php:41
+msgid "Client"
+msgstr "Cliente"
+
+#: includes/Integration/ACF/PostType/Client.php:61
+msgid "Client Logo"
+msgstr "Logo do cliente"
 
 #: includes/Integration/ACF/PostType/Event.php:55
 #: includes/PostType/Event.php:41
@@ -670,6 +685,43 @@ msgstr "Nenhuma Bliki encontrada."
 msgid "No blikis found in Trash."
 msgstr "Nenhuma bliki encontrada na lixeira."
 
+#: includes/PostType/Client.php:42
+msgctxt "client"
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: includes/PostType/Client.php:43
+msgid "Add New Client"
+msgstr "Adicionar Novo Cliente"
+
+#: includes/PostType/Client.php:44
+msgid "New Client"
+msgstr "Novo Cliente"
+
+#: includes/PostType/Client.php:45
+msgid "Edit Client"
+msgstr "Editar Cliente"
+
+#: includes/PostType/Client.php:46
+msgid "View Client"
+msgstr "Ver Cliente"
+
+#: includes/PostType/Client.php:47
+msgid "All Clients"
+msgstr "Todos Clientes"
+
+#: includes/PostType/Client.php:48
+msgid "Search Clients"
+msgstr "Procurar Clientes"
+
+#: includes/PostType/Client.php:49 includes/PostType/Event.php:49
+msgid "No events found."
+msgstr "Nenhum evento encontrado."
+
+#: includes/PostType/Client.php:50 includes/PostType/Event.php:50
+msgid "No events found in Trash."
+msgstr "Nenhum evento encontrado na lixeira."
+
 #: includes/PostType/Event.php:40
 msgid "Events"
 msgstr "Eventos"
@@ -702,14 +754,6 @@ msgstr "Todos Eventos"
 #: includes/PostType/Event.php:48
 msgid "Search Events"
 msgstr "Procurar Eventos"
-
-#: includes/PostType/Event.php:49
-msgid "No events found."
-msgstr "Nenhum evento encontrado."
-
-#: includes/PostType/Event.php:50
-msgid "No events found in Trash."
-msgstr "Nenhum evento encontrado na lixeira."
 
 #. Template Name of the theme
 #: includes/PostType/Lab.php:36
@@ -1066,6 +1110,9 @@ msgstr "Inscrever-se"
 msgid "See more"
 msgstr "Veja mais"
 
+#~ msgid "Resums"
+#~ msgstr "Resumos"
+
 #~ msgid "translates:"
 #~ msgstr "traduções:"
 
@@ -1141,9 +1188,6 @@ msgstr "Veja mais"
 
 #~ msgid "My Abilities"
 #~ msgstr "Minhas habilidades"
-
-#~ msgid "My Clients"
-#~ msgstr "Meus Clientes"
 
 #~ msgid "RavenDB"
 #~ msgstr "RavenDB"

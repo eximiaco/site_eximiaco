@@ -141,5 +141,8 @@ class Thumbnail extends Base {
 
 		// testimonial logo.
 		add_image_size( 'testimonial-logo', 200, 44 );
+
+		// client logo.
+		add_image_size( 'client_logo', 270, 155 );
 	}
 }

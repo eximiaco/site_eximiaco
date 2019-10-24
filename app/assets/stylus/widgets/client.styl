@@ -1,0 +1,46 @@
+.client-list
+    &__wrapper
+        display flex
+        flex-wrap wrap
+        justify-content center
+        margin 0 auto
+        max-width 400px
+        width 100%
+
+        @media screen and ( min-width $screen-md )
+            justify-content flex-start
+            max-width 800px
+
+        @media screen and ( min-width $screen-lg )
+            max-width 100%
+
+    .client
+        height 120px
+        margin 0 10px 25px 0
+        padding 0
+        text-decoration none
+        width calc( 50% - 10px )
+
+        &:nth-child( 2n )
+            margin-right 0
+
+        @media screen and ( min-width $screen-md )
+            height 155px
+            width calc( 25% - 10px )
+
+            &:nth-child( 2n )
+                margin-right 10px
+
+            &:nth-child( 4n )
+                margin-right 0
+
+        &__wrapper
+            display flex
+            flex-direction column
+            height 100%
+
+        img
+            object-fit contain
+            height 100%
+            max-width 100%
+            width auto

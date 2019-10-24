@@ -38,6 +38,7 @@ $page_section = $container->get( PageSection::class ); ?>
 			<div class="<?php echo esc_attr( $page_section->get_row_classes() ); ?>">
 				<?php get_template_part( 'template-parts/page-sections' ); ?>
 			</div>
+
 			<?php endwhile; ?>
 	</article>
 	<?php endwhile; ?>
