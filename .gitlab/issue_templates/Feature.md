@@ -12,12 +12,11 @@
  - Zeplin
  - Anima
 
+
 ## Histórias de usuário
 (Lista de todas histórias de usuários que fazem parte da funcionalidade.)
 
- - #<ID da história>
- - #<ID da história>
- - ...
+#<ID da história> #<ID da história> ...
 
 
 ## Etapas
