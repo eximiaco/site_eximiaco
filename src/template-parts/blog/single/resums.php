@@ -13,6 +13,22 @@ global $container;
 if ( ! have_rows( 'resums_repeater' ) ) {
 	return;
 }
+
+$summary = '';
+
+while ( have_rows( 'resums_repeater' ) ) {
+	the_row();
+	if ( ! empty( get_sub_field( 'resum_title' ) ) ) {
+		$summary .= sprintf( '<li class="post-resums__item">
+			<h3 class="post-resums__item-title">%s</h3>
+			%s
+		</li>', get_sub_field( 'resum_title' ), get_sub_field( 'resum_text' ) );
+	}
+}
+
+if ( empty( $summary ) ) {
+	return;
+}
 ?>
 
 <div class="post-resums">
@@ -24,20 +40,6 @@ if ( ! have_rows( 'resums_repeater' ) ) {
 	</div>
 
 	<ul class="post-resums__list">
-		<?php
-		while ( have_rows( 'resums_repeater' ) ) :
-			the_row();
-			if ( ! empty( get_sub_field( 'resum_title' ) ) ) :
-				?>
-			<li class="post-resums__item">
-				<h3 class="post-resums__item-title">
-					<?php echo esc_html( the_sub_field( 'resum_title' ) ); ?>
-				</h3>
-				<?php echo esc_html( the_sub_field( 'resum_text' ) ); ?>
-			</li>
-				<?php
-			endif;
-		endwhile;
-		?>
+		<?php echo $summary; ?>
 	</ul>
 </div>
