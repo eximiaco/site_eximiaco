@@ -62,6 +62,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\Event::class,
 			\Aztec\Integration\ACF\Pages\Resums::class,
 			\Aztec\Integration\ACF\Pages\Services::class,
+			\Aztec\Integration\ACF\Pages\Summary::class,
 			\Aztec\Integration\ACF\PostType\Client::class,
 			\Aztec\Integration\ACF\PostType\Lab::class,
 			\Aztec\Integration\ACF\PostType\Event::class,

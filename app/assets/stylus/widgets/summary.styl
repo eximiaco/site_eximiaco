@@ -1,0 +1,38 @@
+.summary
+    var-declare( summary_second_padding-left, 30px )
+
+    @media screen and ( min-width $screen-lg )
+        var-declare( summary_second_padding-left, 40px )
+
+    background-color $gray-light-50
+    margin-top 34px
+    padding 20px 20px 1px
+
+    ^[0] &--title
+        font-size 18px
+        margin 0 0 20px
+
+    &--items
+        list-style-type none
+        margin-top 15px
+        padding-left 0
+
+        & &
+            padding-left var-use( summary_second_padding-left )
+
+        & & &
+            padding-left 20px
+            
+        li
+            margin-bottom 15px
+
+            a
+                color var-use( color-primary )
+                font-size 16px
+                text-decoration none
+
+    @media screen and ( min-width $screen-lg )
+        ^[0] > &--items
+            -moz-column-count 2
+            -webkit-column-count 2
+            column-count 2

@@ -29,6 +29,7 @@ class Blog extends Base {
 		add_filter( 'nav_menu_css_class', $this->callback( 'nav_menu_css_class' ), 10, 4 );
 		add_filter( 'next_posts_link_attributes', $this->callback( 'nav_link_class' ) );
 		add_filter( 'previous_posts_link_attributes', $this->callback( 'nav_link_class' ) );
+		add_filter( 'content_save_pre', $this->callback( 'maybe_save_summary' ) );
 	}
 
 	/**
@@ -180,5 +181,146 @@ class Blog extends Base {
 	public function display_category_nav() {
 		$display_category_nav = apply_filters( 'elemarjr_display_category_nav', true );
 		$this->container->set( 'display_category_nav', $display_category_nav );
+	}
+
+	/**
+	 * Maybe save the summary, depending on display summary flag
+	 *
+	 * @param string $content Post content.
+	 * @return string
+	 */
+	public function maybe_save_summary( $content ) {
+
+		if ( 'bliki' !== get_post_type() && 'post' !== get_post_type() ) {
+			return $content;
+		}
+
+		// prevent to save summary twice.
+		remove_filter( 'content_save_pre', $this->callback( 'maybe_save_summary' ) );
+
+		$summaries = $this->getSummary( $content, 1 );
+
+		if ( empty( $summaries ) ) {
+			$summaries = $this->getSummary( $content, 2 );
+		}
+
+		if ( empty( $summaries ) ) {
+			return $content;
+		}
+
+		$replace_content = $this->get_replace_content( $summaries );
+
+		$content = str_replace( $replace_content['search'], $replace_content['replace'], $content );
+
+		$summaries = $this->clear_summary( $summaries );
+
+		update_post_meta( get_the_ID(), 'post-summary', $summaries );
+
+		return $content;
+	}
+
+	/**
+	 * Clear summary array
+	 *
+	 * @param array	$nodes Summary node.
+	 * @return array
+	 */
+	private function &clear_summary( $nodes ) {
+		foreach ( $nodes as &$node ) {
+			unset( $node['content'] );
+
+			if ( ! empty( $node['children'] ) ) {
+				$node['children'] = $this->clear_summary( $node['children'] );
+			}
+		}
+
+		return $nodes;
+
+	}
+
+	/**
+	 * Return str replace array
+	 *
+	 * @param array	$nodes Summary node.
+	 * @param array $return Recursive return.
+	 * @return array
+	 */
+	private function get_replace_content( $nodes, $return = array() ) {
+		if ( empty( $return ) ) {
+			$return = [
+				'search' => array(),
+				'replace' => array()
+			];
+		}
+
+		foreach ( $nodes as $node ) {
+			$return['search'][]  = $node['old_content'];
+			$return['replace'][] = $node['new_content'];
+
+			if ( ! empty( $node['children'] ) ) {
+				$return = $this->get_replace_content( $node['children'], $return );
+			}
+		}
+
+		return $return;
+	}
+
+	/**
+	 * Get summary hierarchy array
+	 *
+	 * @param string $html Partial html.
+	 * @param int    $tag_hierarchy H hierarchy to split.
+	 */
+	private function getSummary( $html, $tag_hierarchy, &$array_content = array() ) {
+
+		$open_tag  = sprintf( '<h%s', $tag_hierarchy );
+		$close_tag = sprintf( '</h%s>', $tag_hierarchy );
+
+		$nodes = array();
+
+		$html       = strstr( $html, $open_tag );
+		$array_html = preg_split( '/' . $open_tag . '/', $html, null, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE );
+
+		foreach ($array_html as $html) {
+			$html = $open_tag . $html;
+
+			preg_match_all( "/<h{$tag_hierarchy}(.*?)>(.*?)<\/h{$tag_hierarchy}>/", $html, $match );
+			$old_tag = $match[0][0];
+
+			$tag_content = trim( strip_tags( $old_tag ) );
+			$id          = sanitize_title( $tag_content ) . '-' . uniqid();
+
+			$new_tag = "{$open_tag} id=\"{$id}\"> {$tag_content} $close_tag";
+
+
+			$node = [
+				'old_content' => $html,
+				'new_content' => str_replace( $old_tag, $new_tag, $html ),
+				'tag_content' => $tag_content,
+				'tag_id' => $id
+			];
+
+			if ( 6 > $tag_hierarchy ) {
+				$html = str_replace( $close_tag, '', strstr( $html, $close_tag ) );
+
+				$next_tag_hierarchy = $tag_hierarchy + 1;
+				$node['children']   = $this->getSummary( $html, $next_tag_hierarchy );
+			}
+
+			$nodes[] = $node;
+		}
+
+		return $nodes;
+	}
+
+	/**
+	 * Get summary template part
+	 *
+	 * @param array $node Summary node.
+	 * @return string
+	 */
+	public function get_summary_item( $node ) {
+		set_query_var( 'summary_node', $node );
+		return get_template_part( 'template-parts/blog/content-parts/summary-item' );
 	}
 }
