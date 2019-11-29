@@ -10,6 +10,8 @@
 
 ?>
 <div class="post--content rich-content">
+	<?php get_template_part( 'template-parts/blog/single/summary' ); ?>
+
 	<?php
 		the_content();
 

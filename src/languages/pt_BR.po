@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-10-16T14:41:22+00:00\n"
+"POT-Creation-Date: 2019-11-19T14:41:54+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -263,12 +263,12 @@ msgid "Email subject - (%s)"
 msgstr "Assunto do e-mail - (%s)"
 
 #. translators: %s: website term
-#: includes/Form/Form.php:238
+#: includes/Form/Form.php:242
 msgid "Message sent by %s website"
 msgstr "Mensagem enviada pelo site %s"
 
 #. translators: %s: Sent from term
-#: includes/Form/Form.php:240
+#: includes/Form/Form.php:244
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr "Enviada por <a href=“%1$s”>%1$s</a>"
 
@@ -567,6 +567,19 @@ msgstr "Recomendações"
 #: includes/Integration/ACF/Pages/NewsletterForm.php:51
 msgid "Newsletter Form"
 msgstr "Formulário de Newsletter"
+
+#: includes/Integration/ACF/Pages/Resums.php:61
+msgid "Resums"
+msgstr "Resumos"
+
+#: includes/Integration/ACF/Pages/Summary.php:62
+#: template-parts/blog/single/summary.php:21
+msgid "Summary"
+msgstr "Sumário"
+
+#: includes/Integration/ACF/Pages/Summary.php:68
+msgid "Show Summary"
+msgstr "Mostrar Sumário"
 
 #: includes/Integration/ACF/PostType/Client.php:55
 #: includes/PostType/Client.php:41
@@ -1000,7 +1013,7 @@ msgstr "Página Anterior"
 msgid "Next Page"
 msgstr "Próxima Página"
 
-#: page-templates/contact.php:85
+#: page-templates/contact.php:86
 msgid "Send"
 msgstr "Enviar"
 
@@ -1065,7 +1078,7 @@ msgid "Next"
 msgstr "Próximo"
 
 #. translators: more posts in series
-#: template-parts/blog/single/resums.php:22
+#: template-parts/blog/single/resums.php:40
 msgid "In Resum"
 msgstr "Em Resumo"
 
@@ -1109,9 +1122,6 @@ msgstr "Inscrever-se"
 #: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Veja mais"
-
-#~ msgid "Resums"
-#~ msgstr "Resumos"
 
 #~ msgid "translates:"
 #~ msgstr "traduções:"

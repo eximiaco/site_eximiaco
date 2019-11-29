@@ -12,7 +12,12 @@ define([],function () {
 
     jQuery( '.request-translate' ).on( 'click', function() {
 		scrollTo( jQuery( '#translate-request-box' ).offset().top - 100 ); // 72 = .top-header height + 10
-	} );
+    } );
+
+    jQuery( '.summary--anchor' ).on( 'click', function() {
+        var anchor = '#' + jQuery( this ).attr( 'data-anchor' );
+        scrollTo( jQuery( anchor ).offset().top - 100 );
+    });
 
 	function scrollTo( top ) {
 		jQuery( 'html, body' ).animate( {

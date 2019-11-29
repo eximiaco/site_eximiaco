@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-10-15T14:31:29+00:00\n"
+"POT-Creation-Date: 2019-11-18T14:21:49+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -69,6 +69,7 @@ msgstr ""
 #: includes/Customize/Banner/Banner.php:87
 #: includes/Integration/ACF/Pages/Event.php:73
 #: includes/Integration/ACF/Pages/Feature.php:79
+#: includes/Integration/ACF/PostType/Client.php:67
 #: includes/Integration/ACF/PostType/Event.php:102
 msgid "URL"
 msgstr "URL"
@@ -89,6 +90,15 @@ msgstr ""
 
 #: includes/Customize/Banner/SinglePost/Promotion.php:30
 msgid "Single post promotion banner"
+msgstr ""
+
+#: includes/Customize/Client.php:41 includes/PostType/Client.php:40
+msgid "Our Clients"
+msgstr ""
+
+#. translators: %s: website locale
+#: includes/Customize/Client.php:56
+msgid "Title of \"Our Clients\" - (%s)"
 msgstr ""
 
 #: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
@@ -268,12 +278,12 @@ msgid "Email subject - (%s)"
 msgstr "Asunto del correo electrónico - (%s)"
 
 #. translators: %s: website term
-#: includes/Form/Form.php:238
+#: includes/Form/Form.php:242
 msgid "Message sent by %s website"
 msgstr "Mensaje enviado por el sitio web de %s"
 
 #. translators: %s: Sent from term
-#: includes/Form/Form.php:240
+#: includes/Form/Form.php:244
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr "Enviado desde: <a href=\"%1$s\">%1$s</a>"
 
@@ -591,6 +601,17 @@ msgstr "Boletín de noticias"
 msgid "Resums"
 msgstr "Resúmenes"
 
+#: includes/Integration/ACF/PostType/Client.php:55
+#: includes/PostType/Client.php:41
+msgid "Client"
+msgstr ""
+
+#: includes/Integration/ACF/PostType/Client.php:61
+#, fuzzy
+#| msgid "Company Logo"
+msgid "Client Logo"
+msgstr "Logo de la empresa"
+
 #: includes/Integration/ACF/PostType/Event.php:55
 #: includes/PostType/Event.php:41
 msgid "Event"
@@ -703,6 +724,47 @@ msgstr ""
 msgid "No blikis found in Trash."
 msgstr ""
 
+#: includes/PostType/Client.php:42
+msgctxt "client"
+msgid "Add New"
+msgstr ""
+
+#: includes/PostType/Client.php:43
+msgid "Add New Client"
+msgstr ""
+
+#: includes/PostType/Client.php:44
+msgid "New Client"
+msgstr ""
+
+#: includes/PostType/Client.php:45
+msgid "Edit Client"
+msgstr ""
+
+#: includes/PostType/Client.php:46
+msgid "View Client"
+msgstr ""
+
+#: includes/PostType/Client.php:47
+#, fuzzy
+#| msgid "All Series"
+msgid "All Clients"
+msgstr "Todas las series"
+
+#: includes/PostType/Client.php:48
+#, fuzzy
+#| msgid "Search"
+msgid "Search Clients"
+msgstr "Buscar"
+
+#: includes/PostType/Client.php:49 includes/PostType/Event.php:49
+msgid "No events found."
+msgstr ""
+
+#: includes/PostType/Client.php:50 includes/PostType/Event.php:50
+msgid "No events found in Trash."
+msgstr ""
+
 #: includes/PostType/Event.php:40
 msgid "Events"
 msgstr "Eventos"
@@ -734,14 +796,6 @@ msgstr ""
 
 #: includes/PostType/Event.php:48
 msgid "Search Events"
-msgstr ""
-
-#: includes/PostType/Event.php:49
-msgid "No events found."
-msgstr ""
-
-#: includes/PostType/Event.php:50
-msgid "No events found in Trash."
 msgstr ""
 
 #. Template Name of the theme
@@ -989,7 +1043,7 @@ msgstr "Página anterior"
 msgid "Next Page"
 msgstr "Página Siguiente"
 
-#: page-templates/contact.php:85
+#: page-templates/contact.php:86
 msgid "Send"
 msgstr "Enviar"
 
@@ -1054,7 +1108,7 @@ msgid "Next"
 msgstr "Siguiente"
 
 #. translators: more posts in series
-#: template-parts/blog/single/resums.php:22
+#: template-parts/blog/single/resums.php:38
 msgid "In Resum"
 msgstr "En Resumen"
 
@@ -1062,6 +1116,10 @@ msgstr "En Resumen"
 #: template-parts/blog/single/serie.php:36
 msgid "More posts in %s series"
 msgstr "Más publicaciones en la serie %s"
+
+#: template-parts/blog/single/summary.php:21
+msgid "Summary"
+msgstr "Resumen"
 
 #: template-parts/blog/single/tags.php:20
 msgid "Tags"
