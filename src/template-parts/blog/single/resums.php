@@ -19,10 +19,12 @@ $summary = '';
 while ( have_rows( 'resums_repeater' ) ) {
 	the_row();
 	if ( ! empty( get_sub_field( 'resum_title' ) ) ) {
-		$summary .= sprintf( '<li class="post-resums__item">
+		$summary .= sprintf(
+			'<li class="post-resums__item">
 			<h3 class="post-resums__item-title">%s</h3>
 			%s
-		</li>', get_sub_field( 'resum_title' ), get_sub_field( 'resum_text' ) );
+		</li>', get_sub_field( 'resum_title' ), get_sub_field( 'resum_text' )
+		);
 	}
 }
 
