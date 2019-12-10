@@ -36,6 +36,7 @@ class Kernel {
 	public function init() {
 		$init_classes = [
 			\Aztec\User\Capability::class,
+			\Aztec\User\Edit::class,
 
 			\Aztec\Setup\Textdomain::class,
 
@@ -87,6 +88,7 @@ class Kernel {
 
 			\Aztec\Performance\Css::class,
 
+			\Aztec\Query\Author::class,
 			\Aztec\Query\Bliki::class,
 			\Aztec\Query\Post::class,
 			\Aztec\Query\PostNav::class,

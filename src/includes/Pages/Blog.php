@@ -270,6 +270,7 @@ class Blog extends Base {
 	 *
 	 * @param string $html Partial html.
 	 * @param int    $tag_hierarchy H hierarchy to split.
+	 * @param array	 $array_content Content array.
 	 */
 	private function getSummary( $html, $tag_hierarchy, &$array_content = array() ) {
 
@@ -291,7 +292,6 @@ class Blog extends Base {
 			$id          = sanitize_title( $tag_content ) . '-' . uniqid();
 
 			$new_tag = "{$open_tag} id=\"{$id}\"> {$tag_content} $close_tag";
-
 
 			$node = [
 				'old_content' => $html,

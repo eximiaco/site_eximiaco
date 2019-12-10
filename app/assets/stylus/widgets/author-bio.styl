@@ -1,0 +1,81 @@
+.author-bio
+    align-items center
+    display flex
+    flex-direction column
+    justify-content center
+    margin-bottom 40px
+    max-width 780px
+    text-align center
+
+    @media screen and ( min-width $screen-md )
+        flex-direction row
+        text-align left
+        margin-left auto
+        margin-right auto
+
+    img
+        border-radius 50%
+        height 110px
+        width 110px
+
+        @media screen and ( min-width $screen-md )
+            height 100px
+            width 100px
+
+    &:before
+        background-color var-use( color-primary )
+        content ''
+        display block
+        height 2px
+        margin-bottom 20px
+        width 95px
+
+        @media screen and ( min-width $screen-md )
+            content none
+
+    &:after
+        background-color var-use( color-primary )
+        content ''
+        display block
+        height 2px
+        margin-bottom 20px
+        width 95px
+
+        @media screen and ( min-width $screen-md )
+            content none
+
+    &__picture
+        min-width 100px
+        @media screen and ( min-width $screen-md )
+            margin-right 15px
+
+    &__content
+        align-self stretch
+
+        &:before
+            background-color var-use( color-primary )
+            content ''
+            display block
+            height 2px
+            margin-bottom 20px
+            width 45px
+
+            @media screen and ( max-width $screen-md )
+                content none
+
+        &:after
+            background-color var-use( color-primary )
+            content ''
+            display block
+            height 2px
+            margin-top 20px
+            width 45px
+
+            @media screen and ( max-width $screen-md )
+                content none
+
+    &__name
+        color var-use( color-primary )
+        font-size 16px
+        font-weight bold
+        margin-bottom 0
