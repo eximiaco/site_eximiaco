@@ -42,7 +42,7 @@ if ( '' !== $current_category ) { ?>
 			foreach ( $user_categories as $category ) {
 				?>
 					<li class="cat-item">
-						<a href="<?php echo esc_url( $container->get( Aztec\Helper\Permalink::class )->get_author_category_permalink( 'pt', get_query_var( 'author_name' ), $category->slug ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
+						<a href="<?php echo esc_url( $container->get( Aztec\Helper\Permalink::class )->get_author_category_permalink( pll_current_language(), get_query_var( 'author_name' ), $category->slug ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
 					</li>
 				<?php
 			}
