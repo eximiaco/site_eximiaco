@@ -38,7 +38,7 @@ if ( 'div' === $args['style'] ) {
 		<time class="comment--meta-date">
 			<?php
 				/* translators: comment date */
-				echo esc_html( printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time( '' ) ) );
+				echo esc_html( sprintf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time( 'H:i:s' ) ) );
 			?>
 		</time>
 	</div>
