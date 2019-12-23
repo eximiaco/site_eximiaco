@@ -53,7 +53,7 @@ $display_hero = $container->get( 'display_hero' );
 			</div>
 		</div>
 		<div class="top-header container">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-branding">
+			<a href="<?php echo esc_url( home_url( '/' . pll_current_language( 'slug' ) ) ); ?>" class="site-branding">
 				<img src="<?php echo ( get_theme_mod( 'head_logo' ) ? esc_url( get_theme_mod( 'head_logo' ) ) : esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			</a><!-- .site-branding -->
 
