@@ -61,10 +61,21 @@ $comment_callback = $container->get( Aztec\Setup\Comments::class )->callback( 'c
 
 		endif; // Check for have_comments().
 
+		set_query_var( 'submit_button_id', 'captcha_submit_comment' );
+		set_query_var( 'submit_button_class', 'button' );
+		set_query_var( 'submit_button_text', __( 'Post Comment', 'elemarjr' ) );
+		set_query_var( 'submit_button_callback', 'submitComment' );
+
+		ob_start();
+		get_template_part( 'template-parts/recaptcha/nocaptcha' );
+		$submit_button = ob_get_contents();
+		ob_end_clean();
+
 		comment_form(
 			array(
 				'class_form'   => 'form comment-form',
 				'class_submit' => 'button',
+				'submit_button' => $submit_button
 			)
 		);
 		?>

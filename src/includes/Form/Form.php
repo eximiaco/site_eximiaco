@@ -10,6 +10,7 @@ namespace Aztec\Form;
 use Aztec\Base;
 use DI\Container;
 use Aztec\Integration\Polylang\Polylang;
+use Aztec\Integration\ReCaptcha\NoCaptcha;
 
 /**
  * Manage the compare properties system
@@ -100,6 +101,7 @@ class Form extends Base {
 
 			foreach ( $this->container->get( 'forms' ) as $form ) {
 				$form_object = $this->container->get( $form );
+				$no_captcha  = $this->container->get( NoCaptcha::class );
 
 				if ( $form_slug === $form_object->get_slug() ) {
 					$curlang = PLL()->curlang;
@@ -116,6 +118,10 @@ class Form extends Base {
 					}
 
 					if ( $form_object->is_spam() ) {
+						$message = 'spam';
+					}
+
+					if ( $no_captcha->is_bot() ) {
 						$message = 'spam';
 					}
 

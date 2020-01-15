@@ -57,7 +57,12 @@ if ( ! empty( $message ) ) {
 			<input type="hidden" name="message_error" value="" id="language-message-error">
 			<?php wp_nonce_field( 'translate-request' ); ?>
 			<div class="form--submit-wrapper">
-				<input type="submit" class="button button__bordered" value=""  id="translate-request-submit"/>
+				<?php
+					set_query_var( 'submit_button_id', 'translate-request-submit' );
+					set_query_var( 'submit_button_class', 'button button__bordered' );
+					set_query_var( 'submit_button_callback', 'postContact' );
+					get_template_part( 'template-parts/recaptcha/nocaptcha' );
+				?>
 			</div>
 		</form>
 	</div>

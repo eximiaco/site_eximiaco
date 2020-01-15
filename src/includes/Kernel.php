@@ -44,6 +44,7 @@ class Kernel {
 			\Aztec\Customize\Colors::class,
 			\Aztec\Customize\Head::class,
 			\Aztec\Customize\Newsletter::class,
+			\Aztec\Customize\NoCaptcha::class,
 			\Aztec\Customize\Social::class,
 			\Aztec\Customize\Banner\Footer\Promotion::class,
 			\Aztec\Customize\Banner\SinglePost\Contact::class,
@@ -76,6 +77,8 @@ class Kernel {
 			\Aztec\Integration\Polylang\Polylang::class,
 
 			\Aztec\Integration\YoastSEO\YoastSEO::class,
+
+			\Aztec\Integration\ReCaptcha\NoCaptcha::class,
 
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Login::class,
