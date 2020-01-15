@@ -15,6 +15,7 @@ require([
     'app/newsletter',
     'app/post-list',
     'app/scroll-button',
+    'app/recaptcha',
     'app/row',
     'app/indexes',
     'app/site-footer',
