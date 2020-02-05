@@ -10,6 +10,7 @@ require([
     'app/animation',
     'app/font',
     'app/hero',
+    'app/slider-hero',
     'app/image-bg',
     'app/menu',
     'app/newsletter',
