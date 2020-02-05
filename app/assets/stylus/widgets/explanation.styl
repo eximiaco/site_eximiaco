@@ -1,0 +1,38 @@
+.shortcode-explanation
+    var-declare( shortcode-explanation-margin, 20px -20px )
+    var-declare( shortcode-explanation__content-padding, 10px )
+    var-declare( shortcode-explanation__img-left, 10px )
+
+    @media screen and ( min-width $screen-md )
+        var-declare( shortcode-explanation-margin, 20px 0 )
+        var-declare( shortcode-explanation__content-padding, 10px 15px )
+        var-declare( shortcode-explanation__img-left, 15px )
+
+    @media screen and ( min-width $screen-lg )
+        var-declare( shortcode-explanation__content-padding, 10px 25px )
+        var-declare( shortcode-explanation__img-left, 25px )
+
+    border 2px solid $gray-light-50
+    margin var-use( shortcode-explanation-margin )
+    padding 10px
+
+    &__content
+        background-color $gray-light-50
+        font-size 16px
+        padding var-use( shortcode-explanation__content-padding )
+        position relative
+        z-index -1
+
+        img
+            top 10px
+            left var-use( shortcode-explanation__img )
+            max-height 26px
+            max-width 26px
+            position absolute
+
+    &__title
+        color var-use( color-secondary )
+        display block
+        font-size 22px
+        font-weight bold
+        padding-left 36px

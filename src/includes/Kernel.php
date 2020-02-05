@@ -116,6 +116,7 @@ class Kernel {
 			\Aztec\Setup\Title::class,
 			\Aztec\Setup\Thumbnail::class,
 
+			\Aztec\Shortcode\Explanation::class,
 			\Aztec\Shortcode\Twitter::class,
 			\Aztec\Shortcode\Veja::class,
 
