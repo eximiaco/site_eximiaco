@@ -30,6 +30,21 @@ class PageSection extends Base {
 	}
 
 	/**
+	 * Add sub-title field.
+	 *
+	 * @return array
+	 */
+	public function add_subtitle_field() {
+		return array(
+			'type'         => 'text',
+			'key'          => 'subtitle',
+			'name'         => 'subtitle',
+			'label'        => __( 'Sub-Title', 'elemarjr' ),
+			'instructions' => __( 'Use * to bold', 'elemarjr' )
+		);
+	}
+
+	/**
 	 * Add content field.
 	 *
 	 * @return array

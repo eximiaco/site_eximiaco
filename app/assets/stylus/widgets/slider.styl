@@ -1,0 +1,203 @@
+.slider
+  var-declare( slider_margin-top, -200px )
+  var-declare( slider_h1_font-size, 80px )
+  var-declare( slider_h1_white-space, normal )
+  var-declare( slider_h2_font-size, 24px )
+  var-declare( slider_h2_margin-top, -30px )
+  var-declare( slider_lnk_margin, 0 auto )
+  var-declare( slider_txt_padding-right, 0 )
+  var-declare( slider_info_flex-wrap, wrap )
+
+  @media screen and ( min-width $screen-md )
+    var-declare( slider_h1_white-space, nowrap )
+    var-declare( slider_h2_font-size, 46px )
+    var-declare( slider_txt_display, block )
+    var-declare( slider_lnk_margin, 0 0 0 auto )
+    var-declare( slider_info_flex-wrap, unset )
+    var-declare( slider_txt_padding-right, 50px )
+
+  @media screen and ( min-width $screen-lg )
+    var-declare( slider_margin-top, -187px )
+    var-declare( slider_h1_font-size, 120px )
+    var-declare( slider_h2_margin-top, -50px )
+    var-declare( slider_txt_padding-right, 100px )
+
+  background-color var-use( color-secondary )
+  margin-top var-use( slider_margin-top )
+  position relative
+
+  &__wrapper
+    height 100vh
+    margin auto
+    max-width 100%
+    position relative
+
+  &__item
+    height 100%
+    overflow hidden
+    position absolute
+    transition all ease 1s
+    width 100%
+    z-index 1
+
+    &--active
+      animation-duration 1.2s
+      animation-name fade
+      z-index 100
+
+  &__img
+    display block
+    height 100vh
+    object-fit cover
+    width 100%
+
+    ^[-1]__item--active &
+      animation-duration 2s
+      animation-name image-scale
+
+  &__content
+    align-items center
+    color $white
+    display flex
+    height 100%
+    position absolute
+    top 0
+    width 100%
+    z-index 1
+
+    h1
+      font-size var-use( slider_h1_font-size )
+      font-weight 700
+      line-height normal
+      letter-spacing 1px
+      margin 0
+      opacity .2
+      text-align center
+      white-space var-use( slider_h1_white-space )
+      width 100%
+
+      ^[-2]__item--active &
+        animation-duration 2s
+        animation-name h1-slide
+
+    h2
+      color $white
+      font-size var-use( slider_h2_font-size )
+      font-weight 100
+      margin-top var-use( slider_h2_margin-top )
+      position relative
+      text-align center
+      width 100%
+
+      ^[-2]__item--active &
+        animation-duration 2s
+        animation-name h2-slide
+
+    &-info
+      align-items baseline
+      display flex
+      flex-wrap var-use( slider_info_flex-wrap )
+      width 100%
+
+    &-txt
+      display var-use( slider_txt_display )
+      padding-right var-use( slider_txt_padding-right )
+      font-size 16px
+
+      ^[-2]__item--active &
+        animation-duration 3s
+        animation-name txt-slide
+
+    &-lnk
+      background-color transparent
+      border 2px solid $white
+      color $white
+      display block
+      flex-shrink 0
+      font-size 18px
+      font-weight 600
+      margin var-use( slider_lnk_margin )
+      max-width 100%
+      padding 10px 50px
+      text-decoration none
+      text-transform uppercase
+      transition all ease .4s
+
+      /.rich-content &
+        color $white
+
+        &:hover
+          background-color $white
+          color var-use( color-primary )
+          text-decoration none
+
+  &__nav
+    bottom 10px
+    position absolute
+    text-align center
+    width 100%
+    z-index 100
+
+  &__dots
+    background-color $gray-light-100
+    border-radius 50%
+    cursor pointer
+    display inline-block
+    height 10px
+    margin 0 2px
+    transition background-color .4s ease
+    width 10px
+
+    &--active,
+    &--hover
+      background-color $gray
+
+@keyframes fade
+  0%
+    opacity 0
+
+  100%
+    opacity 1
+
+@keyframes image-scale
+  0%
+    transform scale( 1.2 )
+
+  100%
+    transform scale( 1 )
+
+@keyframes h1-slide
+  0%
+    margin-left 100%
+
+  100%
+    margin-left 0
+
+@keyframes h2-slide
+  0%
+    margin-left -100%
+    opacity 0
+
+  80%
+    opacity 1
+
+  100%
+    margin-left 0
+
+@keyframes h2-slide
+  0%
+    margin-left -50%
+    opacity 0
+
+  80%
+    opacity 1
+
+  100%
+    margin-left 0
+
+@keyframes txt-slide
+  20%
+    opacity 0
+
+  100%
+    opacity 1

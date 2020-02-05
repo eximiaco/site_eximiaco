@@ -67,11 +67,80 @@ class About extends Base {
 	 */
 	public function init() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
-			add_action( 'acf/include_fields', $this->callback( 'add_hero_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_slider_hero_about' ) );
 			add_action( 'acf/include_fields', $this->callback( 'body_lines' ) );
 		}
 
 		$this->page_section = $this->container->get( PageSection::class );
+	}
+
+	/**
+	 * Add Slider Hero custom fields
+	 */
+	public function add_slider_hero_about() {
+		add_filter( 'elemarjr_display_hero', false );
+		acf_add_local_field_group(
+			array(
+				'key'            => 'about_slider_hero',
+				'title'          => __( 'Slider hero', 'elemarjr' ),
+				'hide_on_screen' => array( 'the_content' ),
+				'fields'         => array(
+					array(
+						'type'       => 'repeater',
+						'key'        => 'slider_hero_repeater',
+						'name'       => 'slider_hero_repeater',
+						'layout'     => 'block',
+						'sub_fields' => array(
+							array(
+								'type'         => 'text',
+								'key'          => 'hero_title',
+								'name'         => 'hero_title',
+								'label'        => __( 'Title', 'elemarjr' ),
+							),
+							array(
+								'type'         => 'text',
+								'key'          => 'hero_subtitles',
+								'name'         => 'hero_subtitle',
+								'label'        => __( 'Sub-Title', 'elemarjr' ),
+								'instructions' => __( 'Use * to bold', 'elemarjr' )
+							),
+							array(
+								'type'  => 'wysiwyg',
+								'key'   => 'hero_text',
+								'name'  => 'hero_text',
+								'label' => __( 'Text', 'elemarjr' ),
+							),
+							array(
+								'type'          => 'image',
+								'key'           => 'hero_image',
+								'name'          => 'hero_image',
+								'label'         => __( 'Image', 'elemarjr' ),
+								'return_format' => 'id,'
+							),
+							array (
+								'type'    => 'text',
+								'label'   => __( 'Button label', 'elemarjr' ),
+								'key'     => 'hero_button_label',
+								'name'    => 'hero_button_label',
+								'wrapper' => array (
+									'width' => '50%',
+								)
+							),
+							array (
+								'type'    => 'url',
+								'label'   => __( 'Button URL', 'elemarjr' ),
+								'key'     => 'hero_button_url',
+								'name'    => 'hero_button_url',
+								'wrapper' => array (
+									'width' => '50%',
+								),
+							),
+						)
+					),
+				),
+				'location' => $this->location,
+			)
+		);
 	}
 
 	/**
@@ -138,28 +207,6 @@ class About extends Base {
 				),
 			 ),
 			 'location'          => $this->location,
-			)
-		);
-	}
-
-	/**
-	 * Add Hero custom fields
-	 */
-	public function add_hero_fields() {
-		acf_add_local_field_group(
-			array(
-			'key'            => 'about_hero',
-			'title'          => __( 'Hero', 'elemarjr' ),
-			'hide_on_screen' => array( 'the_content' ),
-			'fields'         => array(
-				array(
-					'type'  => 'wysiwyg',
-					'key'   => 'hero_text',
-					'name'  => 'hero_text',
-					'label' => __( 'Text', 'elemarjr' ),
-				),
-			 ),
-			 'location'      => $this->location,
 			)
 		);
 	}
