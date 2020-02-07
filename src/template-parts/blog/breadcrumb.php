@@ -12,22 +12,24 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 ?>
 <div class="breadcrumb--wrapper">
 	<div class="container">
-		<ol class="breadcrumb">
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="url">
-					<span itemprop="title">Blog</span>
+		<ol class="breadcrumb" itemtype="http://schema.org/BreadcrumbList">
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="item">
+					<span itemprop="name">Blog</span>
 				</a>
+				<meta itemprop="position" content="1" />
 			</li>
 			<?php if ( is_search() ) : ?>
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( get_search_link( get_search_query() ) ); ?>" itemprop="url">
-					<span itemprop="title">
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( get_search_link( get_search_query() ) ); ?>" itemprop="item">
+					<span itemprop="name">
 						<?php
 							/* translators: search results */
 							echo esc_html( sprintf( __( 'Search Results for &#8220;%s&#8221;', 'elemarjr' ), get_search_query() ) );
 						?>
 					</span>
 				</a>
+				<meta itemprop="position" content="1" />
 			</li>
 				<?php
 				elseif ( is_archive() ) :
@@ -40,10 +42,11 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 						$url = get_tag_link( get_query_var( 'tag' ) );
 					endif;
 					?>
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="url">
-					<span itemprop="title"><?php echo wp_kses_post( $title ); ?></span>
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="item">
+					<span itemprop="name"><?php echo wp_kses_post( $title ); ?></span>
 				</a>
+				<meta itemprop="position" content="2" />
 			</li>
 					<?php
 					elseif ( is_single() ) :
@@ -53,16 +56,18 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 							$category = $categories[0];
 							$url      = get_category_link( $category );
 							?>
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="url">
-					<span itemprop="title"><?php echo esc_html( $category->name ); ?></span>
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( $url ); ?>" itemprop="item">
+					<span itemprop="name"><?php echo esc_html( $category->name ); ?></span>
 				</a>
+				<meta itemprop="position" content="2" />
 			</li>
 				<?php endif; ?>
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url">
-					<span itemprop="title"><?php echo esc_html( get_the_title() ); ?></span>
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( get_permalink() ); ?>" itemprop="item">
+					<span itemprop="name"><?php echo esc_html( get_the_title() ); ?></span>
 				</a>
+				<meta itemprop="position" content="2" />
 			</li>
 				<?php endif; ?>
 			<?php
@@ -71,15 +76,16 @@ $url = get_permalink( get_option( 'page_for_posts' ) );
 			if ( $paged ) :
 				$paged_url = add_query_arg( 'paged', $paged, $url );
 				?>
-			<li class="breadcrumb--item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-				<a class="breadcrumb--link" href="<?php echo esc_url( $paged_url ); ?>" itemprop="url">
-					<span itemprop="title">
+			<li class="breadcrumb--item" itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+				<a class="breadcrumb--link" href="<?php echo esc_url( $paged_url ); ?>" itemprop="item">
+					<span itemprop="name">
 						<?php
 							/* translators: page number */
 							echo esc_html( sprintf( __( 'Page %s' ), $paged ) );
 						?>
 					</span>
 				</a>
+				<meta itemprop="position" content="2" />
 			</li>
 			<?php endif; ?>
 		</ol>
