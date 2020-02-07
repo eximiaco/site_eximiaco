@@ -32,6 +32,7 @@ $slug = PLL()->curlang->slug;
 				$clients->the_post();
 				get_template_part( 'template-parts/client/client' );
 			}
+			wp_reset_query();
 			?>
 		</div>
 	</div>
