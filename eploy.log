@@ -1,0 +1,884 @@
+[staging.eximia.co] > echo $0
+[staging.eximia.co] < bash
+[staging.eximia.co] > if [ ! -d /home/eximia_staging ]; then mkdir -p /home/eximia_staging; fi
+[staging.eximia.co] > if [ ! -L /home/eximia_staging/current ] && [ -d /home/eximia_staging/current ]; then echo 'true'; fi
+[staging.eximia.co] > cd /home/eximia_staging && if [ ! -d .dep ]; then mkdir .dep; fi
+[staging.eximia.co] > cd /home/eximia_staging && if [ ! -d releases ]; then mkdir releases; fi
+[staging.eximia.co] > cd /home/eximia_staging && if [ ! -d shared ]; then mkdir shared; fi
+[staging.eximia.co] > if [ -f /home/eximia_staging/.dep/deploy.lock ]; then echo 'true'; fi
+[staging.eximia.co] > touch /home/eximia_staging/.dep/deploy.lock
+[staging.eximia.co] > cd /home/eximia_staging && (if [ -h release ]; then echo 'true'; fi)
+[staging.eximia.co] > cd /home/eximia_staging && (if [ -d releases ] && [ "$(ls -A releases)" ]; then echo 'true'; fi)
+[staging.eximia.co] < true
+[staging.eximia.co] > cd /home/eximia_staging && (cd releases && ls -t -1 -d */)
+[staging.eximia.co] < 50/
+[staging.eximia.co] < 49/
+[staging.eximia.co] < 48/
+[staging.eximia.co] < 47/
+[staging.eximia.co] < 46/
+[staging.eximia.co] > cd /home/eximia_staging && (if [ -f .dep/releases ]; then echo 'true'; fi)
+[staging.eximia.co] < true
+[staging.eximia.co] > cd /home/eximia_staging && (tail -n 15 .dep/releases)
+[staging.eximia.co] < 20191120162436,36
+[staging.eximia.co] < 20191120162954,37
+[staging.eximia.co] < 20191121154602,38
+[staging.eximia.co] < 20191205145424,39
+[staging.eximia.co] < 20191206113525,40
+[staging.eximia.co] < 20191213104707,41
+[staging.eximia.co] < 20191218113047,42
+[staging.eximia.co] < 20191223170109,43
+[staging.eximia.co] < 20200103095451,44
+[staging.eximia.co] < 20200130120823,45
+[staging.eximia.co] < 20200130162936,46
+[staging.eximia.co] < 20200130164534,47
+[staging.eximia.co] < 20200131164205,48
+[staging.eximia.co] < 20200131171719,49
+[staging.eximia.co] < 20200203112356,50
+[staging.eximia.co] > cd /home/eximia_staging && (if [ -d /home/eximia_staging/releases/51 ]; then echo 'true'; fi)
+[staging.eximia.co] > cd /home/eximia_staging && (date +"%Y%m%d%H%M%S")
+[staging.eximia.co] < 20200203115130
+[staging.eximia.co] > cd /home/eximia_staging && (echo '20200203115130,51' >> .dep/releases)
+[staging.eximia.co] > cd /home/eximia_staging && (mkdir /home/eximia_staging/releases/51)
+[staging.eximia.co] > cd /home/eximia_staging && (if [[ $(man ln 2>&1 || ln -h 2>&1 || ln --help 2>&1) =~ '--relative' ]]; then echo 'true'; fi)
+[staging.eximia.co] < true
+[staging.eximia.co] > cd /home/eximia_staging && (ln -nfs --relative /home/eximia_staging/releases/51 /home/eximia_staging/release)
+[staging.eximia.co] > command -v 'git' || which 'git' || type -p 'git'
+[staging.eximia.co] < /usr/bin/git
+[staging.eximia.co] > /usr/bin/git version
+[staging.eximia.co] < git version 2.17.1
+[staging.eximia.co] > cd /home/eximia_staging && (if [ -h /home/eximia_staging/release ]; then echo 'true'; fi)
+[staging.eximia.co] < true
+[staging.eximia.co] > cd /home/eximia_staging && (readlink /home/eximia_staging/release)
+[staging.eximia.co] < releases/51
+[staging.eximia.co] > cd /home/eximia_staging && (/usr/bin/git clone -b staging --recursive  --reference /home/eximia_staging/releases/50 --dissociate git@greatcode.aztecweb.net:aztecwebteam/eximia.git  /home/eximia_staging/releases/51 2>&1)
+[staging.eximia.co] < Cloning into '/home/eximia_staging/releases/51'...
+[staging.eximia.co] > if [ -d /home/eximia_staging/shared/web/wp-content/uploads ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > rm -rf /home/eximia_staging/releases/51/web/wp-content/uploads
+[staging.eximia.co] > mkdir -p `dirname /home/eximia_staging/releases/51/web/wp-content/uploads`
+[staging.eximia.co] > ln -nfs --relative /home/eximia_staging/shared/web/wp-content/uploads /home/eximia_staging/releases/51/web/wp-content/uploads
+[staging.eximia.co] > if [ -d /home/eximia_staging/shared/. ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > if [ -f /home/eximia_staging/shared/.env ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > if [ -f $(echo /home/eximia_staging/releases/51/.env) ]; then rm -rf /home/eximia_staging/releases/51/.env; fi
+[staging.eximia.co] > if [ ! -d $(echo /home/eximia_staging/releases/51/.) ]; then mkdir -p /home/eximia_staging/releases/51/.;fi
+[staging.eximia.co] > touch /home/eximia_staging/shared/.env
+[staging.eximia.co] > ln -nfs --relative /home/eximia_staging/shared/.env /home/eximia_staging/releases/51/.env
+[staging.eximia.co] > if [ -d /home/eximia_staging/releases/50/node_modules ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > cp -R /home/eximia_staging/releases/50/node_modules /home/eximia_staging/releases/51
+[staging.eximia.co] > which npm
+[staging.eximia.co] < /usr/local/bin/npm
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && /usr/local/bin/npm install
+[staging.eximia.co] < > iltorb@1.3.10 install /home/eximia_staging/releases/51/node_modules/iltorb
+[staging.eximia.co] < > detect-libc prebuild-install || node-gyp rebuild
+[staging.eximia.co] < [error] prebuild-install WARN install No prebuilt binaries found (target=12.6.0 runtime=node arch=x64 platform=linux)
+[staging.eximia.co] < make: Entering directory '/home/eximia_staging/releases/51/node_modules/iltorb/build'
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/common/dictionary.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/dec/bit_reader.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/dec/decode.o
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘BrotliDecoderDecompressStream’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2013:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_METABLOCK_BEGIN;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2015:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_BEGIN:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2018:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_METABLOCK_HEADER;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2020:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2089:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_HUFFMAN_CODE_1;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2091:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_CODE_1: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2096:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_HUFFMAN_CODE_2;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2099:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_CODE_2: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2104:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_HUFFMAN_CODE_3;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2107:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_CODE_3: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2119:45: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_2: {
+[staging.eximia.co] < [error]                                              ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2142:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_CONTEXT_MODES:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2147:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_CONTEXT_MAP_1;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2149:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_CONTEXT_MAP_1:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2157:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_CONTEXT_MAP_2;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2159:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_CONTEXT_MAP_2:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2185:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_TREE_GROUP;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2187:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_TREE_GROUP:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2281:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->state = BROTLI_STATE_DONE;
+[staging.eximia.co] < [error]          ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:2283:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_DONE:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘DecodeMetaBlockLength’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:193:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header = BROTLI_STATE_METABLOCK_HEADER_EMPTY;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:196:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_EMPTY:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:204:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header = BROTLI_STATE_METABLOCK_HEADER_NIBBLES;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:207:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_NIBBLES:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:218:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header = BROTLI_STATE_METABLOCK_HEADER_SIZE;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:221:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_SIZE:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:233:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header =
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[staging.eximia.co] < [error]              BROTLI_STATE_METABLOCK_HEADER_UNCOMPRESSED;
+[staging.eximia.co] < [error]              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:237:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_UNCOMPRESSED:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:255:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header = BROTLI_STATE_METABLOCK_HEADER_BYTES;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:258:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_BYTES:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:267:38: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_metablock_header = BROTLI_STATE_METABLOCK_HEADER_METADATA;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:270:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_METABLOCK_HEADER_METADATA:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘CopyUncompressedBlockToOutput’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:1317:34: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_uncompressed = BROTLI_STATE_UNCOMPRESSED_WRITE;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:1320:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_UNCOMPRESSED_WRITE: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘DecodeVarLenUint8’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:139:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        if (bits == 0) {
+[staging.eximia.co] < [error]           ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:145:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_DECODE_UINT8_SHORT:
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:156:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        *value = bits;
+[staging.eximia.co] < [error]        ~~~~~~~^~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:159:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_DECODE_UINT8_LONG:
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘ReadHuffmanCode’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:703:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          if (s->sub_loop_counter != 1) {
+[staging.eximia.co] < [error]             ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:715:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_SIMPLE_SIZE:
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:721:29: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->sub_loop_counter = 0;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~^~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:723:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_SIMPLE_READ: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:723:46: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_SIMPLE_READ: {
+[staging.eximia.co] < [error]                                               ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:731:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_SIMPLE_BUILD: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:772:29: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]          s->substate_huffman = BROTLI_STATE_HUFFMAN_LENGTH_SYMBOLS;
+[staging.eximia.co] < [error]          ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:775:7: note: here
+[staging.eximia.co] < [error]        case BROTLI_STATE_HUFFMAN_LENGTH_SYMBOLS: {
+[staging.eximia.co] < [error]        ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c: In function ‘DecodeContextMap’:
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:949:31: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        s->substate_context_map = BROTLI_STATE_CONTEXT_MAP_READ_PREFIX;
+[staging.eximia.co] < [error]        ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:951:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_READ_PREFIX: {
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:951:48: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_READ_PREFIX: {
+[staging.eximia.co] < [error]                                                 ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:969:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_HUFFMAN:
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:974:31: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]        s->substate_context_map = BROTLI_STATE_CONTEXT_MAP_DECODE;
+[staging.eximia.co] < [error]        ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:976:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_DECODE: {
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:976:43: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_DECODE: {
+[staging.eximia.co] < [error]                                            ^
+[staging.eximia.co] < [error] ../brotli/dec/decode.c:1024:5: note: here
+[staging.eximia.co] < [error]      case BROTLI_STATE_CONTEXT_MAP_TRANSFORM: {
+[staging.eximia.co] < [error]      ^~~~
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/dec/huffman.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/dec/state.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/backward_references.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/backward_references_hq.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/bit_cost.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/block_splitter.o
+[staging.eximia.co] < [error] In file included from ../brotli/enc/./block_splitter.h:14:0,
+[staging.eximia.co] < [error]                  from ../brotli/enc/block_splitter.c:9:
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h: In function ‘SplitByteVectorLiteral’:
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:403:61: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      double* insert_cost = BROTLI_ALLOC(m, double, data_size * num_histograms);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:405:62: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      uint8_t* switch_signal = BROTLI_ALLOC(m, uint8_t, length * bitmaplen);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h: In function ‘SplitByteVectorCommand’:
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:403:61: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      double* insert_cost = BROTLI_ALLOC(m, double, data_size * num_histograms);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:405:62: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      uint8_t* switch_signal = BROTLI_ALLOC(m, uint8_t, length * bitmaplen);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h: In function ‘SplitByteVectorDistance’:
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:403:61: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      double* insert_cost = BROTLI_ALLOC(m, double, data_size * num_histograms);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] < [error] ../brotli/enc/./block_splitter_inc.h:405:62: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]      uint8_t* switch_signal = BROTLI_ALLOC(m, uint8_t, length * bitmaplen);
+[staging.eximia.co] < [error] ../brotli/enc/././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/brotli_bit_stream.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/cluster.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/compress_fragment.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/compress_fragment_two_pass.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/dictionary_hash.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/encode.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/entropy_encode.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/histogram.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/literal_cost.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/memory.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/metablock.o
+[staging.eximia.co] < [error] In file included from ../brotli/enc/././block_splitter.h:14:0,
+[staging.eximia.co] < [error]                  from ../brotli/enc/./metablock.h:14,
+[staging.eximia.co] < [error]                  from ../brotli/enc/metablock.c:10:
+[staging.eximia.co] < [error] ../brotli/enc/metablock.c: In function ‘ContextBlockSplitterFinishBlock’:
+[staging.eximia.co] < [error] ../brotli/enc/metablock.c:279:45: warning: ‘*’ in boolean context, suggest ‘&&’ instead [-Wint-in-bool-context]
+[staging.eximia.co] < [error]          BROTLI_ALLOC(m, HistogramLiteral, 2 * num_contexts);
+[staging.eximia.co] < [error] ../brotli/enc/./././memory.h:43:5: note: in definition of macro ‘BROTLI_ALLOC’
+[staging.eximia.co] < [error]    ((N) ? ((T*)BrotliAllocate((M), (N) * sizeof(T))) : NULL)
+[staging.eximia.co] < [error]      ^
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/static_dict.o
+[staging.eximia.co] <   CC(target) Release/obj.target/iltorb/brotli/enc/utf8_util.o
+[staging.eximia.co] <   CXX(target) Release/obj.target/iltorb/src/common/allocator.o
+[staging.eximia.co] <   CXX(target) Release/obj.target/iltorb/src/common/stream_coder.o
+[staging.eximia.co] <   CXX(target) Release/obj.target/iltorb/src/dec/stream_decode.o
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc: In constructor ‘StreamDecode::StreamDecode(v8::Local<v8::Object>)’:
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc:14:81: error: no matching function for call to ‘v8::Value::ToObject()’
+[staging.eximia.co] < [error]      Local<Object> dictionary = Nan::Get(params, key).ToLocalChecked()->ToObject();
+[staging.eximia.co] < [error]                                                                                  ^
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63:0,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note: candidate: v8::MaybeLocal<v8::Object> v8::Value::ToObject(v8::Local<v8::Context>) const
+[staging.eximia.co] < [error]    V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+[staging.eximia.co] < [error]                                             ^~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8-internal.h:14:0,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:25,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note: candidate: v8::Local<v8::Object> v8::Value::ToObject(v8::Isolate*) const
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc: In static member function ‘static Nan::NAN_METHOD_RETURN_TYPE StreamDecode::New(Nan::NAN_METHOD_ARGS_TYPE)’:
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc:40:58: error: no matching function for call to ‘v8::Value::ToObject()’
+[staging.eximia.co] < [error]    StreamDecode* obj = new StreamDecode(info[0]->ToObject());
+[staging.eximia.co] < [error]                                                           ^
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63:0,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note: candidate: v8::MaybeLocal<v8::Object> v8::Value::ToObject(v8::Local<v8::Context>) const
+[staging.eximia.co] < [error]    V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+[staging.eximia.co] < [error]                                             ^~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8-internal.h:14:0,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:25,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note: candidate: v8::Local<v8::Object> v8::Value::ToObject(v8::Isolate*) const
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc: In static member function ‘static Nan::NAN_METHOD_RETURN_TYPE StreamDecode::Transform(Nan::NAN_METHOD_ARGS_TYPE)’:
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc:48:44: error: no matching function for call to ‘v8::Value::ToObject()’
+[staging.eximia.co] < [error]    Local<Object> buffer = info[0]->ToObject();
+[staging.eximia.co] < [error]                                             ^
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63:0,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note: candidate: v8::MaybeLocal<v8::Object> v8::Value::ToObject(v8::Local<v8::Context>) const
+[staging.eximia.co] < [error]    V8_WARN_UNUSED_RESULT MaybeLocal<Object> ToObject(
+[staging.eximia.co] < [error]                                             ^~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2532:44: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8-internal.h:14:0,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:25,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note: candidate: v8::Local<v8::Object> v8::Value::ToObject(v8::Isolate*) const
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2546:31: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error]                  Local<Object> ToObject(Isolate* isolate) const);
+[staging.eximia.co] < [error]                                ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc:54:29: error: no matching function for call to ‘v8::Value::BooleanValue()’
+[staging.eximia.co] < [error]    if (info[2]->BooleanValue()) {
+[staging.eximia.co] < [error]                              ^
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63:0,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2559:8: note: candidate: bool v8::Value::BooleanValue(v8::Isolate*) const
+[staging.eximia.co] < [error]    bool BooleanValue(Isolate* isolate) const;
+[staging.eximia.co] < [error]         ^~~~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2559:8: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8-internal.h:14:0,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:25,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2562:51: note: candidate: v8::Maybe<bool> v8::Value::BooleanValue(v8::Local<v8::Context>) const
+[staging.eximia.co] < [error]                  V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+[staging.eximia.co] < [error]                                                    ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2562:51: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error]                  V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+[staging.eximia.co] < [error]                                                    ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc: In static member function ‘static Nan::NAN_METHOD_RETURN_TYPE StreamDecode::Flush(Nan::NAN_METHOD_ARGS_TYPE)’:
+[staging.eximia.co] < [error] ../src/dec/stream_decode.cc:70:29: error: no matching function for call to ‘v8::Value::BooleanValue()’
+[staging.eximia.co] < [error]    if (info[1]->BooleanValue()) {
+[staging.eximia.co] < [error]                              ^
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63:0,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2559:8: note: candidate: bool v8::Value::BooleanValue(v8::Isolate*) const
+[staging.eximia.co] < [error]    bool BooleanValue(Isolate* isolate) const;
+[staging.eximia.co] < [error]         ^~~~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2559:8: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error] In file included from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8-internal.h:14:0,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:25,
+[staging.eximia.co] < [error]                  from /home/eximia_staging/.node-gyp/12.6.0/include/node/node.h:63,
+[staging.eximia.co] < [error]                  from ../../nan/nan.h:54,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.h:4,
+[staging.eximia.co] < [error]                  from ../src/dec/stream_decode.cc:1:
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2562:51: note: candidate: v8::Maybe<bool> v8::Value::BooleanValue(v8::Local<v8::Context>) const
+[staging.eximia.co] < [error]                  V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+[staging.eximia.co] < [error]                                                    ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8.h:2562:51: note:   candidate expects 1 argument, 0 provided
+[staging.eximia.co] < [error]                  V8_WARN_UNUSED_RESULT Maybe<bool> BooleanValue(
+[staging.eximia.co] < [error]                                                    ^
+[staging.eximia.co] < [error] /home/eximia_staging/.node-gyp/12.6.0/include/node/v8config.h:311:3: note: in definition of macro ‘V8_DEPRECATED’
+[staging.eximia.co] < [error]    declarator __attribute__((deprecated(message)))
+[staging.eximia.co] < [error]    ^~~~~~~~~~
+[staging.eximia.co] < iltorb.target.mk:141: recipe for target 'Release/obj.target/iltorb/src/dec/stream_decode.o' failed
+[staging.eximia.co] < make: Leaving directory '/home/eximia_staging/releases/51/node_modules/iltorb/build'
+[staging.eximia.co] < [error] make: *** [Release/obj.target/iltorb/src/dec/stream_decode.o] Error 1
+[staging.eximia.co] < [error] gyp ERR! build error
+[staging.eximia.co] < [error] gyp ERR! stack Error: `make` failed with exit code: 2
+[staging.eximia.co] < [error] gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:262:23)
+[staging.eximia.co] < [error] gyp ERR! stack     at ChildProcess.emit (events.js:203:13)
+[staging.eximia.co] < [error] gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+[staging.eximia.co] < [error] gyp ERR! System Linux 4.15.0-29-generic
+[staging.eximia.co] < [error] gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+[staging.eximia.co] < [error] gyp
+[staging.eximia.co] < [error]  ERR! cwd /home/eximia_staging/releases/51/node_modules/iltorb
+[staging.eximia.co] < [error] gyp ERR! node -v v12.6.0
+[staging.eximia.co] < [error] gyp ERR! node-gyp -v v3.8.0
+[staging.eximia.co] < [error] gyp ERR! not ok
+[staging.eximia.co] < [error] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/fsevents):
+[staging.eximia.co] < [error] npm WARN
+[staging.eximia.co] < audited 10855 packages in 33.91s
+[staging.eximia.co] < found 76 vulnerabilities (21 low, 13 moderate, 42 high)
+[staging.eximia.co] <   run `npm audit fix` to fix them, or `npm audit` for details
+[staging.eximia.co] < [error] notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[staging.eximia.co] < [error] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: iltorb@1.3.10 (node_modules/iltorb):
+[staging.eximia.co] < [error] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: iltorb@1.3.10 install: `detect-libc prebuild-install || node-gyp rebuild`
+[staging.eximia.co] < [error] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 1
+[staging.eximia.co] > if hash unzip 2>/dev/null; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > if hash composer 2>/dev/null; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > command -v 'composer' || which 'composer' || type -p 'composer'
+[staging.eximia.co] < /usr/local/bin/composer
+[staging.eximia.co] > command -v 'php' || which 'php' || type -p 'php'
+[staging.eximia.co] < /usr/bin/php
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && /usr/bin/php /usr/local/bin/composer install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader --no-suggest
+[staging.eximia.co] < [error] Loading composer repositories with package information
+[staging.eximia.co] < [error] Installing dependencies from lock file
+[staging.eximia.co] < [error] Dependency resolution completed in 0.000 seconds
+[staging.eximia.co] < [error] Analyzed 140 packages to resolve dependencies
+[staging.eximia.co] < [error] Analyzed 288 rules to resolve dependencies
+[staging.eximia.co] < [error] Package operations: 79 installs, 0 updates, 0 removals
+[staging.eximia.co] < [error] Installs: johnpbloch/wordpress-core-installer:1.0.2, composer/installers:v1.7.0, tightenco/collect:v5.2.43, aaemnnosttv/wp-cli-dotenv-command:v1.0.2, symfony/process:v4.3.3, symfony/finder:v4.3.3, symfony/polyfill-ctype:v1.12.0, symfony/filesystem:v4.3.3, psr/container:1.0.0, symfony/service-contracts:v1.1.5, symfony/polyfill-php73:v1.12.0, symfony/polyfill-mbstring:v1.12.0, symfony/console:v4.3.3, seld/phar-utils:1.0.1, seld/jsonlint:1.7.1, psr/log:1.1.0, justinrainbow/json-schema:5.2.8, composer/xdebug-handler:1.3.3, composer/spdx-licenses:1.5.2, composer/semver:1.5.0, composer/ca-bundle:1.2.3, composer/composer:1.9.0, gettext/languages:2.5.0, gettext/gettext:v4.6.3, johnpbloch/wordpress-core:5.2.2, johnpbloch/wordpress:5.2.2, mck89/peast:v1.9.2, mustache/mustache:v2.12.0, nb/oxymel:v0.1.0, php-di/phpdoc-reader:2.1.0, container-interop/container-interop:1.2.0, php-di/invoker:1.3.3, php-di/php-di:5.4.6, rmccue/requests:v1.7.0, vlucas/phpdotenv:v2.6.1, worddrop/bookworm:dev-master 07f1f2a, wp-cli/mustangostang-spyc:0.6.3, wp-cli/php-cli-tools:v0.11.11, wp-cli/wp-cli:v2.3.0, wp-cli/widget-command:v2.0.2, wp-cli/super-admin-command:v2.0.2, wp-cli/shell-command:v2.0.3, wp-cli/server-command:v2.0.3, wp-cli/search-replace-command:v2.0.4, wp-cli/scaffold-command:v2.0.6, wp-cli/role-command:v2.0.2, wp-cli/rewrite-command:v2.0.3, wp-cli/package-command:v2.0.5, wp-cli/media-command:v2.0.4, wp-cli/maintenance-mode-command:v2.0.1, wp-cli/language-command:v2.0.4, wp-cli/import-command:v2.0.2, wp-cli/i18n-command:v2.2.0, wp-cli/extension-command:v2.0.6, wp-cli/export-command:v2.0.3, wp-cli/eval-command:v2.0.4, wp-cli/entity-command:v2.0.6, wp-cli/embed-command:v2.0.3, wp-cli/db-command:v2.0.3, wp-cli/cron-command:v2.0.3, wp-cli/core-command:v2.0.6, wp-cli/wp-config-transformer:v1.2.6, wp-cli/config-command:v2.0.4, wp-cli/checksum-command:v2.0.3, wp-cli/cache-command:v2.0.2, wp-cli/wp-cli-bundle:v2.3.0, wpackagist-plugin/akismet:4.1.2, wpackagist-plugin/all-in-one-favicon:4.7, wpackagist-plugin/classic-editor:1.5, wpackagist-plugin/code-prettify:1.4.2, wpackagist-plugin/embed-any-document:2.4.1, wpackagist-plugin/featured-images-for-rss-feeds:1.5.2, wpackagist-plugin/google-analytics-dashboard-for-wp:5.3.9, wpackagist-plugin/polylang:2.6.3, wpackagist-plugin/post-thumbnail-editor:2.4.8, wpackagist-plugin/slideshare:1.9.2, wpackagist-plugin/wp-mail-smtp:1.6.0, wpackagist-plugin/wp-session-manager:4.2.0, wpackagist-plugin/wp-smushit:3.2.4
+[staging.eximia.co] < [error]   - Installing johnpbloch/wordpress-core-installer (1.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/installers (v1.7.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing tightenco/collect (v5.2.43):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing aaemnnosttv/wp-cli-dotenv-command (v1.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/process (v4.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/finder (v4.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/polyfill-ctype (v1.12.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/filesystem (v4.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing psr/container (1.0.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/service-contracts (v1.1.5):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/polyfill-php73 (v1.12.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/polyfill-mbstring (v1.12.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing symfony/console (v4.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing seld/phar-utils (1.0.1):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing seld/jsonlint (1.7.1):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing psr/log (1.1.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing justinrainbow/json-schema (5.2.8):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/xdebug-handler (1.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/spdx-licenses (1.5.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/semver (1.5.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/ca-bundle (1.2.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing composer/composer (1.9.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing gettext/languages (2.5.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing gettext/gettext (v4.6.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing johnpbloch/wordpress-core (5.2.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing johnpbloch/wordpress (5.2.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing mck89/peast (v1.9.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing mustache/mustache (v2.12.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing nb/oxymel (v0.1.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing php-di/phpdoc-reader (2.1.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing container-interop/container-interop (1.2.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing php-di/invoker (1.3.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing php-di/php-di (5.4.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing rmccue/requests (v1.7.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing vlucas/phpdotenv (v2.6.1):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing worddrop/bookworm (dev-master 07f1f2a):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/mustangostang-spyc (0.6.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/php-cli-tools (v0.11.11):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/wp-cli (v2.3.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/widget-command (v2.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/super-admin-command (v2.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/shell-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/server-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/search-replace-command (v2.0.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/scaffold-command (v2.0.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/role-command (v2.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/rewrite-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/package-command (v2.0.5):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/media-command (v2.0.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/maintenance-mode-command (v2.0.1):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/language-command (v2.0.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/import-command (v2.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/i18n-command (v2.2.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/extension-command (v2.0.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/export-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/eval-command (v2.0.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/entity-command (v2.0.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/embed-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/db-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/cron-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/core-command (v2.0.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/wp-config-transformer (v1.2.6):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/config-command (v2.0.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/checksum-command (v2.0.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/cache-command (v2.0.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wp-cli/wp-cli-bundle (v2.3.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/akismet (4.1.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/all-in-one-favicon (4.7):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/classic-editor (1.5):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/code-prettify (1.4.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/embed-any-document (2.4.1):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/featured-images-for-rss-feeds (1.5.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/google-analytics-dashboard-for-wp (5.3.9):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/polylang (2.6.3):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/post-thumbnail-editor (2.4.8):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/slideshare (1.9.2):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/wp-mail-smtp (1.6.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/wp-session-manager (4.2.0):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error]   - Installing wpackagist-plugin/wp-smushit (3.2.4):
+[staging.eximia.co] < [error] Loading from cache
+[staging.eximia.co] < [error]  Extracting archive
+[staging.eximia.co] < [error] Generating optimized autoload files
+[staging.eximia.co] > which bower
+[staging.eximia.co] < /usr/local/bin/bower
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && /usr/local/bin/bower install
+[staging.eximia.co] < bower imagesloaded#^4.1.4       cached https://github.com/desandro/imagesloaded.git#4.1.4
+[staging.eximia.co] < bower imagesloaded#^4.1.4     validate 4.1.4 against https://github.com/desandro/imagesloaded.git#^4.1.4
+[staging.eximia.co] < bower almond#^0.3.3             cached https://github.com/jrburke/almond.git#0.3.3
+[staging.eximia.co] < bower almond#^0.3.3           validate 0.3.3 against https://github.com/jrburke/almond.git#^0.3.3
+[staging.eximia.co] < bower animate.css#^3.5.2        cached https://github.com/daneden/animate.css.git#3.7.2
+[staging.eximia.co] < bower animate.css#^3.5.2      validate 3.7.2 against https://github.com/daneden/animate.css.git#^3.5.2
+[staging.eximia.co] < bower jquery-bridget#^2.0.1     cached https://github.com/desandro/jquery-bridget.git#2.0.1
+[staging.eximia.co] < bower jquery-bridget#^2.0.1   validate 2.0.1 against https://github.com/desandro/jquery-bridget.git#^2.0.1
+[staging.eximia.co] < bower webfontloader#^1.6.28     cached https://github.com/typekit/webfontloader.git#1.6.28
+[staging.eximia.co] < bower webfontloader#^1.6.28   validate 1.6.28 against https://github.com/typekit/webfontloader.git#^1.6.28
+[staging.eximia.co] < bower wow#^1.1.2                cached https://github.com/matthieua/WOW.git#1.1.2
+[staging.eximia.co] < bower wow#^1.1.2              validate 1.1.2 against https://github.com/matthieua/WOW.git#^1.1.2
+[staging.eximia.co] < bower swiper#^4.1.6             cached https://github.com/nolimits4web/Swiper.git#4.5.3
+[staging.eximia.co] < bower swiper#^4.1.6           validate 4.5.3 against https://github.com/nolimits4web/Swiper.git#^4.1.6
+[staging.eximia.co] < bower typed.js#^2.0.6           cached https://github.com/mattboldt/typed.js.git#2.0.11
+[staging.eximia.co] < bower typed.js#^2.0.6         validate 2.0.11 against https://github.com/mattboldt/typed.js.git#^2.0.6
+[staging.eximia.co] < bower requirejs#^2.2.0          cached https://github.com/jrburke/requirejs-bower.git#2.3.6
+[staging.eximia.co] < bower requirejs#^2.2.0        validate 2.3.6 against https://github.com/jrburke/requirejs-bower.git#^2.2.0
+[staging.eximia.co] < bower jquery#>=1.4.2 <4         cached https://github.com/jquery/jquery-dist.git#3.4.1
+[staging.eximia.co] < bower jquery#>=1.4.2 <4       validate 3.4.1 against https://github.com/jquery/jquery-dist.git#>=1.4.2 <4
+[staging.eximia.co] < bower ev-emitter#^1.0.0         cached https://github.com/metafizzy/ev-emitter.git#1.1.1
+[staging.eximia.co] < bower ev-emitter#^1.0.0       validate 1.1.1 against https://github.com/metafizzy/ev-emitter.git#^1.0.0
+[staging.eximia.co] < bower jquery-bridget#^2.0.1    install jquery-bridget#2.0.1
+[staging.eximia.co] < bower almond#^0.3.3            install almond#0.3.3
+[staging.eximia.co] < bower imagesloaded#^4.1.4      install imagesloaded#4.1.4
+[staging.eximia.co] < bower animate.css#^3.5.2       install animate.css#3.7.2
+[staging.eximia.co] < bower webfontloader#^1.6.28    install webfontloader#1.6.28
+[staging.eximia.co] < bower wow#^1.1.2               install wow#1.1.2
+[staging.eximia.co] < bower typed.js#^2.0.6          install typed.js#2.0.11
+[staging.eximia.co] < bower swiper#^4.1.6            install swiper#4.5.3
+[staging.eximia.co] < bower requirejs#^2.2.0         install requirejs#2.3.6
+[staging.eximia.co] < bower jquery#>=1.4.2 <4        install jquery#3.4.1
+[staging.eximia.co] < bower ev-emitter#^1.0.0        install ev-emitter#1.1.1
+[staging.eximia.co] < jquery-bridget#2.0.1 bower_components/jquery-bridget
+[staging.eximia.co] < └── jquery#3.4.1
+[staging.eximia.co] < almond#0.3.3 bower_components/almond
+[staging.eximia.co] < imagesloaded#4.1.4 bower_components/imagesloaded
+[staging.eximia.co] < └── ev-emitter#1.1.1
+[staging.eximia.co] < animate.css#3.7.2 bower_components/animate.css
+[staging.eximia.co] < webfontloader#1.6.28 bower_components/webfontloader
+[staging.eximia.co] < wow#1.1.2 bower_components/wow
+[staging.eximia.co] < typed.js#2.0.11 bower_components/typed.js
+[staging.eximia.co] < swiper#4.5.3 bower_components/swiper
+[staging.eximia.co] < requirejs#2.3.6 bower_components/requirejs
+[staging.eximia.co] < jquery#3.4.1 bower_components/jquery
+[staging.eximia.co] < ev-emitter#1.1.1 bower_components/ev-emitter
+[staging.eximia.co] > which grunt
+[staging.eximia.co] < /usr/local/bin/grunt
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && /usr/local/bin/grunt dist
+[staging.eximia.co] < [4mRunning "clean:assets" (clean) task[24m
+[staging.eximia.co] < [32m>> [39m0 paths cleaned.
+[staging.eximia.co] < [4mRunning "stylus:dist" (stylus) task[24m
+[staging.eximia.co] < [32m>> [39m3 files created.
+[staging.eximia.co] < [4mRunning "postcss:dist" (postcss) task[24m
+[staging.eximia.co] < [error] Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+[staging.eximia.co] < [32m>> [39m1 processed stylesheet created.
+[staging.eximia.co] < [4mRunning "requirejs:compile" (requirejs) task[24m
+[staging.eximia.co] < [4mRunning "copy:images" (copy) task[24m
+[staging.eximia.co] < Created 2 directories, copied 14 files
+[staging.eximia.co] < [4mRunning "copy:font-icon" (copy) task[24m
+[staging.eximia.co] < Copied 3 files
+[staging.eximia.co] < [4mRunning "copy:assets" (copy) task[24m
+[staging.eximia.co] < Created 7 directories, copied 21 files
+[staging.eximia.co] < [4mRunning "compress:theme" (compress) task[24m
+[staging.eximia.co] < [32m>> [39mCompressed 228 files.
+[staging.eximia.co] < [4mRunning "symlink:theme" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:cli" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:wp" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:images" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:font-icon" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:js" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 5 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:assets" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [4mRunning "symlink:robots" (symlink) task[24m
+[staging.eximia.co] < [32m>> [39mCreated 1 symbolic links.
+[staging.eximia.co] < [32mDone, without errors.[39m
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && bin/install
+[staging.eximia.co] < Success: Salts generated.
+[staging.eximia.co] < Unpacking the package...
+[staging.eximia.co] < Installing the plugin...
+[staging.eximia.co] < Plugin installed successfully.
+[staging.eximia.co] < Success: Installed 1 of 1 plugins.
+[staging.eximia.co] < Unpacking the package...
+[staging.eximia.co] < Installing the plugin...
+[staging.eximia.co] < Plugin installed successfully.
+[staging.eximia.co] < Success: Installed 1 of 1 plugins.
+[staging.eximia.co] < Success: Plugins already activated.
+[staging.eximia.co] < Using cached file '/home/eximia_staging/.wp-cli/cache/translation/core-default-5.2.2-pt_BR-1566665860.zip'...
+[staging.eximia.co] < Unpacking the update...
+[staging.eximia.co] < Installing the latest version...
+[staging.eximia.co] < Removing the old version of the translation...
+[staging.eximia.co] < Translation updated successfully.
+[staging.eximia.co] < Language 'pt_BR' installed.
+[staging.eximia.co] < [error] Warning: Language 'pt_BR' already active.
+[staging.eximia.co] < Success: Installed 1 of 1 languages.
+[staging.eximia.co] < Using cached file '/home/eximia_staging/.wp-cli/cache/translation/core-default-5.2.2-es_ES-1567082928.zip'...
+[staging.eximia.co] < Unpacking the update...
+[staging.eximia.co] < Installing the latest version...
+[staging.eximia.co] < Removing the old version of the translation...
+[staging.eximia.co] < Translation updated successfully.
+[staging.eximia.co] < Language 'es_ES' installed.
+[staging.eximia.co] < Success: Installed 1 of 1 languages.
+[staging.eximia.co] < Success: Translations are up to date.
+[staging.eximia.co] < [error] Warning: The 'Elemar Jr Blog Theme' theme is already active.
+[staging.eximia.co] > if [ -d /home/eximia_staging/shared/web/wp-content/uploads ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > rm -rf /home/eximia_staging/releases/51/web/wp-content/uploads
+[staging.eximia.co] > mkdir -p `dirname /home/eximia_staging/releases/51/web/wp-content/uploads`
+[staging.eximia.co] > ln -nfs --relative /home/eximia_staging/shared/web/wp-content/uploads /home/eximia_staging/releases/51/web/wp-content/uploads
+[staging.eximia.co] > if [ -d /home/eximia_staging/shared/. ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > if [ -f /home/eximia_staging/shared/.env ]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > if [ -f $(echo /home/eximia_staging/releases/51/.env) ]; then rm -rf /home/eximia_staging/releases/51/.env; fi
+[staging.eximia.co] > if [ ! -d $(echo /home/eximia_staging/releases/51/.) ]; then mkdir -p /home/eximia_staging/releases/51/.;fi
+[staging.eximia.co] > touch /home/eximia_staging/shared/.env
+[staging.eximia.co] > ln -nfs --relative /home/eximia_staging/shared/.env /home/eximia_staging/releases/51/.env
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && (mkdir -p web/wp-content/uploads)
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && (chmod 2>&1; true)
+[staging.eximia.co] < chmod: missing operand
+[staging.eximia.co] < Try 'chmod --help' for more information.
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && (if hash setfacl 2>/dev/null; then echo 'true'; fi)
+[staging.eximia.co] < true
+[staging.eximia.co] > cd /home/eximia_staging/releases/51 && (getfacl -p web/wp-content/uploads | grep "^user:www-data:.*w" | wc -l)
+[staging.eximia.co] < 1
+[staging.eximia.co] > if [[ $(man mv 2>&1 || mv -h 2>&1 || mv --help 2>&1) =~ '--no-target-directory' ]]; then echo 'true'; fi
+[staging.eximia.co] < true
+[staging.eximia.co] > mv -T /home/eximia_staging/release /home/eximia_staging/current
+[staging.eximia.co] > rm -f /home/eximia_staging/.dep/deploy.lock
+[staging.eximia.co] >  rm -rf /home/eximia_staging/releases/46
+[staging.eximia.co] > cd /home/eximia_staging && if [ -e release ]; then  rm release; fi
+[staging.eximia.co] > cd /home/eximia_staging && if [ -h release ]; then  rm release; fi
