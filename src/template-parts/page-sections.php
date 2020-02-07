@@ -26,7 +26,7 @@ $page_section = $container->get( PageSection::class );
 		</div>
 
 		<!-- List -->
-		<?php if ( have_rows( 'items' ) ) : ?>
+		<?php if ( 'customers' === $page_section->get_template() && have_rows( 'items' ) ) : ?>
 		<ul class="page-section--list">
 			<?php
 			while ( have_rows( 'items' ) ) :
