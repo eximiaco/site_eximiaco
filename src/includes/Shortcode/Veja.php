@@ -32,14 +32,19 @@ class Veja extends Base {
 		$content = ltrim( $content, '</p>' );
 		$content = rtrim( $content, '<p>' );
 
-		$html = '</p>
+		$html = sprintf(
+			'</p>
 				<div class="shortcode-veja">
 					<span class="shortcode-veja__title">
-						Veja
-					</span>'
-					. $content .
-				'</div>
-				<p>';
+						%s
+					</span>
+					%s
+				</div>
+				<p>',
+				__( 'See also', 'elemarjr' ),
+				$content
+		);
+
 		return $html;
 	}
 }

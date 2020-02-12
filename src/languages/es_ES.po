@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2019-11-18T14:21:49+00:00\n"
+"POT-Creation-Date: 2020-02-07T11:56:44+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -39,9 +39,23 @@ msgstr "¡Lo siento! Esa página no parece existir."
 msgid "Back to home"
 msgstr "Volver al inicio"
 
+#: author.php:37 index.php:37
+msgid "Previous Page"
+msgstr "Página anterior"
+
+#: author.php:37 index.php:37
+msgid "Next Page"
+msgstr "Página Siguiente"
+
 #: comments.php:58
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
+
+#: comments.php:66
+#, fuzzy
+#| msgid "No Comments"
+msgid "Post Comment"
+msgstr "No hay comentarios"
 
 #: header.php:28
 msgid "Skip to content"
@@ -51,11 +65,11 @@ msgstr "Saltar al contenido"
 msgid "Search"
 msgstr "Buscar"
 
-#: includes/Customize/Banner/Banner.php:55 includes/Helper/PageSection.php:42
-#: includes/Integration/ACF/Pages/About.php:159
+#: includes/Customize/Banner/Banner.php:55 includes/Helper/PageSection.php:57
+#: includes/Integration/ACF/Pages/About.php:111
 #: includes/Integration/ACF/Pages/Event.php:58
-#: includes/Integration/ACF/Pages/HomePage.php:67
-#: includes/Integration/ACF/Pages/HomePage.php:206
+#: includes/Integration/ACF/Pages/HomePage.php:81
+#: includes/Integration/ACF/Pages/HomePage.php:235
 #: includes/Integration/ACF/Pages/Page.php:69
 #: includes/Integration/ACF/Pages/Resums.php:82
 msgid "Text"
@@ -101,7 +115,7 @@ msgstr ""
 msgid "Title of \"Our Clients\" - (%s)"
 msgstr ""
 
-#: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:148
+#: includes/Customize/Colors.php:41 includes/Helper/PageSection.php:163
 msgid "Color Scheme"
 msgstr ""
 
@@ -176,17 +190,17 @@ msgid "Newletter Form"
 msgstr "Formulario Newletter"
 
 #: includes/Customize/Newsletter.php:62 includes/Helper/PageSection.php:27
+#: includes/Integration/ACF/Pages/About.php:98
 #: includes/Integration/ACF/Pages/Contact.php:59
 #: includes/Integration/ACF/Pages/Feature.php:88
-#: includes/Integration/ACF/Pages/HomePage.php:61
-#: includes/Integration/ACF/Pages/HomePage.php:229
+#: includes/Integration/ACF/Pages/HomePage.php:258
 #: includes/Integration/ACF/Pages/Page.php:57
 #: includes/Integration/ACF/Pages/Resums.php:75
 msgid "Title"
 msgstr "Título"
 
 #: includes/Customize/Newsletter.php:87
-#: includes/Integration/ACF/Pages/HomePage.php:166
+#: includes/Integration/ACF/Pages/HomePage.php:195
 msgid "Background"
 msgstr "Background"
 
@@ -250,6 +264,18 @@ msgstr ""
 msgid "Field Name"
 msgstr ""
 
+#: includes/Customize/NoCaptcha.php:41
+msgid "NoCaptcha"
+msgstr ""
+
+#: includes/Customize/NoCaptcha.php:54
+msgid "Site Key"
+msgstr ""
+
+#: includes/Customize/NoCaptcha.php:68
+msgid "Secret Key"
+msgstr ""
+
 #: includes/Customize/Social.php:41
 msgid "Social Media"
 msgstr ""
@@ -278,12 +304,12 @@ msgid "Email subject - (%s)"
 msgstr "Asunto del correo electrónico - (%s)"
 
 #. translators: %s: website term
-#: includes/Form/Form.php:242
+#: includes/Form/Form.php:248
 msgid "Message sent by %s website"
 msgstr "Mensaje enviado por el sitio web de %s"
 
 #. translators: %s: Sent from term
-#: includes/Form/Form.php:244
+#: includes/Form/Form.php:250
 msgid "Sent from: <a href=\"%1$s\">%1$s</a>"
 msgstr "Enviado desde: <a href=\"%1$s\">%1$s</a>"
 
@@ -357,131 +383,145 @@ msgstr ""
 msgid "Error Feedback Message - (%s)"
 msgstr "Mensaje de error: No enviado"
 
-#: includes/Helper/PageSection.php:28
+#: includes/Helper/PageSection.php:28 includes/Helper/PageSection.php:43
+#: includes/Integration/ACF/Pages/About.php:105
 #: includes/Integration/ACF/Pages/Contact.php:60
+#: includes/Integration/ACF/Pages/HomePage.php:75
 msgid "Use * to bold"
 msgstr "Use * para negrita"
 
-#: includes/Helper/PageSection.php:56
-#: includes/Integration/ACF/Pages/HomePage.php:144
+#: includes/Helper/PageSection.php:42
+#: includes/Integration/ACF/Pages/About.php:104
+#: includes/Integration/ACF/Pages/HomePage.php:74
+#, fuzzy
+#| msgid "Subtitle"
+msgid "Sub-Title"
+msgstr "Subtítulo"
+
+#: includes/Helper/PageSection.php:71
+#: includes/Integration/ACF/Pages/About.php:117
+#: includes/Integration/ACF/Pages/HomePage.php:87
+#: includes/Integration/ACF/Pages/HomePage.php:173
 msgid "Image"
 msgstr "Imagen"
 
-#: includes/Helper/PageSection.php:71
+#: includes/Helper/PageSection.php:86
 msgid "Image Position"
 msgstr "Posición de la imagen"
 
-#: includes/Helper/PageSection.php:73
+#: includes/Helper/PageSection.php:88
 msgid "Left"
 msgstr "Izquierda"
 
-#: includes/Helper/PageSection.php:74
+#: includes/Helper/PageSection.php:89
 msgid "Right"
 msgstr "Derecha"
 
-#: includes/Helper/PageSection.php:90
+#: includes/Helper/PageSection.php:105
 msgid "Image Align"
 msgstr "Alineación de la Imagen"
 
-#: includes/Helper/PageSection.php:92
+#: includes/Helper/PageSection.php:107
 msgid "None"
 msgstr "Ninguno"
 
-#: includes/Helper/PageSection.php:93
+#: includes/Helper/PageSection.php:108
 msgid "Overlap top"
 msgstr ""
 
-#: includes/Helper/PageSection.php:94
+#: includes/Helper/PageSection.php:109
 msgid "Stick on top"
 msgstr ""
 
-#: includes/Helper/PageSection.php:95
+#: includes/Helper/PageSection.php:110
 msgid "Stick on bottom"
 msgstr ""
 
-#: includes/Helper/PageSection.php:96
+#: includes/Helper/PageSection.php:111
 msgid "Overlap bottom"
 msgstr ""
 
-#: includes/Helper/PageSection.php:113
+#: includes/Helper/PageSection.php:128
+#: includes/Integration/ACF/Pages/About.php:122
+#: includes/Integration/ACF/Pages/HomePage.php:92
 msgid "Button label"
 msgstr ""
 
-#: includes/Helper/PageSection.php:129
-#: includes/Integration/ACF/Pages/HomePage.php:79
+#: includes/Helper/PageSection.php:144
+#: includes/Integration/ACF/Pages/About.php:131
+#: includes/Integration/ACF/Pages/HomePage.php:101
 msgid "Button URL"
 msgstr ""
 
-#: includes/Helper/PageSection.php:150
+#: includes/Helper/PageSection.php:165
 msgid "Background White and Title Black"
 msgstr ""
 
-#: includes/Helper/PageSection.php:151
+#: includes/Helper/PageSection.php:166
 msgid "Background Gray and Title Black"
 msgstr ""
 
-#: includes/Helper/PageSection.php:152
+#: includes/Helper/PageSection.php:167
 msgid "Background Black and Title White"
 msgstr ""
 
-#: includes/Helper/PageSection.php:153
+#: includes/Helper/PageSection.php:168
 msgid "Background Dusky and Title White"
 msgstr ""
 
-#: includes/Helper/PageSection.php:154
+#: includes/Helper/PageSection.php:169
 msgid "Background Dark and Title White"
 msgstr ""
 
-#: includes/Helper/PageSection.php:169
+#: includes/Helper/PageSection.php:184
 msgid "Padding Section"
 msgstr ""
 
-#: includes/Helper/PageSection.php:171
+#: includes/Helper/PageSection.php:186
 msgid "With padding"
 msgstr ""
 
-#: includes/Helper/PageSection.php:172
+#: includes/Helper/PageSection.php:187
 msgid "Without padding"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:84
+#: includes/Integration/ACF/Pages/About.php:85
+#: includes/Integration/ACF/Pages/HomePage.php:55
+msgid "Slider hero"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/About.php:153
 #: includes/Integration/ACF/PostType/Service.php:65
 #: includes/Integration/ACF/Taxonomy/Index.php:47
 msgid "Page sections"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:96
+#: includes/Integration/ACF/Pages/About.php:165
 msgid "Template"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:100
+#: includes/Integration/ACF/Pages/About.php:169
 msgid "Default"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:101
+#: includes/Integration/ACF/Pages/About.php:170
 msgid "Customers"
 msgstr "Clientes"
 
-#: includes/Integration/ACF/Pages/About.php:102
+#: includes/Integration/ACF/Pages/About.php:171
 msgid "MVP"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:103
+#: includes/Integration/ACF/Pages/About.php:172
 msgid "Experience"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/About.php:118
+#: includes/Integration/ACF/Pages/About.php:187
 msgid "Items"
 msgstr "Elementos"
 
-#: includes/Integration/ACF/Pages/About.php:130
+#: includes/Integration/ACF/Pages/About.php:199
 msgid "Item"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/About.php:152
-#: includes/Integration/ACF/Pages/HomePage.php:54
-#: includes/Integration/ACF/Pages/Page.php:51
-msgid "Hero"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/Contact.php:52
@@ -530,64 +570,66 @@ msgstr ""
 msgid "Site"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:73
-msgid "Button Label"
-msgstr "Etiqueta del Botón"
+#: includes/Integration/ACF/Pages/HomePage.php:68
+#: includes/Integration/ACF/PostType/Event.php:62
+#: template-parts/newsletter/form.php:49
+msgid "Name"
+msgstr "Nombre"
 
-#: includes/Integration/ACF/Pages/HomePage.php:94
+#: includes/Integration/ACF/Pages/HomePage.php:123
 msgid "Purpose"
 msgstr "Propósito"
 
-#: includes/Integration/ACF/Pages/HomePage.php:102
+#: includes/Integration/ACF/Pages/HomePage.php:131
 msgid "Section title"
 msgstr "Título de la sección"
 
-#: includes/Integration/ACF/Pages/HomePage.php:108
+#: includes/Integration/ACF/Pages/HomePage.php:137
 msgid "Icon Class 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:114
+#: includes/Integration/ACF/Pages/HomePage.php:143
 msgid "Title 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:120
+#: includes/Integration/ACF/Pages/HomePage.php:149
 msgid "Text 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:126
+#: includes/Integration/ACF/Pages/HomePage.php:155
 msgid "Icon Class 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:132
+#: includes/Integration/ACF/Pages/HomePage.php:161
 msgid "Title 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:138
+#: includes/Integration/ACF/Pages/HomePage.php:167
 msgid "Text 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:159
-#: includes/Integration/ACF/Pages/HomePage.php:172
+#: includes/Integration/ACF/Pages/HomePage.php:188
+#: includes/Integration/ACF/Pages/HomePage.php:201
 msgid "Quote"
 msgstr "Frase"
 
-#: includes/Integration/ACF/Pages/HomePage.php:178
+#: includes/Integration/ACF/Pages/HomePage.php:207
 msgid "Quote author"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:184
+#: includes/Integration/ACF/Pages/HomePage.php:213
 msgid "Quote job role"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:199 page-templates/home.php:95
+#: includes/Integration/ACF/Pages/HomePage.php:228 page-templates/home.php:132
 msgid "Blog"
 msgstr "Publicaciones"
 
-#: includes/Integration/ACF/Pages/HomePage.php:207
+#: includes/Integration/ACF/Pages/HomePage.php:236
 msgid "Text after the section title"
 msgstr "Texto después del título de la sección"
 
-#: includes/Integration/ACF/Pages/HomePage.php:222
+#: includes/Integration/ACF/Pages/HomePage.php:251
 #: includes/PostType/Testimonial.php:36
 msgid "Testimonials"
 msgstr "Recomendaciones"
@@ -597,9 +639,24 @@ msgstr "Recomendaciones"
 msgid "Newsletter Form"
 msgstr "Boletín de noticias"
 
+#: includes/Integration/ACF/Pages/Page.php:51
+msgid "Hero"
+msgstr ""
+
 #: includes/Integration/ACF/Pages/Resums.php:61
 msgid "Resums"
 msgstr "Resúmenes"
+
+#: includes/Integration/ACF/Pages/Summary.php:62
+#: template-parts/blog/single/summary.php:21
+msgid "Summary"
+msgstr "Resumen"
+
+#: includes/Integration/ACF/Pages/Summary.php:68
+#, fuzzy
+#| msgid "Summary"
+msgid "Show Summary"
+msgstr "Resumen"
 
 #: includes/Integration/ACF/PostType/Client.php:55
 #: includes/PostType/Client.php:41
@@ -616,11 +673,6 @@ msgstr "Logo de la empresa"
 #: includes/PostType/Event.php:41
 msgid "Event"
 msgstr "Evento"
-
-#: includes/Integration/ACF/PostType/Event.php:62
-#: template-parts/newsletter/form.php:49
-msgid "Name"
-msgstr "Nombre"
 
 #: includes/Integration/ACF/PostType/Event.php:69
 msgid "Start date"
@@ -931,6 +983,10 @@ msgstr "Primario"
 msgid "Social Menu"
 msgstr ""
 
+#: includes/Shortcode/Veja.php:46
+msgid "See also"
+msgstr "Vea también"
+
 #: includes/Taxonomy/Index.php:41 includes/Taxonomy/Index.php:43
 msgid "Indexes"
 msgstr "Índices"
@@ -1035,15 +1091,11 @@ msgstr "Series populares"
 msgid "No series found."
 msgstr ""
 
-#: index.php:37
-msgid "Previous Page"
-msgstr "Página anterior"
+#: includes/User/Edit.php:76
+msgid "Main Profile Image"
+msgstr ""
 
-#: index.php:37
-msgid "Next Page"
-msgstr "Página Siguiente"
-
-#: page-templates/contact.php:86
+#: page-templates/contact.php:87
 msgid "Send"
 msgstr "Enviar"
 
@@ -1059,7 +1111,7 @@ msgstr "Calendario"
 msgid "Home"
 msgstr ""
 
-#: page-templates/home.php:109
+#: page-templates/home.php:146
 msgid "Last posts in English"
 msgstr "Ultimas publicaciones en inglés"
 
@@ -1076,7 +1128,7 @@ msgstr "Cerrar sesión"
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr "Resultados de búsqueda para &#8220;%s&#8221;"
 
-#: template-parts/blog/category-nav.php:33
+#: template-parts/blog/category-nav.php:38
 msgid "Show All"
 msgstr "Mostrar todo"
 
@@ -1108,7 +1160,7 @@ msgid "Next"
 msgstr "Siguiente"
 
 #. translators: more posts in series
-#: template-parts/blog/single/resums.php:38
+#: template-parts/blog/single/resums.php:40
 msgid "In Resum"
 msgstr "En Resumen"
 
@@ -1116,10 +1168,6 @@ msgstr "En Resumen"
 #: template-parts/blog/single/serie.php:36
 msgid "More posts in %s series"
 msgstr "Más publicaciones en la serie %s"
-
-#: template-parts/blog/single/summary.php:21
-msgid "Summary"
-msgstr "Resumen"
 
 #: template-parts/blog/single/tags.php:20
 msgid "Tags"
@@ -1157,6 +1205,9 @@ msgstr "Suscribete"
 msgid "See more"
 msgstr "Ver más"
 
+#~ msgid "Button Label"
+#~ msgstr "Etiqueta del Botón"
+
 #~ msgid "translates:"
 #~ msgstr "traduce:"
 
@@ -1165,9 +1216,6 @@ msgstr "Ver más"
 
 #~ msgid "request translate"
 #~ msgstr "solicitar traducción"
-
-#~ msgid "No Comments"
-#~ msgstr "No hay comentarios"
 
 #~ msgid "1 Comment"
 #~ msgstr "1 Comentario"
