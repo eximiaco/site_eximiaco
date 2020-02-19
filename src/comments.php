@@ -63,7 +63,7 @@ $comment_callback = $container->get( Aztec\Setup\Comments::class )->callback( 'c
 
 		set_query_var( 'submit_button_id', 'captcha_submit_comment' );
 		set_query_var( 'submit_button_class', 'button' );
-		set_query_var( 'submit_button_text', __( 'Post Comment', 'elemarjr' ) );
+		set_query_var( 'submit_button_text', __( 'Post', 'elemarjr' ) );
 		set_query_var( 'submit_button_callback', 'submitComment' );
 
 		ob_start();

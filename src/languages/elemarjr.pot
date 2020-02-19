@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-07T11:56:44+00:00\n"
+"POT-Creation-Date: 2020-02-19T11:49:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: elemarjr\n"
@@ -53,7 +53,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: comments.php:66
-msgid "Post Comment"
+msgid "Post"
 msgstr ""
 
 #: header.php:28
@@ -952,7 +952,7 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: includes/Shortcode/Veja.php:46
+#: includes/Shortcode/Veja.php:44
 msgid "See also"
 msgstr ""
 
@@ -1095,7 +1095,7 @@ msgid "Logout"
 msgstr ""
 
 #. translators: search results
-#: template-parts/blog/breadcrumb.php:27
+#: template-parts/blog/breadcrumb.php:28
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
