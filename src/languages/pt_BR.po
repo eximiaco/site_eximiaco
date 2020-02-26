@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-02-07T11:56:44+00:00\n"
+"POT-Creation-Date: 2020-02-19T11:49:24+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -49,8 +49,8 @@ msgid "Comments are closed."
 msgstr "Comentários estão fechados."
 
 #: comments.php:66
-msgid "Post Comment"
-msgstr "Comentários"
+msgid "Post"
+msgstr "Publicar"
 
 #: header.php:28
 msgid "Skip to content"
@@ -940,7 +940,7 @@ msgstr "Primário"
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: includes/Shortcode/Veja.php:46
+#: includes/Shortcode/Veja.php:44
 msgid "See also"
 msgstr "Veja"
 
@@ -1081,7 +1081,7 @@ msgid "Logout"
 msgstr "Logout"
 
 #. translators: search results
-#: template-parts/blog/breadcrumb.php:27
+#: template-parts/blog/breadcrumb.php:28
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr "Resultados de Busca por &#8220;%s&#8221;"
 
@@ -1161,6 +1161,9 @@ msgstr "Inscrever-se"
 #: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Veja mais"
+
+#~ msgid "Post Comment"
+#~ msgstr "Comentários"
 
 #~ msgid "Button Label"
 #~ msgstr "Rótulo do botão"
