@@ -83,12 +83,7 @@ get_header(); ?>
 				</label>
 				<?php wp_nonce_field( 'contact' ); ?>
 				<div class="form--submit-wrapper">
-					<?php
-						set_query_var( 'submit_button_text', __( 'Send', 'elemarjr' ) );
-						set_query_var( 'submit_button_class', 'button button__bordered' );
-						set_query_var( 'submit_button_callback', 'postContact' );
-						get_template_part( 'template-parts/recaptcha/nocaptcha' );
-					?>
+					<input type="submit" class="button button__bordered" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ); ?>" />
 				</div>
 			</form>
 		</div>

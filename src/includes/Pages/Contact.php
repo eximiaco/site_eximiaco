@@ -33,6 +33,7 @@ class Contact extends Base {
 
 		add_filter( 'elemarjr_display_hero', $this->callback( 'hide_hero' ) );
 		add_filter( 'elemarjr_site_content_bg', $this->callback( 'site_content_bg' ) );
+		add_filter( 'elemarjr_enqueue_recaptcha', $this->callback( 'enqueue_captcha' ) );
 	}
 
 	/**
@@ -114,5 +115,19 @@ class Contact extends Base {
 		$text_helper = $this->container->get( Text::class );
 
 		return $text_helper->asterisk_to_strong( get_field( 'title' ) );
+	}
+
+	/**
+	 * Enqueue captcha if is contact
+	 *
+	 * @param bool $enqueue_captcha Enqueue captcha.
+	 * @return bool True, if is contact template. Otherwise, $enqueue_captcha value.
+	 */
+	public function enqueue_captcha( $enqueue_captcha ) {
+		if ( is_page_template( $this->template ) ) {
+			return true;
+		}
+
+		return $enqueue_captcha;
 	}
 }

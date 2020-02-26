@@ -11,8 +11,9 @@ var require = {
     }
 };
 
+/* globals elemarjr_script_config */
 require.config({
-    baseUrl: elemarjr_script.base_url,
+    baseUrl: elemarjr_script_config.base_url,
     paths: {
         app: '../app'
     },

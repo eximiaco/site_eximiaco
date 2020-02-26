@@ -21,6 +21,7 @@ class Single extends Base {
 		add_filter( 'wp_link_pages_link', $this->callback( 'custom_post_page_link' ), 10, 2 );
 		add_filter( 'private_title_format', $this->callback( 'fix_title_format' ) );
 		add_filter( 'protected_title_format', $this->callback( 'fix_title_format' ) );
+		add_filter( 'elemarjr_enqueue_recaptcha', $this->callback( 'enqueue_captcha' ) );
 	}
 
 	/**
@@ -41,5 +42,19 @@ class Single extends Base {
 	 */
 	public function fix_title_format() {
 		return '%s';
+	}
+
+	/**
+	 * Enqueue captcha if is single
+	 *
+	 * @param bool $enqueue_captcha Enqueue captcha.
+	 * @return bool True, if is single. Otherwise, $enqueue_captcha value.
+	 */
+	public function enqueue_captcha( $enqueue_captcha ) {
+		if ( is_single() ) {
+			return true;
+		}
+
+		return $enqueue_captcha;
 	}
 }

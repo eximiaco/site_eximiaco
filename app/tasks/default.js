@@ -5,6 +5,7 @@
  */
 module.exports = function ( grunt ) {
 	grunt.task.registerTask( 'default', [
+		'clean',
 		'stylint',
 		'jshint',
 		'stylus:dev',
