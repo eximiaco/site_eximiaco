@@ -22,7 +22,15 @@
 
 
 ## Etapas
-(Listagem das etapas a serem concluídas, como Design, Desenvolvimento, Deploy staging e Deploy produção).
+(Remover todas as etapas que não serão executadas para essa feature)
+
+* Especificação
+* Design
+* Desenvolvimento
+* Deploy em staging
+* Deploy em produção
+* Manual de usuário
+* Fechamento
 
 
-~"Componente" 
+/label ~"Componente"
