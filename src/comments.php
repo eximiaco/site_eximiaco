@@ -63,8 +63,11 @@ $comment_callback = $container->get( Aztec\Setup\Comments::class )->callback( 'c
 
 		comment_form(
 			array(
-				'class_form'   => 'form comment-form',
+				'class_form'   => 'form comment-form apply-recaptcha',
 				'class_submit' => 'button',
+				'name_submit' => 'captcha_submit_comment',
+				'id_submit' => 'captcha_submit_comment',
+				'label_submit' => esc_attr__( 'Post', 'elemarjr' ),
 			)
 		);
 		?>

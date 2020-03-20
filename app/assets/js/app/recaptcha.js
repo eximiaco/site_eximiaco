@@ -1,20 +1,24 @@
 /* globals grecaptcha, elemarjr_script */
-define([],function () {
+define( [],function () {
     if( 'undefined' === typeof grecaptcha ) {
         return;
     }
 
-    var form = document.querySelector('.form');
+    var forms = document.querySelectorAll( '.apply-recaptcha' );
 
-    /**
-     * Add recaptcha token data to the form before the submit
-     */
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    for (var i = 0; i < forms.length; i++) {
+        forms[i].addEventListener( 'submit', function( e ) {
+            /**
+             * Add recaptcha token data to the form before the submit
+             */
+            var form = e.currentTarget;
 
-        grecaptcha.execute(elemarjr_script.recaptcha_site_key, {action: 'form'}).then(function(token) {
-            form.insertAdjacentHTML('beforeend', '<input type="hidden" name="g-recaptcha-response" value="' + token + '" />');
-            form.submit();
-        });
-    });
-});
+            e.preventDefault();
+
+            grecaptcha.execute( elemarjr_script.recaptcha_site_key, { action: 'form' } ).then( function( token ) {
+                form.insertAdjacentHTML( 'beforeend', '<input type="hidden" name="g-recaptcha-response" value="' + token + '" />' );
+                form.submit();
+            } );
+        } );
+    }
+} );
