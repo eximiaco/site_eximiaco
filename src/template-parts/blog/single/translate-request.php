@@ -44,7 +44,7 @@ if ( ! empty( $message ) ) {
 	</p>
 
 	<div class="contact">
-		<form action="<?php echo esc_url( wp_nonce_url( $form->get_action() ) ); ?>" method="POST" class="contact--form form">
+		<form action="<?php echo esc_url( wp_nonce_url( $form->get_action() ) ); ?>" method="POST" class="contact--form form apply-recaptcha">
 
 			<label for="name">
 				<input type="text" name="name" placeholder="" value="" id="translate-request-input-name" required />
@@ -57,7 +57,7 @@ if ( ! empty( $message ) ) {
 			<input type="hidden" name="message_error" value="" id="language-message-error">
 			<?php wp_nonce_field( 'translate-request' ); ?>
 			<div class="form--submit-wrapper">
-				<input type="submit" class="button button__bordered" value=""  id="translate-request-submit"/>
+				<input type="submit" class="button button__bordered" value=""  id="translate-request-submit" name="translate-request-submit" />
 			</div>
 		</form>
 	</div>

@@ -68,7 +68,7 @@ get_header(); ?>
 			endif;
 		?>
 
-			<form action="<?php echo esc_url( $form->get_action() ); ?>" method="POST" class="contact--form form">
+			<form action="<?php echo esc_url( $form->get_action() ); ?>" method="POST" class="contact--form form apply-recaptcha">
 				<label for="name">
 					<span class="screen-reader-text"><?php esc_html( $form->get_label( 'name' ) ); ?></span>
 					<input type="text" name="name" placeholder="<?php echo esc_attr( $form->get_label( 'name' ) ); ?>" value="<?php echo esc_attr( $values['name'] ); ?>" required />
@@ -83,7 +83,7 @@ get_header(); ?>
 				</label>
 				<?php wp_nonce_field( 'contact' ); ?>
 				<div class="form--submit-wrapper">
-					<input type="submit" class="button button__bordered" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ); ?>" />
+					<input type="submit" id="contact-request-submit" name="contact-request-submit" class="button button__bordered" value="<?php echo esc_attr_e( 'Send', 'elemarjr' ); ?>" />
 				</div>
 			</form>
 		</div>
