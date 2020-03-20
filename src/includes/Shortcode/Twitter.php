@@ -39,7 +39,8 @@ class Twitter extends Base {
 	 * @return string
 	 */
 	public function tweetAbout( $atts, $content = null ) {
-		$url = "https://twitter.com/intent/tweet?text={$content}&url=" . home_url( '/?p=' . get_the_ID() ) . '&via=' . get_theme_mod( 'social_media_twitter' );
+		$text_param = strip_tags( $content );
+		$url = "https://twitter.com/intent/tweet?text={$text_param}&url=" . home_url( '/?p=' . get_the_ID() ) . '&via=' . get_theme_mod( 'social_media_twitter' );
 
 		return '<a href="' . esc_url( $url ) . '">' . $content . '<i class="i-twitter"></i></a>';
 	}
