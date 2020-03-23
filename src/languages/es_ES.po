@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-02-19T11:49:24+00:00\n"
+"POT-Creation-Date: 2020-03-23T11:28:03+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,7 +51,7 @@ msgstr "Página Siguiente"
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
 
-#: comments.php:66
+#: comments.php:70
 msgid "Post"
 msgstr "Publicar"
 
@@ -1093,7 +1093,7 @@ msgstr ""
 msgid "Main Profile Image"
 msgstr ""
 
-#: page-templates/contact.php:87
+#: page-templates/contact.php:86
 msgid "Send"
 msgstr "Enviar"
 
