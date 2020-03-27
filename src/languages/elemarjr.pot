@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-19T11:49:24+00:00\n"
+"POT-Creation-Date: 2020-03-23T11:28:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: elemarjr\n"
 
 #. Theme Name of the theme
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:66
+#: comments.php:70
 msgid "Post"
 msgstr ""
 
@@ -1066,7 +1066,7 @@ msgstr ""
 msgid "Main Profile Image"
 msgstr ""
 
-#: page-templates/contact.php:87
+#: page-templates/contact.php:86
 msgid "Send"
 msgstr ""
 
