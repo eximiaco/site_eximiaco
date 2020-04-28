@@ -22,6 +22,7 @@ class Single extends Base {
 		add_filter( 'private_title_format', $this->callback( 'fix_title_format' ) );
 		add_filter( 'protected_title_format', $this->callback( 'fix_title_format' ) );
 		add_filter( 'elemarjr_enqueue_recaptcha', $this->callback( 'enqueue_captcha' ) );
+		add_filter( 'wp_kses_allowed_html', $this->callback( 'custom_wpkses_post_tags') , 10, 2 );
 	}
 
 	/**
@@ -56,5 +57,27 @@ class Single extends Base {
 		}
 
 		return $enqueue_captcha;
+	}
+
+	/**
+	 * Add iFrame to allowed wp_kses_post tags
+	 *
+	 * @param array  $tags Allowed tags, attributes, and/or entities.
+	 * @param string $context Context to judge allowed tags by. Allowed values are 'post'.
+	 *
+	 * @return array
+	 */
+	public function custom_wpkses_post_tags( $tags, $context ) {
+		if ( 'post' === $context ) {
+			$tags['iframe'] = array(
+				'src'             => true,
+				'height'          => true,
+				'width'           => true,
+				'frameborder'     => true,
+				'allowfullscreen' => true,
+			);
+		}
+
+		return $tags;
 	}
 }
