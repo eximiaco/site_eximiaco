@@ -79,3 +79,22 @@
         font-size 16px
         font-weight bold
         margin-bottom 0
+
+        a
+            color var-use( color-primary )
+            text-decoration none
+
+    &--single
+        border-top 2px solid var-use( color-primary )
+        border-bottom 2px solid var-use( color-primary )
+        max-width 100%
+        padding 10px 0
+
+        & ^[0..-2]__content
+            &:before,
+            &:after
+                content none
+
+        &:before,
+        &:after
+            content none
