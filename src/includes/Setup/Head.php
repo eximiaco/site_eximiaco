@@ -140,9 +140,10 @@ class Head extends Base {
 	 */
 	public function custom_css() {
 		echo sprintf(
-			'<style>:root{ --color-primary: %s; --color-secondary: %s; } .top-header-wrapper{ background-color: rgba(%s, %s) }</style>',
+			'<style>:root{ --color-primary: %s; --color-secondary: %s; --color-link: %s; } .top-header-wrapper{ background-color: rgba(%s, %s) }</style>',
 			get_theme_mod( 'colors_primary' ),
 			get_theme_mod( 'colors_secondary' ),
+			get_theme_mod( 'colors_link' ),
 			$this->hex2rgb( get_theme_mod( 'colors_secondary' ) ),
 			get_theme_mod( 'colors_opacity' )
 		);

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-03-23T11:28:03+00:00\n"
+"POT-Creation-Date: 2020-04-23T20:22:18+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -116,11 +116,15 @@ msgstr "Esquema de cores"
 msgid "Primary Color"
 msgstr "Cor Primária"
 
-#: includes/Customize/Colors.php:65
+#: includes/Customize/Colors.php:66
 msgid "Secondary Color"
 msgstr "Cor Secundária"
 
-#: includes/Customize/Colors.php:78
+#: includes/Customize/Colors.php:79
+msgid "Link Color"
+msgstr "Cor do Link"
+
+#: includes/Customize/Colors.php:92
 msgid "Main menu opacity"
 msgstr "Opacidade do menu principal"
 
