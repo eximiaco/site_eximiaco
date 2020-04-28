@@ -55,6 +55,7 @@ class Colors extends Base {
 			'section' => $section_id,
 			)
 		);
+
 		$wp_customize->add_setting(
 			"{$section_id}_secondary", array(
 			'default' => '',
@@ -63,6 +64,19 @@ class Colors extends Base {
 		$wp_customize->add_control(
 			"{$section_id}_secondary", array(
 			'label' => __( 'Secondary Color', 'elemarjr' ),
+			'type' => 'color',
+			'section' => $section_id,
+			)
+		);
+
+		$wp_customize->add_setting(
+			"{$section_id}_link", array(
+			'default' => '',
+			)
+		);
+		$wp_customize->add_control(
+			"{$section_id}_link", array(
+			'label' => __( 'Link Color', 'elemarjr' ),
 			'type' => 'color',
 			'section' => $section_id,
 			)
