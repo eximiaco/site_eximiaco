@@ -323,7 +323,7 @@ class PageSection extends Base {
 	 * @return string The the section content.
 	 */
 	public function get_content() {
-		return $this->get_field( 'text' ) ? $this->get_field( 'text' ) : get_the_content();
+		return $this->get_field( 'text' ) ? apply_filters( 'the_content', $this->get_field( 'text' ) ) : get_the_content();
 	}
 
 	/**
@@ -334,5 +334,4 @@ class PageSection extends Base {
 	public function get_image() {
 		return wp_get_attachment_image( $this->get_field( 'image' ), 'full' );
 	}
-
 }
