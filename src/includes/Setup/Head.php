@@ -124,15 +124,23 @@ class Head extends Base {
 	 * Add multiples favicons
 	 */
 	public function favicons() {
-		$path = get_template_directory_uri() . '/assets/images/favicons';
+		$sites = array(
+			1 => 'co',
+			2 => 'tech',
+			3 => 'ms',
+		);
+		$path = get_template_directory_uri() . '/assets/images/favicons/' . $sites[get_current_blog_id()];
 
-		echo sprintf( '<link rel="apple-touch-icon" sizes="180x180" href="%s">', esc_url( $path . '/apple-touch-icon.png' ) ) . esc_html( PHP_EOL );
-		echo sprintf( '<link rel="icon" type="image/png" sizes="32x32" href="%s">', esc_url( $path . '/favicon-32x32.png' ) ) . esc_html( PHP_EOL );
-		echo sprintf( '<link rel="icon" type="image/png" sizes="16x16" href="%s">', esc_url( $path . '/favicon-16x16.png' ) ) . esc_html( PHP_EOL );
-		echo sprintf( '<link rel="manifest" href="%s">', esc_url( $path . '/site.webmanifest' ) ) . esc_html( PHP_EOL );
-		echo sprintf( '<link rel="mask-icon" href="%s">', esc_url( $path . '/safari-pinned-tab.svg' ) ) . esc_html( PHP_EOL );
-		echo '<meta name="msapplication-TileColor" content="#da532c">' . esc_html( PHP_EOL );
-		echo '<meta name="theme-color" content="#ffffff">' . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="72x72" href="%s">', esc_url( $path . '/icon-72x72.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="96x96" href="%s">', esc_url( $path . '/icon-96x96.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="128x128" href="%s">', esc_url( $path . '/icon-128x128.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="144x144" href="%s">', esc_url( $path . '/icon-144x144.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="152x152" href="%s">', esc_url( $path . '/icon-152x152.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="192x192" href="%s">', esc_url( $path . '/icon-192x192.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="384x384" href="%s">', esc_url( $path . '/icon-384x384.png' ) ) . esc_html( PHP_EOL );
+		echo sprintf( '<link rel="icon" type="image/png" sizes="512x512" href="%s">', esc_url( $path . '/icon-512x512.png' ) ) . esc_html( PHP_EOL );
+
+		echo sprintf( '<link rel="manifest" href="%s">', esc_url( $path . '/site.webmanifest' ) );
 	}
 
 	/**
