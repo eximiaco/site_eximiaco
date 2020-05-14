@@ -139,3 +139,6 @@ $wp language core update
 
 # Activate theme
 $wp theme activate ${THEME}
+
+# Permalink rewrite flush
+$wp rewrite flush
