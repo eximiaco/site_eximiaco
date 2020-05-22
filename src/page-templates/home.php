@@ -68,65 +68,48 @@ get_header(); ?>
 		</div>
 	</div>
 	<?php endif; ?>
-	<div class="container divulgation--container">
-		<?php
-			$slug = PLL()->curlang->slug;
-			switch_to_blog( get_network()->site_id );
-			$divulgation_data = array(
-				1 => array(
-					'text' => get_theme_mod( "head_{$slug}_co_divulgation_text" ),
-					'img'  => get_theme_mod( 'head_co_divulgation_logo' ),
-					'url'  => get_blog_option( 1, 'siteurl' ),
-				),
-				2 => array(
-					'text' => get_theme_mod( "head_{$slug}_tech_divulgation_text" ),
-					'img'  => get_theme_mod( 'head_tech_divulgation_logo' ),
-					'url'  => get_blog_option( 2, 'siteurl' ),
-				),
-				3 => array(
-					'text' => get_theme_mod( "head_{$slug}_ms_divulgation_text" ),
-					'img'  => get_theme_mod( 'head_ms_divulgation_logo' ),
-					'url'  => get_blog_option( 3, 'siteurl' ),
-				),
-			);
-			restore_current_blog();
-
-			$current_divulgation = $divulgation_data[ get_current_blog_id() ];
-			unset( $divulgation_data[ get_current_blog_id() ] );
-			?>
-		<?php
-			$data = reset( $divulgation_data );
-
-		if ( $data['img'] && $data['text'] ) :
-			?>
-		<div class="item">
-			<a href="<?php echo esc_url( $data['url'] ); ?>">
-				<span><?php echo esc_html( $data['text'] ); ?></span>
-				<img src="<?php echo esc_html( $data['img'] ); ?>" alt="">
-			</a>
-		</div>
-		<?php endif; ?>
-		<?php if ( $current_divulgation['img'] && $current_divulgation['text'] ) : ?>
-		<div class="item item--current">
-			<span><?php echo esc_html( $current_divulgation['text'] ); ?></span>
-			<img src="<?php echo esc_html( $current_divulgation['img'] ); ?>" alt="">
-		</div>
-		<?php endif; ?>
-		<?php
-			$data = end( $divulgation_data );
-
-		if ( $data['img'] && $data['text'] ) :
-			?>
-		<div class="item">
-			<a href="<?php echo esc_url( $data['url'] ); ?>">
-				<span><?php echo esc_html( $data['text'] ); ?></span>
-				<img src="<?php echo esc_html( $data['img'] ); ?>" alt="">
-			</a>
-		</div>
-		<?php endif; ?>
-	</div>
-
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
+
+		<div class="front-page--websites container">
+			<div class="front-page--websites-content">
+				<div class="front-page--websites-title wow fadeIn">
+					<?php echo wp_kses_post( get_field( 'websites_title' ) ); ?>
+				</div>
+				<div class="websites-images wow fadeIn">
+					<div class="websites-image">
+						<div class="websites-box">
+							<a href="<?php echo wp_kses_post( get_field( 'websites_link_1' ) ); ?>">
+								<?php $websites_image1 = get_field( 'websites_image_1' ); ?>
+								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image1['ID'], 'medium_large' ) ); ?>">
+								<div class="websites-overlay">
+									<?php $websites_logo1 = get_field( 'websites_logo_1' ); ?>
+									<div class="websites-logo">
+										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo1['ID'], 'medium_large' ) ); ?>">
+									</div>
+									<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_1' ) ); ?></div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="websites-image2">
+					<div class="websites-box">
+							<a href="<?php echo wp_kses_post( get_field( 'websites_link_2' ) ); ?>">
+								<?php $websites_image2 = get_field( 'websites_image_2' ); ?>
+								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image2['ID'], 'medium_large' ) ); ?>">
+								<div class="websites-overlay">
+									<?php $websites_logo2 = get_field( 'websites_logo_2' ); ?>
+									<div class="websites-logo">
+										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo2['ID'], 'medium_large' ) ); ?>">
+									</div>
+									<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_2' ) ); ?></div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="front-page--blog">
 			<div class="container container__xs-small-margin">
 				<h2 class="front-page--blog-title wow fadeIn"><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
