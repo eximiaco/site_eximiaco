@@ -57,6 +57,9 @@ get_header(); ?>
 			<?php
 			if ( 'bliki' !== get_post_type() ) {
 				get_template_part( 'template-parts/blog/single/post-nav' );
+
+				// List related posts
+				do_action( 'get_related_posts' );
 			}
 			?>
 

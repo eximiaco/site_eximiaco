@@ -23,6 +23,9 @@ class Single extends Base {
 		add_filter( 'protected_title_format', $this->callback( 'fix_title_format' ) );
 		add_filter( 'elemarjr_enqueue_recaptcha', $this->callback( 'enqueue_captcha' ) );
 		add_filter( 'wp_kses_allowed_html', $this->callback( 'custom_wpkses_post_tags') , 10, 2 );
+
+		// List related posts after post single.
+		add_action( 'get_related_posts', $this->callback( 'get_related_posts' ) );
 	}
 
 	/**
@@ -79,5 +82,56 @@ class Single extends Base {
 		}
 
 		return $tags;
+	}
+
+	/**
+	 * Return the related posts in the current post.
+	 */
+	public function get_related_posts() {
+		global $post;
+
+		// Define default params
+		$args          = array(
+			'numberposts'  => 3,
+			'post__not_in' => array( $post->ID ),
+			'orderby'      => 'RAND',
+		);
+		$ids           = array();
+		$related_posts = array();
+
+		// Check if have related posts defined
+		if ( have_rows( 'related_posts' ) ) {
+			while ( have_rows( 'related_posts' ) ) {
+				the_row();
+				if ( ! empty( get_sub_field( 'related_posts_id' ) ) && 'default' !== get_sub_field( 'related_posts_id' ) ) {
+					$ids[] = (int) get_sub_field( 'related_posts_id' );
+				}
+			}
+			if ( 0 !== count( $ids ) ) {
+				$args['post__in'] = $ids;
+				$related_posts = get_posts( $args );
+			}
+		}
+
+
+		// If no have 3 posts selected in related posts
+		if ( 3 !== count( $related_posts ) ) {
+			$ids[] = $post->ID;
+			$args  = array(
+				'numberposts'  => ( 3 - count( $related_posts ) ),
+				'post__not_in' => $ids,
+				'orderby'      => 'rand',
+				'order'        => 'ASC',
+				'category__in' => wp_get_post_categories( $post->ID )
+			);
+			$related_posts = array_merge( $related_posts, get_posts( $args ) );
+		}
+
+		if ( ! empty( $related_posts ) ) {
+			set_query_var( 'related_posts', $related_posts );
+			get_template_part( 'template-parts/blog/single/related-posts' );
+		}
+
+		wp_reset_postdata();
 	}
 }

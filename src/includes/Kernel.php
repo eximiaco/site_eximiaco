@@ -62,6 +62,7 @@ class Kernel {
 			\Aztec\Integration\ACF\Pages\NewsletterForm::class,
 			\Aztec\Integration\ACF\Pages\Page::class,
 			\Aztec\Integration\ACF\Pages\Event::class,
+			\Aztec\Integration\ACF\Pages\RelatedPosts::class,
 			\Aztec\Integration\ACF\Pages\Resums::class,
 			\Aztec\Integration\ACF\Pages\Services::class,
 			\Aztec\Integration\ACF\Pages\Summary::class,

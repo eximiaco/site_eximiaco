@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-04-23T20:22:18+00:00\n"
+"POT-Creation-Date: 2020-05-20T20:14:36+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -616,6 +616,18 @@ msgstr "Formulário de Newsletter"
 msgid "Hero"
 msgstr "Hero"
 
+#: includes/Integration/ACF/Pages/RelatedPosts.php:56
+msgid "Random"
+msgstr "Aleatório"
+
+#: includes/Integration/ACF/Pages/RelatedPosts.php:65
+msgid "Related Posts"
+msgstr "Posts relacionados"
+
+#: includes/Integration/ACF/Pages/RelatedPosts.php:79
+msgid "Posts"
+msgstr "Posts"
+
 #: includes/Integration/ACF/Pages/Resums.php:61
 msgid "Resums"
 msgstr "Resumos"
@@ -1098,6 +1110,7 @@ msgid "Nothing found here."
 msgstr "Nada encontrado aqui."
 
 #: template-parts/blog/post-list.php:18
+#: template-parts/blog/single/related-posts.php:23
 msgid "Loading posts..."
 msgstr "Carregando posts…"
 
@@ -1119,6 +1132,10 @@ msgstr "Anterior"
 #: template-parts/blog/single/post-nav.php:83
 msgid "Next"
 msgstr "Próximo"
+
+#: template-parts/blog/single/related-posts.php:20
+msgid "You might also like"
+msgstr "Talvez você goste também"
 
 #. translators: more posts in series
 #: template-parts/blog/single/resums.php:40
