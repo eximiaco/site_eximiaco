@@ -51,6 +51,7 @@ class Bliki extends Base {
 					'slug' => 'bliki'
 				),
 				'show_ui' => true,
+				'show_in_rest' => true,
 				'public' => true,
 				'has_archive' => true,
 				'supports'  => array( 'author', 'title', 'editor', 'thumbnail', 'page-attributes', 'comments' ),

@@ -54,7 +54,9 @@ class Serie extends Base {
 					'popular_series' => __( 'Popular Series', 'elemarjr' ),
 					'not_found' => __( 'No series found.', 'elemarjr' ),
 				),
-				'public' => true,
+				'show_ui'      => true,
+				'show_in_rest' => true,
+				'public'       => true,
 			)
 		);
 	}

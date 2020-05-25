@@ -19,9 +19,17 @@
                 margin-bottom 0
 
         &-author
-            color var-use( color-primary )
-            font-weight bold
-            text-decoration none
+            a
+                color var-use( color-primary )
+                font-weight bold
+                text-decoration none
+
+                &:after
+                    content '|'
+
+                &:last-child
+                    &:after
+                        display none
 
             @media screen and ( min-width $screen-md )
                 margin-bottom 0

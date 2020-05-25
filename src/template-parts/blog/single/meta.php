@@ -17,9 +17,23 @@ $form = $container->get( TranslateRequestForm::class );
 ?>
 
 <div class="post--meta">
-	<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="post--meta-author">
-		<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
-	</a><!-- .post--meta-author -->
+	<div class="post--meta-author">
+	<?php
+	// Check if the co-author plugin is installed.
+	if ( function_exists( 'coauthors_posts_links' ) ) :
+		$coauthors = get_coauthors();
+		foreach ( $coauthors as $coauthor ) : ?>
+			<a href="<?php echo esc_url( get_author_posts_url( $coauthor->ID ) ); ?>">
+				<?php echo esc_html( $coauthor->display_name ); ?>
+			</a>
+		<?php
+		endforeach;
+	else : ?>
+		<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+			<?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?>
+		</a>
+	<?php endif; ?>
+	</div>
 
 	<?php if ( get_post_type() !== 'bliki' ) : ?>
 	<div class="post--meta-date">

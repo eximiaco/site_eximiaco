@@ -86,15 +86,47 @@
 
     &--single
         border-top 2px solid var-use( color-primary )
-        border-bottom 2px solid var-use( color-primary )
         max-width 100%
         padding 10px 0
+        margin-bottom 0
+        position relative
+
+        &:last-child
+            border-bottom 2px solid var-use( color-primary )
+            margin-bottom 40px
+
+        &:first-child
+            &:after
+                display none
+
+        &-coauthor
+            padding 30px 0 20px 0
+
+            @media screen and ( min-width $screen-md )
+                padding 10px 0
+
+        &:after
+            background-color white
+            color var-use( color-primary )
+            content '&'
+            font-size 24px
+            font-weight bold
+            height 40px
+            position absolute
+            text-align center
+            top -20px
+            width 48px
+
+            @media screen and ( min-width $screen-md )
+               width 88px
+
+            @media screen and ( min-width $screen-lg )
+                width 108px
 
         & ^[0..-2]__content
             &:before,
             &:after
                 content none
 
-        &:before,
-        &:after
+        &:before
             content none
