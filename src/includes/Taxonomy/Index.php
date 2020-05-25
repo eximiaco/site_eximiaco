@@ -54,6 +54,8 @@ class Index extends Base {
 					'popular_series'    => __( 'Popular Indexes', 'elemarjr' ),
 					'not_found'         => __( 'No indexes found.', 'elemarjr' ),
 				),
+				'show_ui'      => true,
+				'show_in_rest' => true,
 				'public'       => true,
 			)
 		);
