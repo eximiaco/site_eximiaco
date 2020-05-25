@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-03-23T11:28:03+00:00\n"
+"POT-Creation-Date: 2020-05-20T20:14:36+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -123,11 +123,17 @@ msgstr ""
 msgid "Primary Color"
 msgstr "Primario"
 
-#: includes/Customize/Colors.php:65
+#: includes/Customize/Colors.php:66
 msgid "Secondary Color"
 msgstr ""
 
-#: includes/Customize/Colors.php:78
+#: includes/Customize/Colors.php:79
+#, fuzzy
+#| msgid "Primary"
+msgid "Link Color"
+msgstr "Primario"
+
+#: includes/Customize/Colors.php:92
 msgid "Main menu opacity"
 msgstr ""
 
@@ -641,6 +647,18 @@ msgstr "Boletín de noticias"
 msgid "Hero"
 msgstr ""
 
+#: includes/Integration/ACF/Pages/RelatedPosts.php:56
+msgid "Random"
+msgstr "Aleatorio"
+
+#: includes/Integration/ACF/Pages/RelatedPosts.php:65
+msgid "Related Posts"
+msgstr "Posts Relacionados"
+
+#: includes/Integration/ACF/Pages/RelatedPosts.php:79
+msgid "Posts"
+msgstr "Posts"
+
 #: includes/Integration/ACF/Pages/Resums.php:61
 msgid "Resums"
 msgstr "Resúmenes"
@@ -1135,6 +1153,7 @@ msgid "Nothing found here."
 msgstr "No se ha encontrado nada aquí."
 
 #: template-parts/blog/post-list.php:18
+#: template-parts/blog/single/related-posts.php:23
 msgid "Loading posts..."
 msgstr "Cargando publicaciones…"
 
@@ -1156,6 +1175,10 @@ msgstr "Anterior"
 #: template-parts/blog/single/post-nav.php:83
 msgid "Next"
 msgstr "Siguiente"
+
+#: template-parts/blog/single/related-posts.php:20
+msgid "You might also like"
+msgstr "Quizás también te guste"
 
 #. translators: more posts in series
 #: template-parts/blog/single/resums.php:40
