@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-05-20T20:14:36+00:00\n"
+"POT-Creation-Date: 2020-06-03T17:57:30+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -594,7 +594,7 @@ msgstr "Citação autor"
 msgid "Quote job role"
 msgstr "Citação cargo"
 
-#: includes/Integration/ACF/Pages/HomePage.php:228 page-templates/home.php:132
+#: includes/Integration/ACF/Pages/HomePage.php:228 page-templates/home.php:115
 msgid "Blog"
 msgstr "Blog"
 
@@ -1084,7 +1084,7 @@ msgstr "Agenda"
 msgid "Home"
 msgstr "Página Inicial"
 
-#: page-templates/home.php:146
+#: page-templates/home.php:129
 msgid "Last posts in English"
 msgstr "Últimos posts em Inglês"
 
@@ -1119,7 +1119,7 @@ msgstr "Carregando posts…"
 msgid "This post was featured in"
 msgstr "Essa publicação foi destaque em"
 
-#: template-parts/blog/single/meta.php:32
+#: template-parts/blog/single/meta.php:46
 msgid "reading time:"
 msgstr "tempo de leitura:"
 
@@ -1139,7 +1139,7 @@ msgstr "Talvez você goste também"
 
 #. translators: more posts in series
 #: template-parts/blog/single/resums.php:40
-msgid "In Resum"
+msgid "Abstract"
 msgstr "Em Resumo"
 
 #. translators: more posts in series
@@ -1182,6 +1182,9 @@ msgstr "Inscrever-se"
 #: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Veja mais"
+
+#~ msgid "In Resum"
+#~ msgstr "Em Resumo"
 
 #~ msgid "Post Comment"
 #~ msgstr "Comentários"

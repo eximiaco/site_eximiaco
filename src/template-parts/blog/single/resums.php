@@ -14,12 +14,12 @@ if ( ! have_rows( 'resums_repeater' ) ) {
 	return;
 }
 
-$summary = '';
+$abstract = '';
 
 while ( have_rows( 'resums_repeater' ) ) {
 	the_row();
 	if ( ! empty( get_sub_field( 'resum_title' ) ) ) {
-		$summary .= sprintf(
+		$abstract .= sprintf(
 			'<li class="post-resums__item">
 			<h3 class="post-resums__item-title">%s</h3>
 			%s
@@ -28,7 +28,7 @@ while ( have_rows( 'resums_repeater' ) ) {
 	}
 }
 
-if ( empty( $summary ) ) {
+if ( empty( $abstract ) ) {
 	return;
 }
 ?>
@@ -37,11 +37,11 @@ if ( empty( $summary ) ) {
 	<div class="post-resums__title">
 		<?php
 			/* translators: more posts in series */
-			echo esc_html( sprintf( __( 'In Resum', 'elemarjr' ), get_post_type() ) );
+			echo esc_html( sprintf( __( 'Abstract', 'elemarjr' ), get_post_type() ) );
 		?>
 	</div>
 
 	<ul class="post-resums__list">
-		<?php echo $summary; ?>
+		<?php echo $abstract; ?>
 	</ul>
 </div>

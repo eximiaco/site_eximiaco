@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Elemar Jr Blog Theme 1.0.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-05-20T20:14:36+00:00\n"
+"POT-Creation-Date: 2020-06-03T17:57:30+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -625,7 +625,7 @@ msgstr ""
 msgid "Quote job role"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:228 page-templates/home.php:132
+#: includes/Integration/ACF/Pages/HomePage.php:228 page-templates/home.php:115
 msgid "Blog"
 msgstr "Publicaciones"
 
@@ -1127,7 +1127,7 @@ msgstr "Calendario"
 msgid "Home"
 msgstr ""
 
-#: page-templates/home.php:146
+#: page-templates/home.php:129
 msgid "Last posts in English"
 msgstr "Ultimas publicaciones en inglés"
 
@@ -1162,7 +1162,7 @@ msgstr "Cargando publicaciones…"
 msgid "This post was featured in"
 msgstr ""
 
-#: template-parts/blog/single/meta.php:32
+#: template-parts/blog/single/meta.php:46
 msgid "reading time:"
 msgstr "tiempo de lectura:"
 
@@ -1182,8 +1182,8 @@ msgstr "Quizás también te guste"
 
 #. translators: more posts in series
 #: template-parts/blog/single/resums.php:40
-msgid "In Resum"
-msgstr "En Resumen"
+msgid "Abstract"
+msgstr "Abstracto"
 
 #. translators: more posts in series
 #: template-parts/blog/single/serie.php:36
@@ -1225,6 +1225,9 @@ msgstr "Suscribete"
 #: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Ver más"
+
+#~ msgid "In Resum"
+#~ msgstr "En Resumen"
 
 #, fuzzy
 #~| msgid "No Comments"
