@@ -37,7 +37,9 @@
 		"wpackagist-plugin/wp-session-manager" : "^4.1",
 		"wpackagist-plugin/slideshare": "^1.9",
 		"wpackagist-plugin/wp-smushit": "^3.1",
-		"wpackagist-plugin/co-authors-plus": "^3.4.3"
+		"wpackagist-plugin/co-authors-plus": "^3.4.3",
+		"wpackagist-plugin/classic-editor": "^1.4",
+		"wpackagist-plugin/cloudflare": "3.4.1"
 	},
 	"require-dev" : {
 		"deployer/deployer" : "^6.0",
