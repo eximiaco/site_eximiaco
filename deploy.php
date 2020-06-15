@@ -9,16 +9,16 @@ require 'recipe/npm.php';
 require 'app/recipe/bower.php';
 require 'app/recipe/grunt.php';
 
-host('eximia.co')
+host('production')
 	->port(2201)
-	->stage('production')
+	->hostname('186.237.59.129')
 	->user('eximia')
 	->set('branch', 'production')
 	->set('deploy_path', '/home/eximia/production');
 
-host('staging.eximia.co')
+host('staging')
 	->port(2201)
-	->stage('staging')
+	->hostname('186.237.59.129')
 	->user('eximia_staging')
 	->set('branch', 'staging')
 	->set('deploy_path', '/home/eximia_staging');
@@ -26,7 +26,7 @@ host('staging.eximia.co')
 
 set('http_user', 'www-data');
 
-set('repository', 'git@greatcode.aztecweb.net:aztecwebteam/eximia.git');
+set('repository', 'git@git.aztecweb.net:aztecwebteam/eximia.git');
 
 set('ssh_multiplexing', false);
 
