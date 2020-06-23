@@ -11,11 +11,11 @@
         position relative
 
         @media screen and ( min-width $screen-md )
-            padding 70px $page-section-padding-horizontal-md
+            padding 70px 0px
 
     &--content
         ul
-            padding-left 20px
+            font-size 15px
 
         @media screen and ( min-width $screen-md )
             flex 0 0 45%
@@ -52,9 +52,6 @@
         margin-top 0
         text-transform uppercase
         width 100%
-
-        @media screen and ( min-width $screen-md )
-            font-size 32px
 
     &--image
         @media screen and ( min-width $screen-md )
@@ -211,7 +208,10 @@
         & ^[0..-2]--container
             padding-bottom 0
             padding-top 0
-            text-align right
+            text-align left
+
+            @media screen and ( min-width $screen-md )
+                text-align right
 
         & ^[0..-2]--content
             padding-bottom 30px
@@ -229,6 +229,9 @@
                     position absolute
                     right 0
                     width 40px
+
+                    @media screen and ( max-width $screen-sm )
+                        left 0
 
     // Image align top
     &__image-top
@@ -322,3 +325,8 @@
             @media screen and ( min-width $screen-lg )
                 font-size 18px
                 line-height 28px
+
+    h2.page-section--title
+        @media screen and ( min-width $screen-md )
+            font-size 26px
+

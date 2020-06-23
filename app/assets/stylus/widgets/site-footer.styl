@@ -2,7 +2,7 @@
     background-color var-use( color-primary )
     color $white
     height $footer-height
-    padding 65px 0 30px
+    padding 65px 0 65px
     position relative
     text-align center
     visibility visible
@@ -16,16 +16,22 @@
     align-items center
     border 1px solid $white
     cursor pointer
-    display flex
     height 45px
     justify-content center
-    margin 0 auto 70px
     transition all $transition-default
     width 45px
+    border-radius 50px
+    position fixed
+    display flex
+    float left
+    left 10px
+    bottom 10px
+    background-color var-use( color-primary )
 
     &:hover
-        background $white
+        background-color $white
         color $black
+        border 1px solid $black
 
     &--icon
         font-size 20px

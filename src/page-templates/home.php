@@ -83,25 +83,25 @@ get_header(); ?>
 								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image1['ID'], 'medium_large' ) ); ?>">
 								<div class="websites-overlay">
 									<?php $websites_logo1 = get_field( 'websites_logo_1' ); ?>
-									<div class="websites-logo">
+									<div class="websites-inner-box">
 										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo1['ID'], 'medium_large' ) ); ?>">
+										<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_1' ) ); ?></div>
 									</div>
-									<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_1' ) ); ?></div>
 								</div>
 							</a>
 						</div>
 					</div>
 					<div class="websites-image2">
-					<div class="websites-box">
+						<div class="websites-box">
 							<a href="<?php echo wp_kses_post( get_field( 'websites_link_2' ) ); ?>">
 								<?php $websites_image2 = get_field( 'websites_image_2' ); ?>
 								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image2['ID'], 'medium_large' ) ); ?>">
 								<div class="websites-overlay">
 									<?php $websites_logo2 = get_field( 'websites_logo_2' ); ?>
-									<div class="websites-logo">
+									<div class="websites-inner-box">
 										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo2['ID'], 'medium_large' ) ); ?>">
+										<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_2' ) ); ?></div>
 									</div>
-									<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_2' ) ); ?></div>
 								</div>
 							</a>
 						</div>
@@ -109,6 +109,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="front-page--blog">
 			<div class="container container__xs-small-margin">

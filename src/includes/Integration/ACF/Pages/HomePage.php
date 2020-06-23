@@ -38,6 +38,7 @@ class HomePage extends Base {
 		if ( function_exists( 'acf_add_options_page' ) ) {
 			add_action( 'acf/include_fields', $this->callback( 'add_slider_hero_home' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_purpose_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_websites_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_quote_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_blog_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_testimonial_fields' ) );
@@ -171,6 +172,77 @@ class HomePage extends Base {
 					'key' => 'purpose_image',
 					'name' => 'purpose_image',
 					'label' => __( 'Image', 'elemarjr' ),
+				),
+			 ),
+			 'location' => $this->location,
+			)
+		);
+	}
+
+	/**
+	 * Add Websites custom fields
+	 */
+	public function add_websites_fields() {
+		acf_add_local_field_group(
+			array(
+			'key' => 'Websites',
+			'title' => __( 'Websites', 'elemarjr' ),
+			'hide_on_screen' => array( 'the_content' ),
+			// @todo Use repeater instead two fixed fields
+			'fields' => array(
+				array(
+					'type' => 'text',
+					'key' => 'websites_title',
+					'name' => 'websites_title',
+					'label' => __( 'Section Title', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'websites_text_1',
+					'name' => 'websites_text_1',
+					'label' => __( 'Text 1', 'elemarjr' ),
+				),
+				array(
+					'type' => 'image',
+					'key' => 'websites_image_1',
+					'name' => 'websites_image_1',
+					'label' => __( 'Image 1', 'elemarjr' ),
+				),
+				array(
+					'type' => 'image',
+					'key' => 'websites_logo_1',
+					'name' => 'websites_logo_1',
+					'label' => __( 'Logo 1', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'websites_link_1',
+					'name' => 'websites_title_link_1',
+					'label' => __( 'Site Url', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'websites_text_2',
+					'name' => 'websites_text_2',
+					'label' => __( 'Text 2', 'elemarjr' ),
+				),
+				array(
+					'type' => 'image',
+					'key' => 'websites_image_2',
+					'name' => 'websites_image_2',
+					'label' => __( 'Image 2', 'elemarjr' ),
+				),
+				array(
+					'type' => 'image',
+					'key' => 'websites_logo_2',
+					'name' => 'websites_logo_2',
+					'label' => __( 'Logo 2', 'elemarjr' ),
+				),
+				array(
+					'type' => 'text',
+					'key' => 'websites_link_2',
+					'name' => 'websites_title_link_2',
+					'label' => __( 'Site Url 2', 'elemarjr' ),
 				),
 			 ),
 			 'location' => $this->location,

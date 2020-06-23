@@ -26,10 +26,6 @@
             width calc(50% - 10px)
             margin 5px
 
-        img
-            height auto
-            width 100%
-
     &-image2
         display block
         width 100%
@@ -41,55 +37,42 @@
             width calc(50% - 10px)
             margin 5px
 
-        img
-            height auto
-            width 100%
-    &-info
-        width 100%
-        display inline
-
     &-box
         position relative
         display inline-block
 
-        &:hover
-            .websites-overlay
-                height 60%
-
-                @media screen and ( min-width $screen-md )
-                    height 30%
-
     &-overlay
         position absolute
-        transition all .3s ease
-        background-color rgba( $black, .7)
-        height 60%
+        height 100%
         opacity 1
         width 100%
         left 0
         bottom 0
         margin-bottom 5px
         padding 10px 15px
-
-        @media screen and ( min-width $screen-md )
-            height 20%
+        display flex
+        justify-content center
+        flex-direction column
 
     &-text
         text-transform uppercase
-        font-size 14px
+        font-size 12px
         font-weight bold
         color #fff
-        padding 10px 0px
-
-    &-logo
-        width 75%
 
         @media screen and ( min-width $screen-md )
-            width 50%
+            font-size 14px
+
+    &-inner-box
+        width 100%
+        height auto
+        text-align center
 
         img
-            height 100%
+            height 50px
             width auto
 
+            @media screen and ( min-width $screen-md )
+                height 60px
 
 

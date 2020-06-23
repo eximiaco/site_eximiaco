@@ -21,6 +21,7 @@ class Navigation extends Base {
 		add_action( 'after_setup_theme', $this->callback( 'register_nav_menus' ) );
 
 		add_filter( 'walker_nav_menu_start_el', $this->callback( 'social_walker_nav_menu_start_el' ), 10, 4 );
+		add_filter( 'walker_nav_menu_start_el', $this->callback( 'store_walker_nav_menu_start_el' ), 10, 4 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_services_custom_post_type_highlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_restricted_area_link_hightlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_thinking_link_highlight' ), 10, 2 );
@@ -35,6 +36,7 @@ class Navigation extends Base {
 			array(
 				'primary' => __( 'Primary', 'elemarjr' ),
 				'social' => __( 'Social Menu', 'elemarjr' ),
+				'store' => __( 'Store Menu', 'elemarjr'),
 			)
 		);
 	}
@@ -88,6 +90,72 @@ class Navigation extends Base {
 				break;
 			case 'facebook.com':
 				$icon = 'i-facebook';
+				break;
+			case 'open.spotify.com':
+				$icon = 'i-spotify';
+				break;
+			case 'youtube.com':
+				$icon = 'i-youtube';
+				break;
+			case 'soundcloud.com':
+				$icon = 'i-soundcloud';
+				break;
+			case 'applepodcasts.com':
+				$icon = 'i-applepodcasts';
+				break;
+			case 'deezer.com':
+				$icon = 'i-deezer';
+				break;
+			default:
+				$icon = 'i-rss';
+				break;
+		}
+
+		return $icon;
+	}
+
+	/**
+	 * Add store icons to store menu.
+	 *
+	 * @param  string    $item_output The menu item's starting HTML output.
+	 * @param  \WP_Post  $item The current menu item.
+	 * @param  int       $depth Depth of menu item. Used for padding.
+	 * @param  \stdClass $args An object of wp_nav_menu() arguments.
+	 *
+	 * @return string
+	 */
+	public function store_walker_nav_menu_start_el( $item_output, $item, $depth, $args ) {
+		if ( 'store' === $args->theme_location ) {
+			$icon        = sprintf( '<i class="%s"></i>', $this->store_menu_item_icon( $item->url ) );
+			$item_output = str_replace( $args->link_after, "</span>{$icon}", $item_output );
+		}
+
+		return $item_output;
+	}
+
+	/**
+	 * Get store menu icon class name.
+	 *
+	 * @param  string $url Menu item URL.
+	 * @return string
+	 */
+	private function store_menu_item_icon( $url ) {
+
+		$url      = parse_url( $url, PHP_URL_HOST );
+		$url      = preg_replace( '/www\./', '', $url );
+
+		switch ( $url ) {
+			case 'open.spotify.com':
+				$icon = 'i-spotify';
+				break;
+			case 'soundcloud.com':
+				$icon = 'i-soundcloud';
+				break;
+			case 'applepodcasts.com':
+				$icon = 'i-applepodcasts';
+				break;
+			case 'deezer.com':
+				$icon = 'i-deezer';
 				break;
 			default:
 				$icon = 'i-rss';

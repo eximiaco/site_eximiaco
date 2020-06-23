@@ -1,0 +1,133 @@
+.main-content
+    .iron-audioplayer
+        display flex
+        flex-direction column-reverse
+
+    .sonaar-grid
+        margin-left auto
+        margin-right auto
+        width 100%
+        display block
+
+        @media screen and ( min-width $screen-md )
+            width 65%
+
+    .player
+        display block
+        margin-left auto
+        margin-right auto
+        width 100%
+        padding 0px 20px
+
+        @media screen and ( min-width $screen-md )
+            width 50%
+            padding 0
+
+    .playlist
+        margin-top 0px
+
+        ul
+            padding 10px 20px
+            margin 25px 10px
+            border 1px solid var-use( color-primary )
+            max-height 300px
+            overflow-y scroll
+            transform rotate(180deg)
+            direction rtl
+
+            @media screen and ( min-width $screen-lg )
+                max-height 700px
+
+            @media screen and ( min-width $screen-md )
+                max-height 500px
+                padding 10px
+
+            > li
+                transform rotate(-180deg)
+                direction ltr
+
+    .title
+        color var-use( color-primary )
+        display inline-block
+        font-size 32px
+        font-weight 300
+        letter-spacing 3px
+        margin 0 0 40px
+        position relative
+        text-align center
+        text-transform uppercase
+        width 100%
+        font-family 'Open Sans', sans-serif
+        height 60px
+
+        &:before
+            border-bottom 1px solid var-use( color-primary )
+            bottom 0px
+            content ''
+            left 0
+            margin-left auto
+            margin-right auto
+            position absolute
+            right 0
+            width 40px
+            display block
+
+    .sr_it-playlist-title
+        display none
+
+    .track-title
+        color var-use( color-primary )
+        font-size 20px
+        font-weight 300
+        font-family 'Open Sans', sans-serif
+
+    .fa-spotify
+        color #1db954
+
+    .fa-soundcloud
+        color #f50
+
+    .wave
+        margin 20px 30px
+
+    .iron-audioplayer
+        .playlist
+            .store-list
+                .song-store
+                    margin-left  0px
+                    margin-right 10px
+
+    .tracklist-item-title
+        text-align left
+
+    .album-player
+        padding 25px 0px
+        margin-top 0px
+        flex 0 1 225px
+
+    .number
+        display none
+
+    .follow-us
+        margin-left auto
+        margin-right auto
+        width 100%
+        display block
+        text-align center
+
+        @media screen and ( min-width $screen-md )
+            width 50%
+
+        ul
+            margin-bottom 40px
+
+    .follow-us--menu
+        .menu-item
+            a
+                border: 2px solid var-use( color-primary )
+                color var-use( color-primary )
+                text-decoration none
+
+                &:hover
+                    border: 2px solid $faded-blue
+                    color $faded-blue

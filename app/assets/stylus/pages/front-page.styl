@@ -65,6 +65,44 @@
                 padding-right 40px
                 transform none
 
+    &--websites
+        display flex
+        flex-direction column
+        padding 60px 10px 70px 10px
+        position relative
+
+        @media screen and ( min-width $screen-md )
+            padding 60px 0px 70px 0px
+
+        &-content
+            width 100%
+
+        &-image
+            width 33%
+
+        &-title
+            color var-use( color-primary )
+            display inline-block
+            font-size 32px
+            font-weight 300
+            letter-spacing 3px
+            margin 0 0 40px
+            position relative
+            text-align center
+            text-transform uppercase
+            width 100%
+
+            &:after
+                border-bottom 1px solid var-use( color-primary )
+                bottom -20px
+                content ''
+                left 0
+                margin-left auto
+                margin-right auto
+                position absolute
+                right 0
+                width 40px
+
     &--quote
         background-color var-use( color-primary )
         background-position center
