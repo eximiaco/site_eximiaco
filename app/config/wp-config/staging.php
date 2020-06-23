@@ -89,6 +89,9 @@ define('COOKIE_DOMAIN', false);
 #define('COOKIEPATH', '');
 #define('SITECOOKIEPATH', '');
 
+/* MailChimp RSS URL to Sync newsletters */
+define('MAILCHIMP_RSS_URL', getenv( 'MAILCHIMP_RSS_URL' ));
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

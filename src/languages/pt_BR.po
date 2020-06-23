@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-06-03T17:57:30+00:00\n"
+"POT-Creation-Date: 2020-06-05T13:34:00+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -35,6 +35,15 @@ msgstr "Desculpe! Esta página não parece existir."
 #: 404.php:22
 msgid "Back to home"
 msgstr "Voltar para página inicial"
+
+#. Template Name of the theme
+msgid "Newsletters Calendar"
+msgstr "Calendário Newsletter"
+
+#: archive-newsletter.php:38 includes/PostType/Newsletter.php:39
+#: includes/PostType/Newsletter.php:40
+msgid "Newsletter"
+msgstr "Newsletter"
 
 #: author.php:37 index.php:37
 msgid "Previous Page"
@@ -704,6 +713,36 @@ msgstr "Logo da Empresa"
 msgid "Order"
 msgstr "Ordem"
 
+#: includes/Integration/MailChimp/MailChimp.php:41
+#: includes/Integration/MailChimp/MailChimp.php:42
+#: includes/Integration/MailChimp/MailChimp.php:59
+msgid "Sync newsletter"
+msgstr "Sincronizar newsletter"
+
+#: includes/Integration/MailChimp/MailChimp.php:61
+msgid "Synchronization of newsletters with MailChimp."
+msgstr "Sincronização de newsletters com o MailChimp."
+
+#: includes/Integration/MailChimp/MailChimp.php:121
+msgid "New newsletters inserted:"
+msgstr "Novas newsletters inseridas:"
+
+#: includes/Integration/MailChimp/MailChimp.php:131
+msgid "Newsletters removed:"
+msgstr "Newsletters removidas:"
+
+#: includes/Integration/MailChimp/MailChimp.php:140
+msgid "No new changes."
+msgstr "Sem novas alterações."
+
+#: includes/Integration/MailChimp/MailChimp.php:218
+msgid "Sync completed successfully."
+msgstr "Sincronização concluída com sucesso."
+
+#: includes/Integration/MailChimp/MailChimp.php:227
+msgid "An error occurred during synchronization."
+msgstr "Ocorreu um erro durante a sincronização."
+
 #: includes/Integration/Polylang/Polylang.php:51
 msgid "Contact Phone"
 msgstr "Telefone de contato"
@@ -864,6 +903,10 @@ msgstr "Nenhum Lab encontrado."
 #: includes/PostType/Lab.php:46
 msgid "No labs found in Trash."
 msgstr "Nenhum lab encontrado na lixeira."
+
+#: includes/PostType/Newsletter.php:41
+msgid "All Newsletters"
+msgstr "Todas Newsletters"
 
 #. Template Name of the theme
 #: includes/PostType/Service.php:36
@@ -1270,9 +1313,6 @@ msgstr "Veja mais"
 
 #~ msgid "Most Valuable Professional"
 #~ msgstr "Most Valuable Professional"
-
-#~ msgid "Newsletter"
-#~ msgstr "Newsletter"
 
 #~ msgid "Stay informed with our publications"
 #~ msgstr "Mantenha-se informado com nossas publicações"

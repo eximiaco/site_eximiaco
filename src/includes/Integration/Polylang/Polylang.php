@@ -78,6 +78,7 @@ class Polylang extends Base {
 		$post_types['event']       = 'event';
 		$post_types['service']     = 'service';
 		$post_types['testimonial'] = 'testimonial';
+		$post_types['newsletter']  = 'newsletter';
 
 		return $post_types;
 	}

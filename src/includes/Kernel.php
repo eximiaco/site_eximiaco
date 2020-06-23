@@ -81,6 +81,8 @@ class Kernel {
 
 			\Aztec\Integration\ReCaptcha\NoCaptcha::class,
 
+			\Aztec\Integration\MailChimp\MailChimp::class,
+
 			\Aztec\Pages\Blog::class,
 			\Aztec\Pages\Login::class,
 			\Aztec\Pages\Contact::class,
@@ -104,6 +106,7 @@ class Kernel {
 			\Aztec\PostType\Testimonial::class,
 			\Aztec\PostType\Bliki::class,
 			\Aztec\PostType\Client::class,
+			\Aztec\PostType\Newsletter::class,
 
 			\Aztec\Setup\Assets::class,
 			\Aztec\Setup\Comments::class,

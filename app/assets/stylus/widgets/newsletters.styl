@@ -1,0 +1,43 @@
+.newsletters
+    &__container
+        margin-bottom 70px
+
+.card
+    &--newsletters
+        font-weight bold
+        height auto
+        padding 0
+        text-align left
+
+        @media screen and ( min-width $screen-md )
+            margin 0 30px 30px 0
+            width calc( 50% - 30px )
+
+            &:nth-child( 2n )
+                margin-right 0
+
+        @media screen and ( min-width $screen-lg )
+            width calc( 33.33% - 30px )
+
+            &:nth-child( 2n )
+                margin-right 30px
+
+            &:nth-child( 3n + 0 )
+                margin-right 0
+
+        & ^[0]__date
+            border-top 1px solid var(--color-secondary)
+            color var(--color-secondary)
+            display block
+            font-size 18px
+            font-weight 600
+            margin-top 15px
+            padding-top 4px
+            text-align right
+            text-transform capitalize
+
+            &-bordered
+                border-bottom 1px solid var(--color-secondary)
+                border-right 1px solid var(--color-secondary)
+                display inline-block
+                padding 5px 10px
