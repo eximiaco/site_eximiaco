@@ -123,6 +123,9 @@ class Kernel {
 			\Aztec\Shortcode\Explanation::class,
 			\Aztec\Shortcode\Twitter::class,
 			\Aztec\Shortcode\Veja::class,
+			\Aztec\Shortcode\Information::class,
+			\Aztec\Shortcode\Presentation::class,
+			\Aztec\Shortcode\Warning::class,
 
 			\Aztec\Taxonomy\Serie::class,
 			\Aztec\Taxonomy\Index::class,

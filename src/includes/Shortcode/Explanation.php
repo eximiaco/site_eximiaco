@@ -28,12 +28,19 @@ class Explanation extends Base {
 	 * @param  string $content The content.
 	 * @return string
 	 */
+
 	public function shortcode_explanation( $atts, $content = null ) {
+		$image = '';
+		if ( array_key_exists( 'img', $atts ) ) {
+			$image = sprintf( '<img src="%s/assets/images/%s.png" />', get_template_directory_uri(), $atts['img'] );
+		}
+
 		return sprintf( '<div class="shortcode-explanation">
 			<div class="shortcode-explanation__content">
 				<span class="shortcode-explanation__title">%s</span>
 				%s
+				%s
 			</div>
-		</div>', $atts['title'], $content );
+		</div>', $atts['title'], $image, $content );
 	}
 }
