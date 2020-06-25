@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elemar Jr Blog Theme 1.0.18\n"
+"Project-Id-Version: Elemar Jr Blog Theme 1.0.19\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-06-05T13:34:00+00:00\n"
+"POT-Creation-Date: 2020-06-23T19:04:37+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: elemarjr\n"
@@ -36,16 +36,6 @@ msgstr ""
 
 #: 404.php:22
 msgid "Back to home"
-msgstr ""
-
-#. Template Name of the theme
-msgid "Newsletters Calendar"
-msgstr ""
-
-#: archive-newsletter.php:38
-#: includes/PostType/Newsletter.php:39
-#: includes/PostType/Newsletter.php:40
-msgid "Newsletter"
 msgstr ""
 
 #: author.php:37
@@ -78,8 +68,8 @@ msgstr ""
 #: includes/Helper/PageSection.php:57
 #: includes/Integration/ACF/Pages/About.php:111
 #: includes/Integration/ACF/Pages/Event.php:58
-#: includes/Integration/ACF/Pages/HomePage.php:81
-#: includes/Integration/ACF/Pages/HomePage.php:235
+#: includes/Integration/ACF/Pages/HomePage.php:82
+#: includes/Integration/ACF/Pages/HomePage.php:307
 #: includes/Integration/ACF/Pages/Page.php:69
 #: includes/Integration/ACF/Pages/Resums.php:82
 msgid "Text"
@@ -204,14 +194,14 @@ msgstr ""
 #: includes/Integration/ACF/Pages/About.php:98
 #: includes/Integration/ACF/Pages/Contact.php:59
 #: includes/Integration/ACF/Pages/Feature.php:88
-#: includes/Integration/ACF/Pages/HomePage.php:258
+#: includes/Integration/ACF/Pages/HomePage.php:330
 #: includes/Integration/ACF/Pages/Page.php:57
 #: includes/Integration/ACF/Pages/Resums.php:75
 msgid "Title"
 msgstr ""
 
 #: includes/Customize/Newsletter.php:87
-#: includes/Integration/ACF/Pages/HomePage.php:195
+#: includes/Integration/ACF/Pages/HomePage.php:267
 msgid "Background"
 msgstr ""
 
@@ -378,20 +368,20 @@ msgstr ""
 #: includes/Helper/PageSection.php:43
 #: includes/Integration/ACF/Pages/About.php:105
 #: includes/Integration/ACF/Pages/Contact.php:60
-#: includes/Integration/ACF/Pages/HomePage.php:75
+#: includes/Integration/ACF/Pages/HomePage.php:76
 msgid "Use * to bold"
 msgstr ""
 
 #: includes/Helper/PageSection.php:42
 #: includes/Integration/ACF/Pages/About.php:104
-#: includes/Integration/ACF/Pages/HomePage.php:74
+#: includes/Integration/ACF/Pages/HomePage.php:75
 msgid "Sub-Title"
 msgstr ""
 
 #: includes/Helper/PageSection.php:71
 #: includes/Integration/ACF/Pages/About.php:117
-#: includes/Integration/ACF/Pages/HomePage.php:87
-#: includes/Integration/ACF/Pages/HomePage.php:173
+#: includes/Integration/ACF/Pages/HomePage.php:88
+#: includes/Integration/ACF/Pages/HomePage.php:174
 msgid "Image"
 msgstr ""
 
@@ -433,13 +423,13 @@ msgstr ""
 
 #: includes/Helper/PageSection.php:128
 #: includes/Integration/ACF/Pages/About.php:122
-#: includes/Integration/ACF/Pages/HomePage.php:92
+#: includes/Integration/ACF/Pages/HomePage.php:93
 msgid "Button label"
 msgstr ""
 
 #: includes/Helper/PageSection.php:144
 #: includes/Integration/ACF/Pages/About.php:131
-#: includes/Integration/ACF/Pages/HomePage.php:101
+#: includes/Integration/ACF/Pages/HomePage.php:102
 msgid "Button URL"
 msgstr ""
 
@@ -476,7 +466,7 @@ msgid "Without padding"
 msgstr ""
 
 #: includes/Integration/ACF/Pages/About.php:85
-#: includes/Integration/ACF/Pages/HomePage.php:55
+#: includes/Integration/ACF/Pages/HomePage.php:56
 msgid "Slider hero"
 msgstr ""
 
@@ -560,67 +550,101 @@ msgstr ""
 msgid "Site"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:68
+#: includes/Integration/ACF/Pages/HomePage.php:69
 #: includes/Integration/ACF/PostType/Event.php:62
 #: template-parts/newsletter/form.php:49
 msgid "Name"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:123
+#: includes/Integration/ACF/Pages/HomePage.php:124
 msgid "Purpose"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:131
+#: includes/Integration/ACF/Pages/HomePage.php:132
 msgid "Section title"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:137
+#: includes/Integration/ACF/Pages/HomePage.php:138
 msgid "Icon Class 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:143
+#: includes/Integration/ACF/Pages/HomePage.php:144
 msgid "Title 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:149
+#: includes/Integration/ACF/Pages/HomePage.php:150
+#: includes/Integration/ACF/Pages/HomePage.php:203
 msgid "Text 1"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:155
+#: includes/Integration/ACF/Pages/HomePage.php:156
 msgid "Icon Class 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:161
+#: includes/Integration/ACF/Pages/HomePage.php:162
 msgid "Title 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:167
+#: includes/Integration/ACF/Pages/HomePage.php:168
+#: includes/Integration/ACF/Pages/HomePage.php:227
 msgid "Text 2"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:188
-#: includes/Integration/ACF/Pages/HomePage.php:201
+#: includes/Integration/ACF/Pages/HomePage.php:189
+msgid "Websites"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:197
+msgid "Section Title"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:209
+msgid "Image 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:215
+msgid "Logo 1"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:221
+msgid "Site Url"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:233
+msgid "Image 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:239
+msgid "Logo 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:245
+msgid "Site Url 2"
+msgstr ""
+
+#: includes/Integration/ACF/Pages/HomePage.php:260
+#: includes/Integration/ACF/Pages/HomePage.php:273
 msgid "Quote"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:207
+#: includes/Integration/ACF/Pages/HomePage.php:279
 msgid "Quote author"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:213
+#: includes/Integration/ACF/Pages/HomePage.php:285
 msgid "Quote job role"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:228
-#: page-templates/home.php:115
+#: includes/Integration/ACF/Pages/HomePage.php:300
+#: page-templates/home.php:116
 msgid "Blog"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:236
+#: includes/Integration/ACF/Pages/HomePage.php:308
 msgid "Text after the section title"
 msgstr ""
 
-#: includes/Integration/ACF/Pages/HomePage.php:251
+#: includes/Integration/ACF/Pages/HomePage.php:323
 #: includes/PostType/Testimonial.php:36
 msgid "Testimonials"
 msgstr ""
@@ -723,33 +747,33 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:41
 #: includes/Integration/MailChimp/MailChimp.php:42
-#: includes/Integration/MailChimp/MailChimp.php:59
+#: includes/Integration/MailChimp/MailChimp.php:43
+#: includes/Integration/MailChimp/MailChimp.php:60
 msgid "Sync newsletter"
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:61
+#: includes/Integration/MailChimp/MailChimp.php:62
 msgid "Synchronization of newsletters with MailChimp."
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:121
+#: includes/Integration/MailChimp/MailChimp.php:122
 msgid "New newsletters inserted:"
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:131
+#: includes/Integration/MailChimp/MailChimp.php:127
 msgid "Newsletters removed:"
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:140
+#: includes/Integration/MailChimp/MailChimp.php:132
 msgid "No new changes."
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:218
+#: includes/Integration/MailChimp/MailChimp.php:242
 msgid "Sync completed successfully."
 msgstr ""
 
-#: includes/Integration/MailChimp/MailChimp.php:227
+#: includes/Integration/MailChimp/MailChimp.php:251
 msgid "An error occurred during synchronization."
 msgstr ""
 
@@ -917,6 +941,11 @@ msgstr ""
 msgid "No labs found in Trash."
 msgstr ""
 
+#: includes/PostType/Newsletter.php:39
+#: includes/PostType/Newsletter.php:40
+msgid "Newsletter"
+msgstr ""
+
 #: includes/PostType/Newsletter.php:41
 msgid "All Newsletters"
 msgstr ""
@@ -1004,12 +1033,16 @@ msgstr ""
 msgid "No testimonials found in Trash."
 msgstr ""
 
-#: includes/Setup/Navigation.php:36
+#: includes/Setup/Navigation.php:37
 msgid "Primary"
 msgstr ""
 
-#: includes/Setup/Navigation.php:37
+#: includes/Setup/Navigation.php:38
 msgid "Social Menu"
+msgstr ""
+
+#: includes/Setup/Navigation.php:39
+msgid "Store Menu"
 msgstr ""
 
 #: includes/Shortcode/Veja.php:44
@@ -1131,6 +1164,18 @@ msgid "Send"
 msgstr ""
 
 #. Template Name of the theme
+msgid "Drops"
+msgstr ""
+
+#: page-templates/drops.php:30
+msgid "Drops from ExímiaCo"
+msgstr ""
+
+#: page-templates/drops.php:33
+msgid "Also listen in other platforms"
+msgstr ""
+
+#. Template Name of the theme
 msgid "Events Calendar"
 msgstr ""
 
@@ -1142,8 +1187,16 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: page-templates/home.php:129
+#: page-templates/home.php:130
 msgid "Last posts in English"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Newsletters Calendar"
+msgstr ""
+
+#: page-templates/newsletter.php:40
+msgid "Newsletters"
 msgstr ""
 
 #. Template Name of the theme

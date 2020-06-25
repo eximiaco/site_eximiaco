@@ -37,7 +37,7 @@ get_header(); ?>
 	switch_to_blog( get_network()->site_id );
 	foreach ( $newsletters_by_year as $year => $newsletters ) : ?>
 		<div class="page-header">
-			<h3 class="page-header--title"><?php echo esc_html( __( 'Newsletter', 'elemarjr' ) ); ?> <b><?php echo esc_html( $year ); ?></b></h3>
+			<h3 class="page-header--title"><?php echo esc_html( __( 'Newsletters', 'elemarjr' ) ); ?> <b><?php echo esc_html( $year ); ?></b></h3>
 		</div>
 		<div class="cards-list cards-list--newsletters post-list__loaded animated fadeInUpBig">
 			<div class="cards-list__wrapper">
