@@ -126,6 +126,7 @@ class Kernel {
 			\Aztec\Shortcode\Information::class,
 			\Aztec\Shortcode\Presentation::class,
 			\Aztec\Shortcode\Warning::class,
+			\Aztec\Shortcode\Story::class,
 
 			\Aztec\Taxonomy\Serie::class,
 			\Aztec\Taxonomy\Index::class,

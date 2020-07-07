@@ -25,7 +25,8 @@ require([
     'app/site-search',
     'app/testimonial',
     'app/translate-request',
-    'app/message'
+    'app/message',
+    'app/scroll-indicator'
 ], function() {
     setTimeout(function() {
         jQuery( window ).trigger('resize');

@@ -1,0 +1,29 @@
+.shortcode-story
+    var-declare( shortcode-story-margin, 20px 0px )
+    var-declare( shortcode-story-flex-direction, column )
+    var-declare( shortcode-story__content-padding, 10px 10px 10px 10px)
+    var-declare( shortcode-story__img-margin-left, auto)
+    var-declare( shortcode-story__img-margin-right, auto)
+    background-color $gray-light-50
+    margin var-use( shortcode-story-margin )
+    width 100%
+    display flex
+    flex-direction var-use( shortcode-story-flex-direction )
+
+    @media screen and ( min-width $screen-md )
+        var-declare( shortcode-story-flex-direction, row )
+        var-declare( shortcode-story__content-padding, 10px 20px )
+        var-declare( shortcode-story__img-margin-left, 20px)
+        var-declare( shortcode-story__img-margin-right, 0px)
+
+    img
+        margin-top 30px
+        margin-left var-use( shortcode-story__img-margin-left )
+        margin-right var-use( shortcode-story__img-margin-right )
+        max-height 70px
+        max-width 70px
+
+    &__content
+        font-size 16px
+        padding var-use( shortcode-story__content-padding )
+        font-style italic
