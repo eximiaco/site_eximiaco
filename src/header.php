@@ -42,12 +42,27 @@ $display_hero = $container->get( 'display_hero' );
 					</li>
 				<?php endforeach; ?>
 				</ul><!-- .langs-navigation -->
+				<?php get_template_part( 'template-parts/social-menu-header' ); ?>
 				<ul class="websites-navegation">
 					<?php if ( ! empty( get_theme_mod( 'head_primary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_primary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_primary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_primary_title' ) ); ?></a></li>
+						<li class="menu-item<?php echo ( get_theme_mod( 'head_primary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>">
+							<a href="<?php echo esc_url( get_theme_mod( 'head_primary_url' ) ); ?>" class="menu-link menu-link--<?php echo str_replace( '.', '', esc_attr( get_theme_mod( 'head_primary_title' ) ) ); ?>">
+								<?php if ( null !== get_theme_mod( 'head_primary_logo' ) ) : ?>
+									<img src="<?php echo esc_url( get_theme_mod( 'head_primary_logo' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'head_primary_title' ) ); ?>">
+								<?php endif; ?>
+								<?php echo esc_attr( get_theme_mod( 'head_primary_title' ) ); ?>
+							</a>
+						</li>
 					<?php endif; ?>
 					<?php if ( ! empty( get_theme_mod( 'head_secondary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_secondary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_secondary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_secondary_title' ) ); ?></a></li>
+						<li class="menu-item<?php echo ( get_theme_mod( 'head_secondary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>">
+							<a href="<?php echo esc_url( get_theme_mod( 'head_secondary_url' ) ); ?>" class="menu-link menu-link--<?php echo str_replace( '.', '', esc_attr( get_theme_mod( 'head_secondary_title' ) ) ); ?>">
+								<?php if ( null !== get_theme_mod( 'head_secondary_logo' ) ) : ?>
+									<img src="<?php echo esc_url( get_theme_mod( 'head_secondary_logo' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'head_secondary_title' ) ); ?>">
+								<?php endif; ?>
+								<?php echo esc_attr( get_theme_mod( 'head_secondary_title' ) ); ?>
+							</a>
+						</li>
 					<?php endif; ?>
 				</ul>
 			</div>
@@ -75,15 +90,13 @@ $display_hero = $container->get( 'display_hero' );
 						)
 						?>
 				</nav>
-				<ul class="langs-navigation">
-					<li class="menu-item">
-						<a href="#" class="menu-link">
-							<button class="search-toggle" aria-controls="search" aria-expanded="false">
-								<i class="i-search"></i>
-							</button>
-						</a>
-					</li>
-				</ul>
+				<div class="menu-item">
+					<a href="#" class="menu-link">
+						<button class="search-toggle" aria-controls="search" aria-expanded="false">
+							<i class="i-search"></i>
+						</button>
+					</a>
+				</div>
 				<div id="site-search" class="site-search">
 					<form method="GET" class="search-form">
 						<button type="submit" class="search-submit">

@@ -61,26 +61,45 @@ button
 
 // Header wrapper
 .top-header-wrapper
+    background-color white
     fixed top left
     height $sm-nav-height
     transition .2s ease-out
     width 100%
     z-index 99
+    border-top 7px solid $color-co
+
+    @media screen and ( min-width $nav-breakpoint )
+        border-top-width 11px
+        height $lg-nav-height
 
 .top-languages
     align-content right
     align-items center
-    background-color rgba( 0, 0, 0, .4 )
+    border-bottom 1px solid $gray-light-300
     display flex
-    height 40px
+    height 25px
+
+    @media screen and ( min-width $nav-breakpoint )
+        height 43px
+
+
+    @media screen and ( max-width 896px )
+        .container
+            display flex
+            flex-flow row-reverse
+            justify-content space-between
 
 .top-header
     align-items center
     display flex
     justify-content space-between
-    height calc( 100% - 40px )
+    height calc( 100% - 25px )
     position relative
     z-index 9999
+
+    @media screen and ( min-width $nav-breakpoint )
+        height calc( 100% - 43px )
 
     &--collapse
         background $header-bg
@@ -103,7 +122,7 @@ button
             padding 0
             position static
             top 0
-            width calc( 100% - 125px )
+            width auto
 
             &.toggled
                 display flex
@@ -129,14 +148,13 @@ button
 .site-branding
     display block
     transition width $transition-default
-    width 125px
+    width 155px
 
     img
-        max-height 100%
         max-width 100%
 
     @media screen and ( min-width $nav-breakpoint )
-        width 200px
+        width 250px
 
 
 // Nav
@@ -168,26 +186,37 @@ button
             height 100%
 
         a
-            border-bottom 1px solid $white
+            border-bottom 2px solid transparent
             color $white
             display block
-            font-size 12px
+            font-size 17px
             padding 15px 0
             text-decoration none
             text-transform uppercase
+            transition all 0.3s ease
+
+            @media screen and ( min-width $nav-breakpoint )
+                color #3074b9
+
+            /.sticky &
+                font-size 14px
 
             @media screen and ( min-width $nav-breakpoint )
                 border-bottom 1px solid transparent
                 margin 0 10px
-                padding 3px 0 0
+                padding 5px 0
 
             @media screen and ( min-width $screen-lg )
-                margin 0 12.5px
+                margin 0 15px
 
         &.current-menu-item,
         &.current-menu-ancestor
             > a
-                border-bottom 1px solid var-use( color-primary )
+                border-bottom 2px solid white
+
+                @media screen and ( min-width $nav-breakpoint )
+                    border-color #2c3475
+                    color #2c3475
 
         &-has-children
             position relative
@@ -196,8 +225,8 @@ button
                 &:after
                     absolute top right -20px
                     align-items center
-                    color $white
-                    content i-arrow-down
+                    color $color-co
+                    // content i-arrow-down
                     cursor pointer
                     display flex
                     font-family 'icomoon'
@@ -259,6 +288,7 @@ button
                 padding-right 0
 
             a
+                color $white
                 padding-bottom 5px
 
                 @media screen and ( min-width $nav-breakpoint )
@@ -281,12 +311,12 @@ button
         outline none
 
     .icon-bar
-        background $white
+        background $color-co
         border-radius 1px
         display block
-        height 2px
+        height 3px
         transition transform $transition-default
-        width 22px
+        width 31px
 
         & + .icon-bar
             margin-top 4px
@@ -308,31 +338,38 @@ button
 // Langs
 .langs-navigation
     float right
-    height 40px
+    height 25px
     list-style none
-    margin 0 0 0 20px
+    margin 0
     padding 0
+
+    @media screen and ( min-width $nav-breakpoint )
+        align-items center
+        border-left 1px solid $gray-light-300
+        display flex
+        height 43px
+        padding 0 15px
 
     .menu-item
         border-bottom 1px solid transparent
         display inline-block
         font-size 12px
-        margin 0 0 0 20px
+        margin 0 5px
+
+        @media screen and ( min-width $nav-breakpoint )
+            font-size 16px
 
         &.current-menu-item a
-            color var-use( color-primary )
+            color $color-co
 
     .menu-link
-        color $white
+        color $gray-light-200
         display block
-        height 40px
-        line-height 40px
+        font-weight 600
+        height 25px
+        line-height 25px
         padding 0
         text-decoration none
-        text-transform uppercase
-
-    @media screen and ( min-width $nav-breakpoint )
-        font-weight bold
 
         .menu-item
             margin 0 0 0 20px
@@ -341,37 +378,100 @@ button
                 margin-left 15px
 
             &.current-menu-item a
-                color $white
+                color $gray-light-200
 
-.websites-navegation
+.social-navegation
     float right
-    height 40px
+    height 25px
     list-style none
     margin 0
     padding 0
 
+    @media screen and ( min-width $nav-breakpoint )
+        align-items center
+        border-left 1px solid $gray-light-300
+        display flex
+        height 43px
+        padding 0 15px
+
+    &--list
+        margin 0
+
     .menu-item
         display inline-block
         font-size 12px
-        margin 0 0 0 20px
+        margin 0 5px
 
-        &.current-menu-item a,
-        &.current-menu-item:hover a
-            background-color var( --color-primary )
+        a
+            color $gray-light-200
+            display block
+            height 25px
+            line-height 25px
+            padding 0 5px
+            text-decoration none
+            text-transform uppercase
 
-    .menu-link
-        color $white
-        display block
-        height 40px
-        line-height 40px
-        padding 0 5px
-        text-decoration none
-        text-transform uppercase
+            @media screen and ( min-width $nav-breakpoint )
+                font-size 16px
+
+.websites-navegation
+    float right
+    height 25px
+    list-style none
+    margin 0
+    padding 0
 
     @media screen and ( min-width $nav-breakpoint )
-        font-weight bold
+        align-items center
+        display flex
+        height 43px
+        padding 0 15px
+
+    .menu-item
+        display inline-block
+        font-size 12px
+        margin 0 10px 0 0
+
+        @media screen and ( min-width $nav-breakpoint )
+            margin 0 5px 0 25px
+
+    .menu-link
+        color var-use( color-primary )
+        display block
+        font-weight 600
+        height 25px
+        line-height 25px
+        text-decoration none
+
+        @media screen and ( min-width $nav-breakpoint )
+            font-size 16px
+
+        img
+            display none
+
+            @media screen and ( min-width $nav-breakpoint )
+                display inline-block
+
+
+        &--ms
+            color $color-ms
+
+        &--tech
+            color $color-tech
+
+        &--co
+            color $color-co
 
 // Search
+.search-toggle
+    display none
+    color $color-co
+    font-size 22px
+    margin-left 20px
+
+    @media screen and ( min-width $nav-breakpoint )
+        display inline-block
+
 .search-form
     align-items center
     border-bottom 1px solid $white
@@ -380,6 +480,10 @@ button
     height 48px
     margin-bottom 10px
     padding 15px 0
+
+    @media screen and ( min-width $nav-breakpoint )
+        color $color-co
+        border-color $color-co
 
     .search-submit
         margin-right 1rem
@@ -408,7 +512,7 @@ button
         margin-bottom 0
 
         input[type='search']
-            border-bottom 1px solid $white
+            border-bottom 1px solid $color-co
             height 28px
             line-height 28px
             margin 0 8px
@@ -422,7 +526,7 @@ button
 
     &:after,
     &:before
-        background $white
+        background $color-co
         content ''
         display block
         height 1px

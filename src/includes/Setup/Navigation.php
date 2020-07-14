@@ -21,6 +21,7 @@ class Navigation extends Base {
 		add_action( 'after_setup_theme', $this->callback( 'register_nav_menus' ) );
 
 		add_filter( 'walker_nav_menu_start_el', $this->callback( 'social_walker_nav_menu_start_el' ), 10, 4 );
+		add_filter( 'walker_nav_menu_start_el', $this->callback( 'social_header_walker_nav_menu_start_el' ), 10, 4 );
 		add_filter( 'walker_nav_menu_start_el', $this->callback( 'store_walker_nav_menu_start_el' ), 10, 4 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_services_custom_post_type_highlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_restricted_area_link_hightlight' ), 10, 2 );
@@ -36,6 +37,7 @@ class Navigation extends Base {
 			array(
 				'primary' => __( 'Primary', 'elemarjr' ),
 				'social' => __( 'Social Menu', 'elemarjr' ),
+				'social_header' => __( 'Social Menu Header', 'elemarjr' ),
 				'store' => __( 'Store Menu', 'elemarjr'),
 			)
 		);
@@ -53,6 +55,25 @@ class Navigation extends Base {
 	 */
 	public function social_walker_nav_menu_start_el( $item_output, $item, $depth, $args ) {
 		if ( 'social' === $args->theme_location ) {
+			$icon        = sprintf( '<i class="%s"></i>', $this->social_menu_item_icon( $item->url ) );
+			$item_output = str_replace( $args->link_after, "</span>{$icon}", $item_output );
+		}
+
+		return $item_output;
+	}
+
+	/**
+	 * Add social icons to social menu header.
+	 *
+	 * @param  string    $item_output The menu item's starting HTML output.
+	 * @param  \WP_Post  $item The current menu item.
+	 * @param  int       $depth Depth of menu item. Used for padding.
+	 * @param  \stdClass $args An object of wp_nav_menu() arguments.
+	 *
+	 * @return string
+	 */
+	public function social_header_walker_nav_menu_start_el( $item_output, $item, $depth, $args ) {
+		if ( 'social_header' === $args->theme_location ) {
 			$icon        = sprintf( '<i class="%s"></i>', $this->social_menu_item_icon( $item->url ) );
 			$item_output = str_replace( $args->link_after, "</span>{$icon}", $item_output );
 		}

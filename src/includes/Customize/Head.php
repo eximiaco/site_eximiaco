@@ -46,8 +46,8 @@ class Head extends Base {
 			)
 		);
 
-		$setting_id = $this->get_theme_mod_section_id() . '_logo';
-		$control_id = $this->get_theme_mod_section_id() . '_logo_control';
+		$setting_id = $section_id . '_logo';
+		$control_id = $section_id . '_logo_control';
 
 		$wp_customize->add_setting(
 			$setting_id, array(
@@ -92,6 +92,23 @@ class Head extends Base {
 			'section' => $section_id,
 			)
 		);
+		$wp_customize->add_setting(
+			$section_id . '_primary_logo', array(
+			'transport' => 'refresh',
+			'height' => 325,
+			)
+		);
+		$wp_customize->add_control(
+			new \WP_Customize_Image_Control(
+				$wp_customize,
+				$section_id . '_primary_logo_control',
+				array(
+					'description' => sprintf( __( 'Logo', 'elemarjr' ) ),
+					'section'     => $section_id,
+					'settings'    => $section_id . '_primary_logo',
+				)
+			)
+		);
 
 		// Secondary link.
 		$wp_customize->add_setting(
@@ -117,6 +134,23 @@ class Head extends Base {
 			'type' => 'text',
 			'description' => __( 'Website Title', 'elemarjr' ),
 			'section' => $section_id,
+			)
+		);
+		$wp_customize->add_setting(
+			$section_id . '_secondary_logo', array(
+			'transport' => 'refresh',
+			'height' => 325,
+			)
+		);
+		$wp_customize->add_control(
+			new \WP_Customize_Image_Control(
+				$wp_customize,
+				$section_id . '_secondary_logo_control',
+				array(
+					'description' => sprintf( __( 'Logo', 'elemarjr' ) ),
+					'section'     => $section_id,
+					'settings'    => $section_id . '_secondary_logo',
+				)
 			)
 		);
 
