@@ -189,7 +189,7 @@ button
             border-bottom 2px solid transparent
             color $white
             display block
-            font-size 17px
+            font-size 14px
             padding 15px 0
             text-decoration none
             text-transform uppercase
@@ -197,9 +197,6 @@ button
 
             @media screen and ( min-width $nav-breakpoint )
                 color #3074b9
-
-            /.sticky &
-                font-size 14px
 
             @media screen and ( min-width $nav-breakpoint )
                 border-bottom 1px solid transparent
@@ -357,7 +354,7 @@ button
         margin 0 5px
 
         @media screen and ( min-width $nav-breakpoint )
-            font-size 16px
+            font-size 14px
 
         &.current-menu-item a
             color $color-co
@@ -414,6 +411,20 @@ button
             @media screen and ( min-width $nav-breakpoint )
                 font-size 16px
 
+            &:hover
+
+                .i-youtube
+                    color #dc2924
+
+                .i-facebook
+                    color #567ec4
+
+                .i-twitter
+                    color #1ca4f2
+
+                .i-linkedin
+                    color #007db3
+
 .websites-navegation
     float right
     height 25px
@@ -448,6 +459,7 @@ button
 
         img
             display none
+            max-height 16px
 
             @media screen and ( min-width $nav-breakpoint )
                 display inline-block
