@@ -59,14 +59,16 @@ $display_hero = $container->get( 'display_hero' );
 			<div class="top-header--collapse">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
-								'depth'          => 2,
-							)
+					set_query_var( 'current_blog_id', get_current_blog_id() );
+					switch_to_blog( get_network()->site_id );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
 						)
-						?>
+					);
+					restore_current_blog();
+					?>
 				</nav>
 				<div class="menu-item">
 					<a href="#" class="menu-link">

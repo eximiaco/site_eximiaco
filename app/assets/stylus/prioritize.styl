@@ -223,7 +223,7 @@ button
                     absolute top right -20px
                     align-items center
                     color $color-co
-                    // content i-arrow-down
+                    content i-arrow-down
                     cursor pointer
                     display flex
                     font-family 'icomoon'
@@ -259,7 +259,7 @@ button
         display none
         margin-left -20px
         padding-bottom 25px
-        padding-left 65px
+        padding-left 40px
         padding-top 15px
         width 100vw
 
@@ -278,6 +278,21 @@ button
             list-style-type none
             padding-right 20px
             width 100%
+            display block
+
+            .sub-menu
+                margin-left 20px
+                padding 0
+                position initial
+                width 100%
+
+                @media screen and ( min-width $nav-breakpoint )
+                    margin-left 0
+
+                a
+                    &:before
+                        content '-'
+                        margin-right 5px
 
             @media screen and ( min-width $nav-breakpoint )
                 font-weight normal
@@ -286,6 +301,7 @@ button
 
             a
                 color $white
+                font-size 12px
                 padding-bottom 5px
 
                 @media screen and ( min-width $nav-breakpoint )
@@ -295,11 +311,14 @@ button
                     padding-bottom 5px
                     width 100%
 
+                &:after
+                    content ''
+
                 &:hover,
                 // .main-navigation .menu-item--opened .sub-menu .current-menu-item a
                 ^[0] .menu-item--opened ^[1..1] .current-menu-item ^[-1..-1]
-                    border-bottom-color var-use( color-primary )
-                    color var-use( color-primary )
+                    border-bottom-color $color-co
+                    color $color-co
 
 .menu-toggle
     padding 6px

@@ -27,6 +27,7 @@ class Navigation extends Base {
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_restricted_area_link_hightlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_thinking_link_highlight' ), 10, 2 );
 		add_filter( 'nav_menu_css_class', $this->callback( 'fix_thinking_sub_menu_link_highlight' ), 10, 2 );
+		add_filter( 'nav_menu_css_class', $this->callback( 'fix_subsites_link_highlight' ), 10, 2 );
 	}
 
 	/**
@@ -242,6 +243,23 @@ class Navigation extends Base {
 			} elseif ( 'page-templates/services.php' == get_page_template_slug( $item->object_id ) ) {
 				$classes[] = 'current-menu-item';
 			}
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Fix menu highlight on services custom post type listing.
+	 *
+	 * @param array    $classes    Current menu classes.
+	 * @param \WP_Post $item       Current menu item.
+	 * @return array
+	 */
+	public function fix_subsites_link_highlight( $classes, $item ) {
+		$current_blog_id = get_query_var('current_blog_id');
+
+		if ( ( 'tech' === strtolower( $item->title ) && 2 === $current_blog_id ) || ( 'ms' === strtolower( $item->title ) && 3 === $current_blog_id ) ) {
+			$classes = $this->add_blog_active_class( $classes );
 		}
 
 		return $classes;
