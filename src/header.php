@@ -65,6 +65,7 @@ $display_hero = $container->get( 'display_hero' );
 						array(
 							'theme_location' => 'primary',
 							'menu_id'        => 'primary-menu',
+							'depth'          => 3,
 						)
 					);
 					restore_current_blog();
