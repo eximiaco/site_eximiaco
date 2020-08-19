@@ -39,9 +39,9 @@ class HomePage extends Base {
 			add_action( 'acf/include_fields', $this->callback( 'add_slider_hero_home' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_purpose_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_websites_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_cards_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_quote_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_blog_fields' ) );
-			add_action( 'acf/include_fields', $this->callback( 'add_testimonial_fields' ) );
 		}
 	}
 
@@ -250,6 +250,52 @@ class HomePage extends Base {
 		);
 	}
 
+	public function add_cards_fields() {
+		acf_add_local_field_group(
+			array(
+				'key' => 'Cards',
+				'title' => __( 'Cards', 'elemarjr' ),
+				'hide_on_screen' => array( 'the_content' ),
+				// @todo Use repeater instead two fixed fields
+				'fields' => array(
+					array(
+						'type' => 'text',
+						'key' => 'cards_title',
+						'name' => 'cards_title',
+						'label' => __( 'Section Title', 'elemarjr' ),
+					),
+					array(
+						'type'       => 'repeater',
+						'key'        => 'cards_repeater',
+						'name'       => 'cards_repeater',
+						'layout'     => 'block',
+						'sub_fields' => array(
+							array(
+								'type'         => 'text',
+								'key'          => 'card_title',
+								'name'         => 'card_title',
+								'label'        => __( 'Title', 'elemarjr' ),
+							),
+							array(
+								'type'         => 'text',
+								'key'          => 'card_text',
+								'name'         => 'card_text',
+								'label'        => __( 'Text', 'elemarjr' ),
+							),
+							array(
+								'type'  => 'image',
+								'key'   => 'card_image',
+								'name'  => 'card_image',
+								'label' => __( 'Image', 'elemarjr' ),
+							),
+						)
+					),
+				),
+				'location' => $this->location,
+			)
+		);
+	}
+
 	/**
 	 * Add Quote custom fields
 	 */
@@ -309,28 +355,6 @@ class HomePage extends Base {
 				),
 			 ),
 			 'location' => $this->location,
-			)
-		);
-	}
-
-	/**
-	 * Add Testimonial custom fields
-	 */
-	public function add_testimonial_fields() {
-		acf_add_local_field_group(
-			array(
-				'key' => 'testimonial_section',
-				'title' => __( 'Testimonials', 'elemarjr' ),
-				'hide_on_screen' => array( 'the_content' ),
-				'fields' => array(
-					array(
-						'type' => 'text',
-						'key' => 'testimonial_title',
-						'name' => 'testimonial_title',
-						'label' => __( 'Title', 'elemarjr' ),
-					),
-				),
-				'location' => $this->location,
 			)
 		);
 	}

@@ -1,10 +1,4 @@
 .post
-    // margin-top 70px
-
-    &--header
-        @media screen and ( min-width $screen-lg )
-            padding-left 108px
-
     &--content
         color $black
         font-size 18px
@@ -12,7 +6,6 @@
 
         @media screen and ( min-width $screen-lg )
             margin 0 auto 40px
-            width calc( 100% - 108px )
 
         h2
             font-size 30px
@@ -67,14 +60,18 @@
     .progress
         position fixed
         top 0
-        margin-top 100px
+        margin-top $sm-nav-height-sticky
         width 0%
         height 8px
         background #ccc
+        z-index 98
+
+        @media screen and ( min-width $screen-lg )
+            margin-top $lg-nav-height-sticky
 
         &__bar
             height 8px
-            background var-use( color-primary )
+            background $color-co
             width 0%
 
 

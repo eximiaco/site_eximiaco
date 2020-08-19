@@ -1,0 +1,24 @@
+.post
+    &--comments
+        align-items center
+        color $gray
+        display flex
+        text-align center
+        text-decoration none
+
+        &-icon
+            border 1px solid var-use( color-primary )
+            border-radius 50%
+            color var-use( color-primary )
+            cursor pointer
+            font-size 20px
+            height 32px
+            line-height 30px
+            width 32px
+
+            @media screen and ( min-width $screen-lg )
+                margin-left 0
+
+            &:hover
+                background var-use( color-primary )
+                color $white

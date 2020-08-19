@@ -34,6 +34,9 @@ if ( '' !== $current_category ) { ?>
 			$home_url = get_author_posts_url( get_the_author_meta( 'ID' ) );
 		}
 		?>
+		<li class="cat-block">
+			<?php esc_html_e( 'Categories', 'elemarjr' ); ?>
+		</li>
 		<li class="<?php echo esc_attr( join( ' ', $home_classes ) ); ?>">
 			<a href="<?php echo esc_url( $home_url ); ?>"><?php esc_html_e( 'Show All', 'elemarjr' ); ?></a>
 		</li>

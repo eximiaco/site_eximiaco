@@ -1,18 +1,18 @@
 .top-header-wrapper
     .top-header--collapse
-        top 80px
+        top 75px
 
     &__sticky
         height $sm-nav-height-sticky
 
-        .site-branding
-            width 100px
+        @media screen and ( min-width $nav-breakpoint )
+            height $lg-nav-height-sticky
 
-            @media screen and ( min-width $nav-breakpoint )
-                width 120px
+        .site-branding
+            width 150px
 
         .top-header--collapse
-            top 60px
+            top 68px
 
             @media screen and ( min-width $nav-breakpoint )
                 top 0

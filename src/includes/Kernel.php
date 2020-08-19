@@ -130,6 +130,8 @@ class Kernel {
 
 			\Aztec\Taxonomy\Serie::class,
 			\Aztec\Taxonomy\Index::class,
+
+			\Aztec\Widget\Footer::class,
 		];
 
 		foreach ( $init_classes as $class ) {

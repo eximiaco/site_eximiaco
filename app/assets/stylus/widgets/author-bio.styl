@@ -84,6 +84,28 @@
             color var-use( color-primary )
             text-decoration none
 
+    &__share-item
+        display inline-block
+        font-size 20px
+        margin 0 5px
+        position relative
+
+        a
+            border 2px solid $pinkish-grey
+            border-radius 50%
+            color $pinkish-grey
+            display block
+            height 30px
+            line-height 30px
+            transition all .2s linear
+            width 30px
+            text-align center
+            text-decoration none
+
+            &:hover
+                border-color $dark-grey
+                color $dark-grey
+
     &--single
         border-top 2px solid var-use( color-primary )
         max-width 100%
@@ -130,25 +152,3 @@
 
         &:before
             content none
-
-    &__share-item
-        display inline-block
-        font-size 20px
-        margin 0 5px
-        position relative
-
-        a
-            border 2px solid $pinkish-grey
-            border-radius 50%
-            color $pinkish-grey
-            display block
-            height 30px
-            line-height 30px
-            transition all .2s linear
-            width 30px
-            text-align center
-            text-decoration none
-
-            &:hover
-                border-color $dark-grey
-                color $dark-grey

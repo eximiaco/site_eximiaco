@@ -103,7 +103,7 @@ class Blog extends Base {
 	 * Check if is post list.
 	 */
 	public function is_post_list() {
-		return ! is_post_type_archive() && ( ( is_home() && 0 < ( get_query_var( 'paged' ) ) ) || is_search() || is_archive() );
+		return is_home() || is_archive() || is_search() || is_singular( 'post' ) || is_singular( 'bliki' );
 	}
 
 	/**

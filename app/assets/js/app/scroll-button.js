@@ -11,7 +11,7 @@ define([],function () {
 	} );
 
     jQuery( '.request-translate' ).on( 'click', function() {
-		scrollTo( jQuery( '#translate-request-box' ).offset().top - 100 ); // 72 = .top-header height + 10
+		scrollTo( jQuery( '#translate-request-box' ).offset().top - 140 ); // 72 = .top-header height + 10
     } );
 
     jQuery( '.summary--anchor' ).on( 'click', function() {

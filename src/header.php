@@ -42,14 +42,7 @@ $display_hero = $container->get( 'display_hero' );
 					</li>
 				<?php endforeach; ?>
 				</ul><!-- .langs-navigation -->
-				<ul class="websites-navegation">
-					<?php if ( ! empty( get_theme_mod( 'head_primary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_primary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_primary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_primary_title' ) ); ?></a></li>
-					<?php endif; ?>
-					<?php if ( ! empty( get_theme_mod( 'head_secondary_url' ) ) ) : ?>
-						<li class="menu-item<?php echo ( get_theme_mod( 'head_secondary_url' ) === get_site_url() ? 'current-menu-item' : '' ); ?>"><a href="<?php echo esc_url( get_theme_mod( 'head_secondary_url' ) ); ?>" class="menu-link"><?php echo esc_attr( get_theme_mod( 'head_secondary_title' ) ); ?></a></li>
-					<?php endif; ?>
-				</ul>
+				<?php get_template_part( 'template-parts/social-menu-header' ); ?>
 			</div>
 		</div>
 		<div class="top-header container">
@@ -66,24 +59,25 @@ $display_hero = $container->get( 'display_hero' );
 			<div class="top-header--collapse">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary-menu',
-								'depth'          => 2,
-							)
+					set_query_var( 'current_blog_id', get_current_blog_id() );
+					switch_to_blog( get_network()->site_id );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+							'depth'          => 3,
 						)
-						?>
+					);
+					restore_current_blog();
+					?>
 				</nav>
-				<ul class="langs-navigation">
-					<li class="menu-item">
-						<a href="#" class="menu-link">
-							<button class="search-toggle" aria-controls="search" aria-expanded="false">
-								<i class="i-search"></i>
-							</button>
-						</a>
-					</li>
-				</ul>
+				<div class="menu-item">
+					<a href="#" class="menu-link">
+						<button class="search-toggle" aria-controls="search" aria-expanded="false">
+							<i class="i-search"></i>
+						</button>
+					</a>
+				</div>
 				<div id="site-search" class="site-search">
 					<form method="GET" class="search-form">
 						<button type="submit" class="search-submit">
