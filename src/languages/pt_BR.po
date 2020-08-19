@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-06-23T19:04:37+00:00\n"
+"POT-Creation-Date: 2020-07-29T19:15:14+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -56,7 +56,7 @@ msgstr "Publicar"
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: header.php:92
+#: header.php:83
 msgid "Search"
 msgstr "Buscar"
 
@@ -136,43 +136,27 @@ msgstr "Cabeçalho"
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/Customize/Head.php:77
-msgid "Primary Website"
-msgstr "Site Primário"
-
-#: includes/Customize/Head.php:79 includes/Customize/Head.php:106
-msgid "Website URL"
-msgstr "URL do website"
-
-#: includes/Customize/Head.php:91 includes/Customize/Head.php:118
-msgid "Website Title"
-msgstr "Título do Website"
-
-#: includes/Customize/Head.php:104
-msgid "Secondary Website"
-msgstr "Site Secundário"
-
-#: includes/Customize/Head.php:134
+#: includes/Customize/Head.php:81
 msgid "Divulgation Exímia CO "
 msgstr ""
 
-#: includes/Customize/Head.php:149
+#: includes/Customize/Head.php:96
 msgid "Divulgation Exímia Tech "
 msgstr ""
 
-#: includes/Customize/Head.php:164
+#: includes/Customize/Head.php:111
 msgid "Divulgation Exímia MS "
 msgstr ""
 
-#: includes/Customize/Head.php:185
+#: includes/Customize/Head.php:132
 msgid "Upload CO Divulgation logo"
 msgstr ""
 
-#: includes/Customize/Head.php:207
+#: includes/Customize/Head.php:154
 msgid "Upload Tech Divulgation logo"
 msgstr ""
 
-#: includes/Customize/Head.php:229
+#: includes/Customize/Head.php:176
 msgid "Upload MS Divulgation logo"
 msgstr ""
 
@@ -641,6 +625,7 @@ msgid "Quote job role"
 msgstr "Citação cargo"
 
 #: includes/Integration/ACF/Pages/HomePage.php:300 page-templates/home.php:116
+#: template-parts/blog/breadcrumb.php:35
 msgid "Blog"
 msgstr "Blog"
 
@@ -789,6 +774,7 @@ msgid "Contact Email"
 msgstr "E-mail de contato"
 
 #: includes/PostType/Bliki.php:38 includes/PostType/Bliki.php:39
+#: template-parts/blog/breadcrumb.php:43
 msgid "Bliki"
 msgstr "Bliki"
 
@@ -1032,15 +1018,21 @@ msgstr "Nenhuma recomendação encontrada."
 msgid "No testimonials found in Trash."
 msgstr "Nenhuma recomendação encontrada na lixeira."
 
-#: includes/Setup/Navigation.php:37
+#: includes/Setup/Navigation.php:38
 msgid "Primary"
 msgstr "Primário"
 
-#: includes/Setup/Navigation.php:38
+#: includes/Setup/Navigation.php:39
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: includes/Setup/Navigation.php:39
+#: includes/Setup/Navigation.php:40
+#, fuzzy
+#| msgid "Social Menu"
+msgid "Social Menu Header"
+msgstr "Menu Social"
+
+#: includes/Setup/Navigation.php:41
 #, fuzzy
 #| msgid "Social Menu"
 msgid "Store Menu"
@@ -1194,7 +1186,7 @@ msgstr "Últimos posts em Inglês"
 msgid "Newsletters Calendar"
 msgstr "Calendário Newsletter"
 
-#: page-templates/newsletter.php:40
+#: page-templates/newsletters.php:40
 msgid "Newsletters"
 msgstr "Newsletters"
 
@@ -1206,12 +1198,24 @@ msgstr "Área restrita"
 msgid "Logout"
 msgstr "Logout"
 
+#: template-parts/blog/breadcrumb.php:16
+msgid "Our <b>contents</b>"
+msgstr "Nossos <b>conteúdos</b>"
+
+#: template-parts/blog/breadcrumb.php:27
+msgid "Thinking"
+msgstr ""
+
 #. translators: search results
-#: template-parts/blog/breadcrumb.php:28
+#: template-parts/blog/breadcrumb.php:54
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr "Resultados de Busca por &#8220;%s&#8221;"
 
 #: template-parts/blog/category-nav.php:38
+msgid "Categories"
+msgstr "Categorias"
+
+#: template-parts/blog/category-nav.php:41
 msgid "Show All"
 msgstr "Ver Todos"
 
@@ -1293,6 +1297,18 @@ msgstr "Inscrever-se"
 msgid "See more"
 msgstr "Veja mais"
 
+#~ msgid "Primary Website"
+#~ msgstr "Site Primário"
+
+#~ msgid "Website URL"
+#~ msgstr "URL do website"
+
+#~ msgid "Website Title"
+#~ msgstr "Título do Website"
+
+#~ msgid "Secondary Website"
+#~ msgstr "Site Secundário"
+
 #~ msgid "In Resum"
 #~ msgstr "Em Resumo"
 
@@ -1365,9 +1381,6 @@ msgstr "Veja mais"
 
 #~ msgid "Background White and Title Red"
 #~ msgstr "Fundo Branco e Título Vermelho"
-
-#~ msgid "Category: %s"
-#~ msgstr "Categoria: %s"
 
 #~ msgid "Share"
 #~ msgstr "Compartilhe"

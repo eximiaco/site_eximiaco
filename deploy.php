@@ -14,7 +14,7 @@ host('production')
 	->hostname('186.237.59.129')
 	->user('eximia')
 	->set('branch', 'production')
-	->set('deploy_path', '/home/eximia/production');
+	->set('deploy_path', '/home/eximia');
 
 host('staging')
 	->port(2201)

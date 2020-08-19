@@ -1,0 +1,104 @@
+.footer-info
+    background-color #002a52
+    width 100%
+
+    .container
+        padding 0 50px
+
+        @media screen and ( min-width $screen-lg )
+            padding 0
+
+    .info
+        align-items center
+        display flex
+        flex-wrap wrap
+        width 100%
+
+        @media screen and ( min-width $screen-lg )
+            flex-wrap initial
+
+        &__img
+            padding 45px 0
+            padding-right 100px
+
+            img
+                width 220px
+
+                @media screen and ( min-width $screen-lg )
+                    margin-left 20px
+                    width 290px
+
+        &__content
+            display flex
+            flex-wrap wrap
+            width 100%
+
+            @media screen and ( min-width $screen-md )
+                flex-wrap initial
+
+            @media screen and ( min-width $screen-lg )
+                padding-top 45px
+                width calc( 100% - 390px )
+
+        &__schedule,
+        &__contact,
+        &__thinking
+            margin-bottom 50px
+            width 100%
+
+            .menu
+                margin 0
+                padding-left 0px
+
+        &__title
+            font-size 21px
+            font-weight bold
+            text-transform uppercase
+            color $white
+            margin-bottom 10px
+
+        &__text
+            font-size 17px
+            text-transform uppercase
+            font-weight normal
+            color $white
+            margin-bottom 10px
+            display flex
+            flex-direction row
+
+            @media screen and ( min-width $screen-md )
+                margin-bottom 5px
+
+        &__icon
+            margin-right 10px
+            font-size 25px
+
+            .i-whatsapp, .i-envelope
+                vertical-align super
+
+        .menu-item
+            list-style none
+            margin-bottom 10px
+
+            a
+                font-size 21px
+                font-weight bold
+                text-transform uppercase
+                color $white
+                margin-bottom 10px
+                text-decoration none
+
+        .sub-menu
+            padding-left 0px
+            margin-top 10px
+
+            .menu-item
+                    margin-bottom 5px
+                a
+                    font-size 17px
+                    text-transform uppercase
+                    font-weight normal
+                    color $white
+                    text-decoration none
+
+

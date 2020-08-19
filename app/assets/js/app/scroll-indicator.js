@@ -1,7 +1,6 @@
 define(function () {
-    var singlePost = document.querySelector( '.single-post' );
-    var singleBliki = document.querySelector( '.single-bliki' );
-    if ( singlePost === undefined || singlePost === null || singleBliki === undefined || singleBliki === null ) {
+    var progressBar = document.querySelector( '.progress__bar' );
+    if ( progressBar !== null ) {
 
         // When the user scrolls the page, execute myFunction
         window.onscroll = function() {

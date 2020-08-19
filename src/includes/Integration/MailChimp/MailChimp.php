@@ -106,12 +106,6 @@ class MailChimp extends Base {
 					$post_title
 				);
 			}
-
-			// Remove RSS in the newsletters post type.
-			foreach ( $check_post as $key => $post ) {
-				$itens_delete[] = "<li>{$post}</li>";
-				$this->remove_newsletter( $key );
-			}
 		}
 
 		// Create feedback messages about sync.
@@ -120,11 +114,6 @@ class MailChimp extends Base {
 		// If have new newsletters .
 		if ( 0 !== count( $itens_insert ) ) {
 			$message .= sprintf( '<h4>%s<h4><ul>%s<ul>', __( 'New newsletters inserted:', 'elemarjr' ), implode( $itens_insert ) );
-		}
-
-		// If have removed newsletters.
-		if ( 0 !== count( $itens_delete ) ) {
-			$message .= sprintf( '<h4>%s<h4><ul>%s<ul>', __( 'Newsletters removed:', 'elemarjr' ), implode( $itens_delete ) );
 		}
 
 		// If no new changes.
@@ -211,27 +200,6 @@ class MailChimp extends Base {
 		}
 
 		return $check_posts;
-	}
-
-	/**
-	 * Remove posts from post type newsletter.
-	 *
-	 * @return int $post_content
-	 */
-	public function remove_newsletter( $post_content ) {
-		global $wpdb;
-
-		// Get all current posts_type newsletter in the database.
-		$result = $wpdb->get_results( "SELECT ID FROM wp_posts WHERE post_content = '{$post_content}' AND post_type = 'newsletter' LIMIT 1" );
-
-		if ( is_wp_error( $result ) ) {
-			return;
-		}
-
-		foreach ( $result as $post ) {
-			wp_delete_post( $post->ID );
-			return true;
-		}
 	}
 
 	/**

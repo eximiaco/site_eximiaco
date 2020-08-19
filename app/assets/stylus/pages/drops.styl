@@ -10,7 +10,7 @@
         display block
 
         @media screen and ( min-width $screen-md )
-            width 65%
+            width 50%
 
     .player
         display block
@@ -33,7 +33,6 @@
             max-height 300px
             overflow-y scroll
             transform rotate(180deg)
-            direction rtl
 
             @media screen and ( min-width $screen-lg )
                 max-height 700px
@@ -44,7 +43,6 @@
 
             > li
                 transform rotate(-180deg)
-                direction ltr
 
     .title
         color var-use( color-primary )
@@ -103,6 +101,7 @@
     .album-player
         padding 25px 0px
         margin-top 0px
+        background-color $pinkish-grey
         flex 0 1 225px
 
     .number

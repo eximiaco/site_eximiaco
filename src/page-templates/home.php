@@ -21,8 +21,7 @@ use Aztec\Helper\Url;
 use Aztec\PostType\Testimonial;
 
 global $container;
-
-$url_helper = $container->get( Aztec\Helper\Url::class );
+$url_helper = $container->get( Url::class );
 
 get_header(); ?>
 
@@ -32,90 +31,165 @@ get_header(); ?>
 		the_post();
 		?>
 	<?php if ( have_rows( 'slider_hero_repeater' ) ) : ?>
-	<div class="slider">
-		<div class="slider__wrapper">
-			<?php
-			$dots = '';
-			$count = 1;
-			while ( have_rows( 'slider_hero_repeater' ) ) :
-				the_row();
-				$image = wp_get_attachment_image_src( get_sub_field( 'hero_image' ), 'post-single-banner-lg' );
-				?>
-				<div class="slider__item <?php 1 === $count ? ' slider__item--active' : ''; ?>" data-order="<?php echo $count; ?>">
-					<img class="slider__img" src="<?php echo $image[0]; ?>" alt="" />
-					<div class="slider__content">
-						<div class="container">
-							<h1 class="slider__content-title"><?php the_sub_field( 'hero_title' ); ?></h1>
-							<h2 class="slider__content-subtitle"><?php echo preg_replace( '/(.*)\*(.*)\*(.*)/', '$1<strong>$2</strong>$3', get_sub_field( 'hero_subtitle' ) ); ?></h2>
-							<div class="slider__content-info">
-								<div class="slider__content-txt"><?php the_sub_field( 'hero_text' ); ?></div>
-								<?php if ( get_sub_field( 'hero_button_url' ) ) : ?>
-									<a href="<?php the_sub_field( 'hero_button_url' ); ?>" class="slider__content-lnk">
-										<?php the_sub_field( 'hero_button_label' ); ?>
-									</a>
-								<?php endif; ?>
+		<div class="slider">
+			<div class="slider__wrapper">
+				<?php
+				$dots = '';
+				$count = 1;
+				while ( have_rows( 'slider_hero_repeater' ) ) :
+					the_row();
+					$image = wp_get_attachment_image_src( get_sub_field( 'hero_image' ), 'post-single-banner-lg' );
+					?>
+					<div class="slider__item <?php 1 === $count ? ' slider__item--active' : ''; ?>" data-order="<?php echo $count; ?>">
+						<img class="slider__img" src="<?php echo $image[0]; ?>" alt="" />
+						<div class="slider__content">
+							<div class="container">
+								<h1 class="slider__content-title"><?php the_sub_field( 'hero_title' ); ?></h1>
+								<h2 class="slider__content-subtitle"><?php echo preg_replace( '/(.*)\*(.*)\*(.*)/', '$1<strong>$2</strong>$3', get_sub_field( 'hero_subtitle' ) ); ?></h2>
+								<div class="slider__content-info">
+									<div class="slider__content-txt"><?php the_sub_field( 'hero_text' ); ?></div>
+									<?php if ( get_sub_field( 'hero_button_url' ) ) : ?>
+										<a href="<?php the_sub_field( 'hero_button_url' ); ?>" class="slider__content-lnk">
+											<?php the_sub_field( 'hero_button_label' ); ?>
+										</a>
+									<?php endif; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php
+				$dots .= '<span class="slider__dots" onclick="currentSlide(' . $count . ')"></span>';
+				$count++;
+				endwhile; ?>
+			</div>
+			<div class="slider__nav">
+				<?php echo $dots; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
+		<?php if ( '' !== get_field( 'websites_title' ) ) : ?>
+			<div class="front-page--websites container">
+				<div class="front-page--websites-content">
+					<div class="front-page--websites-title wow fadeIn">
+						<?php echo wp_kses_post( get_field( 'websites_title' ) ); ?>
+					</div>
+					<div class="websites-images wow fadeIn">
+						<div class="websites-image">
+							<div class="websites-box">
+								<a href="<?php echo wp_kses_post( get_field( 'websites_link_1' ) ); ?>">
+									<?php $websites_image1 = get_field( 'websites_image_1' ); ?>
+									<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image1['ID'], 'medium_large' ) ); ?>">
+									<div class="websites-overlay">
+										<?php $websites_logo1 = get_field( 'websites_logo_1' ); ?>
+										<div class="websites-inner-box">
+											<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo1['ID'], 'medium_large' ) ); ?>">
+											<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_1' ) ); ?></div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="websites-image2">
+							<div class="websites-box">
+								<a href="<?php echo wp_kses_post( get_field( 'websites_link_2' ) ); ?>">
+									<?php $websites_image2 = get_field( 'websites_image_2' ); ?>
+									<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image2['ID'], 'medium_large' ) ); ?>">
+									<div class="websites-overlay">
+										<?php $websites_logo2 = get_field( 'websites_logo_2' ); ?>
+										<div class="websites-inner-box">
+											<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo2['ID'], 'medium_large' ) ); ?>">
+											<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_2' ) ); ?></div>
+										</div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			<?php
-			$dots .= '<span class="slider__dots" onclick="currentSlide(' . $count . ')"></span>';
-			$count++;
-			endwhile; ?>
-		</div>
-		<div class="slider__nav">
-			<?php echo $dots; ?>
-		</div>
-	</div>
-	<?php endif; ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'front-page' ); ?>>
+			</div>
+		<?php endif; ?>
 
-		<div class="front-page--websites container">
-			<div class="front-page--websites-content">
-				<div class="front-page--websites-title wow fadeIn">
-					<?php echo wp_kses_post( get_field( 'websites_title' ) ); ?>
+		<?php if ( '' !== get_field( 'cards_title' ) ) : ?>
+			<div class="front-page--home-cards">
+				<div class="front-page--home-cards-title wow fadeIn">
+					<?php echo wp_kses_post( get_field( 'cards_title' ) ); ?>
 				</div>
-				<div class="websites-images wow fadeIn">
-					<div class="websites-image">
-						<div class="websites-box">
-							<a href="<?php echo wp_kses_post( get_field( 'websites_link_1' ) ); ?>">
-								<?php $websites_image1 = get_field( 'websites_image_1' ); ?>
-								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image1['ID'], 'medium_large' ) ); ?>">
-								<div class="websites-overlay">
-									<?php $websites_logo1 = get_field( 'websites_logo_1' ); ?>
-									<div class="websites-inner-box">
-										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo1['ID'], 'medium_large' ) ); ?>">
-										<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_1' ) ); ?></div>
-									</div>
-								</div>
-							</a>
+				<?php if ( have_rows( 'cards_repeater' ) ) : ?>
+				<div class="home-cards-container">
+					<?php while ( have_rows( 'cards_repeater' ) ) :
+						the_row();
+						$card_image = get_sub_field( 'card_image' );
+					?>
+					<div class="home-cards-card">
+						<div class="home-cards-image">
+							<img src="<?php echo esc_url( wp_get_attachment_image_url( $card_image['ID'], 'thumbnail' ) ); ?>">
+						</div>
+						<div class="home-cards-title">
+							<?php the_sub_field( 'card_title' ); ?>
+						</div>
+						<div class="home-cards-text">
+							<?php the_sub_field( 'card_text' ); ?>
 						</div>
 					</div>
-					<div class="websites-image2">
-						<div class="websites-box">
-							<a href="<?php echo wp_kses_post( get_field( 'websites_link_2' ) ); ?>">
-								<?php $websites_image2 = get_field( 'websites_image_2' ); ?>
-								<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_image2['ID'], 'medium_large' ) ); ?>">
-								<div class="websites-overlay">
-									<?php $websites_logo2 = get_field( 'websites_logo_2' ); ?>
-									<div class="websites-inner-box">
-										<img src="<?php echo esc_url( wp_get_attachment_image_url( $websites_logo2['ID'], 'medium_large' ) ); ?>">
-										<div class="websites-text"><?php echo wp_kses_post( get_field( 'websites_text_2' ) ); ?></div>
+					<?php endwhile; ?>
+				</div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
+
+		<?php
+		$posts = $container->get( Testimonial::class )->get_testimonials();
+		if ( 0 < count( $posts ) ) : ?>
+		<div class="front-page--home-cards">
+			<div class="front-page--testimonial container wow fadeIn">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+					<?php
+					foreach ( $posts as $post ) :
+						setup_postdata( $post );
+						$photo = get_field( 'testimonial_photo' );
+						$logo  = get_field( 'testimonial_logo' );
+						?>
+						<div class="swiper-slide">
+							<div class="testimonial">
+								<div class="testimonial--container">
+									<div class="testimonial--image">
+										<img src="<?php echo esc_html( wp_get_attachment_image_url( $photo['ID'] ) ); ?>" alt="">
+									</div>
+									<div class="testimonial--content">
+										&quot;<?php echo wp_kses_post( get_the_content() ); ?>&quot;
+									</div>
+									<div class="testimonial--footer">
+										<div class="testimonial--company">
+											<img src="<?php echo esc_html( wp_get_attachment_image_url( $logo['ID'], 'testimonial-logo' ) ); ?>" alt="">
+										</div>
+										<div class="testimonial--author">
+											<p><?php echo esc_html( get_field( 'testimonial_position' ) ); ?></p>
+											<p><?php the_title(); ?></p>
+										</div>
 									</div>
 								</div>
-							</a>
+							</div>
 						</div>
+						<?php
+						endforeach;
+						wp_reset_postdata();
+					?>
 					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 				</div>
 			</div>
+			<?php endif; ?>
 		</div>
 
 
 		<div class="front-page--blog">
 			<div class="container container__xs-small-margin">
 				<h2 class="front-page--blog-title wow fadeIn"><?php esc_html_e( 'Blog', 'elemarjr' ); ?></h2>
-
-			<?php
+				<?php
 				$container->set(
 					'template.home.blog', [
 						'description' => get_field( 'blog_text' ),
@@ -123,16 +197,16 @@ get_header(); ?>
 				);
 				get_template_part( 'template-parts/page/home/blog' );
 
-			if ( pll_current_language() !== 'en' ) {
-				$container->set(
-					'template.home.blog', [
-						'language'    => 'en',
-						'description' => __( 'Last posts in English', 'elemarjr' ),
-					]
-				);
-				get_template_part( 'template-parts/page/home/blog' );
-			}
-			?>
+				if ( pll_current_language() !== 'en' ) {
+					$container->set(
+						'template.home.blog', [
+							'language'    => 'en',
+							'description' => __( 'Last posts in English', 'elemarjr' ),
+						]
+					);
+					get_template_part( 'template-parts/page/home/blog' );
+				}
+				?>
 			</div>
 		</div>
 
@@ -190,58 +264,9 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-
-		<?php
-		$posts = $container->get( Testimonial::class )->get_testimonials();
-		if ( 0 < count( $posts ) ) :
-			?>
-		<div class="front-page--testimonial container wow fadeIn">
-			<div class="front-page--testimonial-header page-header">
-				<h5 class="page-header--title page-header--title__small">
-					<?php echo esc_html( get_field( 'testimonial_title' ) ); ?>
-				</h5>
-			</div>
-
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-				<?php
-				foreach ( $posts as $post ) :
-					setup_postdata( $post );
-					$photo = get_field( 'testimonial_photo' );
-					$logo  = get_field( 'testimonial_logo' );
-					?>
-					<div class="swiper-slide">
-						<div class="testimonial">
-							<div class="testimonial--image">
-								<img src="<?php echo esc_html( wp_get_attachment_image_url( $photo['ID'] ) ); ?>" alt="">
-							</div>
-							<div class="testimonial--content">
-								&quot;<?php echo wp_kses_post( get_the_content() ); ?>&quot;
-							</div>
-							<div class="testimonial--footer">
-								<div class="testimonial--company">
-									<img src="<?php echo esc_html( wp_get_attachment_image_url( $logo['ID'], 'testimonial-logo' ) ); ?>" alt="">
-								</div>
-								<div class="testimonial--author">
-									<p><?php echo esc_html( get_field( 'testimonial_position' ) ); ?></p>
-									<p><?php the_title(); ?></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<?php
-					endforeach;
-					wp_reset_postdata();
-				?>
-				</div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-		<?php endif; ?>
 	</article>
-	<?php endwhile; ?>
+
+<?php endwhile; ?>
 </main>
 
 <?php get_footer(); ?>

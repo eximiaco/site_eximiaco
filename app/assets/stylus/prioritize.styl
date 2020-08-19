@@ -242,11 +242,6 @@ button
         &--opened,
         &--opened.current-menu-ancestor
             > a
-                border-bottom-width 0
-
-                @media screen and ( min-width $nav-breakpoint )
-                    border-bottom-width 1px
-
                 &:after
                     background-color $gray-dark
                     transform rotate( 180deg )
@@ -586,39 +581,38 @@ button
 
 // Breadcrumb
 .breadcrumb
-    color $gray-light-300
+    color $white
     font-size 12px
     list-style none
-    padding 30px 0 15px 0
+    margin 0
+    padding 0
 
     @media screen and ( min-width $screen-md )
         font-size 14px
-        margin-bottom 15px
-        padding 30px 0 15px 0
-
-    @media screen and ( min-width $screen-lg )
-        margin-bottom 25px
-        padding 25px 0
 
     &--wrapper
-        margin-top 100px
+        background-color $color-co
+        margin-bottom 60px
+        margin-top $sm-nav-height
         position relative
         transition margin-top $transition-default
         z-index 10
 
-        /.sticky &
-            // TODO: Utilizar uma variável para controlar o margin
-            margin-top 115px
+        @media screen and ( min-width $nav-breakpoint )
+            margin-bottom 60px
+            margin-top $lg-nav-height
 
-        @media screen and ( min-width $screen-md )
-            // TODO: Utilizar uma variável para controlar o margin
-            margin-top 107px
+        .container
+            align-items center
+            display flex
+            height 60px
+            justify-content space-between
 
     &--item
         display inline
 
         &:after
-            content '>'
+            content '|'
             display inline-block
             margin 0 10px
 
@@ -626,8 +620,20 @@ button
             display none
 
     &--link
-        color $gray-light-300
+        color $white
+        font-weight normal
         text-decoration none
+        text-transform uppercase
+
+    &--title
+        color $white
+        font-size 14px
+        font-weight normal
+        margin 0
+        text-transform uppercase
+
+        @media screen and ( min-width $screen-md )
+            font-size 18px
 
 .site-content,
 .site-footer

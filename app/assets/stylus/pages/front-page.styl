@@ -103,6 +103,69 @@
                 right 0
                 width 40px
 
+    &--home-cards
+        display flex
+        flex-direction column
+        padding 60px 10px 0px 10px
+        position relative
+        background-color #f5f5f5
+
+        @media screen and ( min-width $screen-md )
+            padding 60px 0px 0px 0px
+
+        &-container
+            width 100%
+
+        &-title
+            color var-use( color-primary )
+            display inline-block
+            font-size 32px
+            font-weight 300
+            letter-spacing 3px
+            margin 0 0 40px
+            position relative
+            text-align center
+            text-transform uppercase
+            width 100%
+
+            &:after
+                border-bottom 1px solid var-use( color-primary )
+                bottom -20px
+                content ''
+                left 0
+                margin-left auto
+                margin-right auto
+                position absolute
+                right 0
+                width 40px
+
+    &--testimonial
+        padding 0px 5px 70px 5px
+        position relative
+        background-color #f5f5f5
+
+        @media screen and ( min-width $screen-md )
+            padding-left 20px
+            padding-right 20px
+
+        @media screen and ( min-width $screen-lg )
+            padding-left 0px
+            padding-right 0px
+
+        .swiper-button-next,
+        .swiper-button-prev
+            background url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAABHNCSVQICAgIfAhkiAAAALNJREFUOI3V0rENwjAQheF3uKGMZIuMcEd2QwpiBQq6VGSTFClgCgpkMUJuhUBjpCgotqHjurP+T7rCYOYHM5+ROcY5tyGig7W2VNUuCVT1aq0tiGiXgwwAqGo/QYWq9lEwQ3UMmemSg8z8IaBy6bwPEFD3Rs659TAMlyiYof0ULYIlRDEQhkTkBqAax3G7StXh21QATt77eypuReTJzE3yjm/j5o/jNic+ZscAICI+O/5lXij9b1pEaWA+AAAAAElFTkSuQmCC' )
+            height 22px
+            left 0
+            width 12px
+
+        .swiper-button-next
+            left auto
+            right 0
+
+        .swiper-button-prev
+            transform rotate( -180deg )
+
     &--quote
         background-color var-use( color-primary )
         background-position center
@@ -221,40 +284,6 @@
         &-actions
             margin-top 25px
             text-align center
-
-    &--testimonial
-        max-width 680px
-        padding-bottom 60px
-        padding-top 60px
-        position relative
-
-        @media screen and ( min-width $screen-lg )
-            max-width $screen-lg
-
-        &-header
-            margin-bottom 30px
-            padding-bottom 30px
-
-        .swiper-pagination
-            color var-use( color-primary )
-            text-align center
-
-        .swiper-pagination-fraction
-            bottom 30px
-
-        .swiper-button-next,
-        .swiper-button-prev
-            background url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAABHNCSVQICAgIfAhkiAAAALNJREFUOI3V0rENwjAQheF3uKGMZIuMcEd2QwpiBQq6VGSTFClgCgpkMUJuhUBjpCgotqHjurP+T7rCYOYHM5+ROcY5tyGig7W2VNUuCVT1aq0tiGiXgwwAqGo/QYWq9lEwQ3UMmemSg8z8IaBy6bwPEFD3Rs659TAMlyiYof0ULYIlRDEQhkTkBqAax3G7StXh21QATt77eypuReTJzE3yjm/j5o/jNic+ZscAICI+O/5lXij9b1pEaWA+AAAAAElFTkSuQmCC' )
-            height 22px
-            left 0
-            width 12px
-
-        .swiper-button-next
-            left auto
-            right 0
-
-        .swiper-button-prev
-            transform rotate( -180deg )
 
 .home
     .hero--wrapper

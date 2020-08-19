@@ -40,8 +40,6 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/blog/content-parts/progress-bar' ); ?>
 			<section class="container">
 				<div class="post--main">
-					<?php get_template_part( 'template-parts/blog/single/social-medias' ); ?>
-
 					<?php get_template_part( 'template-parts/blog/single/content' ); ?>
 				</div>
 			</section>

@@ -9,24 +9,21 @@
  */
 
 ?>
-<div class="post--share">
-	<div class="post--share-sticky">
-		<a href="#comments" class="post--comments">
-			<div class="post--comments-count"><?php echo esc_html( get_comments_number() ); ?></div>
-			<div class="post--comments-icon">
-				<i class="i-comments"></i>
-			</div>
-		</a>
-		<div class="post--social">
-			<a class="post--share-item addthis_button_twitter">
-				<i class="i-twitter"></i>
-			</a>
-			<a class="post--share-item addthis_button_linkedin">
-				<i class="i-linkedin"></i>
-			</a>
-			<a class="post--share-item addthis_button_facebook">
-				<i class="i-facebook"></i>
-			</a>
+<div class="post--meta-share">
+	<a href="#comments" class="post--comments">
+		<div class="post--comments-icon">
+			<i class="i-comments"></i>
 		</div>
+	</a>
+	<div class="post--social">
+		<a class="post--meta-share-item addthis_button_twitter">
+			<i class="i-twitter"></i>
+		</a>
+		<a class="post--meta-share-item addthis_button_linkedin">
+			<i class="i-linkedin"></i>
+		</a>
+		<a class="post--meta-share-item addthis_button_facebook">
+			<i class="i-facebook"></i>
+		</a>
 	</div>
 </div>

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elemar Jr Blog Theme 1.0.19\n"
+"Project-Id-Version: Elemar Jr Blog Theme 1.0.23\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-06-23T19:04:37+00:00\n"
+"POT-Creation-Date: 2020-07-29T19:15:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: elemarjr\n"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:92
+#: header.php:83
 msgid "Search"
 msgstr ""
 
@@ -143,45 +143,27 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/Customize/Head.php:77
-msgid "Primary Website"
-msgstr ""
-
-#: includes/Customize/Head.php:79
-#: includes/Customize/Head.php:106
-msgid "Website URL"
-msgstr ""
-
-#: includes/Customize/Head.php:91
-#: includes/Customize/Head.php:118
-msgid "Website Title"
-msgstr ""
-
-#: includes/Customize/Head.php:104
-msgid "Secondary Website"
-msgstr ""
-
-#: includes/Customize/Head.php:134
+#: includes/Customize/Head.php:81
 msgid "Divulgation Exímia CO "
 msgstr ""
 
-#: includes/Customize/Head.php:149
+#: includes/Customize/Head.php:96
 msgid "Divulgation Exímia Tech "
 msgstr ""
 
-#: includes/Customize/Head.php:164
+#: includes/Customize/Head.php:111
 msgid "Divulgation Exímia MS "
 msgstr ""
 
-#: includes/Customize/Head.php:185
+#: includes/Customize/Head.php:132
 msgid "Upload CO Divulgation logo"
 msgstr ""
 
-#: includes/Customize/Head.php:207
+#: includes/Customize/Head.php:154
 msgid "Upload Tech Divulgation logo"
 msgstr ""
 
-#: includes/Customize/Head.php:229
+#: includes/Customize/Head.php:176
 msgid "Upload MS Divulgation logo"
 msgstr ""
 
@@ -637,6 +619,7 @@ msgstr ""
 
 #: includes/Integration/ACF/Pages/HomePage.php:300
 #: page-templates/home.php:116
+#: template-parts/blog/breadcrumb.php:35
 msgid "Blog"
 msgstr ""
 
@@ -787,6 +770,7 @@ msgstr ""
 
 #: includes/PostType/Bliki.php:38
 #: includes/PostType/Bliki.php:39
+#: template-parts/blog/breadcrumb.php:43
 msgid "Bliki"
 msgstr ""
 
@@ -1033,15 +1017,19 @@ msgstr ""
 msgid "No testimonials found in Trash."
 msgstr ""
 
-#: includes/Setup/Navigation.php:37
+#: includes/Setup/Navigation.php:38
 msgid "Primary"
 msgstr ""
 
-#: includes/Setup/Navigation.php:38
+#: includes/Setup/Navigation.php:39
 msgid "Social Menu"
 msgstr ""
 
-#: includes/Setup/Navigation.php:39
+#: includes/Setup/Navigation.php:40
+msgid "Social Menu Header"
+msgstr ""
+
+#: includes/Setup/Navigation.php:41
 msgid "Store Menu"
 msgstr ""
 
@@ -1195,7 +1183,7 @@ msgstr ""
 msgid "Newsletters Calendar"
 msgstr ""
 
-#: page-templates/newsletter.php:40
+#: page-templates/newsletters.php:40
 msgid "Newsletters"
 msgstr ""
 
@@ -1207,12 +1195,24 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
+#: template-parts/blog/breadcrumb.php:16
+msgid "Our <b>contents</b>"
+msgstr ""
+
+#: template-parts/blog/breadcrumb.php:27
+msgid "Thinking"
+msgstr ""
+
 #. translators: search results
-#: template-parts/blog/breadcrumb.php:28
+#: template-parts/blog/breadcrumb.php:54
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr ""
 
 #: template-parts/blog/category-nav.php:38
+msgid "Categories"
+msgstr ""
+
+#: template-parts/blog/category-nav.php:41
 msgid "Show All"
 msgstr ""
 
