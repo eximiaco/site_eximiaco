@@ -4,7 +4,12 @@
 define(function () {
 	var container, button, closeButton, close, open;
 
-	var toggleClass = 'top-header__searchable';
+    var toggleClass = 'top-header__searchable';
+    var searchSelect = document.querySelector( '.search-select' );
+
+    searchSelect.addEventListener( 'change', function() {
+        document.querySelector( '.search-form' ).action = this.value;
+    } );
 
 	container = document.getElementsByClassName( 'top-header--collapse' )[0];
 	if ( ! container ) {
