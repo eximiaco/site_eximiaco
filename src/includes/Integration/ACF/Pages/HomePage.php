@@ -106,6 +106,27 @@ class HomePage extends Base {
 									'width' => '50%',
 								),
 							),
+							array (
+								'type'    => 'url',
+								'label'   => __( 'Button URL', 'elemarjr' ),
+								'key'     => 'hero_button_url',
+								'name'    => 'hero_button_url',
+							),
+							array(
+								'type'		=> 'select',
+								'key'		=> 'hero_template',
+								'label'		=> __( 'Template align', 'elemarjr' ),
+								'name'		=> 'template',
+								'required'	=> true,
+								'choices'	=> array (
+									'center' => __( 'Center', 'elemarjr' ),
+									'left'	 => __( 'Left', 'elemarjr' ),
+									'right'	 => __( 'Right', 'elemarjr' ),
+								),
+								'default_value' => array (
+									0 => 'center',
+								),
+							),
 						)
 					),
 				),
