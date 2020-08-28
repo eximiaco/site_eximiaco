@@ -79,10 +79,24 @@ $display_hero = $container->get( 'display_hero' );
 					</a>
 				</div>
 				<div id="site-search" class="site-search">
-					<form method="GET" class="search-form">
+					<form method="GET" class="search-form" action="<?php echo get_site_url( get_site()->blog_id ) . '/' . pll_current_language( 'slug' ) . '/' ?>">
 						<button type="submit" class="search-submit">
 							<i class="i-search"></i>
 						</button>
+						<select class="search-select">
+							<?php
+							$sites_titles = array( 1 => 'Co', 2 => 'Tech', 3 => 'Ms' );
+							foreach ( get_sites() as $site ) :
+								$site_url = sprintf( '%s/%s/',
+									get_site_url( $site->blog_id ),
+									pll_current_language( 'slug' )
+								);
+							?>
+								<option value="<?php echo esc_attr( $site_url ); ?>"<?php if ( get_site()->blog_id === $site->blog_id ) { echo esc_attr( ' selected' ); } ?>>
+									<?php echo esc_attr( $sites_titles[ $site->blog_id ] ); ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
 						<input type="search" name="s" placeholder="<?php echo esc_attr( __( 'Search', 'elemarjr' ) ); ?>">
 						<span class="search-close"></span>
 					</form>

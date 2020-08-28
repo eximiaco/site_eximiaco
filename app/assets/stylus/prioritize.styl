@@ -470,11 +470,19 @@ button
         @media screen and ( min-width $nav-breakpoint )
             padding-left 8px
 
+    .search-select
+        background transparent
+        border-bottom 1px solid $color-co
+        border none
+        height 17px
+        outline 0
+        padding 0
+
     input[type='search']
         background transparent
         border none
         height 17px
-        padding 0
+        padding 0 10px
         width 100%
 
         &::placeholder
@@ -491,7 +499,13 @@ button
             border-bottom 1px solid $color-co
             height 28px
             line-height 28px
-            margin 0 8px
+            margin-right 8px
+
+        .search-select
+            border-bottom 1px solid $color-co
+            height 29px
+            line-height 28px
+
 
 .search-close
     cursor pointer
