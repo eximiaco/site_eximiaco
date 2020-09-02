@@ -8,12 +8,10 @@
  * @version 0.1.0
  */
 
-use Aztec\Helper\PageSection;
-
 global $container;
 $clients = $container->get( Aztec\PostType\Client::class )->get_clients();
 
-if ( ! $clients->have_posts() ) {
+if ( ! $clients->have_posts() && get_theme_mod( "client_{$slug}_title" ) ) {
 	return;
 }
 

@@ -42,6 +42,8 @@ class HomePage extends Base {
 			add_action( 'acf/include_fields', $this->callback( 'add_cards_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_quote_fields' ) );
 			add_action( 'acf/include_fields', $this->callback( 'add_blog_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_clients_testimonial_fields' ) );
+			add_action( 'acf/include_fields', $this->callback( 'add_contents_fields' ) );
 		}
 	}
 
@@ -218,52 +220,28 @@ class HomePage extends Base {
 					'label' => __( 'Section Title', 'elemarjr' ),
 				),
 				array(
-					'type' => 'text',
-					'key' => 'websites_text_1',
-					'name' => 'websites_text_1',
-					'label' => __( 'Text 1', 'elemarjr' ),
-				),
-				array(
-					'type' => 'image',
-					'key' => 'websites_image_1',
-					'name' => 'websites_image_1',
-					'label' => __( 'Image 1', 'elemarjr' ),
-				),
-				array(
 					'type' => 'image',
 					'key' => 'websites_logo_1',
 					'name' => 'websites_logo_1',
-					'label' => __( 'Logo 1', 'elemarjr' ),
+					'label' => __( 'Logo Tech', 'elemarjr' ),
 				),
 				array(
 					'type' => 'text',
-					'key' => 'websites_link_1',
-					'name' => 'websites_title_link_1',
-					'label' => __( 'Site Url', 'elemarjr' ),
-				),
-				array(
-					'type' => 'text',
-					'key' => 'websites_text_2',
-					'name' => 'websites_text_2',
-					'label' => __( 'Text 2', 'elemarjr' ),
-				),
-				array(
-					'type' => 'image',
-					'key' => 'websites_image_2',
-					'name' => 'websites_image_2',
-					'label' => __( 'Image 2', 'elemarjr' ),
+					'key' => 'websites_text_1',
+					'name' => 'websites_text_1',
+					'label' => __( 'Description Tech', 'elemarjr' ),
 				),
 				array(
 					'type' => 'image',
 					'key' => 'websites_logo_2',
 					'name' => 'websites_logo_2',
-					'label' => __( 'Logo 2', 'elemarjr' ),
+					'label' => __( 'Logo Ms', 'elemarjr' ),
 				),
 				array(
 					'type' => 'text',
-					'key' => 'websites_link_2',
-					'name' => 'websites_title_link_2',
-					'label' => __( 'Site Url 2', 'elemarjr' ),
+					'key' => 'websites_text_2',
+					'name' => 'websites_text_2',
+					'label' => __( 'Description Ms', 'elemarjr' ),
 				),
 			 ),
 			 'location' => $this->location,
@@ -271,6 +249,9 @@ class HomePage extends Base {
 		);
 	}
 
+	/**
+	 * Cards home fields.
+	 */
 	public function add_cards_fields() {
 		acf_add_local_field_group(
 			array(
@@ -318,7 +299,7 @@ class HomePage extends Base {
 	}
 
 	/**
-	 * Add Quote custom fields
+	 * Add Quote custom fields.
 	 */
 	public function add_quote_fields() {
 		acf_add_local_field_group(
@@ -358,7 +339,7 @@ class HomePage extends Base {
 	}
 
 	/**
-	 * Add Quote custom fields
+	 * Add Quote custom fields.
 	 */
 	public function add_blog_fields() {
 		acf_add_local_field_group(
@@ -376,6 +357,106 @@ class HomePage extends Base {
 				),
 			 ),
 			 'location' => $this->location,
+			)
+		);
+	}
+
+	/**
+	 * Section Clients testimonial title.
+	 */
+	public function add_clients_testimonial_fields() {
+		acf_add_local_field_group(
+			array(
+				'key' => 'clients_testimonial_section',
+				'title' => __( 'Clients Testimonials', 'elemarjr' ),
+				'hide_on_screen' => array( 'the_content' ),
+				'fields' => array(
+					array(
+						'type' => 'text',
+						'key' => 'clients_testimonial_title',
+						'name' => 'clients_testimonial_title',
+						'label' => __( 'Title', 'elemarjr' ),
+					),
+				),
+				'location' => $this->location,
+			)
+		);
+	}
+
+
+	/**
+	 * Section Contents.
+	 */
+	public function add_contents_fields() {
+		acf_add_local_field_group(
+			array(
+				'key' => 'contents__section',
+				'title' => __( 'Contents', 'elemarjr' ),
+				'hide_on_screen' => array( 'the_content' ),
+				'fields' => array(
+					array(
+						'type' => 'text',
+						'key' => 'contents_title',
+						'name' => 'contents_title',
+						'label' => __( 'Section Title', 'elemarjr' ),
+					),
+					array(
+						'type'       => 'repeater',
+						'key'        => 'contents_repeater',
+						'name'       => 'contents_repeater',
+						'layout'     => 'block',
+						'sub_fields' => array(
+							array(
+								'type'         => 'text',
+								'key'          => 'content_title',
+								'name'         => 'content_title',
+								'label'        => __( 'Content Title', 'elemarjr' ),
+							),
+							array(
+								'type'         => 'text',
+								'key'          => 'content_text',
+								'name'         => 'content_text',
+								'label'        => __( 'Content text', 'elemarjr' ),
+							),
+							array(
+								'type'         => 'text',
+								'key'          => 'content_url',
+								'name'         => 'content_url',
+								'label'        => __( 'Content URL', 'elemarjr' ),
+							),
+							array(
+								'type'		=> 'checkbox',
+								'key'		=> 'content_target',
+								'name'		=> 'content_target',
+								'label'		=> __( 'Open the content', 'elemarjr' ),
+								'choices'	=> array (
+									'_blank' => __( 'In a new tab', 'elemarjr' ),
+								),
+							),
+							array(
+								'type'       => 'repeater',
+								'key'        => 'contents_tags',
+								'name'       => 'contents_tags',
+								'layout'     => 'block',
+								'sub_fields' => array(
+									array(
+										'type'         => 'text',
+										'key'          => 'content_tags',
+										'name'         => 'content_tags',
+										'label'        => __( 'Tags', 'elemarjr' ),
+									),
+								)
+							),
+							array(
+								'type'  => 'image',
+								'key'   => 'content_image',
+								'name'  => 'content_image',
+								'label' => __( 'Image', 'elemarjr' ),
+							),
+						)
+					),
+				),
+				'location' => $this->location,
 			)
 		);
 	}

@@ -1,0 +1,70 @@
+.clients-testimonial
+    margin-top 0px
+
+    @media (min-width $screen-md)
+        margin-top 10px
+
+    &-wrapper
+        text-align center
+        display flex
+        flex-direction column
+        justify-content center
+
+        .client__wrapper
+            text-align center
+            display flex
+            flex-direction row
+            justify-content center
+
+            img
+                filter grayscale(100%)
+                opacity 0.6
+                transition .5s ease-out
+                object-fit contain
+                height 100%
+                max-width 100%
+                width auto
+
+                @media (min-width $screen-md)
+                    max-width 100%
+
+    .swiper-slide:hover
+        img
+            filter grayscale(0%)
+            opacity 1
+            transition .5s ease-out
+
+    .swiper-navigation
+        display flex
+        flex-direction row
+        justify-content center
+        margin-top 30px
+
+        @media (min-width $screen-md)
+            margin-top 20px
+
+        .swiper-button-next.next-swiper1,
+        .swiper-button-prev.prev-swiper1
+            background url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAABHNCSVQICAgIfAhkiAAAALNJREFUOI3V0rENwjAQheF3uKGMZIuMcEd2QwpiBQq6VGSTFClgCgpkMUJuhUBjpCgotqHjurP+T7rCYOYHM5+ROcY5tyGig7W2VNUuCVT1aq0tiGiXgwwAqGo/QYWq9lEwQ3UMmemSg8z8IaBy6bwPEFD3Rs659TAMlyiYof0ULYIlRDEQhkTkBqAax3G7StXh21QATt77eypuReTJzE3yjm/j5o/jNic+ZscAICI+O/5lXij9b1pEaWA+AAAAAElFTkSuQmCC' )
+            height 22px
+            width 12px
+            display inline-block
+            top 0%
+            position unset
+            right auto
+            left auto
+            margin-left 5px
+            margin-right 5px
+
+        .swiper-button-next.next-swiper1:focus,
+        .swiper-button-prev.prev-swiper1:focus
+            outline 0
+
+        .swiper-button-prev.prev-swiper1
+            transform rotate( -180deg )
+
+        .swiper-button-next.next-swiper1
+            margin-top -21px
+
+
+

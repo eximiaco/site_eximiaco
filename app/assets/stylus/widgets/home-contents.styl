@@ -1,0 +1,152 @@
+.home-contents
+    padding 45px 0 90px
+    position relative
+
+    @media screen and ( min-width $screen-lg )
+        padding 35px 0 0
+
+    &__bg
+        color white
+        background-image url( '../images/home-contents-bg-md.png' )
+        background-position center
+        background-repeat no-repeat
+        background-size cover
+        height 100%
+        position absolute
+        top 0
+        left 0
+        width 100%
+
+        @media screen and ( min-width $screen-lg )
+            background-image url( '../images/home-contents-bg-lg.png' )
+            height 255px
+
+
+    &__title
+        color $white
+        display inline-block
+        font-size 18px
+        font-weight normal
+        margin 0 0 60px
+        position relative
+        text-align center
+        text-transform uppercase
+        width 100%
+
+        @media screen and ( min-width $screen-md )
+            font-size 36px
+
+        &:after
+            border-bottom 1px solid $white
+            bottom -20px
+            content ''
+            left 0
+            margin-left auto
+            margin-right auto
+            position absolute
+            right 0
+            width 80px
+
+            @media screen and ( min-width $screen-md )
+                border-bottom 2px solid $white
+                bottom -25px
+                width 100px
+
+    &__list
+        display flex
+        flex-wrap wrap
+        justify-content space-around
+
+        @media screen and ( min-width $screen-md )
+            justify-content space-between
+
+    &__item
+        max-width 290px
+        padding-right 1px
+        width 100%
+
+        @media screen and ( min-width $screen-md )
+            display flex
+            flex-wrap inherit
+            justify-content center
+            max-width initial
+            width calc( 50% - 8px )
+
+        @media screen and ( min-width $screen-lg )
+            justify-content space-between
+            width calc( 25% - 8px )
+
+        &-title
+            color $white
+            font-size 20px
+            font-weight bold
+            line-height 16px
+            margin 0 0 10px
+            max-width 400px
+            padding-left 16px
+            position relative
+            text-transform uppercase
+            width 100%
+
+            @media screen and ( min-width $screen-md )
+                font-size 24px
+                line-height normal
+                margin 0 0 15px
+
+            &:before
+                background-color $white
+                bottom 0
+                content ''
+                height 15px
+                left 0
+                position absolute
+                width 6px
+
+    .post-list
+        width 100%
+
+    .cards-list__wrapper
+        justify-content center
+
+        @media screen and ( min-width $screen-lg )
+            justify-content space-between
+
+    .card
+        font-size 12px
+        height 245px
+        margin 0 0 55px
+        width 100%
+
+    .listing-post
+
+        &__overlay
+            @media screen and ( min-width $screen-lg )
+                height 140px
+
+        &__header-meta
+            @media screen and ( min-width $screen-lg )
+                bottom 50px
+
+        &__title
+            font-size 12px
+
+        &__footer
+            @media screen and ( min-width $screen-lg )
+                bottom -60px
+                padding 15px
+
+            &__right
+                letter-spacing 0
+
+            i
+                font-size 16px
+
+        &--reading,
+        &--comments
+            height auto
+            margin 0
+
+        &--comments
+            margin-left 5px
+
+

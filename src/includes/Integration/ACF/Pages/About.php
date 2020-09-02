@@ -161,9 +161,9 @@ class About extends Base {
 					'sub_fields' => array(
 						array(
 							'type'		=> 'select',
-							'key'		=> 'template',
 							'label'		=> __( 'Template', 'elemarjr' ),
-							'name'		=> 'template',
+							'key'		=> 'templates',
+							'name'		=> 'templates',
 							'required'	=> true,
 							'choices'	=> array (
 								'default'		=> __( 'Default', 'elemarjr' ),

@@ -78,20 +78,21 @@ $form = $container->get( TranslateRequestForm::class );
 						<?php
 					else :
 						?>
-							<a href="javascript:void(0)"
-									data-language="<?php echo esc_html( $language->slug ); ?>"
-									data-form-message="<?php echo esc_html( $labels['message'] ); ?>"
-									data-input-name="<?php echo esc_html( $labels['input_name'] ); ?>"
-									data-input-email="<?php echo esc_html( $labels['input_email'] ); ?>"
-									data-submit="<?php echo esc_html( $labels['btn_submit'] ); ?>"
-									data-message-success="<?php echo esc_html( $labels['message_success'] ); ?>"
-									data-message-error="<?php echo esc_html( $labels['message_error'] ); ?>"
-									class="post--meta-translate request-translate">
-								<?php echo esc_html( $labels['request'] ); ?>
-							</a>
+						<a href="javascript:void(0)"
+							data-language="<?php echo esc_html( $language->slug ); ?>"
+							data-form-message="<?php echo esc_html( $labels['message'] ); ?>"
+							data-input-name="<?php echo esc_html( $labels['input_name'] ); ?>"
+							data-input-email="<?php echo esc_html( $labels['input_email'] ); ?>"
+							data-submit="<?php echo esc_html( $labels['btn_submit'] ); ?>"
+							data-message-success="<?php echo esc_html( $labels['message_success'] ); ?>"
+							data-message-error="<?php echo esc_html( $labels['message_error'] ); ?>"
+							class="post--meta-translate request-translate">
+							<?php echo esc_html( $labels['request'] ); ?>
+						</a>
+
 						<?php
-					endif;
 				endif;
+			endif;
 		}
 	}
 	?>

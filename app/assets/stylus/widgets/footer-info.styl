@@ -18,14 +18,16 @@
             flex-wrap initial
 
         &__img
-            padding 45px 0
+            padding 50px 0 45px 0
             padding-right 100px
+
+            @media screen and ( min-width $screen-lg )
+                padding 20px 40px 45px 0px
 
             img
                 width 220px
 
                 @media screen and ( min-width $screen-lg )
-                    margin-left 20px
                     width 290px
 
         &__content
@@ -37,13 +39,42 @@
                 flex-wrap initial
 
             @media screen and ( min-width $screen-lg )
-                padding-top 45px
+                padding-top 35px
                 width calc( 100% - 390px )
 
         &__schedule,
-        &__contact,
         &__thinking
             margin-bottom 50px
+            width calc( 100% - 50px)
+
+            .menu
+                margin 0
+                padding-left 0px
+
+        &__thinking2
+            margin-bottom 50px
+            width calc( 100% - 50px)
+
+            .menu
+                margin 0
+                padding-left 0px
+                margin-top -55px
+
+                @media screen and ( min-width $screen-md )
+                    margin-top 38px
+
+                .menu-item
+                    margin-bottom 5px
+
+                    a
+                        font-size 14px
+                        text-transform uppercase
+                        font-weight normal
+                        color $white
+                        text-decoration none
+
+        &__contact
+            margin-bottom 20px
             width 100%
 
             .menu
@@ -58,7 +89,7 @@
             margin-bottom 10px
 
         &__text
-            font-size 17px
+            font-size 14px
             text-transform uppercase
             font-weight normal
             color $white
@@ -69,9 +100,15 @@
             @media screen and ( min-width $screen-md )
                 margin-bottom 5px
 
+            @media screen and ( min-width 900px )
+                padding-right 25px
+
+            @media screen and ( min-width $screen-lg )
+                padding-right 0px
+
         &__icon
             margin-right 10px
-            font-size 25px
+            font-size 21px
 
             .i-whatsapp, .i-envelope
                 vertical-align super
@@ -95,10 +132,9 @@
             .menu-item
                     margin-bottom 5px
                 a
-                    font-size 17px
+                    font-size 14px
                     text-transform uppercase
                     font-weight normal
                     color $white
                     text-decoration none
-
 

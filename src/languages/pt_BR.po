@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/src\n"
-"POT-Creation-Date: 2020-07-29T19:15:14+00:00\n"
+"POT-Creation-Date: 2020-08-28T18:29:48+00:00\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -56,15 +56,16 @@ msgstr "Publicar"
 msgid "Skip to content"
 msgstr "Pular para o conteúdo"
 
-#: header.php:83
+#: header.php:100
 msgid "Search"
 msgstr "Buscar"
 
 #: includes/Customize/Banner/Banner.php:55 includes/Helper/PageSection.php:57
 #: includes/Integration/ACF/Pages/About.php:111
 #: includes/Integration/ACF/Pages/Event.php:58
-#: includes/Integration/ACF/Pages/HomePage.php:82
-#: includes/Integration/ACF/Pages/HomePage.php:307
+#: includes/Integration/ACF/Pages/HomePage.php:84
+#: includes/Integration/ACF/Pages/HomePage.php:285
+#: includes/Integration/ACF/Pages/HomePage.php:355
 #: includes/Integration/ACF/Pages/Page.php:69
 #: includes/Integration/ACF/Pages/Resums.php:82
 msgid "Text"
@@ -138,27 +139,27 @@ msgstr "Logo"
 
 #: includes/Customize/Head.php:81
 msgid "Divulgation Exímia CO "
-msgstr ""
+msgstr "Divulgação Exímia CO"
 
 #: includes/Customize/Head.php:96
 msgid "Divulgation Exímia Tech "
-msgstr ""
+msgstr "Divulgação Exímia Tech"
 
 #: includes/Customize/Head.php:111
 msgid "Divulgation Exímia MS "
-msgstr ""
+msgstr "Divulgação Exímia MS"
 
 #: includes/Customize/Head.php:132
 msgid "Upload CO Divulgation logo"
-msgstr ""
+msgstr "Carregar logotipo de divulgação CO"
 
 #: includes/Customize/Head.php:154
 msgid "Upload Tech Divulgation logo"
-msgstr ""
+msgstr "Carregar logotipo de divulgação Tech"
 
 #: includes/Customize/Head.php:176
 msgid "Upload MS Divulgation logo"
-msgstr ""
+msgstr "Carregar logotipo de divulgação MS"
 
 #: includes/Customize/Newsletter.php:47
 msgid "Newletter Form"
@@ -168,14 +169,15 @@ msgstr "Formulário de Newsletter"
 #: includes/Integration/ACF/Pages/About.php:98
 #: includes/Integration/ACF/Pages/Contact.php:59
 #: includes/Integration/ACF/Pages/Feature.php:88
-#: includes/Integration/ACF/Pages/HomePage.php:330
+#: includes/Integration/ACF/Pages/HomePage.php:279
+#: includes/Integration/ACF/Pages/HomePage.php:378
 #: includes/Integration/ACF/Pages/Page.php:57
 #: includes/Integration/ACF/Pages/Resums.php:75
 msgid "Title"
 msgstr "Título"
 
 #: includes/Customize/Newsletter.php:87
-#: includes/Integration/ACF/Pages/HomePage.php:267
+#: includes/Integration/ACF/Pages/HomePage.php:315
 msgid "Background"
 msgstr "Fundo"
 
@@ -237,15 +239,15 @@ msgstr "Nome do Campo"
 
 #: includes/Customize/NoCaptcha.php:41
 msgid "NoCaptcha"
-msgstr ""
+msgstr "NoCaptcha"
 
 #: includes/Customize/NoCaptcha.php:54
 msgid "Site Key"
-msgstr ""
+msgstr "Site Key"
 
 #: includes/Customize/NoCaptcha.php:68
 msgid "Secret Key"
-msgstr ""
+msgstr "Secret Key"
 
 #: includes/Customize/Social.php:41
 msgid "Social Media"
@@ -295,8 +297,6 @@ msgstr "Email que recebe a requisição - (%s)"
 
 #. translators: %s: locale
 #: includes/Form/TranslateRequest.php:92
-#, fuzzy
-#| msgid "Email subject - (%s)"
 msgid "Email Subject - (%s)"
 msgstr "Assunto do e-mail - (%s)"
 
@@ -343,22 +343,22 @@ msgstr "Mensagem de Feedback de Error"
 #: includes/Helper/PageSection.php:28 includes/Helper/PageSection.php:43
 #: includes/Integration/ACF/Pages/About.php:105
 #: includes/Integration/ACF/Pages/Contact.php:60
-#: includes/Integration/ACF/Pages/HomePage.php:76
+#: includes/Integration/ACF/Pages/HomePage.php:78
 msgid "Use * to bold"
 msgstr "Use * para negrito"
 
 #: includes/Helper/PageSection.php:42
 #: includes/Integration/ACF/Pages/About.php:104
-#: includes/Integration/ACF/Pages/HomePage.php:75
-#, fuzzy
-#| msgid "Subtitle"
+#: includes/Integration/ACF/Pages/HomePage.php:77
 msgid "Sub-Title"
 msgstr "Sub-título"
 
 #: includes/Helper/PageSection.php:71
 #: includes/Integration/ACF/Pages/About.php:117
-#: includes/Integration/ACF/Pages/HomePage.php:88
-#: includes/Integration/ACF/Pages/HomePage.php:174
+#: includes/Integration/ACF/Pages/HomePage.php:90
+#: includes/Integration/ACF/Pages/HomePage.php:197
+#: includes/Integration/ACF/Pages/HomePage.php:291
+#: includes/Integration/ACF/Pages/HomePage.php:454
 msgid "Image"
 msgstr "Imagem"
 
@@ -367,10 +367,12 @@ msgid "Image Position"
 msgstr "Posição da imagem"
 
 #: includes/Helper/PageSection.php:88
+#: includes/Integration/ACF/Pages/HomePage.php:125
 msgid "Left"
 msgstr "Esquerda"
 
 #: includes/Helper/PageSection.php:89
+#: includes/Integration/ACF/Pages/HomePage.php:126
 msgid "Right"
 msgstr "Direita"
 
@@ -400,13 +402,14 @@ msgstr "Sobreposição para baixo"
 
 #: includes/Helper/PageSection.php:128
 #: includes/Integration/ACF/Pages/About.php:122
-#: includes/Integration/ACF/Pages/HomePage.php:93
+#: includes/Integration/ACF/Pages/HomePage.php:95
 msgid "Button label"
 msgstr "Rótulo do botão"
 
 #: includes/Helper/PageSection.php:144
 #: includes/Integration/ACF/Pages/About.php:131
-#: includes/Integration/ACF/Pages/HomePage.php:102
+#: includes/Integration/ACF/Pages/HomePage.php:104
+#: includes/Integration/ACF/Pages/HomePage.php:113
 msgid "Button URL"
 msgstr "URL do botão"
 
@@ -443,9 +446,9 @@ msgid "Without padding"
 msgstr "Sem espaçamento"
 
 #: includes/Integration/ACF/Pages/About.php:85
-#: includes/Integration/ACF/Pages/HomePage.php:56
+#: includes/Integration/ACF/Pages/HomePage.php:58
 msgid "Slider hero"
-msgstr ""
+msgstr "Slider Hero"
 
 #: includes/Integration/ACF/Pages/About.php:153
 #: includes/Integration/ACF/PostType/Service.php:65
@@ -453,7 +456,7 @@ msgstr ""
 msgid "Page sections"
 msgstr "Seções da página"
 
-#: includes/Integration/ACF/Pages/About.php:165
+#: includes/Integration/ACF/Pages/About.php:164
 msgid "Template"
 msgstr "Modelo"
 
@@ -525,118 +528,140 @@ msgstr "Destaques"
 
 #: includes/Integration/ACF/Pages/Feature.php:70
 msgid "Site"
-msgstr ""
+msgstr "Site"
 
-#: includes/Integration/ACF/Pages/HomePage.php:69
+#: includes/Integration/ACF/Pages/HomePage.php:71
 #: includes/Integration/ACF/PostType/Event.php:62
 #: template-parts/newsletter/form.php:49
 msgid "Name"
 msgstr "Nome"
 
+#: includes/Integration/ACF/Pages/HomePage.php:120
+msgid "Template align"
+msgstr "Alinhamento do template"
+
 #: includes/Integration/ACF/Pages/HomePage.php:124
+msgid "Center"
+msgstr "Centralizado"
+
+#: includes/Integration/ACF/Pages/HomePage.php:147
 msgid "Purpose"
 msgstr "Propósito"
 
-#: includes/Integration/ACF/Pages/HomePage.php:132
+#: includes/Integration/ACF/Pages/HomePage.php:155
 msgid "Section title"
 msgstr "Título da seção"
 
-#: includes/Integration/ACF/Pages/HomePage.php:138
+#: includes/Integration/ACF/Pages/HomePage.php:161
 msgid "Icon Class 1"
 msgstr "Classe do ícone 1"
 
-#: includes/Integration/ACF/Pages/HomePage.php:144
+#: includes/Integration/ACF/Pages/HomePage.php:167
 msgid "Title 1"
 msgstr "Título 1"
 
-#: includes/Integration/ACF/Pages/HomePage.php:150
-#: includes/Integration/ACF/Pages/HomePage.php:203
+#: includes/Integration/ACF/Pages/HomePage.php:173
 msgid "Text 1"
 msgstr "Texto 1"
 
-#: includes/Integration/ACF/Pages/HomePage.php:156
+#: includes/Integration/ACF/Pages/HomePage.php:179
 msgid "Icon Class 2"
 msgstr "Classe do ícone 2"
 
-#: includes/Integration/ACF/Pages/HomePage.php:162
+#: includes/Integration/ACF/Pages/HomePage.php:185
 msgid "Title 2"
 msgstr "Título 2"
 
-#: includes/Integration/ACF/Pages/HomePage.php:168
-#: includes/Integration/ACF/Pages/HomePage.php:227
+#: includes/Integration/ACF/Pages/HomePage.php:191
 msgid "Text 2"
 msgstr "Texto 2"
 
-#: includes/Integration/ACF/Pages/HomePage.php:189
-#, fuzzy
-#| msgid "Website URL"
+#: includes/Integration/ACF/Pages/HomePage.php:212
 msgid "Websites"
-msgstr "URL do website"
+msgstr "Websites"
 
-#: includes/Integration/ACF/Pages/HomePage.php:197
-#, fuzzy
-#| msgid "Section title"
+#: includes/Integration/ACF/Pages/HomePage.php:220
+#: includes/Integration/ACF/Pages/HomePage.php:267
+#: includes/Integration/ACF/Pages/HomePage.php:401
 msgid "Section Title"
 msgstr "Título da seção"
 
-#: includes/Integration/ACF/Pages/HomePage.php:209
-#, fuzzy
-#| msgid "Image"
-msgid "Image 1"
-msgstr "Imagem"
+#: includes/Integration/ACF/Pages/HomePage.php:226
+msgid "Logo Tech"
+msgstr "Logo Tech"
 
-#: includes/Integration/ACF/Pages/HomePage.php:215
-#, fuzzy
-#| msgid "Logo"
-msgid "Logo 1"
-msgstr "Logo"
+#: includes/Integration/ACF/Pages/HomePage.php:232
+msgid "Description Tech"
+msgstr "Descrição Tech"
 
-#: includes/Integration/ACF/Pages/HomePage.php:221
-msgid "Site Url"
-msgstr ""
+#: includes/Integration/ACF/Pages/HomePage.php:238
+msgid "Logo Ms"
+msgstr "Logo Ms"
 
-#: includes/Integration/ACF/Pages/HomePage.php:233
-#, fuzzy
-#| msgid "Image"
-msgid "Image 2"
-msgstr "Imagem"
+#: includes/Integration/ACF/Pages/HomePage.php:244
+msgid "Description Ms"
+msgstr "Descrição Ms"
 
-#: includes/Integration/ACF/Pages/HomePage.php:239
-#, fuzzy
-#| msgid "Logo"
-msgid "Logo 2"
-msgstr "Logo"
+#: includes/Integration/ACF/Pages/HomePage.php:259
+msgid "Cards"
+msgstr "Cartões"
 
-#: includes/Integration/ACF/Pages/HomePage.php:245
-msgid "Site Url 2"
-msgstr ""
-
-#: includes/Integration/ACF/Pages/HomePage.php:260
-#: includes/Integration/ACF/Pages/HomePage.php:273
+#: includes/Integration/ACF/Pages/HomePage.php:308
+#: includes/Integration/ACF/Pages/HomePage.php:321
 msgid "Quote"
 msgstr "Citação"
 
-#: includes/Integration/ACF/Pages/HomePage.php:279
+#: includes/Integration/ACF/Pages/HomePage.php:327
 msgid "Quote author"
 msgstr "Citação autor"
 
-#: includes/Integration/ACF/Pages/HomePage.php:285
+#: includes/Integration/ACF/Pages/HomePage.php:333
 msgid "Quote job role"
 msgstr "Citação cargo"
 
-#: includes/Integration/ACF/Pages/HomePage.php:300 page-templates/home.php:116
-#: template-parts/blog/breadcrumb.php:35
+#: includes/Integration/ACF/Pages/HomePage.php:348
+#: template-parts/blog/breadcrumb.php:47
+#: template-parts/page/home/contents.php:22
+#: template-parts/page/home/posts-list.php:20
 msgid "Blog"
 msgstr "Blog"
 
-#: includes/Integration/ACF/Pages/HomePage.php:308
+#: includes/Integration/ACF/Pages/HomePage.php:356
 msgid "Text after the section title"
 msgstr "Texto após o título da seção"
 
-#: includes/Integration/ACF/Pages/HomePage.php:323
-#: includes/PostType/Testimonial.php:36
-msgid "Testimonials"
-msgstr "Recomendações"
+#: includes/Integration/ACF/Pages/HomePage.php:371
+msgid "Clients Testimonials"
+msgstr "Testemunhos de Clientes"
+
+#: includes/Integration/ACF/Pages/HomePage.php:394
+msgid "Contents"
+msgstr "Conteúdos"
+
+#: includes/Integration/ACF/Pages/HomePage.php:413
+msgid "Content Title"
+msgstr "Título de conteúdos"
+
+#: includes/Integration/ACF/Pages/HomePage.php:419
+msgid "Content text"
+msgstr "Texto dos conteúdos"
+
+#: includes/Integration/ACF/Pages/HomePage.php:425
+msgid "Content URL"
+msgstr "URL dos conteúdos"
+
+#: includes/Integration/ACF/Pages/HomePage.php:431
+msgid "Open the content"
+msgstr "Abrir o conteúdo"
+
+#: includes/Integration/ACF/Pages/HomePage.php:433
+msgid "In a new tab"
+msgstr "Em nova aba"
+
+#: includes/Integration/ACF/Pages/HomePage.php:446
+#: template-parts/blog/single/tags.php:20
+msgid "Tags"
+msgstr "Etiquetas"
 
 #. Template Name of the theme
 #: includes/Integration/ACF/Pages/NewsletterForm.php:51
@@ -745,23 +770,19 @@ msgstr "Sincronizar newsletter"
 msgid "Synchronization of newsletters with MailChimp."
 msgstr "Sincronização de newsletters com o MailChimp."
 
-#: includes/Integration/MailChimp/MailChimp.php:122
+#: includes/Integration/MailChimp/MailChimp.php:116
 msgid "New newsletters inserted:"
 msgstr "Novas newsletters inseridas:"
 
-#: includes/Integration/MailChimp/MailChimp.php:127
-msgid "Newsletters removed:"
-msgstr "Newsletters removidas:"
-
-#: includes/Integration/MailChimp/MailChimp.php:132
+#: includes/Integration/MailChimp/MailChimp.php:121
 msgid "No new changes."
 msgstr "Sem novas alterações."
 
-#: includes/Integration/MailChimp/MailChimp.php:242
+#: includes/Integration/MailChimp/MailChimp.php:210
 msgid "Sync completed successfully."
 msgstr "Sincronização concluída com sucesso."
 
-#: includes/Integration/MailChimp/MailChimp.php:251
+#: includes/Integration/MailChimp/MailChimp.php:219
 msgid "An error occurred during synchronization."
 msgstr "Ocorreu um erro durante a sincronização."
 
@@ -774,7 +795,7 @@ msgid "Contact Email"
 msgstr "E-mail de contato"
 
 #: includes/PostType/Bliki.php:38 includes/PostType/Bliki.php:39
-#: template-parts/blog/breadcrumb.php:43
+#: template-parts/blog/breadcrumb.php:55
 msgid "Bliki"
 msgstr "Bliki"
 
@@ -981,6 +1002,10 @@ msgstr "Nenhuma serviço encontrada."
 msgid "No services found in Trash."
 msgstr "Nenhum serviço encontrado na lixeira."
 
+#: includes/PostType/Testimonial.php:36
+msgid "Testimonials"
+msgstr "Recomendações"
+
 #: includes/PostType/Testimonial.php:38
 msgctxt "testimonial"
 msgid "Add New"
@@ -1018,25 +1043,21 @@ msgstr "Nenhuma recomendação encontrada."
 msgid "No testimonials found in Trash."
 msgstr "Nenhuma recomendação encontrada na lixeira."
 
-#: includes/Setup/Navigation.php:38
+#: includes/Setup/Navigation.php:39
 msgid "Primary"
 msgstr "Primário"
 
-#: includes/Setup/Navigation.php:39
+#: includes/Setup/Navigation.php:40
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: includes/Setup/Navigation.php:40
-#, fuzzy
-#| msgid "Social Menu"
-msgid "Social Menu Header"
-msgstr "Menu Social"
-
 #: includes/Setup/Navigation.php:41
-#, fuzzy
-#| msgid "Social Menu"
+msgid "Social Menu Header"
+msgstr "Header do Menu Social"
+
+#: includes/Setup/Navigation.php:42
 msgid "Store Menu"
-msgstr "Menu Social"
+msgstr "Store Menu"
 
 #: includes/Shortcode/Veja.php:44
 msgid "See also"
@@ -1148,7 +1169,47 @@ msgstr "Nenhuma série encontrada."
 
 #: includes/User/Edit.php:76
 msgid "Main Profile Image"
-msgstr ""
+msgstr "Imagem de Perfil Principal"
+
+#: includes/Widget/Footer.php:31
+msgid "Footer first area"
+msgstr "Primeira área do rodapé"
+
+#: includes/Widget/Footer.php:32
+msgid "Content showing in the first area of footer page"
+msgstr "Conteúdo exibido na primeira área da página de rodapé"
+
+#: includes/Widget/Footer.php:44
+msgid "Footer second area"
+msgstr "Segunda área do rodapé"
+
+#: includes/Widget/Footer.php:45
+msgid "Content showing in the second area of footer page"
+msgstr "Conteúdo exibido na segunda área da página de rodapé"
+
+#: includes/Widget/Footer.php:57
+msgid "Footer third area"
+msgstr "Terceira área do rodapé"
+
+#: includes/Widget/Footer.php:58
+msgid "Content showing in the third area of footer page"
+msgstr "Conteúdo exibido na terceira área da página de rodapé"
+
+#: includes/Widget/Footer.php:70
+msgid "Footer fourth area"
+msgstr "Quarta área do rodapé"
+
+#: includes/Widget/Footer.php:71
+msgid "Content showing in the fourth area of footer page"
+msgstr "Conteúdo exibido na quarta área da página de rodapé"
+
+#: includes/Widget/Footer.php:82
+msgid "Footer fifth area"
+msgstr "Quinta área do rodapé"
+
+#: includes/Widget/Footer.php:83
+msgid "Content showing in the fifth area of footer page"
+msgstr "Conteúdo exibido na quinta área da página de rodapé"
 
 #: page-templates/contact.php:86
 msgid "Send"
@@ -1156,15 +1217,15 @@ msgstr "Enviar"
 
 #. Template Name of the theme
 msgid "Drops"
-msgstr ""
+msgstr "Drops"
 
 #: page-templates/drops.php:30
 msgid "Drops from ExímiaCo"
-msgstr ""
+msgstr "Gotas da ExímiaCo"
 
 #: page-templates/drops.php:33
 msgid "Also listen in other platforms"
-msgstr ""
+msgstr "Ouça também em outras plataformas"
 
 #. Template Name of the theme
 msgid "Events Calendar"
@@ -1177,10 +1238,6 @@ msgstr "Agenda"
 #. Template Name of the theme
 msgid "Home"
 msgstr "Página Inicial"
-
-#: page-templates/home.php:130
-msgid "Last posts in English"
-msgstr "Últimos posts em Inglês"
 
 #. Template Name of the theme
 msgid "Newsletters Calendar"
@@ -1198,16 +1255,16 @@ msgstr "Área restrita"
 msgid "Logout"
 msgstr "Logout"
 
-#: template-parts/blog/breadcrumb.php:16
+#: template-parts/blog/breadcrumb.php:28
 msgid "Our <b>contents</b>"
 msgstr "Nossos <b>conteúdos</b>"
 
-#: template-parts/blog/breadcrumb.php:27
+#: template-parts/blog/breadcrumb.php:39
 msgid "Thinking"
-msgstr ""
+msgstr "Thinking"
 
 #. translators: search results
-#: template-parts/blog/breadcrumb.php:54
+#: template-parts/blog/breadcrumb.php:66
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr "Resultados de Busca por &#8220;%s&#8221;"
 
@@ -1261,10 +1318,6 @@ msgstr "Em Resumo"
 msgid "More posts in %s series"
 msgstr "Mais posts da série %s"
 
-#: template-parts/blog/single/tags.php:20
-msgid "Tags"
-msgstr "Etiquetas"
-
 #: template-parts/event/event.php:22
 msgid "and"
 msgstr "e"
@@ -1296,6 +1349,28 @@ msgstr "Inscrever-se"
 #: template-parts/page/home/blog.php:56
 msgid "See more"
 msgstr "Veja mais"
+
+#: template-parts/page/home/posts-list.php:33
+msgid "Last posts in English"
+msgstr "Últimos posts em Inglês"
+
+#, fuzzy
+#~| msgid "Image"
+#~ msgid "Image 1"
+#~ msgstr "Imagem"
+
+#, fuzzy
+#~| msgid "Image"
+#~ msgid "Image 2"
+#~ msgstr "Imagem"
+
+#, fuzzy
+#~| msgid "Logo"
+#~ msgid "Logo 2"
+#~ msgstr "Logo"
+
+#~ msgid "Newsletters removed:"
+#~ msgstr "Newsletters removidas:"
 
 #~ msgid "Primary Website"
 #~ msgstr "Site Primário"
@@ -1329,9 +1404,6 @@ msgstr "Veja mais"
 
 #~ msgid "1 Comment"
 #~ msgstr "1 Comentário"
-
-#~ msgid "Comments"
-#~ msgstr "Comentários"
 
 #~ msgid "URL - (%s)"
 #~ msgstr "URL - (%s)"

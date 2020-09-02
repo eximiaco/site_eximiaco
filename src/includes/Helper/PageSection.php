@@ -241,7 +241,7 @@ class PageSection extends Base {
 	 * @return void
 	 */
 	private function get_template_class( &$classes ) {
-		$classes[] = 'page-section__' . $this->get_field( 'template' );
+		$classes[] = 'page-section__' . $this->get_field( 'templates' );
 	}
 
 	/**
@@ -255,7 +255,7 @@ class PageSection extends Base {
 	private function get_image_align_class( &$classes ) {
 		$align = $this->get_field( 'image_align' );
 
-		if ( 'mvp' === $this->get_field( 'template' ) ) {
+		if ( 'mvp' === $this->get_field( 'templates' ) ) {
 			$align = 'bottom';
 		}
 
@@ -297,7 +297,7 @@ class PageSection extends Base {
 	 * @return string
 	 */
 	public function get_template() {
-		return $this->get_field( 'template' );
+		return $this->get_field( 'templates' );
 	}
 
 	/**

@@ -58,6 +58,11 @@ global $container;
 							dynamic_sidebar( 'widgets_area_footer_4' );
 						}
 					?>
+					<?php
+						if ( is_active_sidebar( 'widgets_area_footer_5' ) ) {
+							dynamic_sidebar( 'widgets_area_footer_5' );
+						}
+					?>
 				</div>
 			</div>
 		</div>

@@ -1,78 +1,133 @@
 .websites
     display flex
-    margin-bottom 25px
+    flex-wrap wrap
+    justify-content space-between
 
-    &--title
+    @media screen and ( min-width $screen-md )
+        flex-wrap initial
+
+    &__title
         color var-use( color-primary )
-        font-size 16px
-        font-weight bold
-        display inline
-        width 33%
-
-    &-content
-        width 100%
-
-    &-images
-        width 100%
-
-    &-image
-        display block
-        width 100%
-
-        @media screen and ( min-width $screen-md )
-
-            display inline
-            float left
-            width calc(50% - 10px)
-            margin 5px
-
-    &-image2
-        display block
-        width 100%
-
-        @media screen and ( min-width $screen-md )
-
-            display inline
-            float right
-            width calc(50% - 10px)
-            margin 5px
-
-    &-box
-        position relative
         display inline-block
-
-    &-overlay
-        position absolute
-        height 100%
-        opacity 1
-        width 100%
-        left 0
-        bottom 0
-        margin-bottom 5px
-        padding 10px 15px
-        display flex
-        justify-content center
-        flex-direction column
-
-    &-text
+        font-size 18px
+        font-weight normal
+        margin 0 0 80px
+        position relative
+        text-align center
         text-transform uppercase
-        font-size 12px
-        font-weight bold
-        color #fff
+        width 100%
 
         @media screen and ( min-width $screen-md )
-            font-size 14px
+            font-size 36px
 
-    &-inner-box
-        width 100%
-        height auto
-        text-align center
-
-        img
-            height 50px
-            width auto
+        &:after
+            border-bottom 1px solid var-use( color-primary )
+            bottom -20px
+            content ''
+            left 0
+            margin-left auto
+            margin-right auto
+            position absolute
+            right 0
+            width 80px
 
             @media screen and ( min-width $screen-md )
-                height 60px
+                border-bottom 2px solid var-use( color-primary )
+                bottom -25px
+                width 100px
 
+    &__item
+        margin-bottom 50px
+        width 100%
 
+        @media screen and ( min-width $screen-md )
+            margin-bottom 0
+            width calc( 50% - 12px )
+
+        &--tech
+            --color-primary $color-tech
+
+        &--ms
+            --color-primary $color-ms
+
+        &-header
+            display flex
+            flex-wrap wrap
+            justify-content space-between
+            margin-bottom 30px
+
+            @media screen and ( min-width $screen-lg )
+                flex-wrap initial
+
+        &-logo,
+        &-description
+            align-content center
+            margin-bottom 20px
+            padding 0 20px
+            text-align center
+            width 100%
+
+            @media screen and ( min-width $screen-lg )
+                margin-bottom 0
+                padding 0
+                text-align left
+                width calc( 50% - 5px )
+
+        &-description
+            margin-bottom 0
+            min-height 35px
+
+        &-posts
+            color #333
+
+    .cards-list__wrapper
+        justify-content center
+
+        @media screen and ( min-width $screen-lg )
+            justify-content space-between
+
+    .card
+        font-size 12px
+        height 245px
+        margin 0
+        width 100%
+        max-width 290px
+
+        @media screen and ( min-width $screen-md )
+            max-width 400px
+
+        @media screen and ( min-width $screen-lg )
+            width calc( 50% - 5px )
+
+    .listing-post
+        margin-bottom 25px
+
+        &__overlay
+            @media screen and ( min-width $screen-lg )
+                height 130px
+
+        &__title
+            font-size 12px
+
+        &__header-meta
+            @media screen and ( min-width $screen-lg )
+                bottom 50px
+
+        &__footer
+            @media screen and ( min-width $screen-lg )
+                bottom -60px
+                padding 15px
+
+            &__right
+                letter-spacing 0
+
+            i
+                font-size 16px
+
+        &--reading,
+        &--comments
+            height auto
+            margin 0
+
+        &--comments
+            margin-left 5px
